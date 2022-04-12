@@ -3,11 +3,20 @@
 
 [glossary]
 
+access controls:: Rules that enforce the parts of a system that somebody can access. Supports data integrity and confidentiality.
+
 availability:: Systems are working as intended at an acceptable level of service. Part of the information security triad.
 
 confidentiality:: Restricting access to information to authorized people, often using access control lists and encryption. Part of the information security triad.
+
+encryption:: Using a secret key and an algorithm to obscure data. Data can later be decrypted. Support confidentiality.
+
+hashing:: A cryptographic process that produces a hash digest that represents the unique "fingerprint" of the data. Use to verify data integrity.
 
 information security triad:: Confidentiality, integrity, and availability.
 
 integrity:: Ensuring that information is accurate and complete. Changes to data are made by authorized individuals. Integrity is supported by access controls and often verified using cryptographic hashing. Part of the information security triad.
 
+key:: Encryption algorithms (ciphers) are pubicly available. Keys are used with algorithms to encrypt or decrypt data. Most encryption keys are kept secret, with the exception of public keys in asymmetric cryptography.
+
+redundancy:: Extra hardware (such as power supplies, servers, or network routers) that can continue operating in case of a failure. Supports system availability.

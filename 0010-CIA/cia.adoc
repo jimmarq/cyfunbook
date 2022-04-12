@@ -9,25 +9,37 @@ Changelog
 
 The information security triad is composed of *confidentiality*, *integrity*, and *availability*. Virtually any topic in cybersecurity will apply to one or more of the elements in the information security triad. It can be useful to think about a given topic and decide whether it refers to confidentity, integrity, and/or availability.
 
+image::cia_diagram.png[]
+
 == Learning Objectivies
 
 You should be able to:
 
 * List the elements of the information security triad
-* Define confidentiality, integrity, and availability in the context of cybersecurity
+* Discuss how confidentiality is supported by access controls and encryption
+* Discuss how integrity is supported by access controls and hashing
+* Discuss how availability is supported by several methods, including redundancy
 * Evaluate a scenario and determine if confidentiality, integrity, and/or availability have been harmed
 
 == Confidentiality
 
-TODO
+Confidentiality is all about protecting sensitive data. Access to some data should be restricted. For example, medical records should be kept private. Financial and education information is also protected. There can be serious legal consequences for failing to protect sensitive information.
+
+Confidentiality is enforced through two primary measures: 1) *access controls*, and 2) *encryption*. Differentiated access to systems can be granted to users. For example, you can login to your bank, but you can only view your account information. A call center employee might have authority to view the accounts of all bank customers. Audits may be performed periodically to ensure that call center employees only access customer data in response to a customer concern, not merely about of curiousity.
+
+With encryption, data is protected using secret keys. Only people with the right keys can read the data. Data can be protected on your device (e.g.; a hard drive or smart card), in transit (i.e.; going over the internet), or while the data is in use (i.e.; in your computer's memory). Encryption is not the ultimate solution to data confidentiality. At some point, the data must be decrypted, so encryption must be employed along with access controls to protect confidentiality.
 
 == Integrity
 
-TODO
+In the context of cybersecurity, data integrity is maintained when information is only modified by people who are authorized. Imagine you have a Twitter account. You want to be the only person to produce tweets. If somebody else could edit your tweets, they could make them say something embarassing or worse. Access controls help maintain data integrity. 
+
+Data integrity can be verified using a cryptographic concept called *hashing*. A hash is like a perfect data fingerprint. You can take the fingerprint of data many times. If the fingerprint ever changes, you know that the underlying data has been modified. When police officers gather forensic data from computers or smart phones, one of the first things they will do is generate a *hash* of every file on the device. In course, if the officers can show that none of the hashes have changed, the court can be sure that the officers did not change any files to modify the digital evidence.
+
+In this context, integrity does *not* mean acting morally or ethically. In cybersecurity, integrity is all about data being whole and accurate.
 
 == Availability
 
-TODO
+Information systems are involved in many aspects of our daily lives. Whether making a purchase, booking a flight, playing an online game, or streaming movies, we rely heavily on networked systems. But there are many things that can go wrong causing systems to crash. Power outages, hurricanes, hard drives crashing, and hackers are just some of the threats that might bring systems down. There are many ways to ensure availability of systems. Testing, *redundancy*, and active network defense are among many techniques for ensuring that systems are availble.
 
 == Fictional Case: Stolen Data
 
