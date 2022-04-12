@@ -65,6 +65,20 @@ Hurricane Pike was a class 3 hurricane that destroyed a health clinic's data in 
 * Was integrity violated?
 * Was availability vioalted?
 
+== Task
+
+Imagine that you are the owner of a landscaping company. All of the purchases made in your company are processed over the internet. Customer information is linked to each purchase. While landscaping purchase information is not highly sensitive, you still want to keep customer information confidential.
+
+How would you maintain confidentiality, integrity, and availability? Some questions to consider are below.
+
+* Confidentiality
+** Who should have access to customer data?
+* Integrity
+** How can company data be kept accurate?
+* Availability
+** What kinds of problems could cause the systems to go down?
+** How would you protect against system outages?
+
 == Reflection
 
 * How would the elements of the information security triad be relevant to:
