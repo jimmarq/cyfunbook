@@ -1,0 +1,63 @@
+= Information Security Triad: Confidentiality, Integrity, and Availability
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-04-12 Initial Version
+* 2022-04-15 Additional cases added
+
+The information security triad is composed of *confidentiality*, *integrity*, and *availability*. Virtually any topic in cybersecurity will apply to one or more of the elements in the information security triad. It can be useful to think about a given topic and decide whether it refers to confidentity, integrity, and/or availability.
+
+== Learning Objectivies
+
+You should be able to:
+
+* List the elements of the information security triad
+* Define confidentiality, integrity, and availability in the context of cybersecurity
+* Evaluate a scenario and determine if confidentiality, integrity, and/or availability have been harmed
+
+== Confidentiality
+
+TODO
+
+== Integrity
+
+TODO
+
+== Availability
+
+TODO
+
+== Fictional Case: Stolen Data
+
+Joe was an employee working for ABC Corp. Joe knew that a rival corporation, XYZ Corp, was working on a new product to compete with ABC Corp's top seller. To prove his worth to his company, Joe hacked into XYZ Corp's computer systems. Joe found a way to bypass the access controls to XYZ Corp's main file repository. Joe downloaded the XYZ Corp product schematics to share with his team members at ABC Corp. Joe did not delete or update any information or try to crash the file repository.
+
+* Was confiendiality violated?
+* Was integrity violated?
+* Was availability vioalted?
+
+== Fictional Case: Updated Grades
+
+A high school student breaks into the school's grading system. The student bumps up each of her grades a full letter (e.g.; changing a C- to a B-). The student does not change or access any other student's grades.
+
+* Was confiendiality violated?
+* Was integrity violated?
+* Was availability vioalted?
+
+== Fictional Case: Hurricane Pike
+
+Hurricane Pike was a class 3 hurricane that destroyed a health clinic's data in Georgia. The data was stored in the basement of a flooded building. The basement was locked, so the clinic is confident that no unathorized party accessed the data. 
+
+* Was confiendiality violated?
+* Was integrity violated?
+* Was availability vioalted?
+
+== Reflection
+
+* How would the elements of the information security triad be relevant to:
+** The military
+** Small businesses
+** A large corporation
+** A non-profit organization
+* Consider the technology you use. You likely have online banking, email, social media, and other accounts that store data in your own computer or online. What steps do you take to ensure the confidentiality, integrity, and availability of that data?

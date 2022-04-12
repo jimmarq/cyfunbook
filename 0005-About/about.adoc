@@ -1,0 +1,6 @@
+= About this Book
+
+This book is intended to introduce core cybersecurity topics using a hands-on approach.
+
+This course relies heavily on virtual machines for labs. This will often require VirtualBox--a free program that runs on Windows, Mac, and Linux computers. VirtualBox does not run on Chromebooks.
+

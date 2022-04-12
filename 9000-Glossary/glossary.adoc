@@ -1,0 +1,13 @@
+[[glossary]]
+= Glossary
+
+[glossary]
+
+availability:: Systems are working as intended at an acceptable level of service. Part of the information security triad.
+
+confidentiality:: Restricting access to information to authorized people, often using access control lists and encryption. Part of the information security triad.
+
+information security triad:: Confidentiality, integrity, and availability.
+
+integrity:: Ensuring that information is accurate and complete. Changes to data are made by authorized individuals. Integrity is supported by access controls and often verified using cryptographic hashing. Part of the information security triad.
+

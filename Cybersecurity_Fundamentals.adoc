@@ -1,0 +1,39 @@
+= Cybersecurity Fundamentals
+Dr. Jim Marquardson, Northern Michigan University
+v0.1, 2022-04-12
+:doctype: book
+:toc:
+
+:leveloffset: 1
+
+:numbered!:
+
+:imagesdir: 0005_About
+include::0005-About\about.adoc[]
+
+:numbered:
+
+<<<
+:imagesdir: 0010-CIA
+include::0010-CIA\cia.adoc[]
+
+
+
+
+
+
+
+<<<
+:imagesdir: 9000-Glossary
+include::9000-Glossary\glossary.adoc[]
+
+
+
+
+
+
+
+
+
+
+
