@@ -1,0 +1,55 @@
+= Create And Delete Files
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+TODO: Introduce the topic in a paragraph here.
+
+Include images like so:
+
+//.Text here will go under the image
+//image::some_image.png[Alt text here]
+
+== Learning Objectives
+
+You should be able to:
+
+* TODO
+* TODO
+* TODO
+
+The learning objectives should be measurable.
+
+== Lesson Here
+
+This should be a couple of pages of text and screenshots.
+
+All images should be original. Do not include images downloaded from the internet.
+
+Use Greenshot to take screenshots.
+
+If you need to make diagrams, use draw.io.
+
+== Exercise
+
+Include detailed steps to practice the topic introduced in the lesson.
+
+Use screenshots and numbered lists heavily.
+
+Decimals are used for numbered lists.
+
+. This is step one.
+.. This is sub-step 1.
+//. This is step two
+//+
+//.This text will go under the image.
+//image::screenshot_1.png[alt text goes here]
+
+== Reflection
+
+* Ask a question here that makes people think.
+* Ask another good question
+

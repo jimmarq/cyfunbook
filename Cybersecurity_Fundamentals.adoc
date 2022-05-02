@@ -13,14 +13,366 @@ include::0005-About\about.adoc[]
 
 :numbered:
 
+
 <<<
-:imagesdir: 0010-CIA
-include::0010-CIA\cia.adoc[]
+:imagesdir: 1010_rise_of_the_machines__a_brief_history_of_computers
+include::1010_rise_of_the_machines__a_brief_history_of_computers\rise_of_the_machines__a_brief_history_of_computers.adoc[]
 
+<<<
+:imagesdir: 1020_confidentiality_integrity_and_availability
+include::1020_confidentiality_integrity_and_availability\confidentiality_integrity_and_availability.adoc[]
 
+<<<
+:imagesdir: 1030_virtualization_for_education
+include::1030_virtualization_for_education\virtualization_for_education.adoc[]
 
+<<<
+:imagesdir: 1040_lab_setup
+include::1040_lab_setup\lab_setup.adoc[]
 
+<<<
+:imagesdir: 2010_symmetric_encryption
+include::2010_symmetric_encryption\symmetric_encryption.adoc[]
 
+<<<
+:imagesdir: 2020_symmetric_encryption__caesar_cipher
+include::2020_symmetric_encryption__caesar_cipher\symmetric_encryption__caesar_cipher.adoc[]
+
+<<<
+:imagesdir: 2030_symmetric_encryption__one-time_pad
+include::2030_symmetric_encryption__one-time_pad\symmetric_encryption__one-time_pad.adoc[]
+
+<<<
+:imagesdir: 2040_symmetric_encryption__aes
+include::2040_symmetric_encryption__aes\symmetric_encryption__aes.adoc[]
+
+<<<
+:imagesdir: 2050_asymmetric_encryption
+include::2050_asymmetric_encryption\asymmetric_encryption.adoc[]
+
+<<<
+:imagesdir: 2060_asymmetric_encryption__rsa
+include::2060_asymmetric_encryption__rsa\asymmetric_encryption__rsa.adoc[]
+
+<<<
+:imagesdir: 2070_asymmetric_encryption__elliptic_curve_cryptography
+include::2070_asymmetric_encryption__elliptic_curve_cryptography\asymmetric_encryption__elliptic_curve_cryptography.adoc[]
+
+<<<
+:imagesdir: 2080_encryption__how_https_works
+include::2080_encryption__how_https_works\encryption__how_https_works.adoc[]
+
+<<<
+:imagesdir: 2090_hashing_files
+include::2090_hashing_files\hashing_files.adoc[]
+
+<<<
+:imagesdir: 2100_hashing_passwords
+include::2100_hashing_passwords\hashing_passwords.adoc[]
+
+<<<
+:imagesdir: 2110_password_managers
+include::2110_password_managers\password_managers.adoc[]
+
+<<<
+:imagesdir: 2120_multifactor_authentication
+include::2120_multifactor_authentication\multifactor_authentication.adoc[]
+
+<<<
+:imagesdir: 3010_social_engineering
+include::3010_social_engineering\social_engineering.adoc[]
+
+<<<
+:imagesdir: 3020_social_media_reconaissance
+include::3020_social_media_reconaissance\social_media_reconaissance.adoc[]
+
+<<<
+:imagesdir: 3030_privacy
+include::3030_privacy\privacy.adoc[]
+
+<<<
+:imagesdir: 3040_phishing
+include::3040_phishing\phishing.adoc[]
+
+<<<
+:imagesdir: 3050_spear_phishing
+include::3050_spear_phishing\spear_phishing.adoc[]
+
+<<<
+:imagesdir: 3060_tailgating
+include::3060_tailgating\tailgating.adoc[]
+
+<<<
+:imagesdir: 3070_dumpster_diving
+include::3070_dumpster_diving\dumpster_diving.adoc[]
+
+<<<
+:imagesdir: 4010_the_rise_of_windows
+include::4010_the_rise_of_windows\the_rise_of_windows.adoc[]
+
+<<<
+:imagesdir: 4020_windows_folders
+include::4020_windows_folders\windows_folders.adoc[]
+
+<<<
+:imagesdir: 4030_windows_accounts
+include::4030_windows_accounts\windows_accounts.adoc[]
+
+<<<
+:imagesdir: 4040_windows_permissions
+include::4040_windows_permissions\windows_permissions.adoc[]
+
+<<<
+:imagesdir: 4050_windows_control_panel
+include::4050_windows_control_panel\windows_control_panel.adoc[]
+
+<<<
+:imagesdir: 4060_windows_firewall
+include::4060_windows_firewall\windows_firewall.adoc[]
+
+<<<
+:imagesdir: 4070_windows_defender
+include::4070_windows_defender\windows_defender.adoc[]
+
+<<<
+:imagesdir: 4080_windows_group_policy
+include::4080_windows_group_policy\windows_group_policy.adoc[]
+
+<<<
+:imagesdir: 4090_windows_powershell__commands
+include::4090_windows_powershell__commands\windows_powershell__commands.adoc[]
+
+<<<
+:imagesdir: 4100_windows_powershell__variables
+include::4100_windows_powershell__variables\windows_powershell__variables.adoc[]
+
+<<<
+:imagesdir: 4110_windows_powershell__scripts
+include::4110_windows_powershell__scripts\windows_powershell__scripts.adoc[]
+
+<<<
+:imagesdir: 4120_windows_powershell__execution_policy
+include::4120_windows_powershell__execution_policy\windows_powershell__execution_policy.adoc[]
+
+<<<
+:imagesdir: 4130_windows_powershell__piping
+include::4130_windows_powershell__piping\windows_powershell__piping.adoc[]
+
+<<<
+:imagesdir: 4140_windows_powershell__debugging
+include::4140_windows_powershell__debugging\windows_powershell__debugging.adoc[]
+
+<<<
+:imagesdir: 4150_windows_command_prompt
+include::4150_windows_command_prompt\windows_command_prompt.adoc[]
+
+<<<
+:imagesdir: 5010_open_source_software
+include::5010_open_source_software\open_source_software.adoc[]
+
+<<<
+:imagesdir: 5020_the_rise_of_linux
+include::5020_the_rise_of_linux\the_rise_of_linux.adoc[]
+
+<<<
+:imagesdir: 5030_linux_distributions
+include::5030_linux_distributions\linux_distributions.adoc[]
+
+<<<
+:imagesdir: 5040_linux_command_line_interface
+include::5040_linux_command_line_interface\linux_command_line_interface.adoc[]
+
+<<<
+:imagesdir: 5050_the_linux_manual
+include::5050_the_linux_manual\the_linux_manual.adoc[]
+
+<<<
+:imagesdir: 5060_linux_folders
+include::5060_linux_folders\linux_folders.adoc[]
+
+<<<
+:imagesdir: 5070_moving_around
+include::5070_moving_around\moving_around.adoc[]
+
+<<<
+:imagesdir: 5080_create_and_delete_files
+include::5080_create_and_delete_files\create_and_delete_files.adoc[]
+
+<<<
+:imagesdir: 5090_editing_files_with_nano
+include::5090_editing_files_with_nano\editing_files_with_nano.adoc[]
+
+<<<
+:imagesdir: 5100_editing_files_with_vim
+include::5100_editing_files_with_vim\editing_files_with_vim.adoc[]
+
+<<<
+:imagesdir: 5110_searching_for_files
+include::5110_searching_for_files\searching_for_files.adoc[]
+
+<<<
+:imagesdir: 5120_permissions
+include::5120_permissions\permissions.adoc[]
+
+<<<
+:imagesdir: 5130_network_mapping
+include::5130_network_mapping\network_mapping.adoc[]
+
+<<<
+:imagesdir: 5140_tcpdump
+include::5140_tcpdump\tcpdump.adoc[]
+
+<<<
+:imagesdir: 5150_curl
+include::5150_curl\curl.adoc[]
+
+<<<
+:imagesdir: 5160_dig
+include::5160_dig\dig.adoc[]
+
+<<<
+:imagesdir: 6010_how_the_internet_connected_us
+include::6010_how_the_internet_connected_us\how_the_internet_connected_us.adoc[]
+
+<<<
+:imagesdir: 6020_packet_tracer
+include::6020_packet_tracer\packet_tracer.adoc[]
+
+<<<
+:imagesdir: 6030_addressing__mac_ipv4_and_ipv6
+include::6030_addressing__mac_ipv4_and_ipv6\addressing__mac_ipv4_and_ipv6.adoc[]
+
+<<<
+:imagesdir: 6040_switches
+include::6040_switches\switches.adoc[]
+
+<<<
+:imagesdir: 6050_routers
+include::6050_routers\routers.adoc[]
+
+<<<
+:imagesdir: 6060_wi-fi_security
+include::6060_wi-fi_security\wi-fi_security.adoc[]
+
+<<<
+:imagesdir: 6070_domain_name_system
+include::6070_domain_name_system\domain_name_system.adoc[]
+
+<<<
+:imagesdir: 6080_nslookup
+include::6080_nslookup\nslookup.adoc[]
+
+<<<
+:imagesdir: 6090_ping
+include::6090_ping\ping.adoc[]
+
+<<<
+:imagesdir: 6100_tracert
+include::6100_tracert\tracert.adoc[]
+
+<<<
+:imagesdir: 6110_ssh
+include::6110_ssh\ssh.adoc[]
+
+<<<
+:imagesdir: 6120_wireshark
+include::6120_wireshark\wireshark.adoc[]
+
+<<<
+:imagesdir: 7010_first_coding_languages
+include::7010_first_coding_languages\first_coding_languages.adoc[]
+
+<<<
+:imagesdir: 7020_why_python
+include::7020_why_python\why_python.adoc[]
+
+<<<
+:imagesdir: 7030_hello_world
+include::7030_hello_world\hello_world.adoc[]
+
+<<<
+:imagesdir: 7040_strings_and_integers
+include::7040_strings_and_integers\strings_and_integers.adoc[]
+
+<<<
+:imagesdir: 7050_working_with_strings
+include::7050_working_with_strings\working_with_strings.adoc[]
+
+<<<
+:imagesdir: 7060_variables
+include::7060_variables\variables.adoc[]
+
+<<<
+:imagesdir: 7070_lists
+include::7070_lists\lists.adoc[]
+
+<<<
+:imagesdir: 7080_basic_operators
+include::7080_basic_operators\basic_operators.adoc[]
+
+<<<
+:imagesdir: 7090_f_strings
+include::7090_f_strings\f_strings.adoc[]
+
+<<<
+:imagesdir: 7100_loops
+include::7100_loops\loops.adoc[]
+
+<<<
+:imagesdir: 7110_functions
+include::7110_functions\functions.adoc[]
+
+<<<
+:imagesdir: 7120_conditionals
+include::7120_conditionals\conditionals.adoc[]
+
+<<<
+:imagesdir: 7130_dunder_methods
+include::7130_dunder_methods\dunder_methods.adoc[]
+
+<<<
+:imagesdir: 7140_dictionaries
+include::7140_dictionaries\dictionaries.adoc[]
+
+<<<
+:imagesdir: 7150_importing
+include::7150_importing\importing.adoc[]
+
+<<<
+:imagesdir: 7160_packages
+include::7160_packages\packages.adoc[]
+
+<<<
+:imagesdir: 8010_hipaa_ferpa_and_other_laws
+include::8010_hipaa_ferpa_and_other_laws\hipaa_ferpa_and_other_laws.adoc[]
+
+<<<
+:imagesdir: 8020_hacking
+include::8020_hacking\hacking.adoc[]
+
+<<<
+:imagesdir: 8030_cybercrime
+include::8030_cybercrime\cybercrime.adoc[]
+
+<<<
+:imagesdir: 8040_cyber_warfare
+include::8040_cyber_warfare\cyber_warfare.adoc[]
+
+<<<
+:imagesdir: 8050_disaster_recovery
+include::8050_disaster_recovery\disaster_recovery.adoc[]
+
+<<<
+:imagesdir: 8060_acceptable_use_policies
+include::8060_acceptable_use_policies\acceptable_use_policies.adoc[]
+
+<<<
+:imagesdir: 8070_cybersecurity_frameworks
+include::8070_cybersecurity_frameworks\cybersecurity_frameworks.adoc[]
+
+<<<
+:imagesdir: 8080_risk_management_strategies
+include::8080_risk_management_strategies\risk_management_strategies.adoc[]
 
 
 <<<
