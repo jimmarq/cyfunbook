@@ -387,5 +387,3 @@ include::9000-Glossary\glossary.adoc[]
 
 
 
-
-

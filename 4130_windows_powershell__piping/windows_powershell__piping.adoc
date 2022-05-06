@@ -6,50 +6,121 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+*Piping* is a way to send the output of one command into another command. Piping is a technique possible in Linux and in Windows scripting. In this section, you will learn to pipe commands into each other to perform complex operations with fairly simple scripts.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Know the pipe character in PowerShell: |
+* Be able to pipe one command into another
 
-The learning objectives should be measurable.
+== How Piping Works
 
-== Lesson Here
+PowerShell commands can be run one at a time. For example, the PowerShell cmdlet `Get-ChildItems` will list files and folders. The PowerShell cmdlet `Get-FileHash` will compute the cryptographic hash of a file. But with piping, the two command can be connected so that all of the files listed can have their hashes computed. This is done through piping.
 
-This should be a couple of pages of text and screenshots.
+PowerShell, like Linux scripting, uses the vertical bar symbol for piping: `|`.  The following code shows a demonstration of how the commands might look.
 
-All images should be original. Do not include images downloaded from the internet.
+[source,powershell]
+----
+PS C:\Users\Jim> command1 | command2
+----
 
-Use Greenshot to take screenshots.
+In this example, command1 would run, and it would send its output to command2. This will be demonstrated in the following exercise.
 
-If you need to make diagrams, use draw.io.
+== Exercise 1: First Pipe
 
-== Exercise
+The first part of this exercise will have you setup a folder and create some files. In the second part, you will list the files and create hashes.
 
-Include detailed steps to practice the topic introduced in the lesson.
+. Launch PowerShell.
+. Run `mkdir pipe` and press enter to create the "pipe" folder in your home directory. (You can delete this folder at the end of the exercise.)
+. Run `cd pipe` and press enter. This will change your working directory to the new "pipe" folder.
++
+.Create the folder and change directory to the new folder
+image::mkdir-cd.png[mkdir pipe, cd pipe]
+. Run the following commands to create 3 files.
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> Set-Content a1.txt -Value "aaaaaaaa"
+PS C:\Users\Jim\pipe> Set-Content a2.txt -Value "aaaaaaaa"
+PS C:\Users\Jim\pipe> Set-Content b1.txt -Value "bbbbbbbb"
+PS C:\Users\Jim\pipe> Set-Content b2.txt -Value "bbbb"
+```
++
+Note that the file contents of a1.txt and a2.txt are identical.
 
-Use screenshots and numbered lists heavily.
 
-Decimals are used for numbered lists.
+The exercise is setup. Now it is time to run the Get-ChildItems (gci) and Get-FileHash cmdlets with and without piping.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Run the following code to list the files.
++
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> gci
+```
++
+.Output of the gci command
+image::gci.png[gci]
+. Run the following code to calculate the hash of each file individually. (The expected output will be shown in the screenshot below.)
++
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> Get-FileHash a1.txt
+PS C:\Users\Jim\pipe> Get-FileHash a2.txt
+PS C:\Users\Jim\pipe> Get-FileHash b1.txt
+PS C:\Users\Jim\pipe> Get-FileHash b2.txt
+```
++
+.Result of hashing files individually
+image::hash-individual.png[get-filehash commands]
+
+So far so good. The hashes of all files were calculated, but this process does not scale well. What if you wanted to calculate the hashes for 10 files, 100 files, or a 1,000 files? It would be cumberson to type each Get-FileHash command manually. This is where piping can be useful.
+
+. Run the following command to pipe the gci output into the Get-FileHash cmdlet.
++
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> gci | Get-FileHash
+```
++
+.Gci piped into Get-FileHash
+image::hash-piped.png[gci piped to get-filehash]
+
+Notice that you did not have to specify the name of a file to hash in the Get-FileHash cmdlet. Instead, the pipe character basically told the Get-FileHash cmdlet to use each of the files from the gci cmdlet.
+
+== Exercise 2: New Pipes
+
+Run the following code to see how different commands can be piped. Take time to read the code and think about what is happening.
+
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> gci | Sort-Object -Property Length
+PS C:\Users\Jim\pipe> gci | Sort-Object -Property Name
+PS C:\Users\Jim\pipe> gci | Get-Content | Sort-Object
+```
+
+Notice that in the last example, there are two pipes. Many pipes can be used in a single line of code.
+
+== Challenge
+
+. Write the code that will compute the hashes of all files in the pipes directory, and sort by hash all in a single line of code.
+# Answer: gci | get-filehash | sort-object
+. The Out-File cmdlet writes output to a file. Create a line of PowerShell code that writes the output of gci to a file called files.txt.
+# Answer: gci | out-file files.txt
+
+== Cleanup
+
+Run the following code to delete the files and the pipe folder.
+
+[source,powershell]
+```
+PS C:\Users\Jim\pipe> rm *.txt
+PS C:\Users\Jim\pipe> cd ..
+PS C:\Users\Jim> rm pipe
+```
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* Why would piping make writing code more efficient?
+* Why would it be useful to sort hashes?
+* What other cmdlets might be useful to combine using piping?
