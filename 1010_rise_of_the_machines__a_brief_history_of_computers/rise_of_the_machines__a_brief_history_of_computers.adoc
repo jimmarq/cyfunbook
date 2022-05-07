@@ -19,6 +19,8 @@ You should be able to:
 ** Personal computers
 ** Smart phones
 ** Internet of Things (IoT)
+** Web 1.0
+** Web 2.0
 
 == In the Beginning
 

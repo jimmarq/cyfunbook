@@ -17,6 +17,26 @@ information security triad:: Confidentiality, integrity, and availability.
 
 integrity:: Ensuring that information is accurate and complete. Changes to data are made by authorized individuals. Integrity is supported by access controls and often verified using cryptographic hashing. Part of the information security triad.
 
+internet of things (IoT):: The trend of connecting many different kinds of devices to the internet. Examples include refrigerators, Amazon Echo, security cameras, light bulbs, and many other kinds of "smart" devices.
+
 key:: Encryption algorithms (ciphers) are pubicly available. Keys are used with algorithms to encrypt or decrypt data. Most encryption keys are kept secret, with the exception of public keys in asymmetric cryptography.
 
+mainframe:: A powerful, centralized computer system that handles transactions and stores data. Relatively dumb client computers would send data to the mainframe where the data would be processed.
+
 redundancy:: Extra hardware (such as power supplies, servers, or network routers) that can continue operating in case of a failure. Supports system availability.
+
+virtual machine:: A guest operating system running in a virtualization platform such as VirtualBox.
+
+VirtualBox:: A popular open source virtualization platform for running virtual machines on a laptop or desktop computer.
+
+virtualization:: Abstracting computer hardware so that virtual machines can be run on one physical computer.
+
+virtualization guest:: A virtual machine that is running on a virtualization platform.
+
+virtualizaiton host:: The base operating system that is supporting virtual machines.
+
+Web 1.0:: The early days of the world wide web where strong technical skills were required to contribute content. Sometimes referred to as the "read-only" web.
+
+Web 2.0:: The "read/write" web. Technological improvements made it easer for everybody to contribute content. Early contributions occurred through blogs, uploading video, and social media.
+
+
