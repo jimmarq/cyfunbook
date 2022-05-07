@@ -1,8 +1,9 @@
 = Cybersecurity Fundamentals
 Dr. Jim Marquardson, Northern Michigan University
-v0.1, 2022-04-12
+v0.1, 2022-08-15
 :doctype: book
 :toc:
+:toclevels: 1
 
 :leveloffset: 1
 
@@ -13,6 +14,9 @@ include::0005-About\about.adoc[]
 
 :numbered:
 
+:leveloffset: 0
+= Introduction
+:leveloffset: 1
 
 <<<
 :imagesdir: 1010_rise_of_the_machines__a_brief_history_of_computers
@@ -29,6 +33,11 @@ include::1030_virtualization_for_education\virtualization_for_education.adoc[]
 <<<
 :imagesdir: 1040_lab_setup
 include::1040_lab_setup\lab_setup.adoc[]
+
+
+:leveloffset: 0
+= Cryptography
+:leveloffset: 1
 
 <<<
 :imagesdir: 2010_symmetric_encryption
@@ -78,6 +87,11 @@ include::2110_password_managers\password_managers.adoc[]
 :imagesdir: 2120_multifactor_authentication
 include::2120_multifactor_authentication\multifactor_authentication.adoc[]
 
+
+:leveloffset: 0
+= Threats
+:leveloffset: 1
+
 <<<
 :imagesdir: 3010_social_engineering
 include::3010_social_engineering\social_engineering.adoc[]
@@ -105,6 +119,11 @@ include::3060_tailgating\tailgating.adoc[]
 <<<
 :imagesdir: 3070_dumpster_diving
 include::3070_dumpster_diving\dumpster_diving.adoc[]
+
+
+:leveloffset: 0
+= Windows
+:leveloffset: 1
 
 <<<
 :imagesdir: 4010_the_rise_of_windows
@@ -165,6 +184,10 @@ include::4140_windows_powershell__debugging\windows_powershell__debugging.adoc[]
 <<<
 :imagesdir: 4150_windows_command_prompt
 include::4150_windows_command_prompt\windows_command_prompt.adoc[]
+
+:leveloffset: 0
+= Linux
+:leveloffset: 1
 
 <<<
 :imagesdir: 5010_open_source_software
@@ -230,6 +253,10 @@ include::5150_curl\curl.adoc[]
 :imagesdir: 5160_dig
 include::5160_dig\dig.adoc[]
 
+:leveloffset: 0
+= Networking
+:leveloffset: 1
+
 <<<
 :imagesdir: 6010_how_the_internet_connected_us
 include::6010_how_the_internet_connected_us\how_the_internet_connected_us.adoc[]
@@ -277,6 +304,11 @@ include::6110_ssh\ssh.adoc[]
 <<<
 :imagesdir: 6120_wireshark
 include::6120_wireshark\wireshark.adoc[]
+
+
+:leveloffset: 0
+= Python
+:leveloffset: 1
 
 <<<
 :imagesdir: 7010_first_coding_languages
@@ -342,6 +374,10 @@ include::7150_importing\importing.adoc[]
 :imagesdir: 7160_packages
 include::7160_packages\packages.adoc[]
 
+:leveloffset: 0
+= Policy and Planning
+:leveloffset: 1
+
 <<<
 :imagesdir: 8010_hipaa_ferpa_and_other_laws
 include::8010_hipaa_ferpa_and_other_laws\hipaa_ferpa_and_other_laws.adoc[]
@@ -374,16 +410,10 @@ include::8070_cybersecurity_frameworks\cybersecurity_frameworks.adoc[]
 :imagesdir: 8080_risk_management_strategies
 include::8080_risk_management_strategies\risk_management_strategies.adoc[]
 
+:numbered!:
 
 <<<
 :imagesdir: 9000-Glossary
 include::9000-Glossary\glossary.adoc[]
-
-
-
-
-
-
-
 
 
