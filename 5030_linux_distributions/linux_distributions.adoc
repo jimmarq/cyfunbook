@@ -6,50 +6,80 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+There are many ways to run Linux. Most individuals and company choose a Linux distribution--basically a flavor of Linux that suits their needs. In this chapter you will get an overview of a few popular Linux distributions.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Identify several popular Linux distributions
+* Choose a Linux distribution for a particular use case
 
-The learning objectives should be measurable.
+== Linux Distributions
 
-== Lesson Here
+A Linux distribution will contain:
 
-This should be a couple of pages of text and screenshots.
+* the Linux kernel (that interfaces with the computer hardware)
+* management tools, and
+* applications.
 
-All images should be original. Do not include images downloaded from the internet.
+A distribution targeting office workers might come with with spreadsheet and document creation software. A distribution targeting artists might forgo spreadsheets in favor of drawing applications. A distribution that runs web servers might come preinstalled with very little software at all and will likely not have any graphical user interface.
 
-Use Greenshot to take screenshots.
+This section describes only a few of the most popular Linux distributions. If you are curious, you can check out more complete list of Linux distributions here: https://en.wikipedia.org/wiki/List_of_Linux_distributions.
 
-If you need to make diagrams, use draw.io.
+=== RedHat Linux
 
-== Exercise
+RedHat was one of the first companies to make money developing and supporting Linux. RedHat Linux is used by many companies, especially in their data centers. RedHat Linux is typically very stable and well tested. Companies often want to purchase software that is supported by competent engineers, and RedHat Linux fits that bill. In 2019, IBM bought RedHat Linux.
 
-Include detailed steps to practice the topic introduced in the lesson.
+Pros of RedHat Linux:
 
-Use screenshots and numbered lists heavily.
+* Stable
+* Popular
+* Support
 
-Decimals are used for numbered lists.
+Cons of RedHat Linux:
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+* Must purchase a license
+* Not always on the cutting edge
+
+=== Ubuntu Linux
+
+Canonical Ltd. stewards the Ubuntu Linux operating system. Ubuntu Linux is aimed at desktop users, the data center, and cloud services. Some of their releases provide long-term support, so a company can feel confident it can run the same operating system for a decade and still get security updates.
+
+Pros of Ubuntu Linux
+
+* Supported by a company
+* Choice between long-term support and faster moving releases
+
+Cons of Ubuntu Linux
+
+* Less popular in the data center
+* Canonical makes architectural changes more frequently than RedHat
+
+=== Kali Linux
+
+Kali Linux is a distribution that comes preinstalled with cybersecurity tools. It can run on lots of different hardware. It is not typically run on servers to do things like serve websites.
+
+Pros of Kali Linux
+
+* Comes preinstalled with many cybersecurity tools
+* Updated frequently
+
+Cons of Kali Linux
+
+* The applications included with Kali are always changing
+* Not a good fit for hosting applications in the data center
+
+== Exercise: Pick Your Distribution
+
+People are your office have been complaining about their Windows laptops for a long time. Your boss has asked you to look into different Linux distributions to see if they would be a good fit to install on the company's desktop computers. Visit the websites of some of the major Linux distributions and decide whether any of these Linux distributions would be a good fit.
+
+* RedHat: https://www.redhat.com/
+* Ubuntu: https://ubuntu.com/
+* Kali: https://www.kali.org/
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why would vendor support matter to a business?
+* What factors would be most important when deciding what technology to adopt in a business?
 

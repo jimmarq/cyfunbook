@@ -11,6 +11,10 @@ confidentiality:: Restricting access to information to authorized people, often 
 
 encryption:: Using a secret key and an algorithm to obscure data. Data can later be decrypted. Support confidentiality.
 
+GPL v2:: Open source license that allows people to use, share, and modify source code. Proprietry software may use open source GPL v2 elements.
+
+GPL v3:: Open source license that allows people to use, share, and mofify source code. Software that uses GPL v3 components must also be open source.
+
 hashing:: A cryptographic process that produces a hash digest that represents the unique "fingerprint" of the data. Use to verify data integrity.
 
 information security triad:: Confidentiality, integrity, and availability.
@@ -19,9 +23,17 @@ integrity:: Ensuring that information is accurate and complete. Changes to data 
 
 internet of things (IoT):: The trend of connecting many different kinds of devices to the internet. Examples include refrigerators, Amazon Echo, security cameras, light bulbs, and many other kinds of "smart" devices.
 
+Kali Linux:: A Linux distribution that includes many cybersecurity tools installed by default.
+
 key:: Encryption algorithms (ciphers) are pubicly available. Keys are used with algorithms to encrypt or decrypt data. Most encryption keys are kept secret, with the exception of public keys in asymmetric cryptography.
 
+linux:: A class of open source operating systems that incorporate the Linux kernal and many open source applications.
+
 mainframe:: A powerful, centralized computer system that handles transactions and stores data. Relatively dumb client computers would send data to the mainframe where the data would be processed.
+
+MIT license:: An open source license that lets people share, modify, and distribute source code as long as the code retains the MIT license.
+
+open source software:: Software that can be distributed, modified, and used freely.
 
 redundancy:: Extra hardware (such as power supplies, servers, or network routers) that can continue operating in case of a failure. Supports system availability.
 

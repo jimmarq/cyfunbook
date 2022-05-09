@@ -1,0 +1,4 @@
+= Lab Virtual Machine Setup
+
+This chapter describes the Linux virtual machine used for all of the Linux labs, python, and several other labs.
+

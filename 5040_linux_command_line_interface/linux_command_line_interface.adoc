@@ -6,47 +6,185 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+The Linux command line interface (CLI) is one of the primary ways that Linux administrators and ethical hackers use Kali Linux. This chapter will walk you through a few commands that you can run in the command line interface.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Launch a terminal
+* Run basic commands: pwd, cd, whoami, ls
+* Run basic commands with options
 
-The learning objectives should be measurable.
+== Basic Linux Commands
 
-== Lesson Here
+In this section you will learn several Linux command by running them.
 
-This should be a couple of pages of text and screenshots.
+=== Launch a Terminal
 
-All images should be original. Do not include images downloaded from the internet.
+. Start the VirtualBox Manager.
+. Star the Kali virtual machine.
+. Login with the username `kali` and the password `kali` if prompted.
+. Click the icon on the toolbar to launch the terminal. The terminal is where you can enter commands with a command line interface.
++
+.Launch a terminal
+image::start-terminal.png[launch a termian]
+. Notice that a terminal icon will appear to the right showing that a terminal application is running. This is similar to how running programs appear at the bottom of the screen in Windows and Mac OSX operating systems.
++
+.Terminal running
+image::terminal-running.png[terminal running]
+. Close the terminal and start it again.
+. Notice that the terminal prompt says `kali@kali`. This refers to your username and computer name. You will be running these commands with the user account `kali` on your virtual machine which was named `kali` when the operating system was first installed.
+. There is a cursor that indicates where you can type commands.
 
-Use Greenshot to take screenshots.
+=== Print Working Directory Command: pwd
 
-If you need to make diagrams, use draw.io.
+The `pwd` command prints the name of the working directory.
 
-== Exercise
+. Run `pwd` in a terminal by typing the command and pressing enter.
+. You should see output similar to the following.
++
+.pwd output
+image::pwd.png[]
+. Note that your home folder is /home/kali. In Linux, users' files and folders are organized in the /home folder. Since kali is your username, your home folder is /home/kali. Every user on the computer would have a separate folder in the /home.
+. Run `PWD` in the termal.
++
+.PWD output
+image::PWD-caps.png[PWD capitalized output]
+. Notice the error message: command not found. In Linux, all commands and file names are *case sensitive*. This behavior is very different in Windows. In Windows, the case of commands and file names are ignored.
 
-Include detailed steps to practice the topic introduced in the lesson.
+=== Change Directory Command: cd
 
-Use screenshots and numbered lists heavily.
+The `cd` command is used to change your working directory. This command lets you move around the directories on your Linux computer.
 
-Decimals are used for numbered lists.
+. Run (not includeing the `$`):
++
+----
+$ pwd
+----
++
+This will just check your current working directory.
+. Run:
++
+----
+$ cd /etc
+----
+. Run:
++
+----
+$ pwd
+----
++
+The location should be:
++
+----
+/etc
+----
++
+Using `cd` followed by a forward slash ('/') changes directory to directory relative to the *root*. The root of the file system is /.
+. Run:
++
+----
+$ cd /
+----
+. Run:
++
+----
+$ pwd
+----
++
+You should see:
++
+----
+/
+----
+. To quickly return to your home folder, run:
++
+----
+$ cd ~
+----
++
+The tilde is a special character used with the `cd` command to return to your home folder.
+. Print your workind directory. It should be `/home/kali`.
+. Run:
++
+----
+$ cd ..
+----
++
+The two periods tells the `cd` command to change directories to the parent folder.
+. Print your working directory again. It should be `/home`.
+. Run:
++
+----
+$ cd kali
+----
++
+Because the kali directory exists in the /home directory, and your working directory is current in /home, you can just type the directory name `kali` after the `cd` command to change directories to /home/kali.
+. Double check that your working directory is now /home/kali.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+=== User Command: whoami
+
+The `whoami` command tells you the account that you are currently logged in as. It might seem obvious right now since you have only logged in with the kali user account, but there are times when you may need to log into systems with multiple accounts.
+
+. Run:
++
+----
+$ whoami
+----
++
+You should see:
++
+----
+kali
+----
+
+Along with `pwd`, the `whoami` command can help you make sense of you are and what you are doing (at least as far as using Linux is concerned).
+
+=== List Command: ls
+
+The `ls` command is used to list files. This is such a common command that even a simple 4-letter word had to be abbreviated to save Linux admins from getting carpal tunnel syndrome, apparently.
+
+. Run the following command to navigate to your home folder.
++
+----
+$ cd ~
+----
+. Run:
++
+----
+$ ls
+----
++
+You will see the list of files and directories in your home folder.
++
+.ls output in the home directory
+image::ls-output.png[ls output in the home directory]
+. Currently, there are just a bunch of folders--no files. Notice that they are laid out left to right. To view them in a list from top to bottom, run:
++
+----
+$ ls -l
+----
++
+.ls -l output
+image::ls-l-output.png[ls -l output]
+. There is a lot more information about each directory. For now, you can ignore all of the extra data presented. It it important to recognize that the `ls` command has several options. The `-l` option is used to show the listing in "long" format. Going forward, you will use command line options for many different kinds of commands.
+
+== Challenge
+
+Adapt the commands in the previous section to complete the following tasks.
+
+. Navigate to `/var`.
+. Print your working directory.
+. List the files and directories in a wide format.
+. Navigate to the `www` directory that exists in the /var directory.
+. Print your working directory.
+. Print the name of the current logged in user.
+. List the files and directories in a wide format.
+. Navigate up one directory.
+. Print your working directory.
+. Return to your home folder.
+. Print your working directory.
 
 == Reflection
 

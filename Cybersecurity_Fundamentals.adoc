@@ -34,6 +34,73 @@ include::1030_virtualization_for_education\virtualization_for_education.adoc[]
 :imagesdir: 1040_lab_setup
 include::1040_lab_setup\lab_setup.adoc[]
 
+:leveloffset: 0
+= Linux
+:leveloffset: 1
+
+<<<
+:imagesdir: 5010_open_source_software
+include::5010_open_source_software\open_source_software.adoc[]
+
+<<<
+:imagesdir: 5020_the_rise_of_linux
+include::5020_the_rise_of_linux\the_rise_of_linux.adoc[]
+
+<<<
+:imagesdir: 5030_linux_distributions
+include::5030_linux_distributions\linux_distributions.adoc[]
+
+<<<
+:imagesdir: 5040_linux_command_line_interface
+include::5040_linux_command_line_interface\linux_command_line_interface.adoc[]
+
+<<<
+:imagesdir: 5050_the_linux_manual
+include::5050_the_linux_manual\the_linux_manual.adoc[]
+
+<<<
+:imagesdir: 5060_linux_folders
+include::5060_linux_folders\linux_folders.adoc[]
+
+<<<
+:imagesdir: 5070_moving_around
+include::5070_moving_around\moving_around.adoc[]
+
+<<<
+:imagesdir: 5080_create_and_delete_files
+include::5080_create_and_delete_files\create_and_delete_files.adoc[]
+
+<<<
+:imagesdir: 5090_editing_files_with_nano
+include::5090_editing_files_with_nano\editing_files_with_nano.adoc[]
+
+<<<
+:imagesdir: 5100_editing_files_with_vim
+include::5100_editing_files_with_vim\editing_files_with_vim.adoc[]
+
+<<<
+:imagesdir: 5110_searching_for_files
+include::5110_searching_for_files\searching_for_files.adoc[]
+
+<<<
+:imagesdir: 5120_permissions
+include::5120_permissions\permissions.adoc[]
+
+<<<
+:imagesdir: 5130_network_mapping
+include::5130_network_mapping\network_mapping.adoc[]
+
+<<<
+:imagesdir: 5140_tcpdump
+include::5140_tcpdump\tcpdump.adoc[]
+
+<<<
+:imagesdir: 5150_curl
+include::5150_curl\curl.adoc[]
+
+<<<
+:imagesdir: 5160_dig
+include::5160_dig\dig.adoc[]
 
 :leveloffset: 0
 = Cryptography
@@ -184,74 +251,6 @@ include::4140_windows_powershell__debugging\windows_powershell__debugging.adoc[]
 <<<
 :imagesdir: 4150_windows_command_prompt
 include::4150_windows_command_prompt\windows_command_prompt.adoc[]
-
-:leveloffset: 0
-= Linux
-:leveloffset: 1
-
-<<<
-:imagesdir: 5010_open_source_software
-include::5010_open_source_software\open_source_software.adoc[]
-
-<<<
-:imagesdir: 5020_the_rise_of_linux
-include::5020_the_rise_of_linux\the_rise_of_linux.adoc[]
-
-<<<
-:imagesdir: 5030_linux_distributions
-include::5030_linux_distributions\linux_distributions.adoc[]
-
-<<<
-:imagesdir: 5040_linux_command_line_interface
-include::5040_linux_command_line_interface\linux_command_line_interface.adoc[]
-
-<<<
-:imagesdir: 5050_the_linux_manual
-include::5050_the_linux_manual\the_linux_manual.adoc[]
-
-<<<
-:imagesdir: 5060_linux_folders
-include::5060_linux_folders\linux_folders.adoc[]
-
-<<<
-:imagesdir: 5070_moving_around
-include::5070_moving_around\moving_around.adoc[]
-
-<<<
-:imagesdir: 5080_create_and_delete_files
-include::5080_create_and_delete_files\create_and_delete_files.adoc[]
-
-<<<
-:imagesdir: 5090_editing_files_with_nano
-include::5090_editing_files_with_nano\editing_files_with_nano.adoc[]
-
-<<<
-:imagesdir: 5100_editing_files_with_vim
-include::5100_editing_files_with_vim\editing_files_with_vim.adoc[]
-
-<<<
-:imagesdir: 5110_searching_for_files
-include::5110_searching_for_files\searching_for_files.adoc[]
-
-<<<
-:imagesdir: 5120_permissions
-include::5120_permissions\permissions.adoc[]
-
-<<<
-:imagesdir: 5130_network_mapping
-include::5130_network_mapping\network_mapping.adoc[]
-
-<<<
-:imagesdir: 5140_tcpdump
-include::5140_tcpdump\tcpdump.adoc[]
-
-<<<
-:imagesdir: 5150_curl
-include::5150_curl\curl.adoc[]
-
-<<<
-:imagesdir: 5160_dig
-include::5160_dig\dig.adoc[]
 
 :leveloffset: 0
 = Networking

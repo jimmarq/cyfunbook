@@ -6,50 +6,57 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Linux is one of the most successful projects in the history of software. This chapter will describe some of the historical events that led to Linux and its popularity.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the components of Linux
+* Describe the *nix design philosophy
 
-The learning objectives should be measurable.
+== Before Linux, there was Unix
 
-== Lesson Here
+In the early days of computing, people were trying to figure out the best way to make computers useful. Designers quickly learned that they needed operating systems that would interface easily with the hardware. They also needed tools to be productive. AT&T's Bell Laboratories invested heavily in innovation in the 1960's and 1970's. An operating system named `Unix` was developed in Bell Labs in 1969. AT&T would go on to license Unix for use by other companies.
 
-This should be a couple of pages of text and screenshots.
+Unix was (and is) a proprietary operating system. That meant that hobbyist and professionals had to pay licensing fees to AT&T in order to use Unix. Over time, the rights to Unix would be sold to different companies, but it remained a proprietary operating system.
 
-All images should be original. Do not include images downloaded from the internet.
+In 1991, a computer science student named Linus Torvalds had an idea. He wanted to create a small operating system that would be similar to Unix, but would be created from the ground up. everal people liked the idea. Over the subsequent years, volunteers created the Linux operating system (named after Linus). They made Linux look and feel much like Unix, but they wrote it using their own code. The Gnus Not Unix (GNU) project developed many of the applications that made Linux useful. Essentially, Linux was composed of the Linux kernal (that interfaces with the computer hardware) and the GNU applications that users would run.
 
-Use Greenshot to take screenshots.
+There are many flavors of Linux and Unix today. They look and run very similarly which leads some to refer to them a *nix distributions. Mac OS X is a Unix operating system. Kali Linux is a Linux operating system. But, many of the commands that work on OS X also work in Kali Linux because they share many of the same programs.
 
-If you need to make diagrams, use draw.io.
+In 2022, Linux has achieved some major victories (per https://en.wikipedia.org/wiki/Usage_share_of_operating_systems):
 
-== Exercise
+* 43% of all devices run Linux
+* All of the fastest 500 supercomputers in the world run Linux.
+* The majority of smartphones run Linux.
 
-Include detailed steps to practice the topic introduced in the lesson.
+Linux has fared well because it is stable, free, and productive. There is a question whether proprietary software can survive in the long term because Linux is a viable alternative. Time will tell.
 
-Use screenshots and numbered lists heavily.
+== *nix Design Philosophy
 
-Decimals are used for numbered lists.
+Linux was designed by a lot of people. One of the design philosophies was to have people write small programs that `do one thing and do that one thing well`. This resulted in hundreds of small programs that Linux users needed to learn. For example, the program `wc` counts words--that's it. The `ls` program lists files--that's it. Competent Linux administrators can string these commands together very efficiently.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Linux also relies heavily on the command line interface (CLI). In a CLI, commands are typed in a `terminal`. This is in contract to Microsoft Windows, which typically relies on a `graphical user interface (GUI)` to run programs and administer the application. A CLI typically has a steeper learning curve than a GUI. With a GUI, different options can be explored visually. With a CLI, programs and options must be sought out.
+
+In the Linux world, the computer gets in your way less. Want to delete every file on your hard drive with a single command? Linux will let you do it! You are expected to be competent enough to know what you're doing, which can be tough when you are learning.
+
+== Exercise: Linux Devices
+
+Use the internet to determine which of the following devices run Linux operating systems.
+
+. Newest XBOX
+. Laptop for sale at Best Buy
+. Amazon Echo
+. PS5
+. iPhone 13
+. Google's web servers
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Does it matter to you which operating system your systems run on?
+* When would it make sense to adopt a CLI instead of a GUI?
+* When would it make sense to adopt a GUI instead of a CLI?
+* Does the *nix phiolosophy of "do one thing and do it well" apply to other parts of society?
+* How might the "do one thing and do it well" philosophy create problems?
 
