@@ -29,13 +29,29 @@ key:: Encryption algorithms (ciphers) are pubicly available. Keys are used with 
 
 linux:: A class of open source operating systems that incorporate the Linux kernal and many open source applications.
 
+linux: cd:: Linux command to change working directories.
+
+linux: ls:: Linux command to list files and directories.
+
+linux: man:: Linux command to launch the Linux manual.
+
+linux: pwd:: Linux command to print the current working directory.
+
+linux: whoami:: Linux command to show the current user in the terminal.
+
 mainframe:: A powerful, centralized computer system that handles transactions and stores data. Relatively dumb client computers would send data to the mainframe where the data would be processed.
 
 MIT license:: An open source license that lets people share, modify, and distribute source code as long as the code retains the MIT license.
 
 open source software:: Software that can be distributed, modified, and used freely.
 
+RedHat Linux:: An enterprise Linux Distribution often used in data centers. Developed by IBM.
+
 redundancy:: Extra hardware (such as power supplies, servers, or network routers) that can continue operating in case of a failure. Supports system availability.
+
+terminal:: The Linux application where commands can are typed.
+
+Ubuntu Linux:: A Linux distribution for desktops, servers, and cloud devices. Developed by Canonical Ltd.
 
 virtual machine:: A guest operating system running in a virtualization platform such as VirtualBox.
 

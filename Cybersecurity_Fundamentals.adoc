@@ -63,8 +63,8 @@ include::5050_the_linux_manual\the_linux_manual.adoc[]
 include::5060_linux_folders\linux_folders.adoc[]
 
 <<<
-:imagesdir: 5070_moving_around
-include::5070_moving_around\moving_around.adoc[]
+:imagesdir: 5070_root
+include::5070_root\root.adoc[]
 
 <<<
 :imagesdir: 5080_create_and_delete_files
