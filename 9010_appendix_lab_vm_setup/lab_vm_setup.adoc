@@ -2,3 +2,8 @@
 
 This chapter describes the Linux virtual machine used for all of the Linux labs, python, and several other labs.
 
+Kali Linux 2022.1 was used.
+
+No additional packages were installed.
+
+No updates were installed. Updates could cause certain labs to behave differently.
