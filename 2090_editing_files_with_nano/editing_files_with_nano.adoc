@@ -6,50 +6,146 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Nano is a simple text editing application that runs in the terminal. It is commonly installed in most Linux distributions. Nano is one of the easiest ways to quickly make changes to text files.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Launch nano
+* Edit a new file with nano
+* Edit an existing file with nano
+* Save nano files
+* Exit nano
+* Use the cat command to print the contents of files
 
-The learning objectives should be measurable.
+== Prerequisites
 
-== Lesson Here
+This lab requires a Kali Linux virtual machine. You should already know:
 
-This should be a couple of pages of text and screenshots.
+* How to navigate directories using `cd`
+* How to check your current working directory with `pwd`
+* How to create files with `touch`
 
-All images should be original. Do not include images downloaded from the internet.
+== Editing Existing Files with Nano
 
-Use Greenshot to take screenshots.
+. Open a terminal window. Navigate to your home directory's Documents folder with the following command.
++
+----
+$ cd ~/Documents
+----
++
+No matter what your working directory was previously, you will now be in /home/kali/Documents. ~/Documents in an absolute path, not a relative path.
+. Create a text file called haiku.txt with the touch command.
++
+----
+$ touch haiku.txt
+----
+. Launch the `nano` editor to with haiku.txt ready for editing using the following command.
++
+----
+$ nano haiku.txt
+----
+. Nano will take over the entire terminal window until you exit.
+. Note the various interface elements.
++
+.nano interface
+image::nano-interface.png[nano interface]
+. Just start typing to add text. This might seem obvious, but other Linux text editors are less intuitive.
+. Write a haiku. As a reminder, a haiku has 3 lines. The first line has 5 syllabues, the second line has 7 syllables, and the last line has 5 syllabues. Your worth as a human being depends heavily on the quality of the haiku that you write in this exercise. Below is a sample.
++
+.Haiku that makes minstrels weep
+image::haiku.png[haiku that makes minstrels weep]
++
+Note that the astrisk next to haiku.txt now appears. The asterisk indicates that the files has unsaved changes.
+. Having a "save" command option would be too obvious, so the makers of nano decided to call this feature "write out."
++
+."Write out" to save
+image::write-out.png[write out to save]
++
+The write out command is used by pressing the control key and "o" at the same time.
+. Nano will give you a change to save the file as a new name. Here, simply press the enter key to accept the suggested name.
++
+.File name to write
+image::file-name-to-write.png[file name to write]
+. Nano should indicate that the write was written (i.e., saved). The asterisk next to the file name will disappear indicating that there are no unsaved changes.
+. Press control + "x" to exit nano. Nano will close and you will be back in the normal terminal interface.
 
-If you need to make diagrams, use draw.io.
+== Editing New Named Files with Nano
 
-== Exercise
+Once you know how to edit existing files with nano, creating and editing new files is not rocket surgery. In this section you will create a file that has no file extension. In the Linux world, file extensions are not required. Many system file just have file names without extensions.
 
-Include detailed steps to practice the topic introduced in the lesson.
+. Run the following command to start editing a new file called `limerick` (with no file extension).
++
+----
+$ nano limerick
+----
+. Write a limerick. As a reminder, limericks have five lines. The first, second, and fifth lines must have seven to ten syllables and rhyme. The third and fourth lines should be shorter--5 to seven syllabus--and rhyme with each other. Below is an example.
++
+.Career in limerick form
+image::limerick.png[career in limerick form]
+. Note that the proposed file name is in the header. This file does not exist, yet. Again, the astrisk indicates unsaved changes.
+. Use control+o to save the file.
+. Accept the file name--it will be the same name you entered in the terminal after the nano command.
+. Use contrl+x to exit.
+. Run `ls` to show the files. The files "haiku.txt" and "limerick" should exist.
 
-Use screenshots and numbered lists heavily.
 
-Decimals are used for numbered lists.
+== Editing New Unnamed Files with Nano
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+You can launch nano and start editing files before you know the file name.
+
+. Run the following command from the terminal.
++
+----
+$ nano
+----
++
+Nano will launch and you can start typing text.
+. Write an acrostic. In an acrostic, the first letter of each line forms a secret message. Below is an example.
++
+.Acrostic
+image::acrostic.png[acrostic]
++
+Notice that where the file name would be we see "New Buffer."
+. Press control+o to save the file. Name the file acrostic.txt. Notice that once saved, "New Buffer" will be replaced with "acrostic.txt."
+. Press control+x to exit.
+
+== Use Cat to Print File Contents
+
+The `cat` command can be used to display file contents in the terminal.
+
+. Run the following commands to display the poems.
++
+----
+$ cat haiku.txt
+----
++
+.Haiku printed with cat
+image::cat-haiku.png[haiku printed with cat]
+. Run the following command to print the limerick.
++
+----
+$ cat limerick
+----
++
+.Limerick printed with cat
+image::cat-limerick.png[limerick printed with cat]
+
+Notice that `cat` does not care about the file extension.
+
+== Practice
+
+. Create a new file for a poem.
+. Add text to the file with `nano`.
+. Save the file and exit `nano`.
+. Display the contents of the file with the `cat` command.
+. Create a new directory called "poems."
+. Move all of your poems into the poems directory.
+. List the files in the poems directory.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* How does nano compare to other text editors you have used.
+* In what ways are plain text files better or worse than Word documents?
+* How much better would Bill Shakespear's work have been if he had access to nano?
