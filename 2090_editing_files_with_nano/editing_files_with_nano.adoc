@@ -50,7 +50,7 @@ $ nano haiku.txt
 . Note the various interface elements.
 +
 .nano interface
-image::nano-interface.png[nano interface]
+image::nano-interface.png[version of nano in the top left, name of the file in the top middle, size of the file is in the bottom middle, and commands are in the very bottom]
 . Just start typing to add text. This might seem obvious, but other Linux text editors are less intuitive.
 . Write a haiku. As a reminder, a haiku has 3 lines. The first line has 5 syllabues, the second line has 7 syllables, and the last line has 5 syllabues. Your worth as a human being depends heavily on the quality of the haiku that you write in this exercise. Below is a sample.
 +

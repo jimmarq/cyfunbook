@@ -6,50 +6,69 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+If you have ever forgotten where you saved a file, you know the value of search. Tools exist on Linux to search for files by file name, or you can search the contents of files.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Search file name using `locate`
+* Search file contents using `grep`
 
-The learning objectives should be measurable.
+== Searching for File Names
 
-== Lesson Here
+The `locate` command can be used to find files by filename. The locate command searches all file names on the computer using an index that is rebuilt periodically (often daily). It is possible that very new files may not be in the index. A benefit of the locate command is that it runs extremely quickly--the database is typically searched in less than a second.
 
-This should be a couple of pages of text and screenshots.
+. Launch a Kali terminal.
+. Imagine that you have heard that Linux has a system log called "syslog." Run the following command to find files that have "syslog" in the file name.
++
+----
+$ locate syslog
+----
++
+You will see output similar to the following.
++
+.'locate syslog' output
+image::locate-syslog-output.png[locate syslog output]
+. There are a lot of results. It may take some time to look through the results to find the file you really want.
+. By default, `locate` finds matches in the directory or file name. So a search for "bunny" would find /home/kali/bunny/easter.txt and /home/kali/bunny.txt.
+. To search only for file names (not directories), use the `-b` option.
++
+----
+$ locate -b syslog
+----
 
-All images should be original. Do not include images downloaded from the internet.
+In this example, the file /var/log/syslog is the file you are looking for.
 
-Use Greenshot to take screenshots.
+Remember that `locate` only looks at file names--it does not look at any of the file content.
 
-If you need to make diagrams, use draw.io.
+== Searching for File Content
 
-== Exercise
+The `grep` command looks inside files for specific contents. The syntax is `grep [options] [search pattern] [file(s) to search]`
 
-Include detailed steps to practice the topic introduced in the lesson.
+. Suppose you wanted to search the log files for the text "user kali."
+----
+$ grep -a "user kali" /var/log/auth.log
+----
+. The contents might be too long to show on one screen. It is sometimes helpful to "pipe" the contents to the `less` command.
++
+----
+$ grep -a "user kali" /var/log/auth.log | less
+----
++
+When the command runs, you can use the up and down arrow keys to nagivate. The output of the `grep` command was passed to the `less` command. To quit the `less` command, press `q`.
 
-Use screenshots and numbered lists heavily.
+== Challenge
 
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Find entries in the in the /var/auth.log file that have the words "user root."
+# locate firefox
+. Find files with the name "firefox" in the file name only.
+# locate -b apache
+. Find files and directories with "apache" in the name.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* When would it be most useful to search by file name?
+* When would it be most useful to search for content within files?
+
 
