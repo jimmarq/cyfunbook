@@ -1,6 +1,6 @@
 = Switches
 
-Author: Dr. Jim Marquardson
+Author: Justin Timmer
 
 Changelog
 
