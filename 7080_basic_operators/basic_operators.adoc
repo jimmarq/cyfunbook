@@ -1,6 +1,6 @@
 = Basic Operators
 
-Author: Dr. Jim Marquardson
+Author: Sarah Nelson 
 
 Changelog
 
