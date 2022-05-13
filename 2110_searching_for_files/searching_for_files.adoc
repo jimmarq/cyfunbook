@@ -42,29 +42,99 @@ In this example, the file /var/log/syslog is the file you are looking for.
 
 Remember that `locate` only looks at file names--it does not look at any of the file content.
 
+== Load Files
+
+. Run the following command in the Kali terminal to ensure you are in your home directory.
++
+----
+$ cd ~
+----
+. Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
++
+----
+$ git clone https://github.com/jimmarq/cyfunfiles.git
+----
+. Change directories to the *cyfunfiles* directory.
++
+----
+$ cd cyfunfiles
+----
+. Change directories to the *linux_finding* subdirectory.
++
+----
+$ cd linux_finding
+----
+. Look at the files in the folder with `ls`.
++
+----
+$ ls
+----
++
+.Contents of the cyfunfiles directory
+image::linux_finding_files.png[contents of cyfunfiles]
+. Use the `locate` command to look for fruits.txt.
++
+----
+$ locate fruits.txt
+----
++
+If you just checked out the files from GitHub for the first time, the `locate` command could not find fruits.txt, even though you obviously see it.
+. Run the following command to update the database of files on your system.
++
+----
+$ sudo updatedb
+----
++
+You may need to enter the password `kali` if prompted. This command will take about 15 seconds to run. It is indexing all of the file names on your system.
+. Run the following command to look for fruits.txt again.
++
+----
+$ locate fruits.txt
+----
++
+You should see that fruits.txt can be found in /home/kali/cyfunfiles/linux_finding/.
+
 == Searching for File Content
 
 The `grep` command looks inside files for specific contents. The syntax is `grep [options] [search pattern] [file(s) to search]`
 
-. Suppose you wanted to search the log files for the text "user kali."
-----
-$ grep -a "user kali" /var/log/auth.log
-----
-. The contents might be too long to show on one screen. It is sometimes helpful to "pipe" the contents to the `less` command.
+. Run the following command to look for the word *celery* in the file veggies.txt.
 +
 ----
-$ grep -a "user kali" /var/log/auth.log | less
+$ grep "celery" veggies.txt
 ----
 +
-When the command runs, you can use the up and down arrow keys to nagivate. The output of the `grep` command was passed to the `less` command. To quit the `less` command, press `q`.
+If the output is not blank, it means the text was found.
+. Search for the word "strawberry" in veggies.txt.
++
+----
+$ grep "strawberry" veggies.txt
+----
++
+In this case, there is not output, meaning that the search did not return any results.
++
+.Search results for celery and strawberry
+image::grep-results-fruits-and-veggies.png[search results for grep--one for celery and none for strawberry]
+. Run the following command to look for the word *banana* in all files in the current folder.
++
+----
+$ grep "banana" ./*
+----
++
+The "./" tells Linux to look in the current folder, and the aserisk tells kali to match any file name. The grep command should find the word *banana* in fruits.txt.
 
 == Challenge
 
 . Find entries in the in the /var/auth.log file that have the words "user root."
-# locate firefox
 . Find files with the name "firefox" in the file name only.
-# locate -b apache
 . Find files and directories with "apache" in the name.
+. How many exmployees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
+
+// Solutions:
+// grep -a "user root" /var/auth.log
+// locate firefox
+// locate -b apache
+// grep "Tavu" ./*
 
 == Reflection
 
