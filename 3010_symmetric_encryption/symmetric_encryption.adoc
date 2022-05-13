@@ -1,6 +1,6 @@
 = Symmetric Encryption
 
-Author: Dr. Jim Marquardson
+Author: Greg O'Hagan
 
 Changelog
 
