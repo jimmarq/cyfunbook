@@ -117,7 +117,8 @@ Notice that in the Kali terminal, files have a white font and directories are bl
 $ mv *.txt sweetcaroline
 ----
 +
-Instead of moving files one by one, it is possible to move multiple files at once. Here, the `*` character is used to match and file that has the .txt extension. The `*` character is a commond wildcard characters. Wildcard characters are used for pattern matching.
+//Must escape the first instance of the asterisk so that the contents are not bolded.
+Instead of moving files one by one, it is possible to move multiple files at once. Here, the `\*` character is used to match any file that has the .txt extension. The `*` character is a commond wildcard characters. Wildcard characters are used for pattern matching.
 . Change directories to sweetcaroline and list the files.
 +
 .me.txt and you.txt in sweetcaroline
