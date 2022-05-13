@@ -119,6 +119,10 @@ image::save-state.png[save the machine state]
 image::resize.png[resize a virtual machine window]
 * I forgot my username and password.
 ** It's `kali` and `kali`, all lower case.
+* If Kali is not booting and you see a message about a "BUG" and "CPU" being stuck, open the virtual machine settings in the VirtualBox Manager. Open the `System` tab, then the `Processor` tab, then ensure that the `Execution Cap` is 100%.
++
+.Check Execution Cap
+image::troubleshoot-cpu-limitation.png[change execution cap to 100%]
 
 == Reflection
 
