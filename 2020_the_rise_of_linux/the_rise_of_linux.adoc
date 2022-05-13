@@ -15,7 +15,7 @@ You should be able to:
 * Describe the components of Linux
 * Describe the *nix design philosophy
 
-== Before Linux, there was Unix
+== Before Linux, There Was Unix
 
 In the early days of computing, people were trying to figure out the best way to make computers useful. Designers quickly learned that they needed operating systems that would interface easily with the hardware. They also needed tools to be productive. AT&T's Bell Laboratories invested heavily in innovation in the 1960's and 1970's. An operating system named `Unix` was developed in Bell Labs in 1969. AT&T would go on to license Unix for use by other companies.
 
