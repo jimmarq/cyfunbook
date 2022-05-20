@@ -3,7 +3,7 @@ Dr. Jim Marquardson, Northern Michigan University
 v0.1, 2022-08-15
 :doctype: book
 :toc:
-:toclevels: 2
+:toclevels: 1
 
 :leveloffset: 1
 
@@ -91,8 +91,8 @@ include::2120_permissions\permissions.adoc[]
 include::2130_network_mapping\network_mapping.adoc[]
 
 <<<
-:imagesdir: 2140_tcpdump
-include::2140_tcpdump\tcpdump.adoc[]
+:imagesdir: 2140_packet_analysis
+include::2140_packet_analysis\tcpdump.adoc[]
 
 <<<
 :imagesdir: 2150_curl

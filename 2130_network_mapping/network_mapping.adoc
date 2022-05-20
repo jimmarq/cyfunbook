@@ -30,6 +30,7 @@ So is network scanning legal? There is some gray area. It is very rare for someb
 . Open a terminal.
 . Run the following command to do a basic network scan with namp. The scan should take less than 30 seconds to complete.
 +
+[source,sh]
 ----
 $ nmap scanme.nmap.org
 ----
