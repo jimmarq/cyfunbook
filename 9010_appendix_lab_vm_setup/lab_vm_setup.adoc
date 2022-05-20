@@ -2,8 +2,6 @@
 
 This chapter describes the Linux virtual machine used for all of the Linux labs, python, and several other labs.
 
-Kali Linux 2022.1 was used.
+Kali Linux 2022.2 was used. No additional packages were installed. No updates were installed. Updates could cause certain labs to behave differently. The guiding decision for making a simple lab environment was ease of creating and destroying the environment if needed.
 
-No additional packages were installed.
-
-No updates were installed. Updates could cause certain labs to behave differently.
+When needed, files are downloaded from a GitHub repository.
