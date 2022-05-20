@@ -3,7 +3,7 @@ Dr. Jim Marquardson, Northern Michigan University
 v0.1, 2022-08-15
 :doctype: book
 :toc:
-:toclevels: 1
+:toclevels: 2
 
 :leveloffset: 1
 

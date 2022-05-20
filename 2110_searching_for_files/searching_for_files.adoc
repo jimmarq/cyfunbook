@@ -20,6 +20,11 @@ You should be able to:
 The `locate` command can be used to find files by filename. The locate command searches all file names on the computer using an index that is rebuilt periodically (often daily). It is possible that very new files may not be in the index. A benefit of the locate command is that it runs extremely quickly--the database is typically searched in less than a second.
 
 . Launch a Kali terminal.
+. If your Kali virtual machine is new, the database of files might not be udpdated. Run the following command to update the database.
++
+----
+$ sudo updatedb
+----
 . Imagine that you have heard that Linux has a system log called "syslog." Run the following command to find files that have "syslog" in the file name.
 +
 ----
@@ -48,6 +53,11 @@ Remember that `locate` only looks at file names--it does not look at any of the 
 +
 ----
 $ cd ~
+----
+. Run the following command to delete the cyfunfiles directory (if it exists).
++
+----
+$ rm -rf cyfunfiles
 ----
 . Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
 +
