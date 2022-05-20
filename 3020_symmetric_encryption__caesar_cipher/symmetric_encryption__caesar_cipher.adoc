@@ -1,12 +1,17 @@
 = Symmetric Encryption: Caesar Cipher
 
-Author: Dr. Jim Marquardson
+Author: Greg O'Hagan
 
 Changelog
 
-* 2022-08-15 Initial Version
+* 2022-05-18 Rough Draft - inprogress - needs pics
 
-TODO: Introduce the topic in a paragraph here.
+A Caesar Cipher (also known as a subsitution cipher) is the earlist form of cyptogrophy where letters or numbers each have their own subsitute. For example if I made my own code I might look like this.
+
+.. abcdefghijklmnopqrstuvwxyz = alphabet
+.. pziuytrewqasdfghjklmnbvcxo = cipher
+
+Each letter in the alphabet has a coresponding letter in the cipher. This can also be done with numbers
 
 Include images like so:
 
@@ -17,21 +22,37 @@ Include images like so:
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* History
+* Pros
+* Cons
 
 The learning objectives should be measurable.
 
-== Lesson Here
+== Caesar Ciphers
 
-This should be a couple of pages of text and screenshots.
 
-All images should be original. Do not include images downloaded from the internet.
+Where did the name Caesar Cipher come from?
 
-Use Greenshot to take screenshots.
+** It dates back to the Roman empire. Julius Caesar would use subsitution to encrypt his messages during war times.
 
-If you need to make diagrams, use draw.io.
+Problems?
+
+** Caesar Ciphers are very easy to crack
+
+* Brute force, frequency analysis, and pattern recognition software are all tool that can be used to break this kind of encryption
+
+Why use it?
+
+** If you want to mess with your friends or family, here you go
+
+** If you want to secure important or sensative data then don't use a Caesar Cipher. There are a host of other highly preforing encryption standards that will serve your needs far better
+//This should be a couple of pages of text and screenshots.
+
+//All images should be original. Do not include images downloaded from the internet.
+
+//Use Greenshot to take screenshots.
+
+//If you need to make diagrams, use draw.io.
 
 == Exercise
 

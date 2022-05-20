@@ -4,9 +4,9 @@ Author: Greg O'Hagan
 
 Changelog
 
-* 2022-08-15 Initial Version
+* 2022-05-18 Rough Draft - needs pic's
 
-TODO: Introduce the topic in a paragraph here.
+Encyption (or Cyptogrophy) is the process of taking plain text data and scrammbling it using a cipher. Symmetric Encryption is any encryption process that uses the same key for encrypting and decrypting data.
 
 Include images like so:
 
@@ -17,32 +17,75 @@ Include images like so:
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* The first Semmetric Encryption Algorithm 
+* Types of Symmetric Encryption
+* AES
 
 The learning objectives should be measurable.
 
-== Lesson Here
+== Symmetric Encryption
 
-This should be a couple of pages of text and screenshots.
+The origional symmetric-key algorithum was a block cipher called Data Encryption Standard or DES
 
-All images should be original. Do not include images downloaded from the internet.
+** Used a 64-bit block size and a 56-bit key size
+** Derivatives of DES were devolped to improve it
+** examples: 3DES, IDEA and Blowfish
+. Block size = how many bits of data (1's and 0's) the algorith outputs after its encypted
+. Key size = how many bits long the key is that the algorithum generates to decrypt the data
+. The longer the Block/Key size is the harder it is to crack the encryption 
 
-Use Greenshot to take screenshots.
+There are two major types of Symmetric-Key encryption 
 
-If you need to make diagrams, use draw.io.
+. Block ciphers
+** encrypt data in chunks (a certain number of byes at a time)
+. Stream ciphers 
+** encrypt data a single bit at a time
+** much faster than block ciphers
+** Rivest Cipher 4 (RC4) was the most polular for a long time until it was replaced in 2013 by AES 
+
+Advanced Encryption Standard (AES)
+
+** AES is a block cyper that uses a 128 bit block size and a 128,192 or 256 bit key
+** For the time being AES is virtually uncrackable
+** AES is so fast that applications that traditionally used stream ciphers have  switched to AES
+
+
+
+
+//This should be a couple of pages of text and screenshots.
+
+//All images should be original. Do not include images downloaded from the internet.
+
+//Use Greenshot to take screenshots.
+
+//If you need to make diagrams, use draw.io.
 
 == Exercise
 
-Include detailed steps to practice the topic introduced in the lesson.
 
-Use screenshots and numbered lists heavily.
+. Go to CyberChef.org.
+.. in the search bar in the top left search for AES 
+. Select AES encrypt
+.. drag it to right and drop it in the area labed recipes 
+.. type "Isn't encrytion neat" into the input box
+. Create a Key (Leave in Hex)
+.. Type random letters (a-f) and numbers(1-9) until you have met either the 128, 192 or 256 requirements displayed in the output box
+.. Example (I used a 256 bit Key): 100292929239239876457638742736234692348234987283426287364237628
+. Create a IV (Leave in Hex)
+.. Type random letters (a-f) and numbers(1-9) until you have met either the 128, 192 or 256 requirements displayed in the output box
+.. Example (I used a 256 bit Key)  :3872273628736287362837642388hfhff
+. OutPut
+.. Now our message "Isn't encrytion neat" is enrypted with the AES algorithm
+.. Copy and paste your KEY, IV and Output into a text file
+. Search for AES decrypt 
+.. Delete AES encrypt
+.. Drag and drop AES decrypt into the recipe box
+. Decrypt the data
+.. Paste your output from AES encryp into the input box for AES decrypt
+.. Paste your Key and IV into the AES decrypt algorithum 
+. Output #2
+.. You should now be looking at the same phase you entered before "Isn’t encrytion neat" but now in the output section 
 
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
 //. This is step two
 //+
 //.This text will go under the image.
@@ -50,6 +93,6 @@ Decimals are used for numbered lists.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What other implications can you think of where AES might be used (*hint it's not just limited to TCP/IP uses)
+* How long do you think it would take to brute force the AES algorithm 
 
