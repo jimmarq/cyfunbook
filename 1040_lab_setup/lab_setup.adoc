@@ -27,8 +27,12 @@ More information can be found at https://www.kali.org/.
 
 == Exercise: Install a Kali Virtual Machine
 
+Note: Like all software, Kali has new updates and releases. In this lab, you might see small differences in version numbers in the text and screenshots (e.g., Kali 2022.1 and 2022.2). The instructions may have to be adapted slightly based on changes to Kali's website or the Kali operating system.
+
 You should already have VirtualBox and the VirtualBox Guest Additions installed. If you do not have these, refer to the chapter on setting up virtualization on your computer. The remainder of this section will walk you though the Kali virtual machine creation. Note that the organization lf Kali's website may change over time, so the screenshots and exact links to click on may change.
 
+. Try  the direct link: https://kali.download/virtual-images/kali-2022.2/kali-linux-2022.2-virtualbox-amd64.ova 
+.. If this link does not work, or if you wanted the newest version of Kali, find the newer download using the steps below.
 . Go to https://www.kali.org/get-kali/.
 . Click on the `Virtual Machines` section.
 +
