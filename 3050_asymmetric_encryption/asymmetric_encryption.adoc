@@ -6,50 +6,54 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Asymmetric encryption uses two keys: a public key and a private key. For this reason, asymmetric encryption is sometimes referred to as public key/private key encryption. With asymmetric encryption, one key is used to encrypt, and the other key is used to decrypt. Without asymmetric encryption, modern online business transactions could not take place.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe principles of asymmetric encryption
+* Describe uses of asymmetric encryption
+* Reocognize two popular asymmetric encryption systems--RSA and Elliptic Curve Cryptography
+* Compare symmetric encryption with asymmetric encryption
 
-The learning objectives should be measurable.
+== Asymmetric Encryption Principles
 
-== Lesson Here
+Two keys are used in asymmetric cryptography: a private key and a public key. The private key should be carefully guarded. The private key typically lives in a file on a computer. Access to that file should be restricted. If the private key is ever disclosed to the public, they private key should be revoked and never used again.
 
-This should be a couple of pages of text and screenshots.
+The public key can be shared with anybody. The public key can be published on a website, sent via email, put in a chat, etc. There is no danger in sending a public key. Basically, it is impossible for a public key to become compromised.
 
-All images should be original. Do not include images downloaded from the internet.
+With symmetric encryption, the same key is used to encrypt and decrypt data. Symmetric encryption is fast and efficient. With asymmetric encryption, one key encrypts and the other key decrypts. If you encrypt data with the public key, only the private key can decrypt the data. If you encrypt data with the private key, the public key can be used to decrypt the data, verifying that the data was encrypted by the only person who has the private key.
 
-Use Greenshot to take screenshots.
+Private keys can also be used to digitally sign files. The private key is used to create a digital signature. The signature does not look anything like a penned signature. A ditial signature is like a digital fingerprint with a bunch of 0s and 1s. When a file is digitally signed with a private key, everybody can verify the signature with the public key.
 
-If you need to make diagrams, use draw.io.
+== Symmetric Key Exchange Process
 
-== Exercise
+Before you can send and receive encrypted data with HTTPS (e.g., https://www.google.com), your web browser and the web server need to agree on a temporary symmetric encryption key. Asymmetric encryption is used to share a temporary symmetric key, and once the symmetric key has been shared, all data with be encrypted and decrypted with the symmetric key. Basically, asymmetric encryption boostraps the encryption process, but symmetric encryption does the bulk of the encryption and decryption.
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Important Cryptosystems
 
-Use screenshots and numbered lists heavily.
+Rivest-Shamir-Adlemen (*RSA*) and Elliptic Curve (*EC*) cryptography are two popular cryptosystems. They are not just one algorithm, but specifications for creating keys, signing files, verifying signatures, and more. RSA is a bit older and battle tested, but it has some limitations. EC cryptography is increasingly adopted, especially for key exchange processes. RSA's security relies primarily on the difficult computers have factoring very large numbers. EC cryptography's security relies primarily on the difficult of finding original plot points on a graph. With RSA, keys are computationally expensive to create. With EC, keys are computationally cheap to make.
 
-Decimals are used for numbered lists.
+== Symmetric vs Asymmetric Encryption
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Symmetric encryption is not "better" than asymmetric encryption. Asymmetric encryption is not "better" than symmetric encryption. They both have important uses.
+
+Asymmetric encryption is good for:
+
+* Digitally signing files
+* Exchanging temporary keys used for symmetric encryption
+* Verifying who encrypted or signed a file
+
+Symmetric encryption is good for:
+
+* Fast encryption and decryption
+* Encrypting data on hard drives
+* Encrypting data over a network, like web pages (once a key has been shared with asymmetric encryption)
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Should the government be able to decrypt all encrypted data?
+* Do you trust yourself to protect your private keys?
+* Would you trust online services to hold and protect your private keys?
 

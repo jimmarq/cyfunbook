@@ -6,50 +6,39 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
-
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Explain how web browsers encrypt data
 
-The learning objectives should be measurable.
+== RSA Key Exchange
 
-== Lesson Here
+Here is how your computer might communicate with https://www.google.com using TLS 1.2.
 
-This should be a couple of pages of text and screenshots.
+1. Your browser tells the server hosting https://www.google.com that you want a secure connection.
+2. The web server hosting https://www.google.com sends you its public key.
+3. You generate a random, temporary key. You encrypt the key with Google's public key. (Only Google can decrypt the key).
+4. Google decrypts the temporary key with its private key.
+5. Google encrypts the https://www.google.com web page data with the temporary key and a symmetric algorithm.
+6. Your web browser decrypts the data with the temporary key and a symmetric algorithm.
 
-All images should be original. Do not include images downloaded from the internet.
+Steps 1-4 are using asymmetric encryption. Steps 5-6 use symmetric encryption. Steps 5 and 6 will continue as long as you keep loading pages on https://www.google.com. When you close your web browser, or after a period of inactivity, your browser and Google will make 
+the temporary key expire.
 
-Use Greenshot to take screenshots.
+== Elliptic Curve Diffie-Helman Key Exchange
 
-If you need to make diagrams, use draw.io.
+Here is how your computer might communicate with https://www.google.com using TLS 1.3.
 
-== Exercise
+1. Your browser generates an EC key pair, sends the public key to the server hosting https://www.google.com and asks for a secure connection.
+2. The web server hosting https://www.google.com generates a new EC key pair and sends you its public key.
+3. You generate a shared secret by multiplying your private key with Google's public key. You send some encrypted data using a symmetric data, using the shared secret key.
+4. Google generates the same shared secret by multiplying its private key with your public key. Google can decrypt the data you sent.
 
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+With TLS 1.3, new keys are created for every new browsing session. If you close your web browser, all temporary keys are discarded. TLS 1.3 provides perfect forward secrecy.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Who is responsible for ensuring the secure cryptographic protocols are used? Web browser developers? Legislators? Operating system vendors? Regular users of technology?
+* Strong cryptography enables privacy. Some people use the internet for bad stuff. Should governments have a master key that can unlock all encrypted communications?
 
