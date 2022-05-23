@@ -1,0 +1,115 @@
+= Password Managers
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+Hashes are one-way functions so it is impossible to reconstruct the hash input from the hash output. But, for passwords, there are ways that password hashes can be "cracked." Several attacks will be demonstrated in this chapter.
+
+== Learning Objectives
+
+You should be able to:
+
+* Use `hashcat` to crack passwords using:
+** Dictionary attacks
+** Brute force attacks
+
+== Crack Hashes
+
+LinkedIn suffered a data breach in 2012. Millions of usernames and password hashes were leaked. Unfortunately, LinkedIn did not salt passwords, and it used the SHA1 algorithm. SHA1 was built for speed, which is great for password crackers. In this section you will do just what the hackers did--try to crack the LinkedIn passwords. For simplicity sake, only a small subset of the actual passwords are included here.
+
+. Launch the Kali virtual machine.
+. Open a terminal.
+. Run the following command. Note that it will delete any files you added or changed in the cyfunfiles folder.
++
+[source,sh]
+----
+$ rm -rf cyfunfiles
+----
+. Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
++
+[source,sh]
+----
+$ git clone https://github.com/jimmarq/cyfunfiles.git
+----
+. Change directories to the *cyfunfiles* directory.
++
+[source,sh]
+----
+$ cd cyfunfiles
+----
+. Change directories to the *crypto_crack_hashes* subdirectory.
++
+[source,sh]
+----
+$ cd crypto_crack_hashes
+----
+. Look at the files in the folder with `ls`.
++
+[source,sh]
+----
+$ ls
+----
+
+In the next sections, you will perform various attacks using a program called John (the Ripper, but many people just refer to the program as "John.") A more sophisticated program for cracking hashes is Hashcat, but it does not run well on virtual machines.
+
+=== Dictionary Attack
+
+Dictionary attacks hash all of the words in a list and compare those hashes to the passwords being cracked. Dictionary attacks often work well because people are predictable and do not choose randome passwords.
+
+. Run the following command to run a dictionary attack.
++
+[source,sh]
+----
+$ john --wordlist=/usr/share/wordlists/metasploit/password.lst --format=Raw-SHA1 linkedin_hashes.txt
+----
++
+The file /usr/share/wordlists/metasploit/password.lst has about 90,000 passwords.
+. The attack should run very fast. All 90,000 passwords were checked against the LinkedIn hashes very quickly.
+. If you missed the hashes in the terminal, you can check to see what has been cracked with:
++
+[source,sh]
+----
+$ john -show linkedin_hashes.txt
+----
+
+When dictionary attacks fail, you can:
+. find a bigger dictionary, or
+. try a different type of attack.
+
+In the next section, you'll try a brute force attack.
+
+=== Brute Force Attack
+
+In a brute force attack, all possible passwords for given character sets will be tried. The larger the character set, the longer the attack can take to finish. Some of John's different preconfigured modes are:
+
+* Lower: lower case
+* Upper: upper case
+* LowerNum: lower case and numbers
+* UpperNum: upper case and numbers
+* ASCII: lower case, upper case, numbers, and symbols
+* Alnum: lower case, upper case, and numbers
+
+. Try cracking passwords with all lower case letters.
++
+[source,sh]
+----
+$ john -incremental=Lower linkedin_hashes.txt
+----
+
+=== Clean up / Restart
+
+If you want to delete the hashes to try different attacks you will have to delete the "potfile" (where hashes are stored).
++
+[source,sh]
+----
+$ rm ~/.john/john.pot
+----
+
+== Reflection
+
+* Why don't people choose stronger passwords?
+* If you picked a strong password, would brute force and dictionary attacks have been successful?
+
