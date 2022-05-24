@@ -6,50 +6,66 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Spear phishing attacks are phishing attacks that are customized to exploit an individual target. Typically, spear-phishing attacks are used for high-value targets. Even the savviest professional can fall victim to spear-phishing attacks.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Differentiate a spear-phishing attack from a regular phishing attack
+* Craft a spear-phishing email
 
-The learning objectives should be measurable.
+== Phishing and Spear Phishing
 
-== Lesson Here
+Phishing is an attack that uses email to solicit information or action from a victim. Many phishing emails are generic and easy to detect. Below is a sample phishing email.
 
-This should be a couple of pages of text and screenshots.
+----
+Dear Customer,
 
-All images should be original. Do not include images downloaded from the internet.
+We have recently detected fraud on your account. Please reply to this email with your username and password so that we can refund all fraudulent transactions. If you do not reply within 24 hours, your account will be deleted and you will be responsible for reimbursing all fraudulent transactions.
 
-Use Greenshot to take screenshots.
+Sincerely,
+The Security Department
+eBay.com
+----
 
-If you need to make diagrams, use draw.io.
+The generic phishing email is addressed to a vague "Customer" instead of a named individual. The email does not include any relevant fraud details. These kinds of emails are sent out by the millions in hopes that a few people fall victim to the attack.
 
-== Exercise
+*Spear phishing* is a technique where social engineers specifically craft phishing emails for individuals. A sample spear-phishing email might look like the following.
 
-Include detailed steps to practice the topic introduced in the lesson.
+----
+Hi Sally Jones!
 
-Use screenshots and numbered lists heavily.
+I am the new Assistant to the Youth Soccer President. Your daughter Jenny's soccer team had to have its tournament schedule updated. The construction at Looper Fields is causing a lot of havoc for everybody. Please run the attached program to see the new schedule.
 
-Decimals are used for numbered lists.
+Thanks for your patience while we get everything ready for the tournament!
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Sincerely,
+Doug Bonk
+Assistant to the Youth Soccer President
+----
+
+In the email above, the social engineer used social media to learn the following:
+
+* Sally has a daughter named Jenny
+* Jenny plays on a youth soccer team
+* There is an upcoming soccer tournament in which Jenny will play
+* The tournament will take place at Looper Fields
+* There is construction happening at Looper Fields
+
+With that information, a social engineer can craft a convincing email. If Sally is a high-value target, social engineers will spend a lot of time learning about her so that they can craft attacks specifically for her.
+
+== Spear Phishing Exercise
+
+You will be asked to craft a spear-phishing attack, but you are not authorized to *conduct* a spear-phishing attack.
+
+. Pick a person to whom you would hypothetically send a spear-phishing email. 
+.. It would be best to pick somebody that you do not already know well.
+. Perform social media reconnaissance on that individual.
+. Draft a spear-phishing email using the data you got in the social media reconnaissance. (DO NOT SEND THE EMAIL.)
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why are spear-phishing emails so effective?
+* How would you protect yourself against spear-phishing attacks?
 
