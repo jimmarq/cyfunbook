@@ -1,4 +1,4 @@
-= Password Managers
+= Cracking Passwords
 
 Author: Dr. Jim Marquardson
 
@@ -12,13 +12,13 @@ Hashes are one-way functions so it is impossible to reconstruct the hash input f
 
 You should be able to:
 
-* Use `hashcat` to crack passwords using:
+* Use `john` to crack passwords using:
 ** Dictionary attacks
 ** Brute force attacks
 
 == Crack Hashes
 
-LinkedIn suffered a data breach in 2012. Millions of usernames and password hashes were leaked. Unfortunately, LinkedIn did not salt passwords, and it used the SHA1 algorithm. SHA1 was built for speed, which is great for password crackers. In this section you will do just what the hackers did--try to crack the LinkedIn passwords. For simplicity sake, only a small subset of the actual passwords are included here.
+LinkedIn suffered a data breach in 2012. Millions of usernames and password hashes were leaked. Unfortunately, LinkedIn did not salt passwords, and it used the SHA1 algorithm. SHA1 was built for speed, which is great for password crackers. In this section, you will do just what the hackers did--try to crack the LinkedIn passwords. For simplicity, only a small subset of the actual passwords are included here.
 
 . Launch the Kali virtual machine.
 . Open a terminal.
@@ -57,7 +57,7 @@ In the next sections, you will perform various attacks using a program called Jo
 
 === Dictionary Attack
 
-Dictionary attacks hash all of the words in a list and compare those hashes to the passwords being cracked. Dictionary attacks often work well because people are predictable and do not choose randome passwords.
+Dictionary attacks hash all of the words in a list and compare those hashes to the passwords being cracked. Dictionary attacks often work well because people are predictable and do not choose random passwords.
 
 . Run the following command to run a dictionary attack.
 +
