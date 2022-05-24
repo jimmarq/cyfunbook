@@ -6,50 +6,42 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Dumpster diving is exactly what it sounds like. Look in the trash for treasure.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the goals of dumpster diving
+* Describe how people can defend against dumpster diving
 
-The learning objectives should be measurable.
+== Dumpster Diving
 
-== Lesson Here
+Even in today's largely digital world, we print a massive amount of documents every year. Paper forms may contain health information, financial information, pay stubs, tax forms, and much more. Among the documentation could be descriptions of information technology security, projects, networks, usernames, and system passwords (unfortunately).
 
-This should be a couple of pages of text and screenshots.
+.Dumpster diving
+image::dumpster_diving.drawio.png[dumpster diving]
 
-All images should be original. Do not include images downloaded from the internet.
+Attackers looking for information might time dumpster diving activities with busy times of the year. If taxes are filed on April 15, accountants might dispose of working documents shortly after that date.
 
-Use Greenshot to take screenshots.
+Computer systems might be thrown out with data still on the hard drives. Most people do not know how to securely retire systems. Even when people think they have erased the hard drives, experts can recover much of the data.
 
-If you need to make diagrams, use draw.io.
+== Dumpster Diving Prevention
 
-== Exercise
+Dumpster diving is a problem that can be solved by properly disposing of sensitive information.
 
-Include detailed steps to practice the topic introduced in the lesson.
+. Shred sensitive documents.
+. Securely wipe the drives of all computer equipment before disposal or donation.
+. Physically destroy hard drives.
+. Train employees on the proper disposal of information.
 
-Use screenshots and numbered lists heavily.
+== Personal Dumpster Dive
 
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Look in your backpack, briefcase, purse, pockets, etc. for things that you probably should have destroyed or thrown away.
+.. If somebody had been able to look through those items, could they have done anything malicious with them?
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What kinds of personal documents do you throw away that should probably be shredded?
+* Do you have digital documents that you've hoarded for a long time that should be securely deleted?
 
