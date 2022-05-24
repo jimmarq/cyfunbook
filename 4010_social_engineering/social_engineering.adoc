@@ -6,50 +6,63 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Social engineering is "people hacking." Social engineering attacks have some technical aspects, but they rely heavily on convincing people to do something for you. Social engineering attacks are some of the hardest attacks to prevent because there is no technical solution that can stop them entirely.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe social engineering attacks
+* Describe why they are effective
 
-The learning objectives should be measurable.
+== Social Engineering Attacks
 
-== Lesson Here
+There are many ways to hack people. Instead of exploiting a website, downloading data, and trying to crack passwords, you could simply call somebody and ask them for their password. Instead of forging an employee badge with a chip that grants access to secured locations, you can convince somebody to hold a door open for you. Below are several social engineering attacks.
 
-This should be a couple of pages of text and screenshots.
+* Phishing emails. Emails might ask you to reset your password, confirm payment details, or verify other information. Phishing emails are the top attack vector because emails make it past many protections that systems administrators put in place. People need to receive their emails.
+* Dumpster diving. People throw out sensitive information including bank statements, employee records, systems documentation, and much more. If a hacker needs to learn about an organization, one of the first places to look is the garbage can.
+* Shoulder surfing. If you have ever flown on an airplane and looked at somebody's computer screen while they type away, you have conducted a shoulder surfing attack. Most of the time we do not care what other people are doing on their computers, but a hacker conducting corporate espionage would be very interested.
+* Tailgating. In cybersecurity, tailgating has nothing to do with driving. In a tailgating attack, an attacker simply follows a legitimate employee into a restricted area. The attacker just follows as if she is supposed to be there. With enough confidence, people simply assume you are where you are supposed to be. Add a uniform and a ladder to the attacker's arsenal, and you have the recipe for a nearly foolproof attack.
+* Vishing. While phishing primarily refers to email, vishing relies on voice. You can simply call somebody and ask for information. Vishers might pretend to be technical support representatives for Microsoft, employees of the Internal Revenue Service (IRS), or other authorities. 
+* Sextortion. Attackers convince victims to send pictures or videos in a compromised state. The attacker then threatens to send the content to the victims' friends and families unless they pay a ransom.
 
-All images should be original. Do not include images downloaded from the internet.
+There are many other kinds of social engineering attacks. The common factor is that they exploit human, not technical, weaknesses.
 
-Use Greenshot to take screenshots.
+== Why Social Engineering Works
 
-If you need to make diagrams, use draw.io.
+We are all socialized to be helpful, courteous, and kind. Social engineers take advantage of this. Below are several reasons for social engineering effectiveness. These principles come from Dr. Cialdini's principles for persuasion.
 
-== Exercise
+* *Authority*: People are more willing to follow orders from people in authority. Social engineers can claim positions of authority and get away with it people rarely verify credentials. 
+* *Intimidation*: Social engineers can use threats of violence, reputational harm, financial loss, and more to convince somebody to take action.
+* *Consensus*: If everybody is doing it, it can't be that bad, right? A social engineer might convince a new help desk employee that all of the previous help desk employees were willing to give out employees' personal contact information. The social engineer wants to make the help desk employee feel like he is doing something wrong by failing to divulge personal information. 
+* *Scarcity*: There is a narrow window of opportunity to act. If you take your time and think about it too long, the window will close. For example, you might learn that you were among a group of people who won a prize, but only the first 50 people to respond will get anything.
+* *Familiarity*: You are willing to do favors for people you like. If somebody can convince you to be your friend, or that you're on the same side, you may be more willing to do something you otherwise would not do. A social engineer might do research and discover that a security guard loves the Los Angeles Lakers. The social engineer might put on a Lakers shirt and strike up a conversation with the security guard. The security guard might feel like he has a trusting relationship with the social engineer and be more willing to do him favors, like let him go up to the third floor to get his jacket when in reality the social engineer wants to plant malware on the third floor.
+* *Urgency*: Action must be taken quickly otherwise there will be negative consequences. In one vishing attack, people claim to be from the IRS and demand immediate payment for unpaid taxes otherwise a warrant will be issued for their arrest. This particular IRS scam involves urgency, authority, and intimidation.
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Defending Against Social Engineering
 
-Use screenshots and numbered lists heavily.
+Below are a few tips to avoid being a victim of social engineering attacks.
 
-Decimals are used for numbered lists.
+* Be skeptical. If it's too good to be true, it probably is.
+* Verify email. If you get a suspicious email purporting to be from a colleague, verify directly with the colleague before responding or clicking on links.
+* Hang up. If you get a call purporting to be from the bank, hang up and call the bank directly.
+* Don't panic. The Hitchhiker's Guide to the Galaxy is right on this one. If you do not panic, you will make better decisions.
+* Follow normal processes. If everybody needs to swipe their badge to enter a building, nobody is admitted without a badge.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Craft Attacks
+
+. Pick a local business.
+. Pick assets that a social engineer might want from that business. Assets could include information or inventory.
+. Describe various social engineering attacks that could be conducted to obtain the assets. Be as detailed as possible.
+.. What would you wear?
+.. What is your back story?
+.. How would you conduct the attack?
+.. What day of the week would you conduct the attack?
+.. What time of day would you conduct the attack?
+.. How would you cover your tracks?
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What are some negative outcomes of successful social engineering attacks?
+* Who is most vulnerable to social engineering attacks?
 
