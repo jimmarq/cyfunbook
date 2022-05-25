@@ -6,47 +6,74 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Variables hold data. Variables are common in every programming language, including PowerShell.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Store data in variables
+* Use variables in commands
 
-The learning objectives should be measurable.
+== PowerShell Variables
 
-== Lesson Here
+. Launch the PowerShell ISE.
+. Write the following code in line 1.
++
+[source,powershell]
+----
+$name = "Alice"
+----
+. In the above code `$name` is a variable. PowerShell variable names always start with the dollar sign.
+. The value of the variable $name is set to the text string "Alice." The equals sign *assigns* the value of "Alice" to the $name variable.
+. With your cursor somewhere in line 1 (nothing highlighted), click the "Run Selection" button (or press the F8 shortcut key)
++
+.Run the line of code
+image::set-name-variable.png[Run the line of code]
++
+Note that the cursor in this example is between the "m" and "e" in name. Multiple characters are *not* selected. The *Run Selection* option can be used to run parts of 1 line of code, so if you want to run the entire line, either select the entire line, or put the cursor in the line with nothing selected.
+. Put the code `$name` on line 2.
+. Run line 2.
+. Notice that the name *Alice* will be output in the console.
++
+.Value of $name is retrieved
+image::alice-output.png[Value of $name is retrieved]
 
-This should be a couple of pages of text and screenshots.
+== Simple MadLib
 
-All images should be original. Do not include images downloaded from the internet.
+. Delete the code in the ISE.
+. One lines 1-4, create 4 variables with the names:
+.. $noun
+.. $adjective
+.. $verb_ending_in_ing
+.. $adverb
+. Assign a text value to the variables.
+. In line 5, write a short MadLib, such as:
++
+----
+Write-Host "While $adverb walking one day I caught my $adjective $noun $verb_ending_in_ing bread to ducks at the park."
+----
+. Select all 5 lines of code and run them.
+. You should see something similar to the following in the output.
++
+.Complete MadLib code and output
+image::madlib-complete.png[Complete MadLib code and output]
+. If there were problems with your script, check the following:
+.. Did you put quotation marks around the variable values?
+.. Did you spell the variable names consistently? $noun will not match $nown, for example.
 
-Use Greenshot to take screenshots.
+== Other Variable Types
 
-If you need to make diagrams, use draw.io.
+Variables do not just have to be text. Look at the following code.
 
-== Exercise
+[source,powershell]
+----
+$favorite_number = 3
+$files = gci
+$pi = 3.14
+$fruits = @("apple", "banana")
+----
 
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
 
 == Reflection
 

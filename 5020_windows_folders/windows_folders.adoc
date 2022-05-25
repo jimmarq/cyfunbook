@@ -6,22 +6,14 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Recent versions of Windows have converged on a consistent set of folders. The organization is especially important to study if switching from tablets or Chromebooks that have very different folder structures. This chapter will use Windows 11. The principles apply to other versions of Windows, but some of the shortcuts, menus, and other graphical user elements might differ.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
-
-The learning objectives should be measurable.
+* Identify the location of important folders
+* Be able to navigate using Windows Explorer
 
 == Lesson Here
 

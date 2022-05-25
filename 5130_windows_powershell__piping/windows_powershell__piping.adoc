@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-*Piping* is a way to send the output of one command into another command. Piping is a technique possible in Linux and in Windows scripting. In this section, you will learn to pipe commands into each other to perform complex operations with fairly simple scripts.
+*Piping* is a way to send the output of one command into another command. Piping is a technique possible in Linux and Windows scripting. In this section, you will learn to pipe commands into each other to perform complex operations with fairly simple scripts.
 
 == Learning Objectives
 
@@ -17,7 +17,7 @@ You should be able to:
 
 == How Piping Works
 
-PowerShell commands can be run one at a time. For example, the PowerShell cmdlet `Get-ChildItems` will list files and folders. The PowerShell cmdlet `Get-FileHash` will compute the cryptographic hash of a file. But with piping, the two command can be connected so that all of the files listed can have their hashes computed. This is done through piping.
+PowerShell commands can be run one at a time. For example, the PowerShell cmdlet `Get-ChildItems` will list files and folders. The PowerShell cmdlet `Get-FileHash` will compute the cryptographic hash of a file. But with piping, the two commands can be connected so that all of the files listed can have their hashes computed. This is done through piping.
 
 PowerShell, like Linux scripting, uses the vertical bar symbol for piping: `|`.  The following code shows a demonstration of how the commands might look.
 
@@ -30,13 +30,13 @@ In this example, command1 would run, and it would send its output to command2. T
 
 == Exercise 1: First Pipe
 
-The first part of this exercise will have you setup a folder and create some files. In the second part, you will list the files and create hashes.
+The first part of this exercise will have you set up a folder and create some files. In the second part, you will list the files and create hashes.
 
 . Launch PowerShell.
 . Run `mkdir pipe` and press enter to create the "pipe" folder in your home directory. (You can delete this folder at the end of the exercise.)
 . Run `cd pipe` and press enter. This will change your working directory to the new "pipe" folder.
 +
-.Create the folder and change directory to the new folder
+.Create the folder and change directories to the new folder
 image::mkdir-cd.png[mkdir pipe, cd pipe]
 . Run the following commands to create 3 files.
 [source,powershell]
@@ -50,7 +50,7 @@ PS C:\Users\Jim\pipe> Set-Content b2.txt -Value "bbbb"
 Note that the file contents of a1.txt and a2.txt are identical.
 
 
-The exercise is setup. Now it is time to run the Get-ChildItems (gci) and Get-FileHash cmdlets with and without piping.
+The exercise is set up. Now it is time to run the Get-ChildItems (gci) and Get-FileHash cmdlets with and without piping.
 
 . Run the following code to list the files.
 +
@@ -74,7 +74,7 @@ PS C:\Users\Jim\pipe> Get-FileHash b2.txt
 .Result of hashing files individually
 image::hash-individual.png[get-filehash commands]
 
-So far so good. The hashes of all files were calculated, but this process does not scale well. What if you wanted to calculate the hashes for 10 files, 100 files, or a 1,000 files? It would be cumberson to type each Get-FileHash command manually. This is where piping can be useful.
+So far so good. The hashes of all files were calculated, but this process does not scale well. What if you wanted to calculate the hashes for 10 files, 100 files, or 1,000 files? It would be cumbersome to type each Get-FileHash command manually. This is where piping can be useful.
 
 . Run the following command to pipe the gci output into the Get-FileHash cmdlet.
 +
@@ -101,9 +101,31 @@ PS C:\Users\Jim\pipe> gci | Get-Content | Sort-Object
 
 Notice that in the last example, there are two pipes. Many pipes can be used in a single line of code.
 
+== Random Choice
+
+Suppose you and your friends are deciding on a restaurant. Nobody wants to pick. You do the only reasonable thing a person could do in this situation and open a PowerShell console and write some code.
+
+[source,powershell]
+----
+$friends = @("Alice", "Bob", "Eve", "Foo", "Bar")
+----
+
+The $friends variable now contains a list of all of the friends. To randomly select one of the friends.
+
+----
+$friends | Get-Random
+----
+
+Looks like *Foo* gets to choose. 
+
+.Result of piping into Get-Random
+image::get-random.png[]
+
+Run `$friends | Get-Random` multiple times. A different name will be displayed most times, but occasionally the same name will appear twice or three times in a row. It's all chance.
+
 == Challenge
 
-. Write the code that will compute the hashes of all files in the pipes directory, and sort by hash all in a single line of code.
+. Write the code that will compute the hashes of all files in the pipes directory and sort them by hash. Do all of this in a single line of code.
 # Answer: gci | get-filehash | sort-object
 . The Out-File cmdlet writes output to a file. Create a line of PowerShell code that writes the output of gci to a file called files.txt.
 # Answer: gci | out-file files.txt
