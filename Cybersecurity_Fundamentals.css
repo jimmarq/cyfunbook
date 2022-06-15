@@ -1,15 +1,27 @@
+.running-license {
+    position: running(runningLicense);
+    font-size: 8pt;
+    border: 1px solid #003;
+    color: white;
+    background: #003;
+    padding: .5em;
+}
+.running-license a {
+    color: white;
+}
+
+@page {
+    margin: 2cm 2cm 2cm 2cm;
+}
 
 @page :right {
-
-  @bottom-right {
-    content: counter(page);
-    margin: 10pt 10pt 30pt 0;
-  }
+@top-left {
+    content: element(runningLicense)
+    }
 }
 
 @page :left {
-  @bottom-left {
-    content: counter(page);
-    margin: 10pt 0 30pt 10pt;
-  }
+@top-left {
+    content: element(runningLicense)
+    }
 }

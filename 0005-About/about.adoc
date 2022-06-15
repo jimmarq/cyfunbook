@@ -1,6 +1,6 @@
 = About this Book
 
-This book is intended to introduce core cybersecurity topics using a hands-on approach. The main audience are people who need a broad understanding of core cybersecurity concepts and technologies. Generally, this book is a mile wide and an inch deep. This book should be seen as a launching point for learning about cybersecurity, not the ultimate destination. An emphasis is given on learning how to learn by understanding documentation and performing small experiments.
+This book is intended to introduce core cybersecurity topics using a hands-on approach. The main audience is people who need a broad understanding of core cybersecurity concepts and technologies. Generally, this book is a mile wide and an inch deep. This book should be seen as a launching point for learning about cybersecurity, not the ultimate destination. An emphasis is given on learning how to learn by understanding documentation and performing small experiments.
 
 This course relies heavily on virtual machines for labs. This will often require VirtualBox--a free program that runs on Windows, Mac, and Linux computers. VirtualBox does not run on Chromebooks. Some of the labs require Windows computers.
 
@@ -8,6 +8,6 @@ The content is licensed using the Creative Commons Attribution-ShareAlike 4.0 In
 
 Recommend corrections, clarifications, or other changes here: github.com/jimmarq/cyfun.
 
-This book was coordinated by Dr. Jim Marquardson. Student workers at Northern Michigan University authored content for many chaptes as indicated in the authorship for each chapter.
+This book was coordinated by Dr. Jim Marquardson. Student workers at Northern Michigan University authored content for many chapters as indicated in the authorship for each chapter.
 
 

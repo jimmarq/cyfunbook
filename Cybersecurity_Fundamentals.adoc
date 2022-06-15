@@ -4,18 +4,18 @@ v0.1, 2022-08-15
 :doctype: book
 :toc:
 :toclevels: 1
-
+:docinfo: shared-running
 :leveloffset: 1
-
 :numbered!:
-
 :imagesdir: 0005_About
 include::0005-About\about.adoc[]
-
 :numbered:
-
+<<<
 :leveloffset: 0
 = Introduction
+
+This section provides an overview of the history of modern computing and how to use modern operating systems.
+
 :leveloffset: 1
 
 <<<
