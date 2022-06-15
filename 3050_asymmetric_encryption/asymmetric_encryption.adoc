@@ -14,26 +14,26 @@ You should be able to:
 
 * Describe principles of asymmetric encryption
 * Describe uses of asymmetric encryption
-* Reocognize two popular asymmetric encryption systems--RSA and Elliptic Curve Cryptography
+* Recognize two popular asymmetric encryption systems--RSA and Elliptic Curve Cryptography
 * Compare symmetric encryption with asymmetric encryption
 
 == Asymmetric Encryption Principles
 
-Two keys are used in asymmetric cryptography: a private key and a public key. The private key should be carefully guarded. The private key typically lives in a file on a computer. Access to that file should be restricted. If the private key is ever disclosed to the public, they private key should be revoked and never used again.
+Two keys are used in asymmetric cryptography: a private key and a public key. The private key should be carefully guarded. The private key typically lives in a file on a computer. Access to that file should be restricted. If the private key is ever disclosed to the public, the private key should be revoked and never used again.
 
-The public key can be shared with anybody. The public key can be published on a website, sent via email, put in a chat, etc. There is no danger in sending a public key. Basically, it is impossible for a public key to become compromised.
+The public key can be shared with anybody. The public key can be published on a website, sent via email, put in a chat, etc. There is no danger in sending a public key. Basically, a public key cannot become compromised.
 
 With symmetric encryption, the same key is used to encrypt and decrypt data. Symmetric encryption is fast and efficient. With asymmetric encryption, one key encrypts and the other key decrypts. If you encrypt data with the public key, only the private key can decrypt the data. If you encrypt data with the private key, the public key can be used to decrypt the data, verifying that the data was encrypted by the only person who has the private key.
 
-Private keys can also be used to digitally sign files. The private key is used to create a digital signature. The signature does not look anything like a penned signature. A ditial signature is like a digital fingerprint with a bunch of 0s and 1s. When a file is digitally signed with a private key, everybody can verify the signature with the public key.
+Private keys can also be used to digitally sign files. The private key is used to create a digital signature. The signature does not look anything like a penned signature. A digital signature is like a digital fingerprint with a bunch of 0s and 1s. When a file is digitally signed with a private key, everybody can verify the signature with the public key.
 
 == Symmetric Key Exchange Process
 
-Before you can send and receive encrypted data with HTTPS (e.g., https://www.google.com), your web browser and the web server need to agree on a temporary symmetric encryption key. Asymmetric encryption is used to share a temporary symmetric key, and once the symmetric key has been shared, all data with be encrypted and decrypted with the symmetric key. Basically, asymmetric encryption boostraps the encryption process, but symmetric encryption does the bulk of the encryption and decryption.
+Before you can send and receive encrypted data with HTTPS (e.g., https://www.google.com), your web browser and the web server need to agree on a temporary symmetric encryption key. Asymmetric encryption is used to share a temporary symmetric key, and once the symmetric key has been shared, all data with be encrypted and decrypted with the symmetric key. Basically, asymmetric encryption bootstraps the encryption process, but symmetric encryption does the bulk of the encryption and decryption.
 
 == Important Cryptosystems
 
-Rivest-Shamir-Adlemen (*RSA*) and Elliptic Curve (*EC*) cryptography are two popular cryptosystems. They are not just one algorithm, but specifications for creating keys, signing files, verifying signatures, and more. RSA is a bit older and battle tested, but it has some limitations. EC cryptography is increasingly adopted, especially for key exchange processes. RSA's security relies primarily on the difficult computers have factoring very large numbers. EC cryptography's security relies primarily on the difficult of finding original plot points on a graph. With RSA, keys are computationally expensive to create. With EC, keys are computationally cheap to make.
+Rivest-Shamir-Adleman (*RSA*) and Elliptic Curve (*EC*) cryptography are two popular cryptosystems. They are not just one algorithm, but specifications for creating keys, signing files, verifying signatures, and more. RSA is a bit older and battle-tested, but it has some limitations. EC cryptography is increasingly adopted, especially for key exchange processes. RSA's security relies primarily on the difficulty computers have factoring very large numbers. EC cryptography's security relies primarily on the difficulty of finding original plot points on a curved graph. With RSA, keys are computationally expensive to create. With EC, keys are computationally cheap to make.
 
 == Symmetric vs Asymmetric Encryption
 

@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-The Linux command line interface (CLI) has a steep learning curve. One of the most important skills with Linx (and life in general) is to learn how to learn. Linux comes with a built-in manual, but learning how to read the manual is key.
+The Linux command-line interface (CLI) has a steep learning curve. One of the most important skills with Linx (and life in general) is to learn how to learn. Linux comes with a built-in manual, but learning how to read the manual is key.
 
 == Learning Objectives
 
@@ -19,11 +19,11 @@ You should be able to:
 
 == The Manual
 
-Linux comes with a manual. The `man` command launches the manual. The manual for a specific command can be launched directly from the terminal by enter the command after `man`, such as `man ls`. These manuals are often referred to as "man pages," having nothing to do with gender--"man" is just short for "manual."
+Linux comes with a manual. The `man` command launches the manual. The manual for a specific command can be launched directly from the terminal by entering the command after `man`, such as `man ls`. These manuals are often referred to as "man pages," having nothing to do with gender--"man" is just short for "manual."
 
 In the Linux world, people are expected to read the documentation before asking questions. A simple question might be met with the response, "RTFM" which stands for "read the flipping manual" except the "f" doesn't stand for flipping. Manual first. Questions later.
 
-This section will guide you though basic use of the manual.
+This section will guide you through basic use of the manual.
 
 . Run the following command to learn about the `ls` command.
 +
@@ -61,7 +61,7 @@ image::file-sizes.png[listing of ls -l]
 ----
 $ man ls
 ----
-. There should be a few helpful entires that describe how to sort.
+. There should be a few helpful entries that describe how to sort.
 +
 .Sort options for ls
 image::sort-options.png[sort options for ls]
@@ -95,7 +95,7 @@ It is very easy to forget the options for Linux commands. That is why being able
 
 Use the Linux manual to come up with new ways to use the `ls` command.
 
-. It can be hard to process file sizes looking at total bytes. Instead of showing files as 4096 bytes, find a way to show the file sizes at 4.0K.
+. It can be hard to process file sizes by looking at total bytes. Instead of showing files as 4096 bytes, find a way to show the file sizes at 4.0K.
 . By default, `ls` will hide files that start with a period, such as .htaccess. Find a way to show these files. What hidden files exist in your home directory?
 
 == Reflection

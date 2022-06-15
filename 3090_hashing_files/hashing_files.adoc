@@ -18,17 +18,17 @@ You should be able to:
 
 == About Hashing
 
-Hashing falls under the cryptogrphy umbrella, but it's not encryption. But, it shares some of the same mathemetical concepts as encryption. Hashes are one-way functions. Data is sent to the hash function, and a hash digest is output. It is impossible to reverse the process. You cannot take the hash digest and reconstruct the input.
+Hashing falls under the cryptography umbrella, but it's not encryption. But, it shares some of the same mathematical concepts as encryption. Hashes are one-way functions. Data is sent to the hash function, and a hash digest is output. It is impossible to reverse the process. You cannot take the hash digest and reconstruct the input.
 
-A good hashing algorithm should have output that is impossible to predict beforehand. Changing a single bit in the file should result in a completely different hash digest. MD5 (message digest version 5) was a popular hashing algorithm, but it was mathematically flawed. Researchers discovered patters between the intput and output and were able to basically break the algorithm. MD5 is considered broken and should not be used.
+A good hashing algorithm should have output that is impossible to predict. Changing a single bit in the file should result in a completely different hash digest. MD5 (message digest version 5) was a popular hashing algorithm, but it was mathematically flawed. Researchers discovered patterns between the input and output and were able to "break" the algorithm. MD5 is considered broken and should not be used.
 
-Today, SHA2 is a popular hashing algorithm that is still considered strong. It is widely adopted. SHA2 has longer hash digests than MD5, but SHA2's strength is in the mathematical improvements that make it more resistant to attack.
+Today, SHA2 is a popular hashing algorithm that is still considered strong. It is widely adopted. SHA2 has longer hash digests than MD5, but SHA2's strength is in the mathematical improvements that make it more resistant to attack. SHA3 is a newer version that is considered strong, but is less widely used.
 
 == Hash Files in Linux
 
-In this section you will hash severl files in Linux and analyze the output.
+Next, you will hash several files in Linux and analyze the output.
 
-. Launc the Kali virtual machine.
+. Launch the Kali virtual machine.
 . Open a terminal.
 . Run the following command. Note that it will delete any files you added or changed in the cyfunfiles folder.
 +
@@ -60,7 +60,7 @@ $ cd crypto_hashing
 ----
 $ ls
 ----
-. Inspect each of the txt files with `cat`.
+. Inspect each of the text files with `cat`.
 +
 [source,sh]
 ----
@@ -105,7 +105,7 @@ The result should be:
 3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d  b.txt
 ----
 . Notice that the input for both a.txt and b.txt was a single character, but the hash is 64 hexadecimal characters long (64*4 bits per character=256 bits).
-. Compute th hash for long.txt.
+. Compute the hash for long.txt.
 +
 [source,sh]
 ----
@@ -149,14 +149,14 @@ $ sha256sum smile.png
 $ sha256sum smile_twin.png
 ----
 +
-The hahses should match, indicating that every single bit in each of the files matches.
+The hashes should match, indicating that every single bit in each of the files matches.
 
 == File Hashing Use Cases
 
 File hashing is used in the following cases:
 
 * When syncing files between computers, programs can check hashes to see if files have been modified since the last time files were synced.
-* When law enforcement seize phones and computer equipment, hashes of all files will be taken before forensic analysis begins. This ensures that law enforcement can determine if any files were modified by investigators. Without hashes and proper chain of custody, digital evidence would not be admissible in court.
+* When law enforcement seizes phones and computer equipment, hashes of all files will be taken before forensic analysis begins. This ensures that law enforcement can determine if any files were modified by investigators. Without hashes and the proper chain of custody, digital evidence would not be admissible in court.
 * When uploading files to cloud computing services, you sometimes have to send a hash of the file to ensure that the cloud provider got the file intact.
 * Some websites publish the hash of files that you download. You can verify the hash to make sure that nobody inserted malware into the file you downloaded.
 

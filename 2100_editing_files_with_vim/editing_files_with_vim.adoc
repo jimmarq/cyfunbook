@@ -35,7 +35,7 @@ If you are in the command mode when you want to write text, vim will look like i
 
 == Create a File in vim
 
-This will walk you through the absoulte basics of using vim.
+This will walk you through the absolute basics of using vim.
 
 . In Kali, navigate to your Documents folder in your home directory.
 +
@@ -51,7 +51,7 @@ $ vim
 +
 .Vim interface
 image::vim-just-launched.png[vim interface]
-. Type the text `fleck`. Notice that no text appears in the window. This is because vim default to opening in *command* mode.
+. Type the text `fleck`. Notice that no text appears in the window. This is because vim defaults to opening in *command* mode.
 . Type `i` to enter *insert* mode. Note that the insert mode will be indicated in the bottom left.
 +
 .Insert mode entered
@@ -63,7 +63,7 @@ image::insert-mode-label.png[insert mode enabled]
 .Sample text in vim
 image::vim-sample-text-entered.png[sample text in vim]
 . To save files in vim, you have to change the mode to command mode.
-. Press the scape key to exit insert mode and enter command mode.
+. Press the escape key to exit insert mode and enter command mode.
 . To save the file:
 .. Press `shift+:` to enter the colon character.
 .. Enter `w file.txt`. The `w` command tells vim to *write* the contents to a file.
@@ -100,7 +100,7 @@ image::cat-file-txt.png[Contents of file.txt with cat]
 
 == Exit vim Without Saving
 
-There are time when you make changes to a file, but do not want to save the changes.
+There are times when you make changes to a file but do not want to save the changes. You may have accidentally changed the file, or maybe you thought better about the changes you were about to make.
 
 . Edit file.txt with vim again.
 +
@@ -110,11 +110,11 @@ $ vim file.txt
 . Type `i` to enter insert mode.
 . Change some text.
 . Press escape to enter command mode.
-. Type `:q!` to quit vim. Notice that the `w` command was omitted because we do not want to write the changes to disk. The `q` command quits vim. The exclamaion point (`!`) tells vim to ignore any unsaved changes.
+. Type `:q!` to quit vim. Notice that the `w` command was omitted because we do not want to write the changes to disk. The `q` command quits vim. The exclamation point (`!`) tells vim to ignore any unsaved changes.
 
 == Power of vim
 
-At this point, you might think that the people who made vim are either crazy or masochists. But these exercises only touch on the most basic vim funcionality. By separating command mode and insert mode, vim can do very powerful things to make editing text efficient.
+At this point, you might think that the people who made vim are either crazy or masochists. But these exercises only touch on the most basic vim functionality. By separating command mode and insert mode, vim can do very powerful things to make editing text efficient.
 
 There are many ways to learn more advanced vim features. One fun resource is https://vim-adventures.com/.
 

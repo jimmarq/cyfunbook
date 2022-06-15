@@ -6,19 +6,14 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+A script is a multi-line program created in a scripting language. Scripts typically do one thing by combining several independent commands.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
+* Know the file extension for PowerShell scripts
+* 
 * TODO
 
 The learning objectives should be measurable.

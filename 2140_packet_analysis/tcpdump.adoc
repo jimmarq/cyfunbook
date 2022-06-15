@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-From a user's perspective, computer networks just work. We don't usually have to care about the individual packets that get sent on the wire. Occasionally, we do care about the individual packets. A cybersecurity professional may want to make sure that data is being sent securely. A network administrator may need to look at network packets to troubleshoot problem. In this chapter, you will peel back the covers and take a look at individual network packets.
+From a user's perspective, computer networks just work. We don't usually have to care about the individual packets that get sent on the wire. Occasionally, we do care about the individual packets. A cybersecurity professional may want to make sure that data is being sent securely. A network administrator may need to look at network packets to troubleshoot problems. In this chapter, you will peel back the covers and take a look at individual network packets.
 
 == Learning Objectives
 
@@ -17,15 +17,15 @@ You should be able to:
 
 == Packets
 
-A packet is a single chunk of data sent over the network. Your computer may need to receive hundreds of packets to load a high resolution photo. Your computer assembles those packets in order to reconstruct the data. Sometimes those packets are sent across the network in cleartext--unencrypted. Sometimes the packets are encrypted.
+A packet is a single chunk of data sent over the network. Your computer may need to receive hundreds of packets to load a high-resolution photo. Your computer assembles those packets to reconstruct the data. Sometimes those packets are sent across the network in cleartext--unencrypted. Sometimes the packets are encrypted.
 
-Generally speaking, the software on our computers takes care of all of the network packets and we never have to investigate what is happening. But imagine that a company was planning to adopt network software to transmit data from its headquarters building to an off-site backup. That company might want to inspect the network packets to ensure that the data was transmitted in an encrypted format. Also, network administrators might need to troubleshoot problems. For example, a user might not be able to obtain an IP address automatically, and the network adminmistrator could look at the network packets to determine what is going wrong.
+Generally speaking, the software on our computers takes care of all of the network packets and we never have to investigate what is happening. But imagine that a company was planning to adopt network software to transmit data from its headquarters building to an off-site backup. That company might want to inspect the network packets to ensure that the data was transmitted in an encrypted format. Also, network administrators might need to troubleshoot problems. For example, a user might not be able to obtain an IP address automatically, and the network administrator could look at the network packets to determine what is going wrong.
 
-Intrusion detection systems (IDS) automatically scan packets coming into a network to look for malicious traffic patterns. These systems work much like antivirus. But where antivirus typically look for malware signatures in files, IDS look for malicious signatures in network traffic.
+Intrusion detection systems (IDS) automatically scan packets coming into a network to look for malicious traffic patterns. These systems work much like antivirus. But where antivirus programs typically look for malware signatures in files, IDSs look for malicious signatures in network traffic.
 
 == Use tcpdump to Capture Traffic
 
-Tcpdump is a command line tool that can be used to capture network traffic. Later, you will use a graphical program to inspect the packets.
+Tcpdump is a command-line tool that can be used to capture network traffic. Later, you will use a graphical program to inspect the packets.
 
 . Launch a Kali terminal.
 . Run the following command to ensure you are in your home directory.
@@ -43,12 +43,12 @@ $ mkdir packets
 ----
 $ cd packets
 ----
-. Run the following command to start capturing packets with tcpdump.
+. Run the following command to start capturing packets with `tcpdump`.
 +
 ----
 $ sudo tcpdump -i eth0 -w telnet.pcap
 ----
-. Tcpdump will run until cancelled.
+. Tcpdump will run until canceled.
 . Open a new terminal tab by clicking File > New Tab.
 +
 .Open a new terminal tab
@@ -59,16 +59,16 @@ image::new-terminal-tab.png[new terminal tab]
 $ telnet telehack.com
 ----
 . You will be connected to a remote computer through your terminal.
-. Run `cowsay hi` to run the cowsay program.
+. Run `cowsay hi` to run the `cowsay` program.
 +
 .Result of cowsay program
 image::cowsay.png[cowsay hi]
-. Run `exit` to close the remote connection. You will not be back to running commands on your own machine.
+. Run `exit` to close the remote connection. You will not be back to running commands on your personal computer.
 +
 .Connection closed
 image::closed.png[connection closed]
 . Close the current terminal tab by clicking the `X` or running the `exit` command.
-. Press control+c to stop tcpdump in the original terminal tab. You should see the number of packets received. The number you capture will likely differ from the number in the following screenshot.
+. Press control+c to stop `tcpdump` in the original terminal tab. You should see the number of packets received. The number you capture will likely differ from the number in the following screenshot.
 +
 .Packets captured by tcpdump
 image::packets-captured.png[packets captured]
@@ -77,9 +77,9 @@ image::packets-captured.png[packets captured]
 .telnet.pcap now exists
 image::telnet-pcap.png[pcap file]
 
-== Analye Capture in Wireshark
+== Analyze Capture in Wireshark
 
-Wireshark is a graphical program that can be used to capture and analyze pcap files. You already made the capture file, so we will only use wireshark to analyze the file.
+Wireshark is a graphical program that can be used to capture and analyze pcap files. You already made the capture file, so we will only use Wireshark to analyze the file.
 
 . In the terminal, run the following command to open the capture file in Wireshark.
 +
@@ -87,7 +87,7 @@ Wireshark is a graphical program that can be used to capture and analyze pcap fi
 $ wireshark telnet.pcap
 ----
 . Wireshark displays a ton of information. It might be helpful to make your Kali virtual machine window larger to display more data.
-. Each row of data in Wireshark represents a different network packet. Your connection to telehack spanned many packets.
+. Each row of data in Wireshark represents a different network packet. Your connection to Telehack spanned many packets.
 . Find a row where the protocol is *TELNET*.
 . Right-click on the row, then select Follow > TCP Stream.
 +
@@ -105,7 +105,7 @@ From this analysis, it is clear that telnet is not encrypting any data. This com
 == Challenge
 
 * Explore the Wireshark interface.
-* Evaluate the source and destination addresses. Make note when you are the source and when you are the destination.
+* Evaluate the source and destination addresses. Note when you are the source and when you are the destination.
 * Look at ports.
 
 == Cleanup

@@ -74,7 +74,7 @@ image::curl-download-to-file.png[curl downloading to a file]
 [source,sh]
 image::google-html-in-firefox.png[google.html in firefox]
 +
-Notice that images and styling looks different than visiting http://www.google.com. This is because curl did not download any images or styling information. Also note that the address bar shows file:// instead of http://. The address bar uses file:// to show that you are browsing a file on your local computer.
+Notice that images and styling look different than visiting http://www.google.com. This is because curl did not download any images or styling information. Also note that the address bar shows file:// instead of http://. The address bar uses file:// to show that you are browsing a file on your local computer.
 . Close Firefox (otherwise the terminal will be locked).
 
 == Curl for Banner Grabbing
@@ -104,6 +104,6 @@ One of the most useful pieces of information is that google.com is running the "
 
 == Reflection
 
-* Why would it be useful to download files from a command line interface?
+* Why would it be useful to download files from a command-line interface?
 * Should companies try to hide the technologies they use? I.e., should they try to block banner grabbing?
 

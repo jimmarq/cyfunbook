@@ -37,15 +37,15 @@ image::withvirtualization.png[with virtualization: a windows laptop with 3 virtu
 Cloud computing platforms like Amazon Web Service, Microsoft Azure, and Google Cloud Platform, use virtualization heavily in their data centers. They use more sophisticated virtualization platforms (like VMWare or Microsoft's Hyper-V), but the virtualization concepts are the same. In data centers, virtualization gives many benefits such as,
 
 * decreased power consumption,
-* more efficient use of floorspace,
+* more efficient use of floor space,
 * easier backup and restore of computer systems, and
 * the ability to scale systems up and down when demands change.
 
-It is likely that you do not have your own personal data center. But, you can simulate a data center on your computer with desktop virtualization software. `VirtualBox` is a popular open source program that can be downloaded for free on Windows, Linux, and Mac operating systems. VirtualBox lets you run virtual machines. The next section has instructions for installing VirtualBox.
+It is likely that you do not have your own personal data center. But, you can simulate a data center on your computer with desktop virtualization software. `VirtualBox` is a popular open-source program that can be downloaded for free on Windows, Linux, and Mac operating systems. VirtualBox lets you run virtual machines. The next section has instructions for installing VirtualBox.
 
 == Exercise 1: VirtualBox Installation
 
-In this section you will install VirtualBox. VirtualBox is supported on Windows, Mac, and Linux. The instructions here will address Windows. You will need to refer to the virtualbox.org website for more specific instructions if using a Mac or Linux computer.
+The instructions in this section will guide you through the VirtualBox installation. VirtualBox is supported on Windows, Mac, and Linux. The instructions here will address Windows. You will need to refer to the virtualbox.org website for more specific instructions if using a Mac or Linux computer.
 
 . Go to https://www.virtualbox.org/wiki/Downloads.
 . Download the latest version for your host. For example, if you are running Windows on your laptop, you download the latest version for Windows hosts.
@@ -67,12 +67,12 @@ At this point, VirtualBox has been successfully installed.
 
 == Exercise 2: Extension Pack Installation
 
-VirtualBox works well with its base installation, but there is an optional Extension Pack that provides helpful features. These instructions will help you install the Extenion Pack.
+VirtualBox works well with its base installation, but there is an optional Extension Pack that provides helpful features. These instructions will help you install the Extension Pack.
 
 . Go to https://www.virtualbox.org/wiki/Downloads. 
 . In the VirtualBox Extension Pack section of the downloads page, click the link to download the extension pack for "all supported platforms."
-. Once downloaded, open the file from either your browser, or by going to your downloads folder and double clicking the file. Installing VirtualBox previously should have registered the extention pack file type with VirtualBox, so you should be prompted to open the file with the VirtualBox Manager.
-. Accept the prompt in the VirtualBox Manager to install the extention pack. The installation should go quickly.
+. Once downloaded, open the file from either your browser or by going to your downloads folder and double-clicking the file. Installing VirtualBox previously should have registered the extension pack file type with VirtualBox, so you should be prompted to open the file with the VirtualBox Manager.
+. Accept the prompt in the VirtualBox Manager to install the extension pack. The installation should go quickly.
 
 You will not notice any changes in the VirtualBox Manager after the extension pack has been installed, but the new features should be working in the background.
 
@@ -90,7 +90,7 @@ image::vbox-manager-machine-new.png[machine > new]
 .64-bit Versions Available
 image::vbox-manager-new-64.png[64-bit options available]
 
-As long as you see 64-bit operating systems available, VirtualBox has been installed correctly and is ready to be used. If only 32-bit options are available, virtualization features will need to be enabled in your computer's BIOS. The method for enabling virtualization in the BIOS depends heavily on your computer's manufaturer and the BIOS version. You would need to find appropriate information online by searching for your laptop, such as "enable virtualization lenovo laptop."
+As long as you see 64-bit operating systems available, VirtualBox has been installed correctly and is ready to be used. If only 32-bit options are available, virtualization features will need to be enabled in your computer's BIOS. The method for enabling virtualization in the BIOS depends heavily on your computer's manufacturer and the BIOS version. You would need to find appropriate information online by searching for your laptop, such as "enable virtualization Lenovo laptop."
 
 == Reflection
 

@@ -7,7 +7,7 @@ Changelog
 * 2022-04-12 Initial Version
 * 2022-04-15 Additional cases added
 
-The information security triad is composed of *confidentiality*, *integrity*, and *availability*. Virtually any topic in cybersecurity will apply to one or more of the elements in the information security triad. It can be useful to think about a given topic and decide whether it refers to confidentity, integrity, and/or availability.
+The information security triad is composed of *confidentiality*, *integrity*, and *availability*. Virtually any topic in cybersecurity will apply to one or more of the elements in the information security triad. It can be useful to think about a given topic and decide whether it refers to confidentiality, integrity, and/or availability.
 
 image::cia_diagram.png[]
 
@@ -25,45 +25,45 @@ You should be able to:
 
 Confidentiality is all about protecting sensitive data. Access to some data should be restricted. For example, medical records should be kept private. Financial and education information is also protected. There can be serious legal consequences for failing to protect sensitive information.
 
-Confidentiality is enforced through two primary measures: 1) *access controls*, and 2) *encryption*. Differentiated access to systems can be granted to users. For example, you can login to your bank, but you can only view your account information. A call center employee might have authority to view the accounts of all bank customers. Audits may be performed periodically to ensure that call center employees only access customer data in response to a customer concern, not merely about of curiousity.
+Confidentiality is enforced through two primary measures: 1) *access controls*, and 2) *encryption*. Differentiated access to systems can be granted to users. For example, you can log in to your bank, but you can only view your account information. A call center employee might have authority to view the accounts of all bank customers. Audits may be performed periodically to ensure that call center employees only access customer data in response to a customer concern, not merely curiosity.
 
 With encryption, data is protected using secret keys. Only people with the right keys can read the data. Data can be protected on your device (e.g.; a hard drive or smart card), in transit (i.e.; going over the internet), or while the data is in use (i.e.; in your computer's memory). Encryption is not the ultimate solution to data confidentiality. At some point, the data must be decrypted, so encryption must be employed along with access controls to protect confidentiality.
 
 == Integrity
 
-In the context of cybersecurity, data integrity is maintained when information is only modified by people who are authorized. Imagine you have a Twitter account. You want to be the only person to produce tweets. If somebody else could edit your tweets, they could make them say something embarassing or worse. Access controls help maintain data integrity. 
+In the context of cybersecurity, data integrity is maintained when information is only modified by people who are authorized. Imagine you have a Twitter account. You want to be the only person to produce tweets. If somebody else could edit your tweets, they could make them say something embarrassing or worse. Access controls help maintain data integrity. 
 
-Data integrity can be verified using a cryptographic concept called *hashing*. A hash is like a perfect data fingerprint. You can take the fingerprint of data many times. If the fingerprint ever changes, you know that the underlying data has been modified. When police officers gather forensic data from computers or smart phones, one of the first things they will do is generate a *hash* of every file on the device. In course, if the officers can show that none of the hashes have changed, the court can be sure that the officers did not change any files to modify the digital evidence.
+Data integrity can be verified using a cryptographic concept called *hashing*. A hash is like a perfect data fingerprint. You can take the fingerprint of data many times. If the fingerprint ever changes, you know that the underlying data has been modified. When police officers gather forensic data from computers or smartphones, one of the first things they will do is generate a *hash* of every file on the device. In court, if the officers can show that none of the hashes have changed, the court can be sure that the officers did not change any files to modify the digital evidence.
 
 In this context, integrity does *not* mean acting morally or ethically. In cybersecurity, integrity is all about data being whole and accurate.
 
 == Availability
 
-Information systems are involved in many aspects of our daily lives. Whether making a purchase, booking a flight, playing an online game, or streaming movies, we rely heavily on networked systems. But there are many things that can go wrong causing systems to crash. Power outages, hurricanes, hard drives crashing, and hackers are just some of the threats that might bring systems down. There are many ways to ensure availability of systems. Testing, *redundancy*, and active network defense are among many techniques for ensuring that systems are availble.
+Information systems are involved in many aspects of our daily lives. Whether making a purchase, booking a flight, playing an online game, or streaming movies, we rely heavily on networked systems. But many things can go wrong causing systems to crash. Power outages, hurricanes, hard drives crashing, and hackers are just some of the threats that might bring systems down. There are many ways to ensure system availability. Testing, *redundancy*, and active network defense are among many techniques for ensuring that systems are available.
 
 == Fictional Case: Stolen Data
 
 Joe was an employee working for ABC Corp. Joe knew that a rival corporation, XYZ Corp, was working on a new product to compete with ABC Corp's top seller. To prove his worth to his company, Joe hacked into XYZ Corp's computer systems. Joe found a way to bypass the access controls to XYZ Corp's main file repository. Joe downloaded the XYZ Corp product schematics to share with his team members at ABC Corp. Joe did not delete or update any information or try to crash the file repository.
 
-* Was confiendiality violated?
+* Was confidentiality violated?
 * Was integrity violated?
-* Was availability vioalted?
+* Was availability violated?
 
 == Fictional Case: Updated Grades
 
 A high school student breaks into the school's grading system. The student bumps up each of her grades a full letter (e.g.; changing a C- to a B-). The student does not change or access any other student's grades.
 
-* Was confiendiality violated?
+* Was confidentiality violated?
 * Was integrity violated?
-* Was availability vioalted?
+* Was availability violated?
 
 == Fictional Case: Hurricane Pike
 
-Hurricane Pike was a class 3 hurricane that destroyed a health clinic's data in Georgia. The data was stored in the basement of a flooded building. The basement was locked, so the clinic is confident that no unathorized party accessed the data. 
+Hurricane Pike was a class 3 hurricane that destroyed a health clinic's data in Georgia. The data was stored in the basement of a flooded building. The basement was locked, so the clinic is confident that no unauthorized party accessed the data. 
 
-* Was confiendiality violated?
+* Was confidentiality violated?
 * Was integrity violated?
-* Was availability vioalted?
+* Was availability violated?
 
 == Exercise
 
@@ -86,4 +86,4 @@ How would you maintain confidentiality, integrity, and availability? Some questi
 ** Small businesses
 ** A large corporation
 ** A non-profit organization
-* Consider the technology you use. You likely have online banking, email, social media, and other accounts that store data in your own computer or online. What steps do you take to ensure the confidentiality, integrity, and availability of that data?
+* Consider the technology you use. You likely have online banking, email, social media, and other accounts that store data on your personal computer or online. What steps do you take to ensure the confidentiality, integrity, and availability of that data?

@@ -29,7 +29,7 @@ More information can be found at https://www.kali.org/.
 
 Note: Like all software, Kali has new updates and releases. In this lab, you might see small differences in version numbers in the text and screenshots (e.g., Kali 2022.1 and 2022.2). The instructions may have to be adapted slightly based on changes to Kali's website or the Kali operating system.
 
-You should already have VirtualBox and the VirtualBox Guest Additions installed. If you do not have these, refer to the chapter on setting up virtualization on your computer. The remainder of this section will walk you though the Kali virtual machine creation. Note that the organization lf Kali's website may change over time, so the screenshots and exact links to click on may change.
+You should already have VirtualBox and the VirtualBox Guest Additions installed. If you do not have these, refer to the chapter on setting up virtualization on your computer. The remainder of this section will walk you through the Kali virtual machine creation. Note that the organization of Kali's website may change over time, so the screenshots and exact links to click on may change.
 
 . Try  the direct link: https://kali.download/virtual-images/kali-2022.2/kali-linux-2022.2-virtualbox-amd64.ova 
 .. If this link does not work, or if you wanted the newest version of Kali, find the newer download using the steps below.
@@ -47,7 +47,7 @@ image::64-dl.png[64-bit VirtualBox version]
 .Download Folder
 image::save-location.png[download folder]
 . The download will take several minutes. The file being downloaded is several gigabytes.
-. When the file download has completed, launch the VirtualBox Manager.
+. Launch the VirtualBox Manager when the file download has completed.
 . You might be tempted to click `New` to create a virtual machine. Don't do it. It will make you sad and will not work the way you think it will. Trust me.
 . Click `File > Import Appliance` to start creating your Kali virtual machine.
 . Navigate to the folder where you downloaded the Kali .ova file.
@@ -60,7 +60,7 @@ image::select-import.png[select the kali .ova file]
 +
 .Appliance settings
 image::import.png[appliance settings - import]
-. You will be prompted to accept the open source software license. Click `Agree` to continue.
+. You will be prompted to accept the open-source software license. Click `Agree` to continue.
 +
 .Software License
 image::agree.png[software license]
@@ -68,7 +68,7 @@ image::agree.png[software license]
 . The Kali virtual machine will now show up in the list of virtual machines.
 . Ensure that Kali is selected, then click `Settings`.
 +
-.Virual machine settings option
+.Virtual machine settings option
 image::vm-settings-option.png[virtual machine settings]
 . In the `General` category, click the `Description` tab. Notice that the username and password are listed here: kali and kali. You could make changes to this description to add notes if you like. But at this point, you can leave the description as is. When you are done reviewing the description, click OK to save any changes you made (or cancel to close without saving any changes).
 +
@@ -90,11 +90,11 @@ The Kali virtual machine will be used in many labs. The following screenshot sho
 image::kali-features.png[Kali features]
 
 . The Kali dragon is like the Start menu in Windows.
-. The search bar can be used to find application quickly.
-. Applications are organized in various categories. Hovering your mouse over these categories will reveal different applications applicable to those categories.
+. The search bar can be used to find applications quickly.
+. Applications are organized by category. Hovering your mouse over these categories will reveal different applications applicable to those categories.
 . Applications that can be run.
 . A regular web browser.
-. A terminal used for entering text commands.
+. A terminal is used for entering text commands.
 . The desktop.
 . Network settings, sound settings, and where you can shut down the virtual machine from within Kali.
 
@@ -110,7 +110,7 @@ The Kali virtual machine consumes a lot of memory and CPU resources on your comp
 image::file-close.png[close the virtual machine]
 . When prompted, choose to save the machine state. This is like putting the virtual machine to sleep. The virtual machine will be saved on your hard drive. It should only take a few seconds to save the machine state.
 +
-.Save the machien state
+.Save the machine state
 image::save-state.png[save the machine state]
 . You can now close the VirtualBox Manager.
 

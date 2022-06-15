@@ -13,14 +13,14 @@ Network administrators, ethical hackers, malicious hackers, security auditors an
 You should be able to:
 
 * Describe the purpose of network scanning
-* Run nmap from the command line
+* Run `nmap` from the command line
 * Change scanning options
 
 == Network Mapping
 
 Network mapping is used to help us understand networks. Network mapping can be used to tell us what computers exist on a network, their IP addresses, and the services that they are running. For example, a server might host websites at the IP address 192.168.10.5. A different server might host email at 192.168.10.25. `Nmap` is the most popular network scanning software.
 
-Network scanning is kind of like walking around a neighborhood and seeing what houses exist. Each house has a unique address. But you're not sure what is inside each house. So you walk up to each house and check to see if the doors are locked, the windows are shut, and if the hose is turned on. Even if you do not plan to break into the house, the occupents might be concerned about stranger checking everything out and call the police. Network scannins is a bit like this. With network scanning, you do a little bit of poking around to see what exists on a remote server, but you are not trying to break in.
+Network scanning is kind of like walking around a neighborhood and seeing what houses exist. Each house has a unique address. But you're not sure what is inside each house. So you walk up to each house and check to see if the doors are locked, the windows are shut, and if the hose is turned on. Even if you do not plan to break into the house, the occupants might be concerned about a stranger checking everything out and call the police. Network scanning is a bit like this. With network scanning, you do a little bit of poking around to see what exists on a remote server, but you are not trying to break in.
 
 So is network scanning legal? There is some gray area. It is very rare for somebody to be prosecuted simply for network scanning, but it happens. Generally, networking professionals do not freak out about their networks being scanned--it happens thousands of times per hour. But network professionals do not create the laws, and some prosecutors have applied hacking laws to people who perform network scans. The following is not legal advice, but likely sound advice. Do not do intrusive scans on government sites, especially the CIA, FBI, or Department of Defense. Stay away from banks. Generally, public tech companies like Microsoft, Google, and Amazon will not give you a headache if you scan their publicly accessible networks. The site scanme.nmap.org gives explicit permission to perform periodic scans.
 
@@ -28,7 +28,7 @@ So is network scanning legal? There is some gray area. It is very rare for someb
 
 . Launch the Kali virtual machine from VirtualBox.
 . Open a terminal.
-. Run the following command to do a basic network scan with namp. The scan should take less than 30 seconds to complete.
+. Run the following command to do a basic network scan with `namp``. The scan should take less than 30 seconds to complete.
 +
 [source,sh]
 ----
@@ -65,7 +65,7 @@ Nmap is powerful. Options can be configured to do things like operating system d
 $ nmap -A scanme.nmap.org
 ----
 +
-The `-A` parameter tells nmap to try to figure out the name and version of everything it finds on the server.
+The `-A` parameter tells `nmap` to try to figure out the name and version of everything it finds on the server.
 . Review the output. It should be similar to the following.
 +
 .nmap output with version information
@@ -75,7 +75,7 @@ image::version-info.png[nmap output with version information]
 .. For the website, the server is running Apache 2.4.7.
 .. The server's operating system is Linux.
 . Run `man nmap` in the terminal to see what other options are available.
-.. Find an additional options that could be helpful. For example, you might simply try operating system detection with `-O`.
+.. Find additional options that could be helpful. For example, you might simply try operating system detection with `-O`.
 +
 ----
 $ nmap -O scanme.nmap.org
@@ -87,7 +87,7 @@ But running this command requires administrative privileges. Run it again with `
 $ sudo nmap -O scanme.nmap.org
 ----
 +
-Enter the password `kali` if needed. The the scan fails, press control+c to cancel the scan.
+Enter the password `kali` if needed. If the scan fails, press control+c to cancel the scan.
 .. Press `q` to quite the manual.
 
 == Challenge
@@ -103,8 +103,8 @@ Enter the password `kali` if needed. The the scan fails, press control+c to canc
 == Reflection
 
 * How would you use network scanning responsibly?
-* Imagine you are an network administrator for a company. How would you feel if somebody scanned your network one time? How would you feel if somebody scanned your network 1,000 times?
-* How would malicious hackers use nmap?
-* How would system auditors use nmap?
+* Imagine you are a network administrator for a company. How would you feel if somebody scanned your network one time? How would you feel if somebody scanned your network 1,000 times?
+* How would malicious hackers use `nmap`?
+* How would system auditors use `nmap`?
 
 

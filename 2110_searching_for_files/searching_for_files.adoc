@@ -20,7 +20,7 @@ You should be able to:
 The `locate` command can be used to find files by filename. The locate command searches all file names on the computer using an index that is rebuilt periodically (often daily). It is possible that very new files may not be in the index. A benefit of the locate command is that it runs extremely quickly--the database is typically searched in less than a second.
 
 . Launch a Kali terminal.
-. If your Kali virtual machine is new, the database of files might not be udpdated. Run the following command to update the database.
+. If your Kali virtual machine is new, the database of files might not be updated. Run the following command to update the database.
 +
 ----
 $ sudo updatedb
@@ -121,7 +121,7 @@ If the output is not blank, it means the text was found.
 $ grep "strawberry" veggies.txt
 ----
 +
-In this case, there is not output, meaning that the search did not return any results.
+In this case, there is no output, meaning that the search did not return any results.
 +
 .Search results for celery and strawberry
 image::grep-results-fruits-and-veggies.png[search results for grep--one for celery and none for strawberry]
@@ -131,14 +131,14 @@ image::grep-results-fruits-and-veggies.png[search results for grep--one for cele
 $ grep "banana" ./*
 ----
 +
-The "./" tells Linux to look in the current folder, and the aserisk tells kali to match any file name. The grep command should find the word *banana* in fruits.txt.
+The "./" tells Linux to look in the current folder, and the asterisk tells kali to match any file name. The grep command should find the word *banana* in fruits.txt.
 
 == Challenge
 
-. Find entries in the in the /var/auth.log file that have the words "user root."
+. Find entries in the /var/auth.log file that have the words "user root."
 . Find files with the name "firefox" in the file name only.
 . Find files and directories with "apache" in the name.
-. How many exmployees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
+. How many employees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
 
 // Solutions:
 // grep -a "user root" /var/auth.log

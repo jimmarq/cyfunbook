@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-There are many ways to run Linux. Most individuals and company choose a Linux distribution--basically a flavor of Linux that suits their needs. In this chapter you will get an overview of a few popular Linux distributions.
+There are many ways to run Linux. Most individuals and companies choose a Linux distribution--a flavor of Linux that suits their needs. This chapter provides an overview of a few popular Linux distributions.
 
 == Learning Objectives
 
@@ -23,9 +23,9 @@ A Linux distribution will contain:
 * management tools, and
 * applications.
 
-A distribution targeting office workers might come with with spreadsheet and document creation software. A distribution targeting artists might forgo spreadsheets in favor of drawing applications. A distribution that runs web servers might come preinstalled with very little software at all and will likely not have any graphical user interface.
+A distribution targeting office workers might come with spreadsheet and document creation software. A distribution targeting artists might forgo spreadsheets in favor of drawing applications. A distribution that runs web servers might come preinstalled with very little software at all and will likely not have any graphical user interface.
 
-This section describes only a few of the most popular Linux distributions. If you are curious, you can check out more complete list of Linux distributions here: https://en.wikipedia.org/wiki/List_of_Linux_distributions.
+This section describes only a few of the most popular Linux distributions. If you are curious, you can check out a more complete list of Linux distributions here: https://en.wikipedia.org/wiki/List_of_Linux_distributions.
 
 === RedHat Linux
 
@@ -49,7 +49,7 @@ Canonical Ltd. stewards the Ubuntu Linux operating system. Ubuntu Linux is aimed
 Pros of Ubuntu Linux
 
 * Supported by a company
-* Choice between long-term support and faster moving releases
+* Choice between long-term support and faster-moving releases
 
 Cons of Ubuntu Linux
 

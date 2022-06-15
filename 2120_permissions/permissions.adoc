@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-Restricting access to files and folders in important way to maintain confidentiality. Linux has features that allow different users or groups to read files, write to files, or execute programs.
+Restricting access to files and folders is important for maintaining confidentiality. Linux has features that allow different users or groups to read files, write to files, or execute programs.
 
 == Learning Objectives
 
@@ -19,7 +19,7 @@ You should be able to:
 
 == Read, Write, and Execute
 
-Limiting access to resources is key for maintaining confidentiality. In Linux, file permissions can be modified to grant read, write, and execute permissions. These permissions will show up in the terminal as `r`, `w`, and `x`.
+Limiting access to resources is key to maintaining confidentiality. In Linux, file permissions can be modified to grant read, write, and execute permissions. These permissions will show up in the terminal as `r`, `w`, and `x`.
 
 * Read permissions. This allows users to display the contents of the file, or open the file in a program. Just because somebody can read a file does not mean that they can make changes.
 * Write permissions. People can update or delete files. Technically, it is possible to grant somebody write permissions without read permissions, but that is often reserved for special systems processes. In most cases, if you grant write permissions, you likely want to grant read permissions as well.

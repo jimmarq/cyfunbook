@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-The Linux command line interface (CLI) is one of the primary ways that Linux administrators and ethical hackers use Kali Linux. This chapter will walk you through a few commands that you can run in the command line interface.
+The Linux command-line interface (CLI) is one of the primary ways that Linux administrators and ethical hackers use Kali Linux. This chapter will walk you through a few commands that you can run in the command-line interface.
 
 == Learning Objectives
 
@@ -18,14 +18,14 @@ You should be able to:
 
 == Basic Linux Commands
 
-In this section you will learn several Linux command by running them.
+Next, you will learn several Linux commands by running them.
 
 === Launch a Terminal
 
 . Start the VirtualBox Manager.
 . Star the Kali virtual machine.
-. Login with the username `kali` and the password `kali` if prompted.
-. Click the icon on the toolbar to launch the terminal. The terminal is where you can enter commands with a command line interface.
+. Log in with the username `kali` and the password `kali` if prompted.
+. Click the icon on the toolbar to launch the terminal. The terminal is where you can enter commands with a command-line interface.
 +
 .Launch a terminal
 image::start-terminal.png[launch a termian]
@@ -47,7 +47,7 @@ The `pwd` command prints the name of the working directory.
 .pwd output
 image::pwd.png[]
 . Note that your home folder is /home/kali. In Linux, users' files and folders are organized in the /home folder. Since kali is your username, your home folder is /home/kali. Every user on the computer would have a separate folder in the /home.
-. Run `PWD` in the termal.
+. Run `PWD` in the terminal.
 +
 .PWD output
 image::PWD-caps.png[PWD capitalized output]
@@ -57,7 +57,7 @@ image::PWD-caps.png[PWD capitalized output]
 
 The `cd` command is used to change your working directory. This command lets you move around the directories on your Linux computer.
 
-. Run (not includeing the `$`):
+. Run (not including the `$`):
 +
 ----
 $ pwd
@@ -105,14 +105,14 @@ $ cd ~
 ----
 +
 The tilde is a special character used with the `cd` command to return to your home folder.
-. Print your workind directory. It should be `/home/kali`.
+. Print your working directory. It should be `/home/kali`.
 . Run:
 +
 ----
 $ cd ..
 ----
 +
-The two periods tells the `cd` command to change directories to the parent folder.
+The two periods tell the `cd` command to change directories to the parent folder.
 . Print your working directory again. It should be `/home`.
 . Run:
 +
@@ -168,7 +168,7 @@ $ ls -l
 +
 .ls -l output
 image::ls-l-output.png[ls -l output]
-. There is a lot more information about each directory. For now, you can ignore all of the extra data presented. It it important to recognize that the `ls` command has several options. The `-l` option is used to show the listing in "long" format. Going forward, you will use command line options for many different kinds of commands.
+. There is a lot more information about each directory. For now, you can ignore all of the extra data presented. It is important to recognize that the `ls` command has several options. The `-l` option is used to show the listing in "long" format. Going forward, you will use command-line options for many different kinds of commands.
 
 == Challenge
 
@@ -179,7 +179,7 @@ Adapt the commands in the previous section to complete the following tasks.
 . List the files and directories in a wide format.
 . Navigate to the `www` directory that exists in the /var directory.
 . Print your working directory.
-. Print the name of the current logged in user.
+. Print the name of the currently logged-in user.
 . List the files and directories in a wide format.
 . Navigate up one directory.
 . Print your working directory.

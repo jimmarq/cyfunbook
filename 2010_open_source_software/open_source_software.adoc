@@ -13,7 +13,7 @@ You have probably used open source software at some point today. Your Wi-Fi rout
 You should be able to:
 
 * Define open source software
-* Recognize popoular open source licenses
+* Recognize popular open source licenses
 * List several popular open source software projects
 * Discuss potential pros and cons of open source and proprietary software
 
@@ -29,15 +29,15 @@ There are several popular open source applications.
 
 . Firefox (https://www.mozilla.org/en-US/firefox). Firefox is one of the most popular web browsers. The developers make all of their source code public and give Firefox away for free. Mozilla, the company that makes Firefox, wants to ensure that Firefox supports a free and open internet.
 . VLC Media Player (https://www.videolan.org/). It plays everything. Before the VLC Media Player, it was hard to tell if you could play the video that you downloaded from the internet.
-. Blender (https://www.blender.org/). Blender is professional-grade 3D modelling software. It has been used to create feature films, and it's available for free.
-. Linux (https://www.linuxfoundation.org/). "Linux" can refer to a lot of things, but at a high level it is a set of operating systems that implement the Linux kernel. Android phones and many web servers run Linux. Linux can be used as a desktop operating system.
+. Blender (https://www.blender.org/). Blender is professional-grade 3D modeling software. It has been used to create feature films, and it's available for free.
+. Linux (https://www.linuxfoundation.org/). "Linux" can refer to a lot of things, but at a high level, it is a set of operating systems that implement the Linux kernel. Android phones and many web servers run Linux. Linux can be used as a desktop operating system.
 . Python (https://www.python.org/). The python programming language can be used by anybody around the world without cost. It can be used to build websites, develop machine learning algorithms, make games, and much more.
 
 == Cathedral Versus the Bazaar
 
-Open source software is typically developed by distributed teams and individuals. Thousands of people across the globe can contribute code to a single software product. This is equivalant to a bazaar in which many individuals bring their unique perspective. Open source advocates often say that this approach results in better software.
+Open source software is typically developed by distributed teams and individuals. Thousands of people across the globe can contribute code to a single software product. This is equivalent to a bazaar in which many individuals bring their unique perspectives. Open source advocates often say that this approach results in better software.
 
-Proprietary software is typically designed by a single entity. That entity has control over the entire design process. The analygy would be a cathedral--one entity was in charge of the entire construction process. Proponents of this approach to software say that it results in higher quality software because it is easier to made unified design decisions.
+Proprietary software is typically designed by a single entity. That entity has control over the entire design process. The analysis would be a cathedral--one entity was in charge of the entire construction process. Proponents of this approach to software say that it results in higher quality software because it is easier to make unified design decisions.
 
 == Open Source Licenses
 
@@ -49,17 +49,16 @@ What you can and cannot do is governed by software licenses. Below are 3 popular
 * GNU GPL v2: Do whatever you want with the software as long as you share the changes. If you incorporate GPL v2 code in your product, you do not need to open source the code you write.
 * GNU GPL v3: If you incorporate GPL v3 code in your product, you also have to open source your product.
 
-The Linux kernel is licensed under GPL v2. Some businesses are relucant to adopt GPL v3 software becuase they would have to open source all of their proprietary software. Because Linux uses the GPL v2, a business can write a custom application that runs on Linux and deploy that application without making their application open source. In essence, it's like an ice cream cone where the ice cream is the open source foundation, and the sprinkles are the proprietary bits that go on top of open source. Some people claim that using open source as a foundation for proprietry software is an abuse of the open source ethos, but many in the open source community are just happy that open source is being embraced.
+The Linux kernel is licensed under GPL v2. Some businesses are reluctant to adopt GPL v3 software because they would have to open source all of their proprietary software. Because Linux uses the GPL v2, a business can write a custom application that runs on Linux and deploy that application without making their application open source. In essence, it's like an ice cream cone where the ice cream is the open source foundation, and the sprinkles are the proprietary bits that go on top of open source. Some people claim that using open source as a foundation for proprietary software is an abuse of the open source ethos, but many in the open source community are just happy that open source is being embraced.
 
 == Exercise: Beer or Speech
 
-. Make a list of some of the software that you use on a daily basis.
-. Is the software open source or proprietary?
-.. You may need to search the internet to find out.
+. Make a list of some of the software that you use daily.
+. Is the software open source or proprietary? (You may need to search the internet to find out.)
 
 == Reflection
 
 * Which approach to product design is better--the cathedral or the bazaar?
-* If you were starting a business developing software, would your software be open source or proprietery?
-* What are the pros and cons of open source and proprietery software?
+* If you were starting a business developing software, would your software be open source or proprietary?
+* What are the pros and cons of open source and proprietary software?
 * Does open source software mean you can do whatever you want with it?

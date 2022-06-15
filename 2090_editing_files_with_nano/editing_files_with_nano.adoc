@@ -41,7 +41,7 @@ No matter what your working directory was previously, you will now be in /home/k
 ----
 $ touch haiku.txt
 ----
-. Launch the `nano` editor to with haiku.txt ready for editing using the following command.
+. Launch the `nano` editor with haiku.txt ready for editing using the following command.
 +
 ----
 $ nano haiku.txt
@@ -52,19 +52,19 @@ $ nano haiku.txt
 .nano interface
 image::nano-interface.png[version of nano in the top left, name of the file in the top middle, size of the file is in the bottom middle, and commands are in the very bottom]
 . Just start typing to add text. This might seem obvious, but other Linux text editors are less intuitive.
-. Write a haiku. As a reminder, a haiku has 3 lines. The first line has 5 syllabues, the second line has 7 syllables, and the last line has 5 syllabues. Your worth as a human being depends heavily on the quality of the haiku that you write in this exercise. Below is a sample.
+. Write a haiku. As a reminder, a haiku has 3 lines. The first line has 5 syllables, the second line has 7 syllables, and the last line has 5 syllables. Your worth as a human being depends heavily on the quality of the haiku that you write in this exercise. Below is a sample.
 +
 .Haiku that makes minstrels weep
 image::haiku.png[haiku that makes minstrels weep]
 +
-Note that the astrisk next to haiku.txt now appears. The asterisk indicates that the files has unsaved changes.
+Note that the asterisk next to haiku.txt now appears. The asterisk indicates that the file has unsaved changes.
 . Having a "save" command option would be too obvious, so the makers of nano decided to call this feature "write out."
 +
 ."Write out" to save
 image::write-out.png[write out to save]
 +
-The write out command is used by pressing the control key and "o" at the same time.
-. Nano will give you a change to save the file as a new name. Here, simply press the enter key to accept the suggested name.
+The *write out* command is used by pressing the control key and "o" at the same time.
+. Nano will give you a chance to save the file as a new name. Here, simply press the enter key to accept the suggested name.
 +
 .File name to write
 image::file-name-to-write.png[file name to write]
@@ -73,7 +73,7 @@ image::file-name-to-write.png[file name to write]
 
 == Editing New Named Files with Nano
 
-Once you know how to edit existing files with nano, creating and editing new files is not rocket surgery. In this section you will create a file that has no file extension. In the Linux world, file extensions are not required. Many system file just have file names without extensions.
+Once you know how to edit existing files with nano, creating and editing new files is not rocket surgery. Next, you will create a file that has no file extension. In the Linux world, file extensions are not required. Many Linux system files have file names without extensions.
 
 . Run the following command to start editing a new file called `limerick` (with no file extension).
 +
@@ -83,8 +83,8 @@ $ nano limerick
 . Write a limerick. As a reminder, limericks have five lines. The first, second, and fifth lines must have seven to ten syllables and rhyme. The third and fourth lines should be shorter--5 to seven syllabus--and rhyme with each other. Below is an example.
 +
 .Career in limerick form
-image::limerick.png[career in limerick form]
-. Note that the proposed file name is in the header. This file does not exist, yet. Again, the astrisk indicates unsaved changes.
+image::limerick.png[carreer in limerick form]
+. Note that the proposed file name is in the header. This file does not exist, yet. Again, the asterisk indicates unsaved changes.
 . Use control+o to save the file.
 . Accept the file name--it will be the same name you entered in the terminal after the nano command.
 . Use contrl+x to exit.
@@ -148,4 +148,4 @@ Notice that `cat` does not care about the file extension.
 
 * How does nano compare to other text editors you have used.
 * In what ways are plain text files better or worse than Word documents?
-* How much better would Bill Shakespear's work have been if he had access to nano?
+* How much better would Bill Shakespeare's work have been if he had access to nano?

@@ -6,7 +6,7 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-There are many important directories in Linux. The current chapter focuses on several key directories so that you will be comfortalbe moving around. The focus is on folders where you might need to explore data and edit files.
+There are many important directories in Linux. The current chapter focuses on several key directories so that you will be comfortable moving around. The focus is on folders where you might need to explore data and edit files.
 
 == Learning Objectives
 
@@ -24,9 +24,9 @@ You should be able to:
 
 * /home. This is where user files and folders go. By default, your user account will have read/write access only to your personal folders.
 * /etc. Configuration files are stored in /etc. Configurations include your network settings or background services.
-* /var. System files that will grow and change will be stored here. If you host a website, you will probably host it in /var/www. Logs are constantly being updated in the backgroundin the /var/log folder.
+* /var. System files that will grow and change will be stored here. If you host a website, you will probably host it in /var/www. Logs are constantly being updated in the background in the /var/log folder.
 * /root. The root user is the most powerful Linux account. The root user can read or change any data on the machine. The root user has unlimited access to everything. The /root folder is the root user's home directory.
-* /dev. In Linux, devices like network cards, monitors, and keyboards are treated like files. These files live in the /dev folder. Sometimes, you might need to point a program at one of these devices to communicate with your hardware.
+* /dev. In Linux, devices like network cards, monitors, and keyboards are treated as files. These files live in the /dev folder. Sometimes, you might need to point a program at one of these devices to communicate with your hardware.
 * /media. USB drives and CD-Roms are some of the media that would show up in the /media directory.
 
 == Explore the folders
@@ -81,14 +81,14 @@ What happened when you tried to list the root user's files and directories? Why 
 $ ls /dev
 ----
 +
-There will be many devices that you do not recognize. What devices do you reocognize? Can you guess what some of the others are?
+There will be many devices that you do not recognize. What devices do you recognize? Can you guess what some of the others are?
 . Run:
 +
 ----
 $ ls /media
 ----
 +
-What media is available? Note that even though Kali is running in a virtual machine, it is possible to attach virtual media to it.
+What media is available? Note that even though Kali is running as a virtual machine, it is possible to attach virtual media to it.
 
 
 == Reflection

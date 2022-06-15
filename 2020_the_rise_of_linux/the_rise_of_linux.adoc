@@ -21,7 +21,7 @@ In the early days of computing, people were trying to figure out the best way to
 
 Unix was (and is) a proprietary operating system. That meant that hobbyist and professionals had to pay licensing fees to AT&T in order to use Unix. Over time, the rights to Unix would be sold to different companies, but it remained a proprietary operating system.
 
-In 1991, a computer science student named Linus Torvalds had an idea. He wanted to create a small operating system that would be similar to Unix, but would be created from the ground up. everal people liked the idea. Over the subsequent years, volunteers created the Linux operating system (named after Linus). They made Linux look and feel much like Unix, but they wrote it using their own code. The Gnus Not Unix (GNU) project developed many of the applications that made Linux useful. Essentially, Linux was composed of the Linux kernal (that interfaces with the computer hardware) and the GNU applications that users would run.
+In 1991, a computer science student named Linus Torvalds had an idea. He wanted to create a small operating system that would be similar to Unix, but would be created from the ground up. several people liked the idea. Over the subsequent years, volunteers created the Linux operating system (named after Linus). They made Linux look and feel much like Unix, but they wrote it using their own code. The Gnus Not Unix (GNU) project developed many of the applications that made Linux useful. Essentially, Linux was composed of the Linux kernel (that interfaces with the computer hardware) and the GNU applications that users would run.
 
 There are many flavors of Linux and Unix today. They look and run very similarly which leads some to refer to them a *nix distributions. Mac OS X is a Unix operating system. Kali Linux is a Linux operating system. But, many of the commands that work on OS X also work in Kali Linux because they share many of the same programs.
 
@@ -31,13 +31,13 @@ In 2022, Linux has achieved some major victories (per https://en.wikipedia.org/w
 * All of the fastest 500 supercomputers in the world run Linux.
 * The majority of smartphones run Linux.
 
-Linux has fared well because it is stable, free, and productive. There is a question whether proprietary software can survive in the long term because Linux is a viable alternative. Time will tell.
+Linux has fared well because it is stable, free, and productive. There is a question about whether proprietary software can survive in the long term because Linux is a viable alternative. Time will tell.
 
 == *nix Design Philosophy
 
 Linux was designed by a lot of people. One of the design philosophies was to have people write small programs that `do one thing and do that one thing well`. This resulted in hundreds of small programs that Linux users needed to learn. For example, the program `wc` counts words--that's it. The `ls` program lists files--that's it. Competent Linux administrators can string these commands together very efficiently.
 
-Linux also relies heavily on the command line interface (CLI). In a CLI, commands are typed in a `terminal`. This is in contract to Microsoft Windows, which typically relies on a `graphical user interface (GUI)` to run programs and administer the application. A CLI typically has a steeper learning curve than a GUI. With a GUI, different options can be explored visually. With a CLI, programs and options must be sought out.
+Linux also relies heavily on the command-line interface (CLI). In a CLI, commands are typed in a `terminal`. This is in contrast to Microsoft Windows, which typically relies on a `graphical user interface (GUI)` to run programs and administer the application. A CLI typically has a steeper learning curve than a GUI. With a GUI, different options can be explored visually. With a CLI, programs and options must be sought out.
 
 In the Linux world, the computer gets in your way less. Want to delete every file on your hard drive with a single command? Linux will let you do it! You are expected to be competent enough to know what you're doing, which can be tough when you are learning.
 
@@ -57,6 +57,6 @@ Use the internet to determine which of the following devices run Linux operating
 * Does it matter to you which operating system your systems run on?
 * When would it make sense to adopt a CLI instead of a GUI?
 * When would it make sense to adopt a GUI instead of a CLI?
-* Does the *nix phiolosophy of "do one thing and do it well" apply to other parts of society?
+* Does the *nix philosophy of "do one thing and do it well" apply to other parts of society?
 * How might the "do one thing and do it well" philosophy create problems?
 

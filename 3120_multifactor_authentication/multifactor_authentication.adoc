@@ -28,7 +28,7 @@ An attacker might be able to steal one of these things, but it is much harder to
 
 Many of our accounts are low-risk and do not necessarily need multifactor authentication. Maybe you signed up for a small message board, and nothing terrible would happen if that account were compromised. But many accounts, such as email, are very important to secure. If your email account is compromised, attackers can reset accounts, cause embarrassment, and more. At a minimum, multifactor authentication should be turned on for email.
 
-Multifactor authentication only occurs when there are more than one type of authentication used. Usernames, passwords, and personal identification numbers (PINs) are all something you know, so if you are asked to provide all 3 at login, that is still only single-factor authentication.
+Multifactor authentication occurs when more than one type of authentication is used. Usernames, passwords, and personal identification numbers (PINs) are all something you know, so if you are asked to provide all 3 at login, that is still only single-factor authentication.
 
 == Practical Advice for Multifactor Authentication
 

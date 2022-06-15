@@ -90,7 +90,7 @@ image::me-you-in-documents.png[me.txt and you.txt in Documents]
 
 == Create Directories
 
-The files are organized better already, but typically we want to organized files in multiple directories. You might have a different directory for each project you are working on, for example. In this section you will use `mkdir` to create a directory.
+The files are organized better already, but typically we want to organize files in multiple directories. You might have a different directory for each project you are working on, for example. Next, you will use `mkdir` to create a directory.
 
 . Your working directory should be /home/kali/Documents. Use `pwd` to verify that this is your working directory.
 . Run the following command to create the "sweetcaroline" directory.
@@ -110,7 +110,7 @@ $ ls
 image::sweet-caroline-created.png[sweetcaroline created]
 +
 Notice that in the Kali terminal, files have a white font and directories are blue.
-. That's about how complicated it is to create a directory using the command line interface in Linux.
+. That's about how complicated it is to create a directory using the command-line interface in Linux.
 . Move both text files into sweetcaroline using the following command.
 +
 ----
@@ -118,7 +118,7 @@ $ mv *.txt sweetcaroline
 ----
 +
 //Must escape the first instance of the asterisk so that the contents are not bolded.
-Instead of moving files one by one, it is possible to move multiple files at once. Here, the `\*` character is used to match any file that has the .txt extension. The `*` character is a commond wildcard characters. Wildcard characters are used for pattern matching.
+Instead of moving files one by one, it is possible to move multiple files at once. Here, the `\*` character is used to match any file that has the .txt extension. The `*` character is a common wildcard character. Wildcard characters are used for pattern matching.
 . Change directories to sweetcaroline and list the files.
 +
 .me.txt and you.txt in sweetcaroline
@@ -165,7 +165,7 @@ image::imempty-created.png[imempty directory created]
 $ rm imempty
 ----
 +
-It won't work. By default, `rm` does not delete directories. This is a basic saqqfeguard to make sure that you don't delete things accidentally.
+It won't work. By default, `rm` does not delete directories. This is a basic safeguard to make sure that you don't delete things accidentally.
 . Use the following command to recursively delete imempty and any (nonexistant in this case) subdirectories.
 +
 ----
@@ -189,7 +189,7 @@ $ rm -r sweetcaroline
 
 == Files and Directories with Spaces
 
-In the Linux world, the use of spaces in files and drectory names is discouraged. Spaces just complicate things from the command line. The solution for using spaces is to put quotes around file and directory names.
+In the Linux world, the use of spaces in files and directory names is discouraged. Spaces just complicate things from the command line. The solution for using spaces is to put quotes around file and directory names.
 
 . Ensure that your working directory is /home/kali/Documents using the `pwd` command.
 . Create a directory called `it works` with the following command.
@@ -220,7 +220,7 @@ $ rm "it works" -r
 . Create a new directory in Documents with the name of a fruit.
 . Create three files in the new directory with the names of people you know (e.g., alice, bob).
 . Rename the files to the names of different colors (e.g., red, blue, yellow).
-. Delete the files one by done.
+. Delete the files one by one.
 . Delete the directory you created with the fruit name.
 
 Tips:
