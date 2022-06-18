@@ -328,8 +328,8 @@ include::7020_why_python\why_python.adoc[]
 include::7030_hello_world\hello_world.adoc[]
 
 <<<
-:imagesdir: 7040_strings_and_integers
-include::7040_strings_and_integers\strings_and_integers.adoc[]
+:imagesdir: 7040_strings_and_numbers
+include::7040_strings_and_integers\strings_and_numbers.adoc[]
 
 <<<
 :imagesdir: 7050_working_with_strings
@@ -344,8 +344,8 @@ include::7060_variables\variables.adoc[]
 include::7070_lists\lists.adoc[]
 
 <<<
-:imagesdir: 7080_basic_operators
-include::7080_basic_operators\basic_operators.adoc[]
+:imagesdir: 7080_dictionaries
+include::7080_dictionaries\dictionaries.adoc[]
 
 <<<
 :imagesdir: 7090_f_strings

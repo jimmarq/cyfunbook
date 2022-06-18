@@ -6,50 +6,119 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Lists store multiple values. The values could be the same data type or different data types.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Use lists to store multiple values
+* Determine the number of items in a list
+* Insert, update, and remove list items
 
-The learning objectives should be measurable.
+== Lists
 
-== Lesson Here
+A string object just holds one piece of text. An integer holds a single whole number. A float holds a single decimal number. Lists can hold multiple values. This section will walk you through several examples of creating and using lists.
 
-This should be a couple of pages of text and screenshots.
+. In a Kali terminal, run `python` to start an interactive python shell.
++
+[source,sh]
+----
+$ python
+----
+. Run the following code to create a list variable named *names* with 4 values: Alice, Bob, Eve, and the number 42. Yes, 42 would be a strange name.
++
+[source,python]
+----
+>>> names = ["Alice", "Bob", "Eve", 42]
+----
++
+Be sure to put the commas outside of the quotation marks. It is important to note that python lists can contain different data types. This is different than the default behavior in many programming languages that require all elements to be the same data type.
+. Check the number of items in the list with the *len()* function. Yes, this is the same function that is used to check the number of characters in a string.
++
+[source,python]
+----
+>>> len(names)
+----
++
+The result should be 4.
+. You can use the *print()* function to show the values in the list. This is similar to printing the value of a string.
++
+[source,python]
+----
+>>> print(names)
+----
+The result will be: ['Alice', 'Bob', 'Eve', 42].
+. Bob has been annoying lately, so remove him from the list with the *remove()* function.
++
+[source,python]
+----
+>>> names.remove("Bob")
+----
++
+But did that really remove Bob? Running *upper()* and *lower()* on a string variable does not change the variable's value.
+. Print the value of *names* again.
++
+[source,python]
+----
+>>> print(names)
+----
++
+There should only be 3 values left. Bob, indeed, has been removed.
+. Assume that Bob has apologized for being annoying, so we want to let him back in. The *append()* function can be used to add values to the end of a list.
++
+[source,python]
+----
+>>> names.append("Bob")
+>>> print(names)
+----
++
+Bob's back. But he's at the end of the list, now.
+. If you have somehow messed up your list, you can re-create it with the following code.
++
+[source,python]
+----
+>>> names = ["Alice", "Eve", 42, "Bob"]
+----
+. Individual values can be accessed by their index. Like strings, indexes start at 0.
++
+[source,python]
+----
+>>> print(names[0])
+Alice
+>>> print(names[1])
+Eve
+>>> print(names[2])
+42
+>>> print(names[3])
+Bob
+>>> print(names[4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+----
+. Lastly, it is possible to have lists of lists.
++
+[source,powershell]
+----
+>>> schools = [ ["South High", "Somecity"], ["North High", "OtherCity"]]
+>>> print(schools)
+----
++
+This code contains a *schools* variable that is a single list. The *schools* list has 2 items, and each of the items is a list with the school name and the city name.
 
-All images should be original. Do not include images downloaded from the internet.
+Lists are very versatile and powerful. To master python, you must master the list data type.
 
-Use Greenshot to take screenshots.
+== Challenge
 
-If you need to make diagrams, use draw.io.
-
-== Exercise
-
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+* Make a list of companies where you might want to work in the future.
+* Display the number of companies in the list.
+* Remove your least favorite company.
+* Add another company that your parents would like you to work for.
+* Display the list again.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* How are lists data types different from strings?
+* How could lists help you organize things you have to get done? How would you use lists of lists?
 

@@ -1,0 +1,116 @@
+= Dictionaries
+
+Author: Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+Dictionaries organize data using named values. Like lists, dictionaries hold multiple values. Each value is associated with a key.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe the differences between lists and dictionaries
+* Create dictionaries
+* Create, read, and delete dictionary values
+
+== Dictionaries
+
+Think about a regular dictionary that defines words. If you want to know the definition of a word, you find it in the dictionary, and once you've found the word, you read the definition. In python, dictionaries work similarly. But the words are called *keys*, and the definitions are called *values*. In a python dictionary, you look up a *key* and find its associated *value*.
+
+. In a Kali terminal, run `python` to start an interactive python shell.
++
+[source,sh]
+----
+$ python
+----
+. Create a small dictionary with the following code. Notice that the code spans multiple lines. Python won't run the code until you hit enter after the last curly brace. (You do not need to type the ellipses--those are there to indicate what the user interface will look like.)
++
+[source,python]
+----
+>>> target = {
+... "name": "ACME Tech University",
+... "IP": "251.22.25.932",
+... "reason": "spite"
+... }
+----
+. You can use the *print()* function to display the target objects, the keys, and the values. (And yes, I realize that "932" is not a valid number in an IP address.)
++
+[source,python]
+----
+>>> print(target)
+----
+The output should be:
++
+[source,python]
+----
+{'name': 'ACME Tech University', 'IP': '251.22.25.932', 'reason': 'spite'}
+----
+. You can access dictionary values by key.
++
+[source,python]
+----
+>>> target['IP']
+>>> target['name']
+>>> target['reason']
+----
+. If you try to access a key that does not exist, or you use the wrong case for a key, you'll get an error.
++
+[source,python]
+----
+>>> target['NAME']
+----
++
+You will get:
++
+[source,python]
+----
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'NAME'
+----
+. You can add new keys and values just by inventing accessing a new key and assigning a value.
++
+[source,python]
+----
+>>> target['contact_name'] = "Alice"
+>>> print(target)
+----
++
+A fourth key and value should appear in the output.
+. To remove an item, use the *pop()* function.
++
+[source,python]
+----
+>>> target.pop("IP")
+>>> print(target)
+----
++
+The pop function prints the IP value, then removes the key and value. The IP key and value will no longer exist.
+. Values of the dictionary can be updated by replacing the old value.
++
+[source,python]
+----
+>>> target['contact_name'] = "Bob"
+>>> print(target)
+----
+
+Dictionaries are commonly used in python. Like lists, they are very flexible. Dictionary values can even be lists or dictionaries. Lists can have dictionary elements. 
+
+== Challenge
+
+* Create a dictionary object to hold information about a car.
+* Think of at least 3 keys you will store and what values you will assign to those keys.
+* After creating the dictionary object, add another key/value pair.
+* Print the dictionary.
+
+== Reflection
+
+* How are lists and dictionaries similar and different?
+* What would be the best way to store the following data--lists or dictionaries? A combination of both?
+** Names of babies born last year.
+** Details about corporate earnings.
+** Historial daily high temperatures.
+

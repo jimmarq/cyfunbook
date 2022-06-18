@@ -6,50 +6,48 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Python is one of the most popular programming languages. It is expressive, meaning that a lot of work can be done in a few lines of code. Python is versatile. It can be used to create websites, artificial intelligence models, games, and more. Python is one of the top languages used by cybersecurity progessionals.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the python design philosophy
+* List some notable python projects
 
-The learning objectives should be measurable.
+== Python's Evolution
 
-== Lesson Here
+Python first appeared in 1991. It was created by Guido van Rossum who continued to lead the python project for decades. Some of python's goals are listed in PEP 20 - The Zen of Python (https://github.com/python/peps/blob/main/pep-0020.txt).
 
-This should be a couple of pages of text and screenshots.
+* Beautiful is better than ugly.
+* Simple is better than complex.
+* Complex is better than complicated.
+* Readability counts.
+* There should be one-- and preferably only one --obvious way to do it.
 
-All images should be original. Do not include images downloaded from the internet.
+Python is free for anybody to download and use. Many developers build *libraries* that extend python's base functionality to add features. Your python code can leverage these libraries to reduce the amount of code you need to write to solve problems. These libraries are often given away for free. For example, PyTorch is a premier machine learning library that anybody can use for free (https://pytorch.org/).
 
-Use Greenshot to take screenshots.
+The python community encourages sharing code and best practices. There are thousands of resources to help you learn python.
 
-If you need to make diagrams, use draw.io.
+== Notable Python Projects
 
-== Exercise
+Many thousands of projects have used python. Below are just a few that show the breadth of use cases for python.
 
-Include detailed steps to practice the topic introduced in the lesson.
+* Python was used to analyze data to produce the first image of a black hole.
++
+.Black Hole. Source: https://www.eso.org/public/images/eso1907a/
+image::eso1907a.jpg[black hole]
+* Key parts of YouTube are written in python. Python is one of Google's official programming languages accepted for use within the company, and YouTube is owned by Google.
+* Instagram uses python to serve its web pages.
+* Dropbox wrote its initial server and desktop software in python.
+* SQLMap is a tool to hack databases written in python.
+* Disney's Toontown Online was a massively multiplayer online game written in python.
 
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+An investment in learning python can pay dividends because it can be used to solve a wide array of problems.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* What problems might you want to solve using python?
+** Tasks you want to automate?
+** Websites you want to build?
+** Data you want to analyze?

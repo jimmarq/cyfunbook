@@ -6,50 +6,141 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Variables hold data. Data could be a string, multiple strings, numbers, and more. 
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the purpose of using variables
+* Create variables in python
 
-The learning objectives should be measurable.
+== Why Variables Are Useful
 
-== Lesson Here
+Variables help organize the data that an application uses. For example, an online banking website will store your first name as a variable. When you log in, the variable might be displayed with a welcome message. If you order checks, the variable with your first name will be printed on the checks.
 
+There are two kinds of variables: mutable and immutable. Mutable objects can have their values changed. Immutable variables cannot change. The only way to change the value of an immutable variable is to overwrite the old variable. Strings and numbers are immutable.
+
+== Naming Variables
+
+In python, variables must start with a letter or an underscore. Only use a-z and 0-9, and _. So, no special characters. Variable names are case-sensitive.
 This should be a couple of pages of text and screenshots.
 
-All images should be original. Do not include images downloaded from the internet.
+Good variable names:
 
-Use Greenshot to take screenshots.
+* age
+* first_name
+* firstName
+* compay1
+* spent_money
 
-If you need to make diagrams, use draw.io.
+Illegal variable names:
 
-== Exercise
+* 9_squares (starts with a number)
+* first-name (has a dash)
+* spent$ (has a special character)
 
-Include detailed steps to practice the topic introduced in the lesson.
+Make variable names unambiguous if possible. "ASDF" is a perfectly valid variable name, but nobody reading your code will understand what that variable is meant to represent.
 
-Use screenshots and numbered lists heavily.
+== Create Variables
 
-Decimals are used for numbered lists.
+. In a Kali terminal, run `python` to start an interactive python shell.
++
+[source,sh]
+----
+$ python
+----
+. Run the following code to create a variable named *first_name* with a value of "Alice."
++
+[source,python]
+----
+>>> first_name = "Alice"
+----
+. Use the *print()* function to output the variable's value. (In the shell, it's possible to just write the variable name and press enter, but this does not work in .py files.)
++
+[source,python]
+----
+>>> print(first_name)
+----
+. Run the following code to make "Alice" lower-case.
++
+[source,python]
+----
+>>> first_name.lower()
+----
++
+The code will automatically print 'alice' in the shell.
+. Print the value of first_name again.
++
+[source,python]
+----
+>>> print(first_name)
+----
++
+The value of first_name is still "Alice" with a capital A. The *lower()* function did not change the value of the first_name variable.
+. Update the first_name variable with the lower-case version of the variable's value.
++
+[source,python]
+----
+>>> first_name = first_name.lower()
+----
++
+No code will be output in the shell. 
+. Print the value of first_name again.
++
+[source,python]
+----
+>>> print(first_name)
+----
++
+Now, the value should be lower-case. In this instance, python overwrote the old variable with the new value.
+. Create a string variable.
++
+[source,python]
+----
+>>> age = 25
+----
++
+Notice that you did not have to declare a data type for first_name or age.
+. Print the value of the age variable.
++
+[source,python]
+----
+>>> print(age)
+----
+. Add 5 to age.
++
+[source,python]
+----
+>>> age + 5
+----
+The value 30 will be output in the shell.
+. Predict what the value of age will be before printing it.
++
+[source,python]
+----
+>>> print(age)
+----
+. Update the age variable by adding 2.
++
+[source,python]
+----
+>>> age = age + 2
+----
+. Check that the value has been updated.
++
+----
+>>> print(age)
+----
++
+The value should be 27.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Challenge
+
+What variables would you create to store data about a single person? define the variables and print them in the shell.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why is it important to use descriptive variable names?
+* What other data types besides numbers and strings would you want to describe a person?
 
