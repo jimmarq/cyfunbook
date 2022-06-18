@@ -196,6 +196,9 @@ include::4070_dumpster_diving\dumpster_diving.adoc[]
 
 :leveloffset: 0
 = Windows
+
+Microsoft Windows is extremely popular in corporate environments. Microsoft develops Active Directory which centralizes user accounts and enforces security policy. It is important to understand how Windows works so that desktops and servers can be secured properly.
+
 :leveloffset: 1
 
 <<<
@@ -260,6 +263,9 @@ include::5150_windows_command_prompt\windows_command_prompt.adoc[]
 
 :leveloffset: 0
 = Networking
+
+Hackers take advantage of insecure networks to steal information. This section provides an overview of key network hardware and networking concepts.
+
 :leveloffset: 1
 
 <<<
@@ -313,6 +319,9 @@ include::6120_wireshark\wireshark.adoc[]
 
 :leveloffset: 0
 = Python
+
+Python is a popular programming language. Python can be run on Windows, Linux, and Mac computers. It has become the one programming language that virtually all cybersecurity experts should learn. It is powerful and (compared to other languages) easy to learn. This section will introduce python language fundamentals.
+
 :leveloffset: 1
 
 <<<
@@ -329,7 +338,7 @@ include::7030_hello_world\hello_world.adoc[]
 
 <<<
 :imagesdir: 7040_strings_and_numbers
-include::7040_strings_and_integers\strings_and_numbers.adoc[]
+include::7040_strings_and_numbers\strings_and_numbers.adoc[]
 
 <<<
 :imagesdir: 7050_working_with_strings
@@ -348,28 +357,30 @@ include::7070_lists\lists.adoc[]
 include::7080_dictionaries\dictionaries.adoc[]
 
 <<<
-:imagesdir: 7090_f_strings
-include::7090_f_strings\f_strings.adoc[]
+:imagesdir: 7090_user_input
+include::7090_user_input\user_input.adoc[]
 
 <<<
-:imagesdir: 7100_loops
-include::7100_loops\loops.adoc[]
+:imagesdir: 7100_conditionals
+include::7100_conditionals\conditionals.adoc[]
 
 <<<
-:imagesdir: 7110_functions
-include::7110_functions\functions.adoc[]
+:imagesdir: 7110_loops
+include::7110_loops\loops.adoc[]
+
 
 <<<
-:imagesdir: 7120_conditionals
-include::7120_conditionals\conditionals.adoc[]
+:imagesdir: 7120_functions
+include::7120_functions\functions.adoc[]
+
 
 <<<
 :imagesdir: 7130_dunder_methods
 include::7130_dunder_methods\dunder_methods.adoc[]
 
 <<<
-:imagesdir: 7140_dictionaries
-include::7140_dictionaries\dictionaries.adoc[]
+:imagesdir: 7140_f_strings
+include::7140_f_strings\fstrings.adoc[]
 
 <<<
 :imagesdir: 7150_importing

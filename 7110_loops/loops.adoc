@@ -1,0 +1,163 @@
+= Loops
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+Loops let us do operations on multiple items. There are two popular kinds of loops in python: *for* loops and *while* loops. In this chapter you will use *for* loops and *while* loops to work with lists and to control program flow.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe the usefulness of loops
+* Use *for* loops
+* Use *while* loops
+
+== For Loops
+
+Python's *for* loops are good for iterating through list items. 
+
+. Open a Kali terminal.
+. If you did not create the *mypython* directory, create it with the following command. (Even if the directory exists, the following command will not hurt anything--it will just tell you that the directory already exists.)
++
+[source,sh]
+----
+$ mkdir ~/Documents/mypython
+----
+. Navigate to the *mypython* directory.
++
+[source,sh]
+----
+$ cd ~/Documents/mypython
+----
+. Create a file called *for.py* with the `touch` command.
++
+[source,sh]
+----
+$ touch for.py
+----
+. Edit *for.py* with nano.
++
+[source,sh]
+----
+$ nano for.py
+----
+. Enter the following code.
++
+[source,python]
+----
+names = ["Alice", "Bob", "Eve"]
+for name in names:
+    print("Hello " + name)
+----
+Important: put 4 spaces before the *print* function.
++
+Line 1 creates a list of strings.
++
+Line 2 contains the code that starts the loop. The *for* keyword tells python that we want a loop. We know that the *names* variable was created on line 1. The *name* variable is new in this program. The *name* variable temporarily holds the current name from the *names* variable. So the first time through the loop, the *name* variable will have the name, "Alice." The second time through the loop, the *name* variable will have the value "Bob." The value of the *name* variable will be updated for every item in the *names* list. At the end of line 2 is a colon (":") that tells python that everything that comes after is what should happen inside the loop.
++
+Line 3 starts with 4 spaces. Python uses spaces (or tabs) for defining the structure of code. Other programming languages often rely on curly braces ("{ }") for defining the structure of code. Some say that python's use of spaces rather than curly braces makes it easier to read. Problems can occur when spaces and tabs are mixed, or you forget to add spaces and python yells at you and hurts your feelings, and then you have to hunt through your source code trying to find where you need to add a space, or where you need to delete a tab and add four spaces. `Nano` is not very sophisticated and does not help you out with spacing, so you have to add the spaces manually. More advanced code editors will try to indent your code with spaces automatically. But we'll stick with `nano` for now because our programs are not terribly complicated.
+. Save the code (*control+o*) and exit (*control+x*).
+. Run *for.py* from the terminal.
++
+[source,sh]
+----
+$ python for.py
+----
++
+You should see the output:
++
+----
+Hello Alice
+Hello Bob
+Hello Eve
+----
+
+== For Loop Challenge
+
+. Create a file called *for_nums.py*.
+. In the first line, create an array of integers.
+. In the second line, start the *for* loop.
+. In the third line, be sure to indent 4 spaces, then print the numbers.
+
+There do not need to be any quotation marks in your loop.
+
+== While Loops
+
+In python, *while* will continue until some condition is met, then the loop is exited.
+
+. In the Kali terminal, run the following code to create the file *while.py* using the `touch` command.
++
+[souce,sh]
+----
+$ touch while.py
+----
+. Edit *while.py* with `nano` (*nano while.py*).
+. Add the following code to write a small program.
++
+[souce,python]
+----
+counter = 1
+while counter < 10:
+    print(counter)
+    counter = counter + 1
+print("Done")
+----
++
+Line 1 creates an integer variable named counter with a value of 1. Note that this variable is created outside of the loop.
++
+Line 2 starts the *while* loop. This statement tells python to run the indented code below as long as the *counter* variable is less than 10. If the *counter* variable is not less than 10, the code will continue after the loop.
++
+Line 3 prints the current value of the *counter* variable.
++
+Line 4 adds one to the counter. If this line were omitted, the loop would continue forever.
++
+Line 5 will print "Done" after the *while* loop has exited.
+. Save the file (*control+o*) and exit (*control+x*).
+. Run the program (*python while.py*). You should see the output:
++
+----
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Done
+----
+
+== While Challenge
+
+. Create a file called *while_launch.py* to create a launch countdown counting from 10 down to 1, then printing "Blastoff!".
+. Your launch countdown should look like this:
++
+----
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Blastoff!
+----
+. The numbers 10 through 1 should be printed in a *while* loop.
+
+== Challenge
+
+Create a *while* loop that never exits. Run it. What happens to your program?
+
+== Reflection
+
+* When would it be better to use while *loops* and *for* loops?
+* When would it be appropriate to include an infinite loop in your code?
+

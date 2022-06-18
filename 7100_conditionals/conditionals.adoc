@@ -1,0 +1,210 @@
+= Conditionals
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+Conditionals let you compare values and take action depending on the values. The important control statements are the *if*, *else*, and *elif*. Inside those statements, variables can be compared with *>*, *<*, *\<=*, *>=*, *==*, and *!=*.
+
+Include images like so:
+
+//.Text here will go under the image
+//image::some_image.png[Alt text here]
+
+== Learning Objectives
+
+You should be able to:
+
+* Use comparison operators
+* Structure programs using control statements
+* Compare multiple statements with *and* and *or*
+
+== Comparison Operators
+
+Comparison operators let you compare values. Some of the comparison operators are similar to math. An exception is checking for equality. The core comparison operators are included below.
+
+. Run `python` in the Kali terminal to start an interactive python shell. Run the following sample comparisons. The expected output is included in a comment to the right.
+* *>*: Greater than
++
+[souce,python]
+----
+5 > 6 # False
+5 > 3 # True
+----
++
+(You do not need to write "# False" or "# True"--those values should appear as a result of running the code before.)
+* *>=*: Greater than or equal to
++
+[souce,python]
+----
+100 >= 100 # True
+100 >= 99  # True
+100 >= 200 # False
+----
+* *<*: Less than
++
+[souce,python]
+----
+8 < 10 # True
+10 < 8 # False
+----
+* *\<=*: Less than or equal to
++
+[souce,python]
+----
+1 <= 100 # True
+1 <= 1   # True
+1 <= -1  # False
+----
+* *==*: Equal to
++
+[souce,python]
+----
+42 == 42 # True
+41 == 42 # False
+----
+* *!=*: Not equal to
++
+[souce,python]
+----
+42 != 42 # False
+41 != 42 # True
+----
+
+Instead of comparing numbers, comparisons often include variables.
+
+. Set the following variables in your python interactive shell.
++
+[source,python]
+----
+small = 5
+large = 100
+----
+. Compare the values of the *small* and *large* variables using the comparison operators.
++
+[source,python]
+----
+small == large
+small != large
+small < large
+small > large
+small <= large
+small >= large
+----
+. Run *exit()* to quit the python shell.
+
+== If, Else, and Elif
+
+Sometimes you need to take action based on the result of comparing two values. "If" statements are included in virtually every programming language. In this section, you will create the code to evaluate student scores on an entrance exam. If students score at least 500 points on the exam, they make it. If they score less than 500 but at least 400 points, they get a free retake. If they score less than 400, they are told to study more.
+
+. In the Kali terminal, create *if.py* with the `touch` command.
++
+[source,sh]
+----
+$ touch if.py
+----
+. Edit *if.py* in `nano` (*nano if.py*).
+. Add the following code.
++
+[source,python]
+----
+student_score = int(input("Please enter the student score to evaluate: "))
+if student_score >= 500:
+    print("The student made it!")
+elif student_score >= 400:
+    print("Almost! The student earned a free retake.")
+else:
+    print("The student needs to study more.")
+----
++
+Line 1 accepts user input, converts it to an integer, and saves the integer value in the *student_score* variable.
++
+Line 2 checks if the score is greater than or equal to 500. If this statement is true, the following indented line (line 3) will be run.
++
+Line 4 will only be evaluated if line 2 was false. This will check if the score was at least 400. If true, the following indented line (line 5) will be run.
++
+Line 6 will only be evaluated if lines 2 and 4 are both false. We know the score is less than 400, so the following line (line 7) is printed.
+. Save the code (*control+o*) and exit (*control+x*).
+. Run the code (*python if.py*).
+. Enter a student score when prompted. If you enter *550*, you should see:
++
+----
+Please enter the student score to evaluate: 550
+The student made it!
+----
+. Run the program again (*python if.py*) and enter *419* for the score. You should see:
++
+----
+Please enter the student score to evaluate: 419
+Almost! The student earned a free retake.
+----
+. Run the program again and enter *330* for the score. You should see:
++
+----
+Please enter the student score to evaluate: 330
+The student needs to study more.
+----
+
+One of the biggest problems people have when programming *if/elif/else* statements is not being precise with comparison operators. Double-check that you did not accidentally use *>* when you should have used *>=*, for example.
+
+== Multiple Comparison
+
+It is possible to compare multiple things at the same time to evaluate if all statements are true, or if any of the statements are true. 
+
+. Start a python interactive shell (*python*).
+. Run the following code to set the value of several variables.
++
+[source,python]
+----
+>>> grade = "B"
+>>> status = "Junior"
+----
+. Run the following code that will make sure that *grade* is "B" and *status* is "Senior" (which it is not).
++
+[source,python]
+----
+>>> grade == "B" and status == "Senior"
+----
++
+This will return a single "False" value indicating that the entire statement is not true.
+. Run the following code that will check that either *grade* is "B" *or* that *status* is "Senior."
++
+[source,python]
+----
+>>> grade == "B" or status == "Senior"
+----
++
+The code returns a single "True" value because one of the values was true.
+. What would be the value of the following code: True or False?
++
+[source,python]
+----
+>>> 1 == 2 or 2 == 3 or 3 == 4 or 4 == 5 or 5 == 6 or 7 == 7
+----
+. What would be the value of the following code: True or False?
++
+[source,python]
+----
+>>> 1 == 1 and 2 == 2 and 3 == 3 and 4 == 4
+----
+. What would be the value of the following code: True or False?
++
+[source,python]
+----
+>>> 1 == 1 and 2 == 2 and 3 == 3 and 4 == 4 and 5 == 6 or 6 == 7 or 7 == 7
+----
+
+== Challenge
+
+. Create a small program to evaluate hiking trail difficulty based on elevation gain.
+. Choose 3 elevation gain cutoffs for hard, moderate, and easy trails.
+. Write a program to print out hiking trail difficulty based on elevation gain.
+
+== Reflection
+
+* What conditions would a loan officer need to be fulfilled before granting a loan?
+* Think of a new case when *and* should be used to evaluate multiple comparisons.
+* Think of a new case when *or* should be used to evaluate multiple comparisons.
+

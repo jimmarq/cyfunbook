@@ -1,4 +1,4 @@
-= Conditionals
+= F-Strings
 
 Author: Dr. Jim Marquardson
 
