@@ -1,4 +1,4 @@
-= F-Strings
+= F-strings
 
 Author: Dr. Jim Marquardson
 
@@ -6,50 +6,110 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Programs frequently need to include the values of variables inside strings. Instead of concatenating strings with the plus symbol, python's f-strings let you use curly braces inside strings to include variables.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the benefits of using f-strings over string concatenation
+* Use f-strings
 
-The learning objectives should be measurable.
+== F-strings
 
-== Lesson Here
+Python's f-strings were first included in python version 3.6. Most new code uses f-strings to some extent.
 
-This should be a couple of pages of text and screenshots.
+The following code shows how verbose (and error-prone) it can be to create strings solely through concatenation.
 
-All images should be original. Do not include images downloaded from the internet.
+[source,python]
+----
+name = "Alice"
+friend = "Bob"
+day = "Tuesday"
+minutes = 60
+message = "On " + day + ", " + name + " and " + friend + " will hang out for " + str(minutes) + " minutes."
+print(message)
+----
 
-Use Greenshot to take screenshots.
+It is easy to get lost in the mix of quotation marks and plus symbols. Care has to be taken to convert the *minutes* variable to a string.
 
-If you need to make diagrams, use draw.io.
+Python's f-strings make this easier. The following code demonstrates how they are used.
 
-== Exercise
+[source,python]
+----
+name = "Alice"
+friend = "Bob"
+day = "Tuesday"
+minutes = 60
+message = f"On {day}, {name} and {friend} will hang out for {minutes} minues."
+print(message)
+----
 
-Include detailed steps to practice the topic introduced in the lesson.
+Line 5 includes the f-string. The letter "f" must be placed before the quotation mark to tell python to interpret the variables in the string. The variable names are put in curly braces. Notice that python figures out that minutes is an integer and automatically converts it to a string when needed.
 
-Use screenshots and numbered lists heavily.
+== F-string exercise
 
-Decimals are used for numbered lists.
+. Launch *python* from the Kali terminal to start an interactive python shell.
+. Run the following code.
++
+[source,python]
+----
+>>> ip = "10.1.2.15"
+>>> f"The IP address is {ip}"
+----
++
+You should see the output:
++
+----
+'The IP address is 10.1.2.15'
+----
+. Try using integers with f-strings.
++
+[souce,python]
+----
+>>> age = 5
+>>> f"My sister is {age} years old."
+----
+. You should see the output:
++
+----
+'My sister is 5 years old.'
+----
+. Decimal numbers can be trickier. Run the following code:
++
+----
+>>> fraction = 2/3
+>>> f"{fraction} of the pie has been eaten."
+----
++
+The output should be:
++
+----
+'0.6666666666666666 of the pie has been eaten.'
+----
++
+That's a few more decimal places than needed.
+. F-string allows you to format decimal numbers. In this case, we might only want 2 decimal places after the zero. In this case, we can format the variable with ":.2" by putting that in the curly brace after the variable name.
++
+[source,python]
+----
+f"{fraction:.2} of the pie has been eaten."
+----
++
+The above code produces a much more readable output:
++
+----
+'0.67 of the pie has been eaten.'
+----
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Mad Lib Challenge
+
+. Create a file called madlib.py.
+. Use the *input()* function to prompt the user to input 2 adjectives, 2 nouns, 2 verbs, and an adjective.
+. Use f-strings to combine the variables into a brief string.
+. Print the string to the terminal.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why is combining strings such an important part of coding?
 

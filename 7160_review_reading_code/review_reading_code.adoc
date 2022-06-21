@@ -1,0 +1,64 @@
+= Review: Reading Code
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+It is important to be able to read other people's source code. You may need to tweak examples you find online, read tutorials, or look for bugs that can be exploited. This chapter reviews core python concepts.
+
+== Learning Objectives
+
+You should be able to:
+
+* Explain what code is doing, line by line
+
+== Reading Source Code
+
+Explain what each line of code in the following python program does.
+** Identify the data types.
+** Describe function parameters and return values.
+** Explain the flow of the program.
+** There may be specific libraries or functions you do not recognize. Search for them on the internet if needed.
+
+[source,python,linenums]
+----
+import requests
+
+settings = {
+    "success_message": "Success!",
+    "failure_message": "Failure!"
+}
+
+def check_connectivity(sites):
+    for site in sites:
+        print(f"Checking connectivity for {site}...")
+        response = requests.get(site)
+        if response:
+            print(settings['success_message'])
+        else:
+            print(settings['failure_message'])
+
+if __name__ == "__main__":
+    print("Welcome!")
+    answer = ""
+    while answer != "x":
+        print("What would you like to do?")
+        print("  1 - check connectivity")
+        print("  x - exit")
+        answer = input("? ")
+        if answer == "1":
+            sites = ["https://google.com", "https://microsoft.com", "https://apple.com/doesnotexist"]
+            check_connectivity(sites)
+        elif answer == "x":
+            break
+        else:
+            print("Uknown option")
+----
+
+== Reflection
+
+* Why is it important to be able to read code?
+* What weaknesses exist in the program to check connectivity?
+

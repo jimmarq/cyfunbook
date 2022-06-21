@@ -375,8 +375,8 @@ include::7120_functions\functions.adoc[]
 
 
 <<<
-:imagesdir: 7130_dunder_methods
-include::7130_dunder_methods\dunder_methods.adoc[]
+:imagesdir: 7130_main_method
+include::7130_main_method\main_method.adoc[]
 
 <<<
 :imagesdir: 7140_f_strings
@@ -387,8 +387,8 @@ include::7140_f_strings\fstrings.adoc[]
 include::7150_importing\importing.adoc[]
 
 <<<
-:imagesdir: 7160_packages
-include::7160_packages\packages.adoc[]
+:imagesdir: 7160_review_reading_code
+include::7160_review_reading_code\review_reading_code.adoc[]
 
 :leveloffset: 0
 = Policy and Planning

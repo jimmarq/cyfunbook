@@ -6,50 +6,133 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Python has a lot of features. So far, chapters have focused on core functionality. It is possible to "import" python libraries that do more advanced work.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe what importing does
+* Import libraries
+* Use imported library functions
 
-The learning objectives should be measurable.
+== Importing
 
-== Lesson Here
+Python is broken down into modules. A python file is a single module. Modules are organized in packages. Packages are folders of different modules. So there could be an entire package (i.e., folder) of python modules (i.e., .py files) that could help you manipulate images, download web pages, decrypt data, and more.
 
-This should be a couple of pages of text and screenshots.
+Python comes with many packages that can be imported without having to install anything. In the next section, you will work with the *datetime*, *os*, and *hashlib* packages.
 
-All images should be original. Do not include images downloaded from the internet.
+== Datetime Library
 
-Use Greenshot to take screenshots.
+Dates are hard. Really hard. Your average elementary school student knows how calendars and clocks work, but behind the basics lies a huge amount of complexity. Developers often get bitten by bugs due to leap years, leap seconds, time zones, and other date-related issues. Python's *datetime* library helps developers work with dates.
 
-If you need to make diagrams, use draw.io.
+. From the Kali terminal, launch a python interactive shell.
++
+----
+$ python
+----
+. Run the following code to try to get the current date. (It will fail.)
++
+[source,python]
+----
+>>> datetime.date.today()
+----
++
+You should see an error: "NameError: name 'datetime' is not defined." The *datetime* library definitely exists, but we have not imported it, yet.
+. The entire *datetime* package can be imported with the following code.
++
+[source,python]
+----
+>>> import datetime
+----
++
+It looks like nothing happens when you run the above code. But what python does is load all of the *datetime* python files into your current program (the shell).
+. You can now access the *datetime* features.
++
+[source,python]
+----
+>>> datetime.date.today()
+----
++
+The code will now produce:
++
+----
+datetime.date(2022, 6, 20)
+----
++
+(Of course, the date produced will depend on the date when you run the code.)
+. Technically, you imported way more functionality than you needed to. If the only *datetime* feature we need is the *date* functionality, it can be imported specifically.
++
+[source,python]
+----
+from datetime import date
+date.today()
+----
++
+The above code goes into the *datetime* package and only loads the *date* module. Generally, only importing what you need and nothing else is preferred.
 
-== Exercise
+== Os Library
 
-Include detailed steps to practice the topic introduced in the lesson.
+The *os* library has information about operating system features.
 
-Use screenshots and numbered lists heavily.
+. Run the following code.
++
+[source,python]
+----
+>>> import os
+>>> os.getlogin()
+----
++
+This will print the name of the logged-in user--'kali.'
+. Check to see if two folders exist.
++
+[source,python]
+----
+>>> os.path.exists("/home/kali/Docs")
+>>> os.path.exists("/home/kali/Documents")
+----
+. Check your current working directory.
++
+[source,python]
+----
+>>> os.getcwd()
+----
 
-Decimals are used for numbered lists.
+Find other features here: https://docs.python.org/3/library/os.html.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Hashlib Library
+
+Python can be used to calculate hashes.
+
+. Run the following code.
++
+[source,python]
+----
+>>> import hashlib
+>>> hashlib.sha256(b"watermelon").hexdigest()
+----
++
+The result should be:
++
+----
+'31a2d5282683edb3a22c565f199aa96fb9ffb3107af35aad92ee1cd567cfc25d'
+----
+. To see what else is in the *hashlib* library, run the following code:
++
+----
+>>> dir(hashlib)
+----
+. If you see something interesting, you can dig deeper into the official documentation at https://docs.python.org/3/library/hashlib.html.
+. For example, for password storage, *scrypt* would be better than *sha256*. Honestly, the python documentation does not give a great explanation for using *scrypt*. But, the following code would work.
++
+----
+>>> hashlib.scrypt(b"watermelon", salt=os.urandom(16), n=4, r=8, p=1)
+----
++
+Run the above code several times. Notice that a different hash is created each time. That is because you are pulling in random entropy from the *os* library each time.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What kinds of libraries would be most useful to help you solve problems?
+* Why is it a good idea to import the minimum number of libraries needed to solve a problem?
 

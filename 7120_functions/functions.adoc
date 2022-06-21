@@ -6,50 +6,173 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Functions are blocks of code that perform some useful action. Functions can be defined once and run many times in code. Functions are useful for organizing code and making code easier to test.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the benefits of using functions
+* Write python functions
 
-The learning objectives should be measurable.
+== Functions
 
-== Lesson Here
+Functions are blocks of code that perform some kind of action. Functions might update data, draw pictures, create lists, access variables, or anything else that you could do outside of a block. Variables created inside a function will die when the function ends. Functions can *return* variables when they finish. The *return* value can be stored as a variable.
 
-This should be a couple of pages of text and screenshots.
+* The following code defines a function named *add* that accepts two parameters: *number1* and *number2*. Then, the function is used. Functions must be used *after* they have been defined.
++
+[source,python]
+----
+def add(number1, number2):
+    return number1 + number2
+add(5, 7)
+add(12, 9)
+add(42, 0)
+----
+* The following code defines a function that does not return anything. The function accepts the day of the week as an input parameter. The function simply prints a message.
++
+[source,python]
+----
+def display_message(day_of_week):
+    print("Today is " + day_of_week)
+display_message("Monday")
+display_message("Friday")
+----
+* Generally, functions are multiple lines long and do some sort of calculation or carry out logic. For example, consider the following function that evaluates a student's fitness for graduation. The function accepts a dictionary as an input parameter. After the function is defined, a sample *student* dictionary is created. Then the student dictionary is passed to the function.
++
+[source,python]
+----
+def evaluate_for_graduation(student):
+    if student['coursework'] == "complete" and student['gpa'] >= 2.0:
+        student['graduated'] = True
+        print("The student " + student['name'] + " has been approved for graduation.")
+    else:
+        student['graduated'] = False
+        print("The student " + student['name'] + " has not met all graduation requirements.")
+student = {"name": "Ricky Bobby", "coursework": "complete", "gpa": 3.5, "graduated": "False"}
+evaluate_for_graduation(student)
+----
 
-All images should be original. Do not include images downloaded from the internet.
+In the next section, you will write several functions and test them.
 
-Use Greenshot to take screenshots.
+. Open a Kali terminal.
+. If you did not create the *mypython* directory, create it with the following command. (Even if the directory exists, the following command will not hurt anything--it will just tell you that the directory already exists.)
++
+[source,sh]
+----
+$ mkdir ~/Documents/mypython
+----
+. Navigate to the *mypython* directory.
++
+[source,sh]
+----
+$ cd ~/Documents/mypython
+----
+. Create a file called *convert.py* with the `touch` command.
++
+[source,sh]
+----
+$ touch convert.py
+----
+. Edit *convert.py* with nano.
++
+[source,sh]
+----
+$ nano convert.py
+----
+. Enter the following code.
++
+[source,python]
+----
+celsius = 30
+print(str(celsius) + " degrees Celsius in Farenheight is: " + str(celsius * 9 / 5 + 32))
+celsius = 20
+print(str(celsius) + " degrees Celsius in Farenheight is: " + str(celsius * 9 / 5 + 32))
+----
++
+Line 1 creates the *celsius* variable that holds a temperature.
++
+Line 2 converts Celsius to Farenheight and displays the conversion.
++
+Line 3 updates the value of the *celsius* variable.
++
+Line 4 again converts celsius to Farenheight and displays the conversion.
++
+There is a design problem with the code. If we wanted to convert 50 temperatures, we would have to copy the code 50 times. If we happened to have an error in the calculation, we would have to fix it in many places.
+. Save the file (*control+o*) and exit `nano` (*control+x*).
+. Run the code to verify that it works.
++
+[source,sh]
+----
+$ python convert.py
+----
++
+You should see the following output.
++
+----
+30 degrees Celsius in Farenheight is: 86.0
+20 degrees Celsius in Farenheight is: 68.0
+----
+. The code works, but it can be improved with functions.
+. Edit the code in `nano` (*nano convert.py*). You can hold down shift, then use the arrow keys to select all of the text. Press *control+k* to cut the text. Write the following code. Be sure to indent lines 2 and 3 four spaces.
++
+[source,python]
+----
+def convert(celsius):
+    farenheight = celsius * 9 / 5 + 32
+    return str(celsius) + " degrees Celsius in Farenheight is: " + str(celsius * 9 / 5 + 32)
+print(convert(30))
+print(convert(20))
+----
++
+Lines 1-3 define the *convert* function. Line 1 starts with "*def*" which *defines* a function's name. The function is named "*convert*." Variables that can be sent to the function are included in parentheses. In this case, only a single variable ("*celsius*") is included, but functions often accept multiple variables. Functions might also accept no variables.
++
+Line 2 performs the calculation.
++
+Line 3 returns a string that describes the entire unit conversion.
++
+Lines 4 and 5 *call* the *convert* function and print the result.
++
+The above code is better with functions. If we had an error in our calculation, we could fix it once in the function.
 
-If you need to make diagrams, use draw.io.
+== Function Challenge
 
-== Exercise
+. Create a file called *greet.py.*
+. In the first line, define a function named *greet*.
+.. The greet function should have a parameter called *name*.
+.. The greet function should return a string with the text "Hello name" but with the value of the variable name in the output.
+. After the function, create an array of names (strings).
+. Loop through the names, and for each name, print the result of calling the *greet* function.
 
-Include detailed steps to practice the topic introduced in the lesson.
+Your code should have a structure similar to the following redacted code sample.
 
-Use screenshots and numbered lists heavily.
+----
+xxx xxxxx(xxxx):
+    xxxxxx xxxxxxx x xxxx
+xxxxx = xxxxxxx xxxxxx xxxxxx xxxxxxx
+xxx xxxx xx xxxxx:
+    xxxxxxxxxxxxxxxxxx
+----
 
-Decimals are used for numbered lists.
+== Function Challenge 2
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Create a file called *loopconvert.py*.
+. Write a function called *convert* that accepts a list of Celsius integers as a parameter.
+. In the function, loop through the list of integers and convert them to Farenheight. Print the result in the loop.
+. After the function, create a list of Celcius integers.
+. Call the *convert* function by passing the list of integers.
+
+== Function Challenge 3
+
+. Create a file called *comparenames.py*.
+. Write a function named *compare* that accepts two parameters: *name1*, and *name2*.
+. In the function, determine which name is longer using the *len()* function.
+. If *name1* is longer, output the value of *name1* and " is longer."
+. If *name2* is longer, output the value of *name2* and " is longer."
+
+For example, if I pass "Alice" and "Bob" to the *compare* function, the function should print, "Alice is longer."
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* How can using functions make it easier to write correct code?
+* Why would it be a bad practice to copy and paste calculations many times instead of using functions?
