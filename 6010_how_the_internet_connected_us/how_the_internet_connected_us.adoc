@@ -45,7 +45,7 @@ The internet is not going away, but the nature of the internet of the future is 
 
 == The Future of the Internet
 
-Web 1.0 is called the "read-only" web because most people simply consumed content that highly technical people produced. Web 2.0 is the participatory web. Technical improvements to web platforms made it easy for people to contribute content. People could post blogs, photos, videos, podcasts, and more.
+The web before the year 2000 is called Web 1.0. Web 1.0 is the "read-only" web because most people simply consumed content that highly technical people produced. Web 2.0 sites began to spring up in the early 2000s. Web 2.0 is the participatory web. Technical improvements to web platforms made it easy for people to contribute content. People could post blogs, photos, videos, podcasts, and more. We are currently in Web 2.0.
 
 Nobody is sure what Web 3.0 will look like. Some say that Web 3.0 will be driven by artificial intelligence that can crawl the web and truly understand the content. Others say that Web 3.0 will distribute power from the Facebooks, Twitters, and Amazons of the world to the individual content creators. There are sure to be many failures along the way, but the internet will be a key aspect of life in the foreseeable future.
 

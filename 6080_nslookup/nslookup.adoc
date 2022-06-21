@@ -6,50 +6,163 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Nslookup is a tool that exists on Windows and Linux to evaluate DNS settings. You can use nslookup to investigate and troubleshoot DNS.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Run nslookup
+* Evaluate `nslookup`` output
 
-The learning objectives should be measurable.
+== Nslookup
 
-== Lesson Here
+The *ns* in `nslookup`` stands for name server. Nslookup is a cross-platform tool for investigating DNS. This section will walk through several `nslookup` commands. These commands can be run from a Windows command prompt, a Windows PowerShell prompt, or a Linux terminal.
 
-This should be a couple of pages of text and screenshots.
+Note: `nslookup` has two modes--interactive and non-interactive. We will only use the non-interactive mode. If you accidentally enter interactive mode, the prompt will change to ">". If that happens, just type "exit" and press enter to leave `nslookup`.
 
-All images should be original. Do not include images downloaded from the internet.
+. Run these commands in a command-line interface. The instructions will show the Kali terminal, but the commands will work in PowerShell or the command prompt.
+. Determine google.com's IP address.
++
+[source,sh]
+----
+$ nslookup google.com
+----
++
+The output will look something like the following.
++
+----
+Server:         192.168.1.1
+Address:        192.168.1.1#53
 
-Use Greenshot to take screenshots.
+Non-authoritative answer:
+Name:   google.com
+Address: 142.250.191.206
+Name:   google.com
+Address: 2607:f8b0:4009:805::200e
+----
++
+The *Server* is the DNS server that resolved the domain name. In this case, my home router was responsible for resolving Google's IP address. The *Address* includes the port number. DNS uses port 53. Two IP addresses are listed for Google. The IPv4 address and the IPv6 address. You may have received different IP addresses for Google. Google has many, many, servers, and it will give people different IP addresses to distribute the load.
++
+The answer returned is *non-authoritative* in that it did not come directly from Google's nameserver. Instead, the answer came from a DNS resolver that contacted Google's nameserver. We can still trust the results, but the information may be out of date (remote, but likely) or incorrect (even less likely).
+. It is possible to query a specific DNS server. This could be useful when setting up a new server inside an organization. In `nslookup`, the name or IP address of the DNS server can be added at the end. Google maintains a public DNS server at 8.8.8.8. We can ask it about Google's DNS information.
++
+[source,sh]
+----
+$ nslookup google.com 8.8.8.8
+----
++
+The result is similar to the response from my DNS server, but note that different IP addresses are returned.
++
+----
+Server:         8.8.8.8
+Address:        8.8.8.8#53
 
-If you need to make diagrams, use draw.io.
+Non-authoritative answer:
+Name:   google.com
+Address: 142.250.190.46
+Name:   google.com
+Address: 2607:f8b0:4009:81b::200e
+----
+. Specific record types can be queried. *A* records are IPv4. *AAAA* are IPv6. *MX* are used for email. The *any* keyword can be used for all record types. The following command would find mail records, which would be useful if my email server needed to send an email to an employee with a @google.com email address.
++
+[source,sh]
+----
+$ nslookup -type=mx google.com
+----
++
+The result was:
++
+----
+Server:         192.168.1.1
+Address:        192.168.1.1#53
 
-== Exercise
+Non-authoritative answer:
+google.com      mail exchanger = 10 smtp.google.com.
+----
+. The following command asks the nameserver for all record types from google's 8.8.8.8 resolving nameserver.
++
+[source,sh]
+----
+$ nslookup -type=ANY google.com 8.8.8.8
+----
++
+The result is long.
++
+----
+Server:         8.8.8.8
+Address:        8.8.8.8#53
 
-Include detailed steps to practice the topic introduced in the lesson.
+Non-authoritative answer:
+Name:   google.com
+Address: 74.125.129.139
+Name:   google.com
+Address: 74.125.129.100
+Name:   google.com
+Address: 74.125.129.101
+Name:   google.com
+Address: 74.125.129.102
+Name:   google.com
+Address: 74.125.129.113
+Name:   google.com
+Address: 74.125.129.138
+Name:   google.com
+Address: 2607:f8b0:4001:c15::65
+Name:   google.com
+Address: 2607:f8b0:4001:c15::64
+Name:   google.com
+Address: 2607:f8b0:4001:c15::8b
+Name:   google.com
+Address: 2607:f8b0:4001:c15::71
+google.com      text = "globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="
+google.com      text = "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"
+google.com      text = "apple-domain-verification=30afIBcvSuDV2PLX"
+google.com      text = "v=spf1 include:_spf.google.com ~all"
+google.com      text = "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"
+google.com      nameserver = ns1.google.com.
+google.com      rdata_257 = 0 issue "pki.goog"
+google.com      mail exchanger = 10 smtp.google.com.
+google.com      text = "webexdomainverification.8YX6G=6e6922db-e3e6-4a36-904e-a805c28087fa"
+google.com      nameserver = ns2.google.com.
+google.com      text = "atlassian-domain-verification=5YjTmWmjI92ewqkx2oXmBaD60Td9zWon9r6eakvHX6B77zzkFQto8PQ9QsKnbf4I"
+google.com      text = "docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"
+google.com      text = "google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"
+google.com
+        origin = ns1.google.com
+        mail addr = dns-admin.google.com
+        serial = 456251889
+        refresh = 900
+        retry = 900
+        expire = 1800
+        minimum = 60
+google.com      nameserver = ns4.google.com.
+google.com      nameserver = ns3.google.com.
+google.com      text = "MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"
+google.com      text = "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"
+----
+. Usually, we want to look up a domain name and find the IP address information. That is a *forward lookup.* A *reverse lookup* is useful when we know an IP address, and we want to find the domain name information associated with it. The following shows a reverse lookup using one of the IP addresses recently found in a forward lookup.
++
+[source,sh]
+----
+$ nslookup 74.125.129.101              
+----
++
+The result is:
++
+----
+101.129.125.74.in-addr.arpa     name = jm-in-f101.1e100.net.
+----
++
+It might not be immediately obvious who owns the domain 1e100.net. A "googol" is a 1 followed by 100 zeros, 1e100 in scientific notation. That's where "Google" got its name. So I can be fairly confident that the IP address is associated with Google.
 
-Use screenshots and numbered lists heavily.
+== Nslookup Challenge
 
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Display the IPv4 and IPv6 information for Yahoo.com.
+. Query google's nameserver for Yahoo's email records.
+. Ping yahoo.com to get its IP address. Perform a reverse lookup on the IP address.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* How could DNS information accidentally leak information about your company's network?
+* Should we let just anybody set up their own DNS resolver?
 
