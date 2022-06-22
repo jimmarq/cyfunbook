@@ -1,4 +1,4 @@
-= Ssh
+= Secure Shell: SSH
 
 Author: Dr. Jim Marquardson
 
@@ -6,50 +6,88 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+SSH is a program that lets you establish a secure connection to a remote computer. Typically, SSH connections are used to administer remote devices. For example, you might SSH into a router or a web server to make configuration changes. SSH connections are encrypted.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe why SSH would be useful
+* Establish an SSH connection
 
-The learning objectives should be measurable.
+== History of SSH
 
-== Lesson Here
+Prior to SSH, a tool called *telnet* existed for people to connect to remote computers. But telnet had one big problem--connections were not encrypted. So if an administrator entered a user name and password while connected to telnet, anybody who could capture those network packets could read the username and password in cleartext. SSH was invented to solve this problem. SSH connections are encrypted. People could still theoretically intercept your network packets, but those packets will be useless without the encryption key that only the SSH client and server share.
 
-This should be a couple of pages of text and screenshots.
+== Using SSH
 
-All images should be original. Do not include images downloaded from the internet.
+=== SDF Account Creation
 
-Use Greenshot to take screenshots.
+To use SSH, you need a remote computer to connect to. In this section, you will create a free account on sdf.org. For decades, SDF has provided access to *nix systems.
 
-If you need to make diagrams, use draw.io.
+. Go to https://sdf.org.
+. Follow the links to join that will take you to http://sdf.org/?signup.
+. Enter a valid email and choose a login name.
+. Follow any other instructions for setting up the account.
 
-== Exercise
+Do not proceed to the next section until you have an account and password successfully created.
 
-Include detailed steps to practice the topic introduced in the lesson.
+=== Connect via SSH
 
-Use screenshots and numbered lists heavily.
+. Open a Kali terminal.
+. Run the following command to connect to sdf.org using the `ssh` program. When you run the command, enter your username instead of *jimarqua*.
++
+[source,sh]
+----
+$ ssh jimarqua@tty.sdf.org
+----
+. The first time you connect, you will be asked to accept the server's key. Type *yes* and press enter to confirm that you want to accept the connection.
++
+----
+The authenticity of host 'tty.sdf.org (205.166.94.16)' can't be established.
+ED25519 key fingerprint is SHA256:ZjwbO7AU8rHJExYrmZS2LqGZ7WfdoELfMrF54W92PYA.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+----
+. You will be prompted for your password. NOTE: when you type or paste your password, the cursor will not move. This confuses many people, but this is a basic security feature. The login is hiding how long your password is from potential hackers. Just type confidently or right-click and paste your password and you will be fine.
+. You'll see several pages of information. Read it if you want.
+. Press enter to page through the information.
+. Notice the final prompt.
++
+----
+rie:/sdf/udd/j/jimarqua>
+----
++
+This is your home directory on the remote server. The commands that you type right now will be run on the remote server. The server will send the result back to your Kali Linux terminal.
+. Remember that you logged into Kali Linux with the *kali* user account. Run `whoami` to determine your current account in your SSH connection.
++
+----
+rie:/sdf/udd/j/jimarqua> whoami
+----
++
+You should see the username that you just created, not *kali*. In the background, you are still logged into Kali Linux with your *kali* username, but for the purposes of this connection, you are using your new username on the remote system.
+. Run the `tetris` command to launch the game. Quit whenever you want.
+.. In a very, very basic sense, this is cloud gaming that Google and Microsoft are currently testing, except that the graphics are extremely basic. The game is running on the remote computer, and you are getting the graphics sent back to you via SSH.
+. Explore what else you can do on the remote machine. Run the `help` command.
++
+Sidebar: Successful cybersecurity professionals are curious. There is no way to teach you to want to push the boundaries of your knowledge and experience. If you connected to sdf.org and did not want to poke around, that's fine, but shows a lack of interest. If you don't care, you won't put in the time or effort needed to succeed long term. This goes for any career, but it is especially true in cybersecurity because systems evolve so quickly that you must continually learn new things. Most of the chapters in this book hold your hand and walk you through problems step-by-step, but in "the real world" you will eventually need to be in a position to determine what those steps are without an expert looking over your shoulder telling you what to do. /end of rant
+. When you are done on sdf.org, run `exit`. It will take a few seconds to fully disconnect. You should see a prompt like the following before returning to the Kali prompt.
++
+----
+Good Bye from the S D F - 1 ..
 
-Decimals are used for numbered lists.
+Please 'validate' or join 'arpa' soon.
+Your support is appreciated!
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Thank you!
+Connection to tty.sdf.org closed.
+----
+. At this point, the remote connection has closed. Now, the command that you run will be run on your local Kali Linux computer.
+
+SSH is an important tool for working with distributed computers. You can use SSH to connect to network equipment like routers and switches. Inside an organization, you could use SSH to connect to a web server or database server. With cloud computing, you might use SSH to connect to a virtual machine running in a data center hosted by Amazon, Google, or Microsoft.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What are the potential benefits of using a command-line interface (CLI) instead of a graphical user interface (GUI) when establishing remote connections?
+* How is SSH different from HTTPS? How are they similar?
 

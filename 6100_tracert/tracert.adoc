@@ -1,4 +1,4 @@
-= Tracert
+= Tracing Routes
 
 Author: Dr. Jim Marquardson
 
@@ -6,50 +6,145 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Utilities exist to determine the route a packet takes over the internet. On Windows, the utility is named `tracert`. On Linux, the utility is `traceroute`.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe how route tracing works
+* Use the `traceroute` utility
+* Explain `traceroute` output
 
-The learning objectives should be measurable.
+== Tracing Routes
 
-== Lesson Here
+On the internet, packets travel through several routers to get to their destination. Inside organizations, packets might travel through a handful of routers in the private network before reaching a service, such as an intranet website. Route tracing utilities can show the router path that the packets took to reach the destination.
 
-This should be a couple of pages of text and screenshots.
+On Windows, the utility is named `tracert`. On Linux, the utility is named `traceroute`. But they work similarly. On Windows, `tracert` uses ICMP messages. On Linux, `traceroute` uses UDP packets by default, but can also use ICMP or TCP packets. When using ICMP, the utilities manipulate the *TTL* (time to live) field of an IP packet so that the packet expires when it reaches a router. By manipulating this field with subsequent packets, the utility can determine the path of the routers to the ultimate destination. Sometimes a router will choose not to respond to dropped packets (when the TTL is 0), so there can be a gap in the route tracing utility response.
 
-All images should be original. Do not include images downloaded from the internet.
+== Using `traceroute`
 
-Use Greenshot to take screenshots.
+The Linux `traceroute` utility can work poorly in a virtual machine. The following steps use the ICMP option. The ICMP option requires that the command be run with administrative rights, so the `sudo` command is used to run `traceroute.`
 
-If you need to make diagrams, use draw.io.
+. Open a Kali Linux terminal.
+. Run the following command.
++
+[source,sh]
+----
+$ sudo traceroute -I google.com
+----
++
+`sudo` tells Linux to run the command that follows with administrative rights. `traceroute` is the main command. The `-I` option tells `traceroute` to use ICMP. And finally, `whitehouse.gov` is the site we want to trace.
++
+The output will be something similar to the following.
++
+----
+ 1  10.0.2.2 (10.0.2.2)  0.600 ms  0.475 ms  0.427 ms
+ 2  unifi.localdomain (192.168.1.1)  0.725 ms  3.468 ms  3.414 ms
+ 3  22.19.163.1 (22.19.163.1)  8.857 ms  9.537 ms  9.493 ms
+ 4  int-0-6-0-16.dtr01mrqtmi.netops.charter.com (96.34.21.8)  9.818 ms  9.774 ms  9.716 ms
+ 5  lag-201.crr02stptwi.netops.charter.com (96.34.31.81)  22.834 ms  25.247 ms  25.203 ms
+ 6  lag-300.crr01stptwi.netops.charter.com (96.34.24.72)  25.149 ms  23.636 ms  24.422 ms
+ 7  lag-400.crr01euclwi.netops.charter.com (96.34.24.83)  26.815 ms  27.877 ms  27.727 ms
+ 8  lag-100.bbr01euclwi.netops.charter.com (96.34.2.153)  27.669 ms  24.691 ms  31.616 ms
+ 9  lag-5.bbr02euclwi.netops.charter.com (96.34.0.7)  37.048 ms  39.681 ms  39.640 ms
+10  lag-1.bbr01chcgil.netops.charter.com (96.34.0.9)  45.351 ms  46.429 ms  46.387 ms
+11  lag-811.prr01chcgil.netops.charter.com (96.34.3.119)  55.467 ms  55.425 ms  55.504 ms
+12  prr01chcgil-tge-0-1-0-11.chcg.il.charter.com (96.34.152.101)  55.340 ms  55.299 ms  55.256 ms
+13  74.125.251.183 (74.125.251.183)  55.212 ms  55.171 ms  55.064 ms
+14  216.239.51.145 (216.239.51.145)  47.076 ms  47.452 ms  54.177 ms
+15  lga15s47-in-f78.1e100.net (172.217.4.78)  46.412 ms  46.273 ms  46.988 ms
+----
++
+It is easier to read in a table:
++
+|========
+| Hop | Router                                                 | Trip 1    | Trip 2     | Trip 3
+| 1 | 10.0.2.2 (10.0.2.2)                                      | 0.600 ms  | 0.475 ms   | 0.427 ms
+| 2 | unifi.localdomain (192.168.1.1)                          | 0.725 ms  | 3.468 ms   | 3.414 ms
+| 3 | 22.19.163.1 (22.19.163.1)                                | 8.857 ms  | 9.537 ms   | 9.493 ms
+| 4 | int-0-6-0-16.dtr01mrqtmi.netops.charter.com (96.34.21.8) | 9.818 ms  | 9.774 ms   | 9.716 ms
+| 5 | lag-201.crr02stptwi.netops.charter.com (96.34.31.81)     | 22.834 ms |  25.247 ms | 25.203 ms
+| 6 | lag-300.crr01stptwi.netops.charter.com (96.34.24.72)     | 25.149 ms |  23.636 ms | 24.422 ms
+| 7 | lag-400.crr01euclwi.netops.charter.com (96.34.24.83)     | 26.815 ms |  27.877 ms | 27.727 ms
+| 8 | lag-100.bbr01euclwi.netops.charter.com (96.34.2.153)     | 27.669 ms |  24.691 ms | 31.616 ms
+| 9 | lag-5.bbr02euclwi.netops.charter.com (96.34.0.7)         | 37.048 ms |  39.681 ms | 39.640 ms
+|10 | lag-1.bbr01chcgil.netops.charter.com (96.34.0.9)         | 45.351 ms |  46.429 ms | 46.387 ms
+|11 | lag-811.prr01chcgil.netops.charter.com (96.34.3.119)     | 55.467 ms |  55.425 ms | 55.504 ms
+|12 | prr01chcgil--0-11.chcg.il.charter.com (96.34.152.101)    | 55.340 ms |  55.299 ms | 55.256 ms
+|13 | 74.125.251.183 (74.125.251.183)                          | 55.212 ms |  55.171 ms | 55.064 ms
+|14 | 216.239.51.145 (216.239.51.145)                          | 47.076 ms |  47.452 ms | 54.177 ms
+|15 | lga15s47-in-f78.1e100.net (172.217.4.78)                 | 46.412 ms |  46.273 ms | 46.988 ms
+|========
++
+The number in the first column is the hop number. Each line represents a different router. In this example, hop #1 is leaving my virtual machine and going to the host operating system. Hop #2 is to my local router in my home. Hops #3-12 are on the Charter network--my internet service provider. To some degree, you can trace the geographic path of the packet. "Mrqtmi" referrs to Marquette, Michigan. "Stptwi" refers to Stevens Point, Wisconsin. "Euclwi" refers to Eau Claire, Wisconsin. "Chgil" refers to Chicago, Illinois. These hops are between 100 to 350 miles apart. Hopes #13-14 are probably public routers on the internet. Hop #15 is likely a router in one of Google's data centers.
++
+The last 3 columns are the round trip times to that router. The `traceroute` utility sends 3 requests and reports the total trip time for each. It only took ~0.5 milliseconds for that to happen.
+. Trace the path to a different site. The site whitehouse.gov is an official United States government website.
++
+----
+$ sudo traceroute -I whitehouse.gov
+----
++
+Several of the first hops will likely be the same.
++
+----
+ 1  10.0.2.2 (10.0.2.2)  0.428 ms  0.286 ms  0.337 ms
+ 2  unifi.localdomain (192.168.1.1)  0.739 ms  0.894 ms  0.619 ms
+ 3  22.19.163.1 (22.19.163.1)  8.300 ms  8.748 ms  8.458 ms
+ 4  int-0-6-0-17.dtr01mrqtmi.netops.charter.com (96.34.21.34)  12.599 ms  13.214 ms  12.905 ms
+ 5  lag-201.crr02stptwi.netops.charter.com (96.34.31.81)  20.681 ms  21.466 ms  21.080 ms
+ 6  lag-300.crr01stptwi.netops.charter.com (96.34.24.72)  20.979 ms  22.990 ms  23.468 ms
+ 7  lag-400.crr01euclwi.netops.charter.com (96.34.24.83)  25.825 ms  26.662 ms  26.252 ms
+ 8  lag-100.bbr01euclwi.netops.charter.com (96.34.2.153)  25.967 ms  29.913 ms  24.058 ms
+ 9  lag-5.bbr02euclwi.netops.charter.com (96.34.0.7)  28.777 ms  34.017 ms  34.642 ms
+10  lag-1.bbr01chcgil.netops.charter.com (96.34.0.9)  46.811 ms  47.861 ms  47.564 ms
+11  lag-801.prr01chcgil.netops.charter.com (96.34.3.9)  49.839 ms  50.285 ms  50.023 ms
+12  eqix-ch1.automattic.com (208.115.136.239)  48.905 ms  48.639 ms  48.746 ms
+13  192.0.66.168 (192.0.66.168)  46.936 ms  51.060 ms  51.764 ms
+----
+. Trace the route to your local city's website. I live in Marquette, Michigan and https://www.marquettemi.gov/ is my city's official website.
++
+----
+$ sudo traceroute -I marquettemi.gov
+----
++
+The packets do not stay in my hometown.
++
+----
+ 1  10.0.2.2 (10.0.2.2)  1.316 ms  0.248 ms  0.238 ms
+ 2  unifi.localdomain (192.168.1.1)  0.917 ms  0.948 ms  0.986 ms
+ 3  22.19.163.1 (22.19.163.1)  7.758 ms  10.470 ms  9.519 ms
+ 4  int-0-6-0-18.dtr01mrqtmi.netops.charter.com (96.34.21.148)  10.164 ms  10.664 ms  10.429 ms
+ 5  lag-201.crr02stptwi.netops.charter.com (96.34.31.81)  20.097 ms  20.141 ms  19.909 ms
+ 6  lag-300.crr01stptwi.netops.charter.com (96.34.24.72)  18.754 ms  19.959 ms  20.460 ms
+ 7  lag-400.crr01euclwi.netops.charter.com (96.34.24.83)  22.694 ms  23.467 ms  23.219 ms
+ 8  lag-100.bbr01euclwi.netops.charter.com (96.34.2.153)  23.226 ms  28.790 ms *
+ 9  lag-5.bbr02euclwi.netops.charter.com (96.34.0.7)  26.093 ms  33.912 ms  33.235 ms
+10  lag-1.bbr01chcgil.netops.charter.com (96.34.0.9)  49.532 ms  49.490 ms  49.448 ms
+11  lag-800.bbr02chcgil.netops.charter.com (96.34.0.67)  52.962 ms  53.584 ms  53.543 ms
+12  lag-807.bbr02ashbva.netops.charter.com (96.34.0.59)  75.328 ms  75.286 ms  75.621 ms
+13  lag-802.prr01ashbva.netops.charter.com (96.34.3.89)  73.855 ms  75.456 ms  75.402 ms
+14  eqix.dc.godaddy.com (206.126.236.43)  67.149 ms  67.178 ms  72.421 ms
+15  148.72.36.47 (148.72.36.47)  65.453 ms  70.429 ms  70.721 ms
+16  148.72.36.3 (148.72.36.3)  71.260 ms  70.607 ms  69.581 ms
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  ip-107-180-48-116.ip.secureserver.net (107.180.48.116)  72.730 ms  73.576 ms  73.872 ms
+----
++
+Notice that hops 17-20 did not respond to the ICMP requests, so their data is unavailable.
 
-== Exercise
+The examples above might be interesting (if you're in how the internet works), but they generally tell us that the networks between me and the destination are working fine. The response times to all of the routes are fairly good. There are no problems with the network. If we were to run this test on a private network, we might find a router that is much slower than the others, indicating that there could be an opportunity to tweak the network to improve performance. Ethical hackers might run trace routes in order to map out the organization of a private network.
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Challenge
 
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Test the path to several websites.
+. What is the highest and lowest number of hops you can find?
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* Why would it be useful to trace the path a packet takes on the internet?
+* How would tracing utilities help authorized administrators? Hackers?

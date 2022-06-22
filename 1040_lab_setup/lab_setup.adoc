@@ -127,6 +127,11 @@ image::resize.png[resize a virtual machine window]
 +
 .Check Execution Cap
 image::troubleshoot-cpu-limitation.png[change execution cap to 100%]
+* If Kali does not boot and you see a message about a PXE-E06 option and a message about the CD-ROM:
+** Power off the virtual machine.
+** In the VirtualBox manager, go to *Settings*, *System*, and uncheck the CD-ROM boot option.
+** Click *OK* to save the settings.
+** Boot the virtual machine.
 
 == Reflection
 

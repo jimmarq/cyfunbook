@@ -6,50 +6,121 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+The `ping` tool can do more than basic connectivity testing. This chapter goes through several `ping` command examples and analyzes the output. Running tools is easy. Understanding what the tools are telling you requires more skill.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the Internet Control Message Protocol (ICMP)
+* Use advanced `ping` features
+* Evaluate `ping` output
 
-The learning objectives should be measurable.
+== Internet Control Message Protocol
 
-== Lesson Here
+The Internet Control Message Protocol (ICMP) is part of the Internet Protocol definition. Every device connected to the internet can choose to report successes or failures to communication requests. ICMP defines many messages, including:
 
-This should be a couple of pages of text and screenshots.
+* Destination network unreachable
+* Destination host unreachable
+* Destination host unknown
 
-All images should be original. Do not include images downloaded from the internet.
+When troubleshooting networks, administrators can find useful ICMP messages in log files. ICPM is a network-layer protocol, so it does not use a specific port.
 
-Use Greenshot to take screenshots.
+== Ping
 
-If you need to make diagrams, use draw.io.
+The `ping` utility implements the ICMP *echo request* and *echo reply* messages. It is commonly used for connectivity testing but has some more advanced uses. This section will walk through several `ping` commands, and the output will be evaluated. Kali Linux will be used. The Windows `ping` utility works nearly the same. One difference is that by default, Windows will `ping` four times before exiting automatically, while on Linux, `ping` will ping forever until canceled (unless told otherwise).
 
-== Exercise
+. Launch a terminal in Kali.
+. Run the following command to ping an IP address on the internet. In this case, the IP address is a public DNS server hosted by Google. Pinging a known IP address is a good way to test basic internet connectivity. *Press control+c to stop the ping after about 4 replies.*
++
+[source,sh]
+----
+$ ping 8.8.8.8
+----
++
+Evaluate the output.
++
+----
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=109 time=46.3 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=109 time=45.4 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=109 time=45.9 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=109 time=45.8 ms
 
-Include detailed steps to practice the topic introduced in the lesson.
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3021ms
+rtt min/avg/max/mdev = 45.447/45.845/46.317/0.312 ms
+----
++
+The first line shows the IP address being pinged. *56* is the amount of data being sent. The ICMP header adds 8 bytes, so that is why "*64* bytes" is seen in the subsequent lines. The IP header adds additional information for a total of *84* bytes. This example ping uses the default values for packet size. The size of the packet can be increased manually. In the past, some computers did not expect a very large `ping` packet and would crash if the packet was too large. This attack was known as the *ping of death*. 
++
+Lines 2-4 show successful replies. 64-byte `ping` packets were received from 8.8.8.8.
++
+The *icmp_seq* field shows the order in which the replies came. If a sequence number is missing, packets might be dropped from the network.
++
+The *ttl* field is 109. When a packet first starts its journal on the internet, a *time to live (TTL)* field is set in the IP header. Every time the packet goes through a router, the TTL value is decreased by one. If a router receives a packet with a TTL of 0, the packet is dropped. The initial TTL defaults differ depending on your operating system. The defaults are typically 64, 128, or 255. Usually, you can get anywhere on the internet within 12-20 hops maximum, so even 64 hops give a lot of room for navigating the internet.
++
+The *time* field shows *latency*--the time it took to send and receive a reply. It is usually measured in milliseconds. The lower the number, the faster your connection. Generally, we want consistent numbers. You might be unsatisfied with your network if you had 10 packets with really low latency and 10 packets with really high latency. Especially for gaming, low latency is important. The *time* number does not evaluate bandwidth, but it is a decent heuristic for evaluating the network connection between two devices.
+. You can `ping` a domain name to test connectivity. (Again, press *control+c* to stop the ping after about 4 replies.)
++
+[source,sh]
+----
+$ ping google.com
+----
++
+Evaluate the output.
++
+----
+PING google.com (142.250.191.174) 56(84) bytes of data.
+64 bytes from ord38s30-in-f14.1e100.net (142.250.191.174): icmp_seq=1 ttl=109 time=47.7 ms
+64 bytes from ord38s30-in-f14.1e100.net (142.250.191.174): icmp_seq=2 ttl=109 time=53.2 ms
+64 bytes from ord38s30-in-f14.1e100.net (142.250.191.174): icmp_seq=3 ttl=109 time=47.2 ms
+64 bytes from ord38s30-in-f14.1e100.net (142.250.191.174): icmp_seq=4 ttl=109 time=54.4 ms
+^C
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3008ms
+rtt min/avg/max/mdev = 47.167/50.630/54.422/3.214 ms
+----
++
+The results show that DNS is successfully resolving Google's IP address. The first line shows the IP address being pinged.
++
+Lines 2-4 show a different domain. A DNS reverse lookup was used to determine the domain associated with the IP address. Because a single server might host multiple domains, the domain you `ping` and the domain in the reverse lookup may not always match.
+. You can specify the number of pings with the *-c* (count) option.
++
+[source,sh]
+----
+$ ping -c 4 8.8.8.8
+----
++
+The output will be similar to before. The only difference is that it stops automatically.
+. See if netflix.com is up.
++
+[source,sh]
+----
+$ ping -c 4 netflix.com
+----
++
+Evaluate the output.
++
+----
+PING netflix.com (54.160.93.182) 56(84) bytes of data.
 
-Use screenshots and numbered lists heavily.
+--- netflix.com ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3081ms
+----
++
+The output shows that the netflix.com domain name was successfully resolved--that's good. But there was 100% packet loss. 4 packets were transmitted, and 0 were received. Check your web browser and see if netflix.com can be loaded (it probably can). So what is happening? Likely, netflix.com simply does not respond to `ping` requests. The network engineers at Netflix decided to block ICMP requests.
 
-Decimals are used for numbered lists.
+The `ping` command is a foundational command for basic network connectivity testing. It is important to understand how to use it and what it is telling you. If you run networks, you have the choice of blocking ICPM requests. You might choose to block incoming ICMP requests on a *firewall* (a device that filters packets based on rules).
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Challenge
+
+. In the Kali terminal, run `man ping` to read about different `ping` features. For example, you can find out how to change the packet size.
+. Read about a new way to use the `ping` command.
+. Press *q* to quit the manual.
+. Run the new `ping` command you learned from the manual. What information does the command tell you?
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* If you ran a web server on the internet, would you block ICMP requests?
+* How would you find additional ways to use the `ping` utility?
