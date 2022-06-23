@@ -6,50 +6,67 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+People say they care about privacy, but actions are not always consistent with stated values. If you care about privacy, there are steps you can take to increase privacy, but there may be a limit to what you can do without legislation that increases your options.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Define the privacy paradox
+* Describe the tension between privacy and the requirements of getting tasks done online
+* Describe actions to increase privacy
 
-The learning objectives should be measurable.
+== The Privacy Paradox
 
-== Lesson Here
+You have privacy when you can choose to be unobserved and undisturbed. We often choose to share information. When you walk around in public, you give away some element of privacy because people can observe you. When you pick up the phone, you take the risk of being bothered. But there are other times when we expect privacy. We do not want strangers eavesdropping on conversations with our doctors. We do not want targeted advertisements broadcast over loudspeakers.
 
-This should be a couple of pages of text and screenshots.
+Generally, people say that they want privacy. But many people disclose a lot of information online. This "privacy paradox" has been investigated, and calls for action have been made, but many people are confused about their privacy.
 
-All images should be original. Do not include images downloaded from the internet.
+== Case: The Lost Keys
 
-Use Greenshot to take screenshots.
+(The following true store has fictionalized elements to protect privacy.)
 
-If you need to make diagrams, use draw.io.
+I teach in shared university classrooms. One day, I found a set of keys lying on the floor. I could not find a name, but I did find a keychain in the shape of a swim cap that said "LHS - KDB." LHS looked like a high school name. I started searching the internet for regional high schools that started with the letter "L." I found a nearby school that seemed like a good candidate. I found the recent swim team rosters on a website. There was a swimmer with a first name that started with "K" and a last name that started with "B." I looked up her email on the university's public directory and found that she was an active student. I sent her a quick email telling her that I may have found her keys. She showed up to class a few minutes later and picked up her keys.
 
-== Exercise
+I was able to track somebody down using two acronyms and the shape of a swim cap because so much information was available publicly.
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Case: The Letter of Recommendation
 
-Use screenshots and numbered lists heavily.
+As a professor, I often get requests to write letters of recommendation (which I am happy to do). One student asked for a letter of recommendation for graduate school. The school the student was applying to sent me a link to sign up for a 3rd party letter or recommendation service so that I could upload my letter of recommendation. To provide the letter of recommendation, I had to create an account--there was no option to upload a letter using a guest or temporary account. When registering, I actually read the terms of service that stated that my account data could be used for targeted advertisements. I could not continue to register my account until I checked the box to indicate that I accepted the terms of use. So I had a choice. Do I:
 
-Decimals are used for numbered lists.
+* Choose to not register the account. I cannot provide my student the letter of recommendation.
+* Call the school and ask if there is an alternative way to provide a letter of recommendation. Maybe I could email a letter or mail a physical copy.
+* Just accept the terms even though I'm not happy that my account will be used for targeted advertising.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Which would you do?
+
+I chose option #3. I accepted the terms and uploaded the letter. I did not want a hypothetical future advertisement to impede my former student's acceptance to graduate school. I emailed the 3rd party letter of recommendation website and told them about my displeasure with their privacy policy. I doubt the president of the company lost any sleep over my complaint.
+
+This example demonstrates one of the complexities of privacy. We use hundreds of websites that track our data. For example, if you need to book a flight, you will probably do it on a website. The website will track your information. Technically, you are free not to travel. But most of us want to participate in society. You need email. You to buy things online. You have to use online services. Legislation in the United States currently favors websites' ability to track your data as long as they disclose that they are doing it. The United States constitution does not guarantee privacy from companies collecting your data. Legislation will likely be needed to give consumers more control over their data. Simply refusing to participate in the modern online world is simply not a viable option.
+
+== Exercise: Personal Digital Dossier
+
+. Use a private browsing window to search for yourself. A private window will help ensure that your search results and web pages are what somebody could find publicly.
+. Follow the links.
+. Was there any information disclosed online that you thought was private?
+
+== Steps to Improve Privacy
+
+There are several things you can do to improve your privacy.
+
+. Limit the visibility of social media data.
+. Delete unused accounts.
+. Post less information online.
+. Use ad blocking in your web browser (I recommend U-block Origin).
+. Use privacy-enhancing tools like the Privacy Badger.
+. Never share passwords with friends.
+. Delete old files.
+
+Virtual private networks (VPNs) are sometimes used to enhance privacy. But be wary. Shady VPN providers might be the ones capturing and selling your data to the highest bidder.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* What are your privacy concerns?
+* To what extent do you have the ability to manage your privacy?
+* What steps do you take to control your privacy?
+* What services do you use that you feel respect your privacy?
