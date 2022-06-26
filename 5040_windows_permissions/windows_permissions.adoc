@@ -6,50 +6,69 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Permissions can be set on files and folders to control access. Windows lets you change read, write, execute, and other permissions.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the permissions that Windows lets you set on files and folders
+* Modify file and folder permissions
 
-The learning objectives should be measurable.
+== Viewing and Modifying Permissions
 
-== Lesson Here
+. Create a new folder called *Secure Documents*.
+. Right-click on the folder and choose *Properties*.
++
+.Folder Menu Options
+image::right-click-menu.png[Folder Menu Options]
+. Look at your account's permissions.
++
+.Account Permissions
+image::jims-permissions.png[Account Permissions]
+.. Full control: TODO
+.. Modify:  TODO
+.. Read & Execute:  TODO
+.. List folder contents:  TODO
+.. Read:  TODO
+.. Write:  TODO
 
-This should be a couple of pages of text and screenshots.
+== Challenge
 
-All images should be original. Do not include images downloaded from the internet.
+. Create a new user account on your system.
+.. Run *lusrmgr.msc* from the start menu.
+.. Select the *Users* category.
+.. Right-click in an empty space and click *New...*.
+.. Give the new user information and click *Create* when done.
+. Give the user read access to the *Secure Documents* folder.
+.. Edit the permissions.
++
+.Edit Folder Permissions
+image::edit-permissions.png[Edit Folder Permissions]
+. Click *Add...*.
++
+.Add User
+image::permissions-add.png[]
+. Type the name of the user, then *Check Names*, then *OK*.
++
+.Find and Add User
+image::add-jerk.png[]
+. With the new user selected, uncheck all permissions except *Read*, then click *Apply*.
++
+.Select Permissions
+image::jerks-permissions.png[]
 
-Use Greenshot to take screenshots.
+At this point, the new user has limited access to the folder in question.
 
-If you need to make diagrams, use draw.io.
+== Cleanup
 
-== Exercise
+When finished:
 
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. You can delete the *Secure Documents* folder.
+. You can delete the new user account you created.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Which elements of the security triad does changing permissions help with?
+* When should permissions be granted to users? When should permissions be granted to groups?
 

@@ -218,8 +218,8 @@ include::5030_windows_accounts\windows_accounts.adoc[]
 include::5040_windows_permissions\windows_permissions.adoc[]
 
 <<<
-:imagesdir: 5050_windows_control_panel
-include::5050_windows_control_panel\windows_control_panel.adoc[]
+:imagesdir: 5050_windows_task_manager
+include::5050_windows_task_manager\windows_task_manager.adoc[]
 
 <<<
 :imagesdir: 5060_windows_firewall

@@ -6,50 +6,87 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+User account information can be stored centrally (such as in Microsoft Active Directory) or locally on individual computers. Unless your computer is connected to a corporate network, your user and group information is probably stored locally. This chapter will help you explore local account information.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe how local users and groups work on Windows computers
+* List local users
+* Evaluate user properties
+* List local group members
 
-The learning objectives should be measurable.
 
-== Lesson Here
+== Users and Groups: Windows Home
 
-This should be a couple of pages of text and screenshots.
+User accounts can be managed in Windows Home and Windows Pro, but the Home version has more limited abilities.
 
-All images should be original. Do not include images downloaded from the internet.
+. In the start menu, search for *Users* and launch the *Add, edit, or remove other users.*
++
+.Start Menu Item: Add, edit or remove other users
+image::home-users-start-menu.png[Start Menu Item: Add, edit or remove other users]
+. You can add a family member or an "Other user." Click the button to add an "Other user."
++
+.Add Other User
+image::home-add-other.png[Add Other User]
+. Microsoft really wants people to sign in with an online account so that information can be synchronized. Click the link to indicate that we do not have this person's information.
++
+.Skip the Online Sign-in
+image::home-dont-have.png[Skip the Online Sign-in]
+. Microsoft is being stubborn. Click the link to add a user without a Microsoft Account.
++
+.No Microsoft Account
+image::home-stubborn.png[No Microsoft Account]
+. Fill out the name, password, and other required information, then click *Next*.
++
+.User Details
+image::home-add-jerk.png[User Details]
+. At this point, the new user has been added. The account can now be used to log in.
++
+.User Account Added
+image::home-jerk-added.png[User Account Added]
+. To remove the account, select the account, then click *Remove*.
++
+.Remove Account
+image::home-account-remove.png[Remove account]
+. Removing an account is kind of a big deal, so Windows will confirm that you really want to do this.
+.Confirm Account Removal
+image::home-remove-confirm.png[Confirm Account Removal]
+.. Go ahead and confirm if you'd like to delete this account. If you want to test it out, keep it. It's your computer.
 
-Use Greenshot to take screenshots.
+== Users and Groups: Windows Pro
 
-If you need to make diagrams, use draw.io.
+Microsoft includes different management tools in Windows Pro versions.
 
-== Exercise
-
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Search for "lusrmgr.msc" in the start menu. This will link directly to a tool for managing local users and groups. In this case, "local" refers to this particular computer. These accounts are not centrally managed by an organization.
++
+.Start Menu Search for lusrmgr.msc
+image::local-users-start-menu.png[Start Menu Search for lusrmgr.msc]
+. Select the *Users* category.
++
+.List of Local Users
+image::local-users-list.png[List of Local Users]
+. Double-click on the *Guest* account. Notice that the account is disabled.
++
+.Guest Account Properties
+image::guest-account-disabled.png[Guest Account Properties]
+. Analyze the properties of your account.
+. Open the *Groups*.
++
+.List of Local Groups
+image::groups-list.png[List of Local Groups]
+. Double-click the *Administrators* group. Your account is likely a member of the group.
++
+.Administrator Group Properties
+image::administrator-group-properties.png[Administrator Group Properties]
+. Check several groups. Many groups will have no members. Some groups will have system account members only instead of named users. These are typically for services that run in the background.
++
+.Internet Information Services (IIS) Group Members
+image::iis-group-members.png[Internet Information Services Group Members]
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why would it be a poor practice to add everybody to the *Administrators* group?
+* What would be the benefits of having all members of a family use separate local accounts when using a shared computer?
 

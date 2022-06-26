@@ -72,6 +72,18 @@ In contrast to Windows, most Linux distributions are open source and can be lice
 .. Windows 10: https://en.wikipedia.org/wiki/Windows_10
 .. Windows 11: https://en.wikipedia.org/wiki/Windows_11
 
+== Home Versus Pro
+
+For each major version of Windows, Microsoft typically offers two different kinds of licensing options: home and pro. Microsoft often offers slightly different versions (e.g., for education, or "ultimate"), but they are largely just a different mix of home and pro versions.
+
+Businesses should use the pro versions because they have several benefits that help organizations secure data. Benefits of going pro:
+
+* BitLocker - BitLocker is a feature used to encrypt entire hard drives. You will be safe if an employee loses a hard drive if the hard drive was encrypted with BitLocker.
+* Group Policy - Windows computers connected to a network can have individual features enabled or disabled via Group Policy. A Windows administrator can make a policy, store it centrally in *Active Directory*, and deploy it to thousands of computers relatively easily. For example, Group Policy may forbid employees from installing software from unapproved sources.
+* Active Directory Support - Active Directory stores user account information in a central location. Group Policy is applied to different organizational groups in Active Directory.
+
+There are other pro features, but the three above are some of the most critical for cybersecurity.
+
 == Reflection
 
 * Do people care about operating system releases today?
