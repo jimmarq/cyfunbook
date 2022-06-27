@@ -226,8 +226,8 @@ include::5050_windows_task_manager\windows_task_manager.adoc[]
 include::5060_windows_firewall\windows_firewall.adoc[]
 
 <<<
-:imagesdir: 5070_windows_defender
-include::5070_windows_defender\windows_defender.adoc[]
+:imagesdir: 5070_windows_virus_protection
+include::5070_windows_virus_protection\windows_virus_protection.adoc[]
 
 <<<
 :imagesdir: 5080_windows_group_policy

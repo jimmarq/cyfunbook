@@ -1,0 +1,55 @@
+= Windows Virus & Threat Protection
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-08-15 Initial Version
+
+Microsoft Windows offers built-in Virus & Threat Protection to discover and remove malware. This chapter will explore these protections.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe why virus and threat protection is important
+* View your current virus and threat protection settings
+* Run a custom scan
+
+== Virus and Threat Protection
+
+Computer viruses have been around for decades, and new viruses are created daily. Many viruses have *signatures*--patterns of code that anti-virus applications can detect. Other viruses modify their code so that each time the virus replicates it has a new signature. Anti-virus can try to detect these viruses through other means, such as finding patterns in the way that these viruses access data on the hard drive. Older generations of anti-virus software were sometimes as bad for computers as viruses themselves because they used so much of the computer's resources. Computers were sometimes slow and unusable because the anti-virus spent so much time scanning for viruses. In a sense, the anti-viruses worked just like a virus. Microsoft eventually built anti-virus into Windows so that consumers did not need to install third-party anti-virus (from companies like McAfee or Kaspersky). And Microsoft's anti-virus was good. It worked well without bringing your computer to a crawl. Still, some organizations choose to install third-party anti-virus because the third-party products provide features like centralized monitoring and reporting that they prefer over Microsoft's products.
+
+Some people run computers without anti-virus intentionally. Every anti-virus application will impose some performance penalty on your computer. If you browse safe websites and are judicious in what applications you install, you *might* be okay running a computer without anti-virus. But sometimes malware can make it onto your machine without you doing anything wrong. A type of malware called *worms* can propagate over networks without the user doing anything. Because of the large number of known and unknown threats, it is better to run anti-virus. Occasionally, cybersecurity professionals have to test viruses, so in those cases, anti-virus can be disabled temporarily. If you are designing a network for a client, you must make anti-virus part of the design.
+
+== Explore Windows Virus & Threat Protection
+
+. In the start menu, search for *virus* and launch the *Virus & threat protection*.
++
+.Start Menu: Virus & Thread Protection
+image::start-menu-virus-threat-protection.png[Start Menu: Virus & Thread Protection]
+. A summary of current threats and the latest scan will be shown.
++
+.No Current Threats /humblebrag
+image::current-threats.png[No current threats /humblebrag]
++
+The image shows that a quick scan was done overnight. Only 66,900 files were scanned. There are hundreds of thousands of files on my computer. 
+
+Include detailed steps to practice the topic introduced in the lesson.
+
+Use screenshots and numbered lists heavily.
+
+Decimals are used for numbered lists.
+
+. This is step one.
+.. This is sub-step 1.
+//. This is step two
+//+
+//.This text will go under the image.
+//image::screenshot_1.png[alt text goes here]
+
+== Reflection
+
+* Ask a question here that makes people think.
+* Ask another good question
+
