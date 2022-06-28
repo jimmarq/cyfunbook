@@ -1,65 +1,92 @@
 = Symmetric Encryption: Caesar Cipher
 
-Author: Greg O'Hagan
+Author: Dr. Jim Marquardson
 
 Changelog
 
-* 2022-05-18 Rough Draft - inprogress - needs pics
+* 2022-08-15 First version
 
-A Caesar Cipher (also known as a subsitution cipher) is the earlist form of cyptogrophy where letters or numbers each have their own subsitute. For example if I made my own code I might look like this.
-
-.. abcdefghijklmnopqrstuvwxyz = alphabet
-.. pziuytrewqasdfghjklmnbvcxo = cipher
-
-Each letter in the alphabet has a coresponding letter in the cipher. This can also be done with numbers
+One of the simplest methods of encryption is the Caesar Cipher. It is also known as a rotation cipher. The Caesar Cipher demonstrates the principles of symmetric encryption, but should not be used for serious cryptography.
 
 == Learning Objectives
 
 You should be able to:
 
-* History
-* Pros
-* Cons
+* Describe the algorithm and key in the Caesar Cipher
+* Describe a rotation in the Caesar Cipher
+* Brute force decrypt a message encrypted with the Caesar Cipher
 
-The learning objectives should be measurable.
+== The Caesar Ciphers
 
-== Caesar Ciphers
+Julius Caesar used this particular cipher for military communications. This was not the first attempt at encrypting data, but Julius Caesar made this particular cipher popular. As far as encryption goes, it is not strong. At all. Fortunately for Julius Caesar, many of his enemies could not read, so a basic encryption scheme worked well enough for his purposes.
 
+The Caesar Cipher is also called a rotation cipher because the alphabet is "rotated" a certain number of characters. The number of rotations is the key. The following table shows an alphabet with zero rotations:
 
-Where did the name Caesar Cipher come from?
+.Alphabet with Zero Rotation
+|=====
+| Cleartext  | A | B | C | D | E | F | ...
+| Ciphertext | A | B | C | D | E | F | ...
+|=====
 
-** It dates back to the Roman empire. Julius Caesar would use subsitution to encrypt his messages during war times.
+.Alphabet with One Rotation
+|=====
+| Cleartext  | A | B | C | D | E | F | ...
+| Ciphertext | Z | A | B | C | D | E | ...
+|=====
 
-Problems?
+.Alphabet with Two Rotations
+|=====
+| Cleartext  | A | B | C | D | E | F | ...
+| Ciphertext | Y | Z | A | B | C | D | ...
+|=====
 
-** Caesar Ciphers are very easy to crack
+Caesar himself used an alphabet with 3 rotations.
 
-* Brute force, frequency analysis, and pattern recognition software are all tool that can be used to break this kind of encryption
+.Alphabet with Three Rotations
+|=====
+| Cleartext  | A | B | C | D | E | F | ...
+| Ciphertext | X | Y | Z | A | B | C |  ...
+|=====
 
-Why use it?
+Using the table above, the word *FACE* would be encrypted as *CXZB*. 
 
-** If you want to mess with your friends or family, here you go
+Challenge: Encrypt the word *CAFE* using a rotation of 3.
 
-** If you want to secure important or sensative data then don't use a Caesar Cipher. There are a host of other highly preforing encryption standards that will serve your needs far better
+== Cyber Chef
 
+The CyberChef is an open-source application that lets you build "recipes" of many cybersecurity algorithms. The ROT-13 algorithm implements the Caesar Cipher. The default rotation is 13.
 
-== Exercise
+. Go to https://gchq.github.io/CyberChef/.
+. In the *Operations* filter, type *rot*.
+. Click and drag the *ROT13* operation into the recipe area.
++
+.Add the ROT13 Operation to the Recipe
+image::chef-add-rot-13.png[Add the ROT13 Operation to the Recipe]
+. Type the word *CAFE* in the *Input*. The encrypted text will appear in the *Output* area.
++
+.ROT13 Encryption of the Word "CAFE"
+image::cafe-default-rotation.png[ROT13 Encryption of the Word "CAFE"]
+. Every time you change the input or the operation, CyberChef will "re-bake" the recipe to produce new output.
+. Change the *Amount* in the ROT13 algorithm. Change it to -3. Does that match what you had encrypted earlier?
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Brute Force Decrypting the Caesar Cipher
 
-Use screenshots and numbered lists heavily.
+. There are 26 letters in the English alphabet, so there are only 26 possible unique rotations. (A rotation of 27 is the same thing as a rotation of 1.) In a brute force attack, every possible key is tried. 
+. Imagine that you find the following encrypted text.
++
+----
+Nby Wuymul Wcjbyl cm lyuffs hin mywoly. Sio mbiofx hin omy cn ni jlinywn xunu.
+----
+. Paste that text into the *Input* in the CyberChef.
+. Increase or decrease the *Amount* of the ROT13 rotation until you find something that reads like English.
+. How hard was it to decrypt the message?
 
-Decimals are used for numbered lists.
+== Caesar Cipher Summary
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+The Caesar Cipher is not strong. But, it demonstrates how symmetric algorithms work. Symmetric algorithms have algorithms (e.g., shifting letters of the alphabet) and keys (the number of letters to shift). The Caesar Cipher's algorithm is not complex, and the key is easy to brute force. Modern encryption algorithms have very sophisticated algorithms and require much better keys.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Was Julius Caesar wrong to use such a simple encryption algorithm?
+* Will people in two thousand years laugh at our current computer systems?
 

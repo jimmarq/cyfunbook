@@ -1,98 +1,42 @@
 = Symmetric Encryption
 
-Author: Greg O'Hagan
+Author: Dr. Jim Marquardson
 
 Changelog
 
-* 2022-05-18 Rough Draft - needs pic's
+* 2022-08-15 First version
 
-Encyption (or Cyptogrophy) is the process of taking plain text data and scrammbling it using a cipher. Symmetric Encryption is any encryption process that uses the same key for encrypting and decrypting data.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Symmetric encryption is used to protect information on our hard drives and sent over networks. Symmetric algorithms encrypt data with a key, and decrypt data with the same key.
 
 == Learning Objectives
 
-You should be able to:
+* Describe symmetric algorithms
+* List common symmetric algorithms
 
-* The first Semmetric Encryption Algorithm 
-* Types of Symmetric Encryption
-* AES
+== Symmetric Encryption Algorithms
 
-The learning objectives should be measurable.
+Data can be encrypted with symmetric or asymmetric algorithms. With symmetric algorithms, data is encrypted with a key, and that data can be decrypted with the same key. Using the same key to encrypt and decrypt data is fairly intuitive. An example is a physical lock that accepts a physical key. Anybody with a copy of the key can unlock the lock.
 
-== Symmetric Encryption
+.Symmetric Encryption: Anybody with the Key Can Unlock the Lock
+image::lock-same-key.png[Symmetric Encryption: Anybody with the Key Can Unlock the Lock]
 
-The origional symmetric-key algorithum was a block cipher called Data Encryption Standard or DES
+This differs from asymmetric encryption in which data is encrypted with one key in a public key/private key pair, and the lock can only be unlocked with the corresponding key.
 
-** Used a 64-bit block size and a 56-bit key size
-** Derivatives of DES were devolped to improve it
-** examples: 3DES, IDEA and Blowfish
-. Block size = how many bits of data (1's and 0's) the algorith outputs after its encypted
-. Key size = how many bits long the key is that the algorithum generates to decrypt the data
-. The longer the Block/Key size is the harder it is to crack the encryption 
+.Asymmetric Encryption: Encrypt with One Key, Decrypt with the Other
+image::lock-public-and-private.png[Asymmetric Encryption: Encrypt with One Key, Decrypt with the Other]
 
-There are two major types of Symmetric-Key encryption 
+Symmetric encryption is faster and more efficient than asymmetric encryption. On the internet, asymmetric encryption is often used to transmit a shared symmetric key, then the bulk of data transmitted uses symmetric encryption.
 
-. Block ciphers
-** encrypt data in chunks (a certain number of byes at a time)
-. Stream ciphers 
-** encrypt data a single bit at a time
-** much faster than block ciphers
-** Rivest Cipher 4 (RC4) was the most polular for a long time until it was replaced in 2013 by AES 
+There are several common symmetric encryption algorithms.
 
-Advanced Encryption Standard (AES)
+* One-time Pads: One-time pads were used by spies to send secret messages. Encryption and decryption could be done with pencil and paper. One-time pads are unbreakable, but distributing and protecting keys is hard.
+* Caesar Cipher: This is probably the encryption scheme you learned in 2nd grade. You shift your message a certain number of characters in the alphabet to encrypt, and you shift back to decrypt.
+* Advanced Encryption Standard (AES): This is one of the most common symmetric encryption algorithms used on modern computer systems. It is fast and efficient. When used appropriately, data encrypted with AES cannot be broken.
 
-** AES is a block cyper that uses a 128 bit block size and a 128,192 or 256 bit key
-** For the time being AES is virtually uncrackable
-** AES is so fast that applications that traditionally used stream ciphers have  switched to AES
-
-
-
-
-//This should be a couple of pages of text and screenshots.
-
-//All images should be original. Do not include images downloaded from the internet.
-
-//Use Greenshot to take screenshots.
-
-//If you need to make diagrams, use draw.io.
-
-== Exercise
-
-
-. Go to CyberChef.org.
-.. in the search bar in the top left search for AES 
-. Select AES encrypt
-.. drag it to right and drop it in the area labed recipes 
-.. type "Isn't encrytion neat" into the input box
-. Create a Key (Leave in Hex)
-.. Type random letters (a-f) and numbers(1-9) until you have met either the 128, 192 or 256 requirements displayed in the output box
-.. Example (I used a 256 bit Key): 100292929239239876457638742736234692348234987283426287364237628
-. Create a IV (Leave in Hex)
-.. Type random letters (a-f) and numbers(1-9) until you have met either the 128, 192 or 256 requirements displayed in the output box
-.. Example (I used a 256 bit Key)  :3872273628736287362837642388hfhff
-. OutPut
-.. Now our message "Isn't encrytion neat" is enrypted with the AES algorithm
-.. Copy and paste your KEY, IV and Output into a text file
-. Search for AES decrypt 
-.. Delete AES encrypt
-.. Drag and drop AES decrypt into the recipe box
-. Decrypt the data
-.. Paste your output from AES encryp into the input box for AES decrypt
-.. Paste your Key and IV into the AES decrypt algorithum 
-. Output #2
-.. You should now be looking at the same phase you entered before "Isn’t encrytion neat" but now in the output section 
-
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+New encryption algorithms are being created all of the time. But, it takes a tremendous amount of time and effort to properly scrutinize algorithms for weakness.
 
 == Reflection
 
-* What other implications can you think of where AES might be used (*hint it's not just limited to TCP/IP uses)
-* How long do you think it would take to brute force the AES algorithm 
+* What techniques have you used to encrypt data?
+* What are the pros and cons of letting people encrypt data in a way that the government cannot decrypt?
 

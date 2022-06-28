@@ -6,50 +6,82 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+One-time Pads are the strongest way to encrypt data. But their strength comes with several limitations. Encryption and decryption with one-time pads can be done by hand, which made it useful for spies.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Use a one-time pad to encrypt and decrypt data
+* Describe some of the limitations of one-time pads
 
-The learning objectives should be measurable.
+== Encrypting with One-time Pads
 
-== Lesson Here
+A pad refers to a book of codes. A book might have hundreds of pages, each with a unique key. The following is a page from a book of codes from the National Security Agency.
 
-This should be a couple of pages of text and screenshots.
+.US National Security Agency, Public domain, via Wikimedia Commons
+image::one-time-pad.png[US National Security Agency, Public domain, via Wikimedia Commons]
 
-All images should be original. Do not include images downloaded from the internet.
+The left portion of the page has groups of randomly generated characters. The key to the right gives lookup values. The right half of the page is static--it can be repeated and distributed publicly. The left-hand side has the keys that are randomly generated. These keys should never be disclosed.
 
-Use Greenshot to take screenshots.
+. Suppose you wanted to use this one-time pad to encrypt the word "CAT."
+. Using some agreed upon method, you and the recipient of your message will use the first line of the one-time pad.
++
+----
+LFHHY ZAHBB ...
+----
++
+Because the message "CAT" is only three characters long, only three characters of the key are needed. (If you needed to send a message a thousand characters long, the key would also need to be a thousands characters).
+. The first character of the key is *L*, so we look in the lookup table in section *L*. The character *C* corresponds to the encrypted character *M*. So *M* is the first character of the encrypted output.
++
+.Encrypt "C" Using the Key "L"
+image::encrypt-lcm.png[Encrypt "C" Using the Key "L"]
+. The second character of the key is *F*, so we look in the lookup table in section *F*. The character *A* corresponds to the encrypted character *U*. So *U* is the second character of the encrypted output.
++
+.Encrypt "A" Using the Key "F"
+image::encrypt-fau.png[Encrypt "A" Using the Key "F"]
+. The third character of the key is *H*. In the lookup table for *H*, the character *T* corresponds to the encrypted character *Z*.
++
+.Encrypt "T" Using the Key "H"
+image::encrypt-htz.png[]
+. And so, encrypting *CAT* with the one-time pad key *LFH* gives the encrypted text *MUZ*.
 
-If you need to make diagrams, use draw.io.
+== Decrypting with One-time Pads
 
-== Exercise
+Suppose you know you must use the last line of keys in the one-time pad--*UGBOA*--to decrypt data. You are sent the encrypted text: CFS.
 
-Include detailed steps to practice the topic introduced in the lesson.
+. The first key is *U*. We find the encrypted character *C*, and it corresponds to the cleartext *D*.
++
+.Decrypt "C" Using the Key "U"
+image::decrypt-ucd.png[]
+. The second character of the key is *G*. In row *G*, find the encrypted character *F*. This corresponds to the letter *O*.
++
+.Decrypt "F" using the Key "G"
+image::decrypt-gfo.png[.Decrypt "F" using the Key "G"]
+. The third character of the key is *B*. In row *B*, find the encrypted character *S*. This corresponds to the letter *G*.
++
+.Decrypt "S" Using the Key "G"
+image::decrypt-bsg.png[Decrypt "S" Using the Key "G"]
 
-Use screenshots and numbered lists heavily.
+== Challenge
 
-Decimals are used for numbered lists.
+Use the key and the NSA codebook to encrypt and decrypt the missing data below.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+|=======
+| Key   | Cleartext | Ciphertext
+| LFHHY | APPLE     | ?????
+| VRETH | FISH      | ????
+| NHCJK | ?????     | XHXOL
+| POFRI | ????      | JDRE
+|=======
+
+== Limitations
+
+As the name suggests, keys in one-time pads can be used once. If keys in the pad are used more than once, code breakers could find patterns in the encrypted data and reverse engineer the encryption keys.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* How would you securely transmit codebooks?
+* What could an attacker do if they intercepted a codebook?
+* Would one-time pads work on the modern internet?
 

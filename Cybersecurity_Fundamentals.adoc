@@ -113,6 +113,13 @@ include::2160_dig\dig.adoc[]
 
 People have tried to hide messages from prying eyes for thousands of years. Modern encryption protects our data from prying eyes. Cryptography secures our online shopping, communications, and data. In this section, you will learn some of the foundations of cryptography and how they are applied to modern systems.
 
+Some principles apply to several aspects of cryptography.
+
+* *Cleartext* is any unencrypted data, not just text. An unencrypted picture is in cleartext.
+* *Ciphertext* refers to encrypted data. Again, the encrypted data could be any format, not just text.
+* *Confusion* is the property wherein the encrypted ciphertext looks very different from the original cleartext. Any patterns in the cleartext should not be evident in the ciphertext.
+* *Diffusion* means that a small change in the input has a large change in the output. Diffusion helps protect against cryptography attacks that look for small changes in the encrypted output to reverse engineer the cleartext or the encryption keys.
+
 :leveloffset: 1
 
 <<<
