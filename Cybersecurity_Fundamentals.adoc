@@ -10,8 +10,9 @@ v0.1, 2022-08-15
 :imagesdir: 0005_About
 include::0005-About\about.adoc[]
 :numbered:
-<<<
+
 :leveloffset: 0
+<<<
 = Introduction
 
 This section provides an overview of the history of modern computing and how to use modern operating systems.
@@ -35,7 +36,11 @@ include::1030_virtualization_for_education\virtualization_for_education.adoc[]
 include::1040_lab_setup\lab_setup.adoc[]
 
 :leveloffset: 0
+<<<
 = Linux
+
+Linux is one of the most popular operating systems in the world. Every Android device runs Linux. Many servers on the internet run Linux. The desktop environment is the one place where Linux adoption has lagged. Hackers (authorize and unauthorized) use Linux because many security tools are available.
+
 :leveloffset: 1
 
 <<<
@@ -103,7 +108,11 @@ include::2150_curl\curl.adoc[]
 include::2160_dig\dig.adoc[]
 
 :leveloffset: 0
+<<<
 = Cryptography
+
+People have tried to hide messages from prying eyes for thousands of years. Modern encryption protects our data from prying eyes. Cryptography secures our online shopping, communications, and data. In this section, you will learn some of the foundations of cryptography and how they are applied to modern systems.
+
 :leveloffset: 1
 
 <<<
@@ -146,8 +155,6 @@ include::3090_hashing_files\hashing_files.adoc[]
 :imagesdir: 3100_hashing_passwords
 include::3100_hashing_passwords\hashing_passwords.adoc[]
 
-
-
 <<<
 :imagesdir: 3105_cracking_hashes
 include::3105_cracking_hashes\cracking_hashes.adoc[]
@@ -162,7 +169,11 @@ include::3120_multifactor_authentication\multifactor_authentication.adoc[]
 
 
 :leveloffset: 0
+<<<
 = Threats
+
+There are many threats to our security and privacy. Some of the threats are technical--such as ransomware that holds your data hostage. Some attacks require no technical skill at all, such as dumpster diving. Cybersecurity professionals must be able to identify potential threats and develop mitigations to stop or reduce the harm of those threats.
+
 :leveloffset: 1
 
 <<<
@@ -195,6 +206,7 @@ include::4070_dumpster_diving\dumpster_diving.adoc[]
 
 
 :leveloffset: 0
+<<<
 = Windows
 
 Microsoft Windows is extremely popular in corporate environments. Microsoft develops Active Directory which centralizes user accounts and enforces security policy. It is important to understand how Windows works so that desktops and servers can be secured properly.
@@ -242,26 +254,20 @@ include::5090_windows_powershell__commands\windows_powershell__commands.adoc[]
 include::5100_windows_powershell__variables\windows_powershell__variables.adoc[]
 
 <<<
-:imagesdir: 5110_windows_powershell__scripts
-include::5110_windows_powershell__scripts\windows_powershell__scripts.adoc[]
-
-<<<
-:imagesdir: 5120_windows_powershell__execution_policy
-include::5120_windows_powershell__execution_policy\windows_powershell__execution_policy.adoc[]
-
-<<<
 :imagesdir: 5130_windows_powershell__piping
 include::5130_windows_powershell__piping\windows_powershell__piping.adoc[]
-
-<<<
-:imagesdir: 5140_windows_powershell__debugging
-include::5140_windows_powershell__debugging\windows_powershell__debugging.adoc[]
 
 <<<
 :imagesdir: 5150_windows_command_prompt
 include::5150_windows_command_prompt\windows_command_prompt.adoc[]
 
+<<<
+:imagesdir: 5160_windows_terminal
+include::5160_windows_terminal\windows_terminal.adoc[]
+
+
 :leveloffset: 0
+<<<
 = Networking
 
 Hackers take advantage of insecure networks to steal information. This section provides an overview of key network hardware and networking concepts.
@@ -318,6 +324,7 @@ include::6120_wireshark\wireshark.adoc[]
 
 
 :leveloffset: 0
+<<<
 = Python
 
 Python is a popular programming language. Python can be run on Windows, Linux, and Mac computers. It has become the one programming language that virtually all cybersecurity experts should learn. It is powerful and (compared to other languages) easy to learn. This section will introduce python language fundamentals.
@@ -391,7 +398,11 @@ include::7150_importing\importing.adoc[]
 include::7160_review_reading_code\review_reading_code.adoc[]
 
 :leveloffset: 0
+<<<
 = Policy and Planning
+
+Governments and organizations need people who understand technology and provide high-level guidance for achieving confidentiality, integrity, and availability. These people shape laws, organizational policy, and strategic direction. 
+
 :leveloffset: 1
 
 <<<

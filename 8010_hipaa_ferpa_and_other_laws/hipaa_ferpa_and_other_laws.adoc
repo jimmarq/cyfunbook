@@ -1,4 +1,4 @@
-= Hipaa Ferpa And Other Laws
+= HIPAA, FERPA, And CFAA Legislation
 
 Author: Dr. Jim Marquardson
 
@@ -6,50 +6,34 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Defensive cybersecurity practices are sometimes driven by legislation like HIPAA (that protects health information) and FERPA (that protects academic information). Laws also exist to punish misuse of computer systems, like the Computer Fraud and Abuse Act.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe how legislation shapes cybersecurity practices
+* Describe HIPAA, FERPA, and CFAA
 
-The learning objectives should be measurable.
+== HIPAA
 
-== Lesson Here
+The Health Insurance Portability and Accountability Act (HIPAA) of 1996 required that healthcare practitioners protect patient information. As healthcare data was increasingly stored in computer systems, legislators wanted to give citizens assurance that their data would be protected. HIPAA is the reason why every time you visit a new doctor you must sign a form consenting to have the doctors store and share your data with people to give you care. You can choose not to sign the form, but you will likely be turned away.
 
-This should be a couple of pages of text and screenshots.
+HIPAA is a law with teeth. Fines for HIPAA violations can be very expensive. Every healthcare provider needs to take HIPAA seriously. An employee who willfully violates HIPAA will be fined a minimum of $50,000 *per violation*. Even accidental violations can be expensive, especially with data breaches. In 2017, Memorial Health Systems was fined $5.5 million because employees had inappropriately accessed patient data (source: https://www.hipaajournal.com/ocr-record-hipaa-settlement-memorial-healthcare-system-8695/).
 
-All images should be original. Do not include images downloaded from the internet.
+== FERPA
 
-Use Greenshot to take screenshots.
+The Family Educational Rights and Privacy Act (FERPA) governs the use of academic information. Occasionally, the parent of a concerned university student will reach out to me to discuss their child's progress in my course. Because their children are legally adults, I cannot disclose any information to the parents without the express consent of the students. Educational records are treated as private information and must be protected by educators. Academic information must be shared for legitimate educational purposes. While HIPAA and FERPA both define strict penalties for inappropriate use of information, examples of FERPA fines are rare.
 
-If you need to make diagrams, use draw.io.
+== CFAA
 
-== Exercise
+The Computer Fraud and Abuse Act (CFAA) was passed in 1986. Basically, the law makes hacking illegal. But it has not always been entirely clear how hacking is defined. The law states that a person cannot access a computer without authorization, or exceed their authorization (https://www.justice.gov/criminal/file/442156/download). Prior to CFAA, people who used computers maliciously were often prosecuted under wire fraud to mail fraud laws.
 
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+In one civil case, Craigslist sued a company called 3Taps that was scraping its data (https://en.wikipedia.org/wiki/Craigslist_Inc._v._3Taps_Inc.). Craigslist sent 3Taps a cease-and-desist letter telling 3Taps to stop scraping the data. Craigslist blocked 3Taps IP addresses to stop 3Taps from scraping its data. 3Taps then used anonymous proxies to access Craigslist's data. In the case, the judge ruled that 3Taps should have known that its authorization to access Craigslist's data had been revoked. Eventually, Craigslist settled with 3Taps, with 3Taps paying $1 million to Craigslist and promising not to scrape its data anymore.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Are new laws needed to protect your information?
+* Do you have a meaningful choice when deciding to accept a doctor's privacy policy?
+* When is appropriate for a user to probe to determine if they can gain access to non-public information?
 

@@ -14,6 +14,7 @@ You should be able to:
 
 * Describe why virus and threat protection is important
 * View your current virus and threat protection settings
+* Update virus definitions
 * Run a custom scan
 
 == Virus and Threat Protection
@@ -33,23 +34,41 @@ image::start-menu-virus-threat-protection.png[Start Menu: Virus & Thread Protect
 .No Current Threats /humblebrag
 image::current-threats.png[No current threats /humblebrag]
 +
-The image shows that a quick scan was done overnight. Only 66,900 files were scanned. There are hundreds of thousands of files on my computer. 
+The image shows that a quick scan was done overnight. Only 66,900 files were scanned. There are hundreds of thousands of files on my computer. A quick scan does not scan all files, but it does scan programs (which are most likely to contain viruses).
+. All anti-virus software needs to be updated so that it can protect against the latest threats.
+. Click the *Check for updates* link.
++
+.Update Anti-virus Definitions
+image::updates.png[Update Anti-virus Definitions]
+. Anti-virus typically checks for updates automatically. Checking for updates manually is helpful when a computer has been offline for a long time and has not been receiving updates automatically.
+. Click the button to check for updates. It should take less than a minute.
++
+.Check for Updates
+image::check-for-updates-button.png[Check for Updates]
+. Click the *Virus & threat protection* link to return to the main screen.
+. Click the *Scan options* link.
++
+.Scan Options Link
+image::scan-options-link.png[Scan Options Link]
+. Take a moment to read the different scan options available.
++
+.Scan Options List
+image::scan-types.png[Scan Options List]
+. Select the *Custom scan* option, then click the *Scan now* button.
+. A window will pop up asking you to select a folder.
+. Click your *Desktop* folder, then click *Select Folder*.
++
+.Select the Desktop Folder
+image::select-desktop.png[Select the Desktop Folder]
+. The scan should run quickly. If it does not run quickly, it means you have a lot of files stored on your desktop and you should rethink the way you organize files on your computer.
++
+.Custom Scan Results
+image::desktop-scan-results.png[Custom Scan Results]
 
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+In general, anti-virus works well. Home users should always run anti-virus. Network administrators should ensure that all devices are running anti-virus, and that centralized reporting is available to determine when threats are detected.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Do you know somebody who has had a device infected with a virus? What happened?
+* How would you recover your system if you were infected with a virus?
 

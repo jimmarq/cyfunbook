@@ -6,50 +6,40 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+The term hacking can mean several things. Hacking can mean tinkering. Early computer enthusiasts were hackers because they tinkered with computers. Today, the term hacker often means an unauthorized person who breaks into computer systems.
 
 == Learning Objectives
 
-You should be able to:
+You should be able to describe:
 
-* TODO
-* TODO
-* TODO
+* Authorized (white hat) hackers 
+* Semi-authorized (gray hat) hackers 
+* Unauthorized (black hat) hackers 
 
-The learning objectives should be measurable.
+== Authorized Hackers
 
-== Lesson Here
+Some people love hacking. If you are the kind of person who ever took apart a toaster to see how it worked, you might make a great computer hacker. You can make a legal career out of hacking as an authorized hacker. *Authorized hackers* are commonly referred to as *white hat* hackers. Authorized hackers have been given explicit permission to test the security of computer systems. These hackers might have job titles such as *penetration tester*.
 
-This should be a couple of pages of text and screenshots.
+Permission is the key to what makes a hacker an authorized hacker. Permission must be granted in writing before a penetration testing engagement. Failure to abide by the scope of services defined in the agreement can land a hacker in hot water.
 
-All images should be original. Do not include images downloaded from the internet.
+In 2019, security testers were arrested while performing an authorized penetration test (https://www.desmoinesregister.com/story/news/crime-and-courts/2021/08/01/arrested-coalfire-security-testers-2019-file-dallas-county-iowa-courthouse-lawsuit/5431611001/). The penetration testers had worked with government officials to create the scope of engagement which included physical testing and lock picking. But when the testers successfully broke into a courthouse one night, they ended up leaving the courthouse in handcuffs. It was claimed that they had exceeded the scope of work by trying to enter the courthouse after normal operating hours. It didn't help that one member of the security team had been drinking alcohol (https://www.wired.com/story/inside-courthouse-break-in-spree-that-landed-two-white-hat-hackers-in-jail/). The engagement and subsequent prosecution became a huge fiasco.
 
-Use Greenshot to take screenshots.
+== Semi-authorized Hackers
 
-If you need to make diagrams, use draw.io.
+Semi-authorized hackers are often experts who like pushing the boundaries of what might be acceptable. They are commonly referred to as *gray hats*. They do not have malicious intent. They also lack authorization. A gray hat hacker might spend hours seeing if they can break into a system. If they are successful, they will tell the company the weakness they found. Sometimes they will ask for a bug bounty, but often they report their findings without any expectation of reward.
 
-== Exercise
+Gray hat hackers face a huge risk--they never know how the target organization will react. One company might thank the gray hat hacker for disclosing the weakness in their system, and some companies even offer to hire them as security consultants. Other organizations react as if their systems have been corrupted and try to get the gray hat hacker prosecuted.
 
-Include detailed steps to practice the topic introduced in the lesson.
+A journalist in Missouri discovered that a state government website was disclosing the social security numbers of state educators (https://www.bloomberg.com/news/newsletters/2022-01-11/a-missouri-reporter-is-getting-blamed-for-the-security-flaw-he-exposed). The reporter disclosed the flaw, and the governor of Missouri decided to prosecute him for hacking. All the journalist did was look at the website source code--something that does not take a tremendous amount of skills, and not something that anybody with a brain larger than a walnut should consider hacking. If awards were granted for Cybersecurity Idiot of the Year, Missouri's Governor Mike Parson would be a top contender for 2022.
 
-Use screenshots and numbered lists heavily.
+== Unauthorized Hackers
 
-Decimals are used for numbered lists.
+Unauthorized hackers (*black hats*) lack authorization and good intentions. Black hat hackers can have different motivations. They might want to hack for the thrill, to bring down a company, to cause embarrassment, or for hacker peer respect.
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+The hacking group LulzSec picked major targets including the FBI and the CIA. They definitely did not have permission. They were able to take down some FBI sites, but some members of the team were found and arrested. Be careful which bears you poke.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Should companies invite responsible hackers to find vulnerabilities in their systems?
+* What makes a good hacker?
 
