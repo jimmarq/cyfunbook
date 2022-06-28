@@ -6,50 +6,42 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Modern militaries rely on information technology to conduct warfare. Militaries use offensive and defensive cybersecurity tools. Civilians sometimes throw themselves into the fray.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Discuss offensive and defensive use of information technology in war
+* Identify major players in cyber warfare
+* Discuss how civilians have played a role in cyber warfare
 
-The learning objectives should be measurable.
+== Information Technology in War
 
-== Lesson Here
+Modern warfare relies on technology. Reconnaissance data is gathered with sophisticated satellites, spy planes, and drones. On the ground, troops must communicate securely with each other and their commanding officers. Increasingly, autonomous and semi-autonomous weapons are deployed. The 2022 war between Russia and Ukraine saw the use of drones that could fly for miles before autonomously locking onto a target. Forces can use hacking tools to bring down critical infrastructure, such as power grids. Militaries rely on strong critical infrastructures and civilians who have secured systems.
 
-This should be a couple of pages of text and screenshots.
+== Major Players
 
-All images should be original. Do not include images downloaded from the internet.
+The United States Cyber Command (https://www.cybercom.mil/) works with the cyber command in each of the branches of the military:
 
-Use Greenshot to take screenshots.
+* Army Cyber Command (https://www.arcyber.army.mil/)
+* Fleet Cyber Command (https://www.fcc.navy.mil/)
+* Air Forces Cyber (https://www.16af.af.mil/)
+* Marine Corps Forces Cyberspace Command (https://www.marforcyber.marines.mil/)
 
-If you need to make diagrams, use draw.io.
+One example will help describe how information technology is used in warfare. In 1990, Iraq invaded Kuwait. The United States responded by launching Operation Desert Storm. The United States troops realize that they could compromise the communication abilities of the Iraqi forces. Using sophisticated tools, U.S. armed forces could intercept Iraqi communications. For the Iraqi forces, using a radio that could have its position triangulated became a death sentence. Iraqi communication methods broke down. They eventually resorted to delivering paper instructions. When the U.S. military learned of the new paper delivery method, they took steps to make sure that the paper messages failed to be delivered. The old adage, "Don't shoot the messenger" does not apply to an enemy force's internal communications. Operation Desert Storm was an example of how dominating information technology can help win (or lose) a war.
 
-== Exercise
+== Civilian Participation
 
-Include detailed steps to practice the topic introduced in the lesson.
+The 2022 war between Russia and Ukraine brought to light a new phenomenon in war--civilian cybersecurity participation. On February 28, 2022, the Ukraine government issued a call for Russian vulnerabilities.
 
-Use screenshots and numbered lists heavily.
+.Source: https://twitter.com/dsszzi/status/1498245709031776258?s=20&t=eoiPUeg39zD1APV8tOAAMw
+image::ukraine-call.png[CYBER FRONT IS NOW OPEN! If you possess any information regarding vulnerabilities in Russian cyber defenses (bugs, backdoors, credentials), please report it via the chatbot @stop_russian_war_bot Ukrainian cyber experts will use your information to fight against the occupant]
 
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Weeks after the Ukrainian government's call for vulnerabilities, the hacker group Anonymous claims that they hacked Russia's spy satellites and recovered sensitive documents. Anonymous posted screenshots of web pages and hacked systems on Twitter, but the validity of the screenshots and claims could not be verified. Russia denied the claims.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* What will the cyber warfare arms race look like?
+* What would be the cyber version of a nuclear bomb?
 

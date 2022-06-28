@@ -26,12 +26,12 @@ image::right-click-menu.png[Folder Menu Options]
 +
 .Account Permissions
 image::jims-permissions.png[Account Permissions]
-.. Full control: TODO
-.. Modify:  TODO
-.. Read & Execute:  TODO
-.. List folder contents:  TODO
-.. Read:  TODO
-.. Write:  TODO
+.. Full control: Read, edit, delete, and *change permissions*
+.. Modify: Read, edit, and delete files
+.. Read & Execute: Read files and run executables
+.. List folder contents: View file and folder names only
+.. Read: View the file and folder content
+.. Write: Add and edit files and folders
 
 == Challenge
 

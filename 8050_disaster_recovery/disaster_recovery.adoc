@@ -6,50 +6,39 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Everybody who has used a computer knows that occasionally things go wrong. Cybersecurity professionals must plan for the worst-case computing scenarios. Together, these practices are known as *disaster recovery*.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Discuss recovery point objectives and recovery time objectives
+* Discuss hot sites, cold sites, and warm sites
+* Identify the strengths and weaknesses of different backup options
 
-The learning objectives should be measurable.
+== Disaster Recovery Objectives and Options
 
-== Lesson Here
+Computer systems fail. Hard drives crash. Data is accidentally deleted. Power surges fry equipment. There are a lot of things that can go wrong.
 
-This should be a couple of pages of text and screenshots.
+Backups should be made in such a way that systems can be restored. Critical to the backup process is testing the backups to make sure that data can truly be restored. There is an old adage, "If you have not tested your backup, you do not have a backup."
 
-All images should be original. Do not include images downloaded from the internet.
+Organizations must answer the question--how much data are we willing to lose? The less data an organization is willing to lose, the more expensive the backup solution will be. A *recovery point objective (RPO)* describes how much data an organization is willing to lose. The recovery point objective could be 1 second prior to a disaster, a minute, a day, a week, etc. If an organization takes weekly backups, that means that they are willing to risk losing a week's worth of data. Some organizations take nightly backups, in which case only a day's data might be lost. For critical systems, no loss of data is acceptable, so highly redundant systems store backups of data right up to the point of failure.
 
-Use Greenshot to take screenshots.
+It can take time to rebuild systems after a disaster. The time it takes to restore systems is the *recovery time objective (RTO)*. Complex systems could take weeks or months to restore if starting from scratch. If system administrators cannot meet the RTO, they can consider options for speeding up the process. They might use hot sites, cold sites, and warm sites to hit the RTO.
 
-If you need to make diagrams, use draw.io.
+* *Hot Site*. Hot sites are secondary data centers that have up-to-date data. If the primary system fails, the hot site can quickly take over data processing. Users should notice little to no interruption in service.
+* *Cold Site*. A cold site is an empty data center. Servers and network equipment must be installed after a disaster takes place. Backups would have to be loaded onto the computer systems. Cold sites are the cheapest options, but they take the longest to set up.
+* *Warm Site*. A warm site sits between the hot and cold sites. Some network and server equipment might be installed. Network connectivity may already be established. Warm sites lack up-to-date data. At a minimum, a warm site needs backup data to be restored before the site can launch.
 
-== Exercise
+== Backup Options
 
-Include detailed steps to practice the topic introduced in the lesson.
+Digital *tapes* are often used for backups. Tapes can store a tremendous amount of data, but they are relatively slow. *Hard drives* are a common backup alternative. Hard drives are more expensive than tapes but are easier to work with. Critically important if using tape or hard drive backups is to take the media off-site. People who simply backup their data to an external hard drive and then leave the hard drive next to the main computer find themselves without a backup in case of fires or floods.
 
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+Companies like Backblaze (https://www.backblaze.com/) backup data to the *cloud*. An advantage of cloud backup is that the backups are automatically made off-site. One problem with online backups is the time it takes to make an initial backup. It can take weeks or months to do an initial backup of a computer system. If you have a lot of data, a slow internet connection, or a combination of both, online backup services might not be good options.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* How much of your personal data on your computers are you willing to lose?
+* What is your personal backup strategy?
+* Have you ever tested backups of your personal data?
 

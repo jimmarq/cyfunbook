@@ -6,50 +6,59 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Employees should know how an organization's assets can be used. These policies should be documented in an acceptable use policy.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe concerns that should be addressed in an acceptable use policy
+* Describe how training should reinforce the acceptable use policy
 
-The learning objectives should be measurable.
+== Acceptable Use Policies
 
-== Lesson Here
+Acceptable use policies are written documents that describe the appropriate use of organization computer systems. Many templates are available for free online and can serve as good starting points for developing acceptable use policies. The SANS Insitute has policies available here: https://www.sans.org/information-security-policy/. The following are key elements of acceptable use policies.
 
-This should be a couple of pages of text and screenshots.
+* Description of the policy's purpose. This is a brief overview introducing the document.
+* Scope. Does the policy apply to employees, contractors, vendors, or others? What about guests?
+* Polices. Expected behaviors are listed in detail. Allowed and disallowed behaviors should be explicit.
+** What is allowed? Examples might include:
+*** Labeling the sensitivity of information (such as proprietary or public use)
+*** Using passwords that comply with company policy
+*** Use caution when opening email attachments
+** What is forbidden? Examples might include:
+*** Sharing passwords
+*** Putting data on external storage
+*** Intentionally causing service disruptions
+*** Attempting to access unauthorized information
+* Compliance. Employees are expected to comply. Consequences of non-compliance should be clear.
 
-All images should be original. Do not include images downloaded from the internet.
+Employees should be required to review the acceptable use policy as part of onboarding. Employees should be informed about any changes to the acceptable use policy. Regularly scheduled training should ensure that employees clearly understand what is expected of them.
 
-Use Greenshot to take screenshots.
+== Sample Case #1
 
-If you need to make diagrams, use draw.io.
+Joe is an ACME employee. ACME's acceptable use policy says that employees should not download and run malicious email attachments. One day, Joe thought he got an email from an important client. The email said that Joe needed to adjust the client's project. Joe opened the attachment which contained malware. Joe's computer was infected and had to be destroyed. Later, Joe was visited by the information security chief and was told that he violated company policy by abusing email.
 
-== Exercise
+What should Joe's consequences be?
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Sample Case #2
 
-Use screenshots and numbered lists heavily.
+Beth works for ACME. ACME's acceptable use policy says that documents labeled, "Proprietary" should not be shared outside of the company without express consent from the company president. Beth read a proprietary document that describes ACME's intention to buy land to build a warehouse. Beth thought the community would be happy about job creation in the region, so she emailed a copy of the document to the local newspaper. It turns out that the community was indeed pleased and ACME was praised for its investment in the community. The information security chief confronted Beth about the leak, and Beth admitted that she gave the proprietary information to the newspaper.
 
-Decimals are used for numbered lists.
+Should Beth face consequences for leaking proprietary information?
 
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+== Create an Acceptable Use Policy
+
+Use the SANS Institute's Acceptable Use Policy as a starting point (https://www.sans.org/information-security-policy/).
+
+Choose one of the following organizations and create an acceptable use policy for it.
+
+* A hospital
+* A K-12 school
+* A manufacturing company
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* When is it okay to violate acceptable use policies?
+* What should penalties be for violating acceptable use policies?
 

@@ -6,50 +6,59 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Every organization that uses information technology should have a plan for maintaining security. Many organizations have created frameworks for organizations to ensure that their cybersecurity plans are complete.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* Describe the NIST Cybersecurity Framework
+* Describe the CIS Controls
 
-The learning objectives should be measurable.
+== Cybersecurity Frameworks
 
-== Lesson Here
+The National Institute of Standards and Technology (NIST) provides cybersecurity guidance. NITS's Cybersecurity Framework describes five major cybersecurity categories of actions that organizations should employ. The framework can be downloaded for free at https://www.nist.gov/cyberframework. Below, the five categories are described.
 
-This should be a couple of pages of text and screenshots.
+. Identify: Organizations must identify their assets and the threats that those assets face. You cannot protect something if you do not know that you have it. You also cannot protect against threats that you have not considered.
+. Protect: Implement practices and tools to protect against threats. Stopping an attack is more desirable than cleaning up a successful attack.
+. Detect: Systems should be monitored. At some point, an attack will be successful. An organization must be able to recognize when an attack has been successful.
+. Respond: Incidents must be contained. Evidence should be gathered. Stakeholders should be informed.
+. Recover: Normal operations should be restored. Lessons learned should be documented, and steps should be taken to avoid repeating incidents.
 
-All images should be original. Do not include images downloaded from the internet.
+It should be noted that the NIST Cybersecurity Framework is not a checklist. It is guidance that helps organizations craft their own cybersecurity policies and practices.
 
-Use Greenshot to take screenshots.
+The Center for Internet Security (CIS) Controls serve more as a checklist. They produce a list of the practices that organizations should follow. Version 8's list of controls is included below. More details can be found at https://www.cisecurity.org/controls/cis-controls-list.
 
-If you need to make diagrams, use draw.io.
+. Inventory and Control of Enterprise Assets
+. Inventory and Control of Software Assets
+. Data Protection
+. Secure Configuration of Enterprise Assets and Software
+. Account Management
+. Access Control Management
+. Continuous Vulnerability Management
+. Audit Log Management
+. Email and Web Browser Protections
+. Malware Defenses
+. Data Recovery
+. Network Infrastructure Management
+. Network Monitoring and Defense
+. Security Awareness and Skills Training
+. Service Provider Management
+. Application Software Security
+. Incident Response Management
+. Penetration Testing
 
-== Exercise
+Several other cybersecurity frameworks exist. All frameworks can add value to organizations if the organizations are thoughtful in their use. Organizations should avoid adopting frameworks without thinking critically about how those frameworks apply to their specific needs.
 
-Include detailed steps to practice the topic introduced in the lesson.
+== Compare
 
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+. Briefly review the NIST Cybersecurity Framework (e.g., focusing on the table of contents).
+. Briefly review the CIS Top 20 Controls.
+. What elements are similar?
+. What differences do you note?
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Why should organizations adopt cybersecurity frameworks?
+* What might be wrong with using third-party checklists for assessing your organization's cybersecurity posture?
 

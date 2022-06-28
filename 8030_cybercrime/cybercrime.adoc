@@ -6,50 +6,43 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+Criminals use tools like smartphones, laptops, and social media at some point when committing crimes. Ditial evidence from these tools must be extracted so that it is admissible in court.
 
 == Learning Objectives
 
 You should be able to:
 
-* TODO
-* TODO
-* TODO
+* List common crimes using cybersecurity
+* Discuss major forensics activities
 
-The learning objectives should be measurable.
+== Crimes
 
-== Lesson Here
+The following are examples of crime. Some of the crimes target technology, while others merely use technology to facilitate crime.
 
-This should be a couple of pages of text and screenshots.
+* Ransomeware. Criminals install malware on a victim's device. The malware encrypts the data and holds the decryption key hostage. If the ransom is paid, the decryption key is (hopefully) sent to the victim.
+* Phishing. Email is used to obtain information from a victim.
+* Internet of Things (IOT) hacking. Devices like security cameras
+* Child sexual abuse material (CSAM). Illicit photos and videos are traded online.
+* Digital theft. People download unauthorized material from the internet. Or, employees take trade secrets with them when they leave an employer.
 
-All images should be original. Do not include images downloaded from the internet.
+In each of the above crimes, digital evidence is created. Law enforcement must be able to preserve that evidence if the crimes are to be prosecuted.
 
-Use Greenshot to take screenshots.
+Sometimes, the criminal resides in a foreign country. Prosecution is difficult when a criminal must be extradited. It seems that governments seek only the most notorious hackers for extradition and prosecution.
 
-If you need to make diagrams, use draw.io.
+== Forensic Process
 
-== Exercise
+In court, judges enforce strict rules of evidence. Law enforcement must gather evidence in a forensically sound way so that the evidence can be admissible in court. There are five steps to this digital forensics process.
 
-Include detailed steps to practice the topic introduced in the lesson.
+. Identification. Officers must decide which devices and/or online services contain relevant case data. Warrants to search and seize equipment must be obtained. If officers catch somebody committing a crime, they sometimes have the authority to seize electronic devices. Officers often must obtain data from online services, such as Facebook or YouTube.
+. Preservation. Evidence must be securely stored. Hard drives are copied. The original is stored in a secure area, and all forensic activities occur on the copy. First, a cryptographic hash is taken of all files on the device. At the end of the investigation, hashes of the files can be compared to prove that the analysts did not change any files.
+. Analysis. The forensics data is analyzed to look for text messages, emails, documents, computer logs, and other data relevant to the case.
+. Documentation. Relevant information is laid out to explain the timeline of the crime.
+. Presentation. The information is summarized and presented. Forensics investigators might be asked to give testimony at trial.
 
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+I have spoken with several officers who have been involved in data forensics. Their jobs are rewarding but tough. They like the job for its mission of protecting people, but they often have to see or hear the worst things that humans do to each other. 
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Is cybercrime an increasing problem?
+* Should the government have the ability to decrypt all data stored on your personal devices?
 

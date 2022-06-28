@@ -1,4 +1,4 @@
-= Risk Management Strategies
+= Risk Response Strategies
 
 Author: Dr. Jim Marquardson
 
@@ -6,50 +6,34 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-TODO: Introduce the topic in a paragraph here.
-
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
+There are many ways to respond to risk. Risks can be accepted, mitigated, avoided, and transferred.
 
 == Learning Objectives
 
-You should be able to:
+You should be able to describe different risk responses:
 
-* TODO
-* TODO
-* TODO
+* Accept
+* Mitigate
+* Avoid
+* Transfer
 
-The learning objectives should be measurable.
+== Risk Responses
 
-== Lesson Here
+Risk is the *likelihood* that a *severity* will be exploited leading to a loss. *Likelihood* is the probability that an adverse event will occur. *Severity* is the magnitude of harm if the event occurs. A risk score can be calculated by multiplying likelihood by severity. The higher the risk score, the more concerned an organization should be about the risk.
 
-This should be a couple of pages of text and screenshots.
+Scenario 1: Lost smart cart. Employees at ACME use a combination of a smart cart and a personal identification number (PIN) to log in to computers. ACME expects several employees to lose their smart cards every month. But because the smart card is useless without the PIN or physical access to computer systems, it is unlikely that a smart card could be badly abused. The likelihood is high (e.g., a 10/10), but the severity is low (e.g., 1/10), so the overall risk score is low (10/100 in this example). This means that ACME should probably not invest significant resources to address lost smart cards.
 
-All images should be original. Do not include images downloaded from the internet.
+Organizations have several strategies they can employ to respond to risks.
 
-Use Greenshot to take screenshots.
+* Risk acceptance. The identified risks are within the organization's tolerance. They choose to engage in practices. In the smart card example explained previously, the risks associated with lost smart cards can likely be accepted without modifying any organizational practices.
+* Risk mitigation. If risks are above an organization's tolerance, actions can be taken to reduce the chance of an adverse event occurring or reduce the severity of an event. In the smart card example, risk could be reduced by requiring employees to use a third factor when logging in, such as biometrics. Requiring a third factor would reduce risk, but comes at a cost. Systems might become harder to use, biometric identification could be costly, and systems would become more complex overall.
+* Risk avoidance. When risks are above an organization's risk tolerance and they cannot be mitigated sufficiently, the organization can simply choose not to engage in the activity. 
+* Trisk transfer. Risks can be shifted to third parties. Risk transfer is typically handled by a company purchasing cybersecurity insurance. An organization might do its best to secure its systems but still purchase cybersecurity insurance. A single data breach can cost organizations millions of dollars. Cybersecurity insurance is becoming a standard cost that organizations must bear.
 
-If you need to make diagrams, use draw.io.
-
-== Exercise
-
-Include detailed steps to practice the topic introduced in the lesson.
-
-Use screenshots and numbered lists heavily.
-
-Decimals are used for numbered lists.
-
-. This is step one.
-.. This is sub-step 1.
-//. This is step two
-//+
-//.This text will go under the image.
-//image::screenshot_1.png[alt text goes here]
+These risk responses apply in many different scenarios, not just cybersecurity. You might accept the risks associated with bungee jumping. You might mitigate the risks of bungee jumping by making sure the bungee jumping company has relevant certifications or by choosing a provider that has backup safeguards (such as jumping over water). You can avoid bungee jumping risks by choosing not to jump. You can transfer bungee jumping risks by purchasing life insurance.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* To what degree does risk transference abdicate you of the responsibility of carrying out cybersecurity best practices?
+* How do you employ different risk responses in your life?
 
