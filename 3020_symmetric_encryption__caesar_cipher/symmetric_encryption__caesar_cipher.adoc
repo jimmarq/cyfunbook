@@ -13,11 +13,6 @@ A Caesar Cipher (also known as a subsitution cipher) is the earlist form of cypt
 
 Each letter in the alphabet has a coresponding letter in the cipher. This can also be done with numbers
 
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
-
 == Learning Objectives
 
 You should be able to:
@@ -46,13 +41,7 @@ Why use it?
 ** If you want to mess with your friends or family, here you go
 
 ** If you want to secure important or sensative data then don't use a Caesar Cipher. There are a host of other highly preforing encryption standards that will serve your needs far better
-//This should be a couple of pages of text and screenshots.
 
-//All images should be original. Do not include images downloaded from the internet.
-
-//Use Greenshot to take screenshots.
-
-//If you need to make diagrams, use draw.io.
 
 == Exercise
 
