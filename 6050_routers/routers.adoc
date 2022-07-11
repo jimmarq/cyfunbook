@@ -34,7 +34,7 @@ In this example, we will assume that a company has two segmented parts of the ne
 .. Change the label of the other switch to *Workstations*.
 . Add a *PC*.
 .. Label the PC *Test User*.
-.. Connect the PC to the switch with a straight-through ethernet cable on any of the switch's FastEthernet interfaces.
+.. Connect the PC to the switch labeled *Workstations* with a straight-through ethernet cable on any of the switch's FastEthernet interfaces.
 . Add a *Server*. The server can be found in the same *[End Devices]* subcategory as the PC.
 .. Label the server *Web Server*.
 .. Connect the server to the switch with a straight-through ethernet cable on any of the switch's FastEthernet interfaces.

@@ -38,7 +38,7 @@ Home wireless routers work well with little configuration, but the acronym soup 
 . Give the router a new label.
 +
 .Add a Home Router
-image::home-router-added.png
+image::home-router-added.png[Home Router Added]
 . Click on the router to open its settings.
 . Click on the GUI (graphical user interface) tab. Unlike many devices in Packet Tracer, the *Home Router* comes with a graphical user interface.
 . On the Setup > Basic Setup screen, take note of the following settings.
@@ -57,7 +57,7 @@ image::wireless-settings-1.png[]
 ... 5 GHz signal gets blocked by walls much more than 2.4 GHz but has a higher maximum data transfer rate.
 ... Most wireless access points support both 2.4 and 5 GHz.
 ... There are two different 5 GHz radios to prevent potential congestion.
-.. The *Network Name (SSID)* has the name that people see when connecting to the network.
+.. The *Network Name (SSID)* is the name that people see when connecting to the network.
 .. Change the SSID of your network to something unique to you.
 .. After changing the SSID, scroll down and click the *Save Settings* button (otherwise your changes will be lost.)
 . Click the *Wireless Security* subcategory.
