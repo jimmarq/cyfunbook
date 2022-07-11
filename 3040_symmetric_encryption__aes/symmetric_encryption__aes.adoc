@@ -79,6 +79,8 @@ My file is 33 bytes.
 ----
 $ gpg --output encrypted-secret.gpg --symmetric secrets.txt
 ----
++
+If you get an error that says, "No such file or directory," then double-check that you 1) did not make a typo when creating *secrets.txt*, and 2) did not make a typo when typing *secrets.txt* into the `gpg` command.
 . You will be prompted for a passphrase. This will become the key used to encrypt and decrypt the data.
 +
 .Passphrase Prompt

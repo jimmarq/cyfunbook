@@ -97,8 +97,8 @@ PS C:\users\Jim> dir
 ----
 +
 You should see the same output as `Get-ChildItem` because the `Get-ChildItem` command was the command that Windows ran.
-* `gci` is another alias for `Get-ChildItem`.
-* PowerShell commands often accept parameters. For example, the `gci` command can be used to filter. Run the following code to see if there are any text files in the directory.
+. `gci` is another alias for `Get-ChildItem`.
+. PowerShell commands often accept parameters. For example, the `gci` command can be used to filter. Run the following code to see if there are any text files in the directory.
 +
 [source,powershell]
 ----

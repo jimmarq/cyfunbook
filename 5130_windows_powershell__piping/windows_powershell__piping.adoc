@@ -39,6 +39,7 @@ The first part of this exercise will have you set up a folder and create some fi
 .Create the folder and change directories to the new folder
 image::mkdir-cd.png[mkdir pipe, cd pipe]
 . Run the following commands to create 3 files.
++
 [source,powershell]
 ```
 PS C:\Users\Jim\pipe> Set-Content a1.txt -Value "aaaaaaaa"

@@ -25,13 +25,13 @@ image::one-time-pad.png[US National Security Agency, Public domain, via Wikimedi
 The left portion of the page has groups of randomly generated characters. The key to the right gives lookup values. The right half of the page is static--it can be repeated and distributed publicly. The left-hand side has the keys that are randomly generated. These keys should never be disclosed.
 
 . Suppose you wanted to use this one-time pad to encrypt the word "CAT."
-. Using some agreed upon method, you and the recipient of your message will use the first line of the one-time pad.
+. Using some agreed-upon method, you and the recipient of your message will use the first line of the one-time pad.
 +
 ----
 LFHHY ZAHBB ...
 ----
 +
-Because the message "CAT" is only three characters long, only three characters of the key are needed. (If you needed to send a message a thousand characters long, the key would also need to be a thousands characters).
+Because the message "CAT" is only three characters long, only three characters of the key are needed. (If you needed to send a message a thousand characters long, the key would also need to be a thousand characters).
 . The first character of the key is *L*, so we look in the lookup table in section *L*. The character *C* corresponds to the encrypted character *M*. So *M* is the first character of the encrypted output.
 +
 .Encrypt "C" Using the Key "L"

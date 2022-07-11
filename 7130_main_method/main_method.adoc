@@ -6,13 +6,13 @@ Changelog
 
 * 2022-08-15 Initial Version
 
-Python has special "*dunder*" methods. They are referred to as "dunder" because they use double-underscore characters. In this chapter, you will learn to use "\_\_main\_\_" dunder method to control how your programs flow.
+Python has special "*dunder*" methods. They are referred to as "dunder" because they use double-underscore characters. In this chapter, you will learn to use "\\__main__" dunder method to control how your programs flow.
 
 == Learning Objectives
 
 You should be able to:
 
-* Explain the purpose of using \_\_main\_\_ to organize code
+* Explain the purpose of using \\__main__ to organize code
 * Write a main dunder method to control the flow of your program
 
 == Main Functions
@@ -83,7 +83,7 @@ Notice the output.
 +
 image::import_from_shell.png[]
 +
-None of the code in the \_\_main\_\_ section was executed. This is because the main.py file was not executed directly from the terminal.
+None of the code in the \\__main__ section was executed. This is because the main.py file was not executed directly from the terminal.
 . Run the following code in the interactive python shell:
 +
 [source,python]
@@ -93,14 +93,14 @@ None of the code in the \_\_main\_\_ section was executed. This is because the m
 +
 You will see "Hello Jen" as a result. In this case, python knew that when you ran "import main" you wanted to run the code inside main.py.
 
-As programs become more complex, you will start to include code from several .py files. Code in the \_\_main\_\_ method will only be run if it is called from the terminal, e.g., *python main.py*.
+As programs become more complex, you will start to include code from several .py files. Code in the \\__main__ method will only be run if it is called from the terminal, e.g., *python main.py*.
 
 == Challenge
 
 . Create a small python program.
 . Define at least one variable.
 . Define at least one function.
-. Create a \_\_main\_\_ method that calls the function and uses the variable defined earlier in the program.
+. Create a \\__main__ method that calls the function and uses the variable defined earlier in the program.
 
 == Reflection
 

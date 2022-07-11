@@ -24,6 +24,7 @@ In python, you do not need to declare the data type. This is in contrast to many
 . Open a terminal.
 . Run `python` to start an interactive python shell.
 . Run the following code.
++
 [source,python]
 ----
 >>> print(4)

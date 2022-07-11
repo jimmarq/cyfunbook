@@ -102,7 +102,7 @@ $ john -incremental=Lower linkedin_hashes.txt
 === Clean up / Restart
 
 If you want to delete the hashes to try different attacks you will have to delete the "potfile" (where hashes are stored).
-+
+
 [source,sh]
 ----
 $ rm ~/.john/john.pot
