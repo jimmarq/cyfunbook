@@ -113,3 +113,4 @@ $ rm ~/.john/john.pot
 * Why don't people choose stronger passwords?
 * If you picked a strong password, would brute force and dictionary attacks have been successful?
 
+//Test to be removed
