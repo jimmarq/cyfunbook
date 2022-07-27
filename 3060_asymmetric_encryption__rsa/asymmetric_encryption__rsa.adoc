@@ -107,7 +107,7 @@ image::public-key-cat.png[public key block]
 +
 [source,sh]
 ----
-$
+$ gpg --output private.key --armor --export-secret-key bugs@bunny.com
 ----
 . Run the following command to display the contents of the key file.
 +
