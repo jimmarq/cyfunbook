@@ -24,7 +24,7 @@ image::altair.jpg[By Swtpc6800 en:User:Swtpc6800 Michael Holley - Transfered fro
 
 Before computers could take off, somebody had to find a way to make it easier for software to interact with the computer hardware. The computer operating system is the software layer that lets programs access the computer hardware, such as the CPU, memory, keyboard, monitor, network cards, etc.
 
-Five years after the Altair 8080 was released, the Seattle Computer Products company released an operating system internally branded QDOS--for Quick and Dirty Operating System. This operating system competed with an operating system developed by IBM--CP/M.
+Five years after the Altair 8800 was released, the Seattle Computer Products company released an operating system internally branded QDOS--for Quick and Dirty Operating System. This operating system competed with an operating system developed by IBM--CP/M.
 
 IBM was reluctant to license CP/M to hardware manufacturers. An enterprising young man named Bill Gates had no such reservations. Bill gates licensed and later purchased QDOS so that it could turn around and license it to hardware companies. Microsoft's initial success in licensing its software lead to further development of software that it could license. Microsoft eventually created its own operating system--MS-DOS (Microsoft Disk Operating System). The operating system was largely command-line driven and not terribly easy to use.
 
