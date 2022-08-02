@@ -25,6 +25,7 @@ You should be able to:
 .File Explorer Menu Icon
 image::file-explorer-app-start-menu.png[File Explorer Menu Icon]
 . Right-click on the start menu to open the super-secret options and choose *File Explorer*.
++
 .Super-Secret Right-click Start Menu Options
 image::right-click-menu.png[Super-Secret Right-click Start Menu Options]
 
@@ -56,6 +57,7 @@ image::left-network.png[Network Category]
 
 . Click on the *This PC* category. Notice that there is a *Windows (C:)* drive. But why is it labeled *C*? Historically, computers came with floppy disks. It was common to have two floppy disk drives. Those drives would be given the letters *A* and *B*. Fixed hard drives were given the label *C*. For historical purposes (and perhaps some backward compatibility), the first hard drive on your computer is typically given the letter *C*.
 . Double-click on the C: drive to list its folders.
++
 .Windows C: Drive
 image::c-drive.png[Windows C: Drive]
 +
