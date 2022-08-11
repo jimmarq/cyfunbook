@@ -34,6 +34,7 @@ In general, everything that works in the command prompt works in PowerShell. An 
 == Launch and Use the Command Prompt
 
 . In the Windows start menu, find the *command prompt* application.
++
 .Launch the Command Prompt
 image::cmd-prompt-start-menu-item.png[]
 . You will see a message with the current version of Windows and a copyright notice. You should also see that the working directory is your user account's home directory.

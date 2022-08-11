@@ -127,9 +127,9 @@ Run `$friends | Get-Random` multiple times. A different name will be displayed m
 == Challenge
 
 . Write the code that will compute the hashes of all files in the pipes directory and sort them by hash. Do all of this in a single line of code.
-# Answer: gci | get-filehash | sort-object
+// Answer: gci | get-filehash | sort-object
 . The Out-File cmdlet writes output to a file. Create a line of PowerShell code that writes the output of gci to a file called files.txt.
-# Answer: gci | out-file files.txt
+// Answer: gci | out-file files.txt
 
 == Cleanup
 

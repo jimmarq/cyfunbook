@@ -42,7 +42,7 @@ image::alice-output.png[Value of $name is retrieved]
 == Simple MadLib
 
 . Delete the code in the ISE.
-. One lines 1-4, create 4 variables with the names:
+. On lines 1-4, create 4 variables with the names:
 .. $noun
 .. $adjective
 .. $verb_ending_in_ing
@@ -74,9 +74,8 @@ $pi = 3.14
 $fruits = @("apple", "banana")
 ----
 
-
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* How can using variables help people write programs?
+* Why is it important to understand a variable's data type?
 
