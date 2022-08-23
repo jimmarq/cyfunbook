@@ -120,6 +120,6 @@ $ rm -rf packets
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
-
+* How would analyzing packets help you troubleshoot network problems?
+* How would analyzing packets help you determine if a data breach occurred?
+* How would you learn about network protocols you have never discovered?

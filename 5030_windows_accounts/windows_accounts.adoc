@@ -51,6 +51,7 @@ image::home-jerk-added.png[User Account Added]
 .Remove Account
 image::home-account-remove.png[Remove account]
 . Removing an account is kind of a big deal, so Windows will confirm that you really want to do this.
++
 .Confirm Account Removal
 image::home-remove-confirm.png[Confirm Account Removal]
 .. Go ahead and confirm if you'd like to delete this account. If you want to test it out, keep it. It's your computer.

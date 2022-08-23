@@ -71,7 +71,7 @@ The `-o` option tells curl to output the download to the file google.html.
 image::curl-download-to-file.png[curl downloading to a file]
 . Run the following command to open the google.html file in Firefox.
 +
-[source,sh]
+.Google's HTML in Firefox
 image::google-html-in-firefox.png[google.html in firefox]
 +
 Notice that images and styling look different than visiting http://www.google.com. This is because curl did not download any images or styling information. Also note that the address bar shows file:// instead of http://. The address bar uses file:// to show that you are browsing a file on your local computer.

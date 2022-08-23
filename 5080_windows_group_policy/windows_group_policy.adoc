@@ -27,8 +27,7 @@ image::start-menu-group-policy.png[Group Policy Editor in the Start Menu]
 . Notice that the application title says, *"Local" Group Policy Editor*. The changes you make here will only be applied to the local computer. It is possible that you could edit group policy for an entire organization, but that would require that you be connected to Active Directory.
 +
 .Local Group Policy Editor
-image::main-gpedit-screen.pn
-g[Local Group Policy Editor]
+image::main-gpedit-screen.png[Local Group Policy Editor]
 . Note that there are 2 cateries within the local policy:
 .. *Computer Configuraiton*. These settings will apply to everybody who uses the computer, even if they use different user accounts.
 .. *User Configuration*. These settings apply to an individual account. 

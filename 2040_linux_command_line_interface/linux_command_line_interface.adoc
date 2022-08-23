@@ -188,6 +188,6 @@ Adapt the commands in the previous section to complete the following tasks.
 
 == Reflection
 
-* Ask a question here that makes people think.
-* Ask another good question
+* Have terminals gone the way of the dinosaur?
+* What advantages does a terminal have over a graphical interface?
 
