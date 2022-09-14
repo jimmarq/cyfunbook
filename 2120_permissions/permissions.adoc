@@ -94,7 +94,7 @@ echo "Hello world"
 . Run the following command to add the execute permission.
 +
 ----
-$ chmod +x permission
+$ chmod +x program
 ----
 . List the folder contents with the permissions.
 +
