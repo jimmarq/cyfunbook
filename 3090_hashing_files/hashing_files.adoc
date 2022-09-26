@@ -140,7 +140,7 @@ The output should look similar to the following screenshot.
 .Diff of essay.txt and essay_twin.txt
 image::diff-of-essays.png[diff of essay.txt and essay_twin.txt]
 +
-The diff result shows that on line 7, column 7 the text has been changed. So in this case, hashing told us that the file contents were not the same. But file hashing cannot tell us *what* has changed. For text files, the `diff` tool can be helpful.
+The diff result shows that a change occured on line 7, and the resulting change is contained on line 7. So in this case, hashing told us that the file contents were not the same. But file hashing cannot tell us *what* has changed. For text files, the `diff` tool can be helpful.
 . The two smiley faces look the same, but unless we hash the files we cannot know for sure. Calculate the SHA2-256 hashes.
 +
 [source,sh]
