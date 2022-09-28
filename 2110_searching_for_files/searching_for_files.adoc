@@ -135,13 +135,13 @@ The "./" tells Linux to look in the current folder, and the asterisk tells kali 
 
 == Challenge
 
-. Find entries in the /var/auth.log file that have the words "user root."
+. Find entries in the /var/log/auth.log file that have the words "user root."
 . Find files with the name "firefox" in the file name only.
 . Find files and directories with "apache" in the name.
 . How many employees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
 
 // Solutions:
-// grep -a "user root" /var/auth.log
+// grep -a "user root" /var/log/auth.log
 // locate firefox
 // locate -b apache
 // grep "Tavu" ./*
