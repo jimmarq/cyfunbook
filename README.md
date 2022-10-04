@@ -30,6 +30,10 @@ This eBook will be improved over time based on student feedback and industry tre
 * Expand the chapter on working with files to include the copy command
 * Include a chapter on tar and zip files
 
+### Cryptography
+
+* Expand password cracking to include bcrypt hashes
+
 ### Threats
 
 The current section on threats focuses primarily on social engineering attacks. The threats section needs to be expanded to include:
