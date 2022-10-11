@@ -212,6 +212,11 @@ include::4060_tailgating\tailgating.adoc[]
 include::4070_dumpster_diving\dumpster_diving.adoc[]
 
 
+<<<
+:imagesdir: 4900_linux_crypto_review
+include::4900_linux_crypto_review\linux_crytpo_review.adoc[]
+
+
 :leveloffset: 0
 <<<
 = Windows

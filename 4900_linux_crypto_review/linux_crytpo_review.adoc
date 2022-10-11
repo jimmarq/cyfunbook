@@ -1,0 +1,128 @@
+= Linux, Cryptography, and Threat Review
+
+Test your skills by completing as many of these challenges as possible. For each challenge, take a screenshot proving that you were able to complete the challenge. Copy the challenges to a Word document, CherryTree notebook, or another document editor. When pasting the data, paste as plain text. In a web browser, control+shift+v often pastes as plain text. In Word, use the `paste special` command. Then, start completing the challenges and pasting your screenshots into the document.
+
+== Linux Challenges
+
+. Boot a Kali Linux virtual machine. (Include a screenshot of the running virtual machine.)
+. Open a terminal.
+. In a terminal, navigate to /etc.
+. In a terminal, navigate to your home directory without typing any slashes in the command.
+. In your home directory, create an empty file called `review.txt`.
+. Edit the file in `vim`. Add some text. (Ensure that the screenshot shows that you are in `vim`.)
+. Save the file in `vim`.
+. Exit `vim`.
+. Display the contents of `review.txt`.
+. Rename the file `review.txt` to `review_done.txt`.
+. Display the list of files in your home directory.
+. Delete `review_done.txt`.
+. Display the list of files in your home directory that shows review_done.txt has been deleted.
+. Show the list of hidden files in your home directory.
+. Show the list of files in your home directory in the long format.
+. Show all files in your system that contain the word `hosts` in the filename.
+. While in your home directory, display the contents of the file `/etc/hosts`.
+. Create a file in your home directory called `program.sh`.
+. Edit the file in `nano` to add the following text:
++
+----
+echo 'This takes practice.'
+----
++
+Save the file in `nano`.
+. Run the program.
+.. Hint #1: Change the permissions.
+.. Hint #2: ./
+. Read the manual about the `cp` program.
+. Copy `program.sh` to `program_backup.sh`.
+. Edit `/etc/hosts` to add the following content:
++
+----
+# I'm not actually changing anything
+----
++
+Be sure to include the `#` at the beginning of the line.
++
+Hint: The `kali` user does not have write permission to /etc/hosts.
+. Find the IP address of the server hosting https://www.nmu.edu.
+. Display your IP address.
+. Display the hardware address of your network card.
+. Search for the word `root` in the file `/var/log/syslog`.
+
+== Cryptography Challenge.
+
+Use the Cyber Chef as appropriate: https://gchq.github.io/CyberChef/
+
+. The following ciphertext was encrypted using the Caesar cipher. Decrypt it.
++
+----
+Csy'vi hsmrk kviex
+----
+. Encrypt a message using the Caesar Cipher. Include the decryption key in your submission.
+. Clear any Cyber Chef recipes. Add the RSA Encrypt operation. A public key must be provided. Whose public key would go in this space?
+. Go to https://www.nmu.edu.
+.. In Chrome, open the developer tools security tab (ctrl-shift-i > security tab).
+.. In Firefox, click on the lock in the URL, click connection, more information > view certificate.
+.. What is the subject's public key algorithm?
+.. What kind of cryptography is being used to establish a secure connection?
+. Decrypt the following ciphertext.
++
+----
+b79acb634559bdab9f66afb96b6e5db7c4b403144110d46beb7b9125b2163748ce23da5777d9508536d767372d8d7a03
+----
++
+Use the cyber chef. It was encrypted with `AES`. The encryption mode was `CBC`. The key is `wildcatswildcats` (UTF8). The IV was `abcdefghijklmnop` (UTF8).
+
+== Threats Challenges
+
+(Text submissions are okay here.)
+
+. Compose a brief phishing email that uses the principle of `authority`.
+. Compose a brief phishing email that uses the principle of `intimidation`.
+. Compose a brief phishing email that uses the principle of `scarcity`.
+. Compose a brief phishing email that uses the principle of `urgency`.
+. Compose a brief phishing email that uses the principle of `familiarity`.
+. Compose a brief phishing email that uses the principle of `consensus`.
+. Describe reconnaissance techniques you could use during an ethical hacking engagement.
+. List practices for protecting personal privacy.
+. What are the pros and cons of using password managers?
+. List several ways that multi-factor authentication can be implemented.
+. How are phishing and spear phishing?
+. What are the differences between phishing, smishing, and vishing?
+
+== Advanced Linux
+
+. Download the latest release .zip file of this eBook from Github using the terminal.
+. Show the addresses of IBM's email servers.
+. Determine the services running and the operating system of the server running burns.nmu.edu.
+. Search for the word `root` in every file in `/var/log` that starts with `sysl`.
+.. Hint: It is likely that you have several zipped logs. You may need to find a new search tool.
+
+== Advanced Crypto
+
+. Crack this 3-character password. It was hashed using bcrypt. It only uses lower-case characters (a-z).
++
+----
+$2a$10$qvsCr2TVnxiGUN.LP.4nj.XqPTxLrdU5tCXVvskXrGhPivXNv93Hi
+----
+//cat
+. Crack this 5-digit password. It was hashed using bcrypt. It only uses digits (0-9).
++
+----
+$2a$10$.Uhzxlc5/elaQi7AJZswDOonIe.Q5rJ4gZQTgtqoey3ifvC19uHQG
+----
+//49855
+. Crack these SHA2-256 password hashes.
++
+----
+f02c96357481972443a2eb6d2861c803fa7790fb7d0225b2f54b6beba964f4ad
+5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+583f292b1159c0b38eeff9a35ee92ad1656b705045e8231bdf72e1072f360f2f
+----
+//basketball
+//password
+//admin
+//mciskxlq
+. Create an RSA private key/public key pair in Kali.
+.. Use the Cyber Chef to encrypt a message using your public key. 
+.. Decrypt the message with your private key in Kali.
