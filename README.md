@@ -38,10 +38,15 @@ This eBook will be improved over time based on student feedback and industry tre
 
 * Expand the chapter on working with files to include the copy (cp) command
 * Include a chapter on tar and zip files
+* Include the logger command. Search logs with grep and zgrep. Include an exercise to download a script and run it. The script should write logs.
+* Add a Linux review activity.
+* Add an exercise using tar. Include sample files.
 
 ### Cryptography
 
 * Expand password cracking to include bcrypt hashes. Define the metrics reported by john regarding hashing speed.
+* Asymmetric cryptography: Add an exercise to import a public key and verify a file's signature (signed with somebody else's private key).
+* Symmetric cryptographic: Add an exercise to decrypt a file that somebody else encrypted.
 
 ### Threats
 
