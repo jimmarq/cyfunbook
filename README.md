@@ -37,10 +37,9 @@ This eBook will be improved over time based on student feedback and industry tre
 ### Linux
 
 * Expand the chapter on working with files to include the copy (cp) command
-* Include a chapter on tar and zip files
+* Include a chapter on tar and zip files. Include sample files.
 * Include the logger command. Search logs with grep and zgrep. Include an exercise to download a script and run it. The script should write logs.
 * Add a Linux review activity.
-* Add an exercise using tar. Include sample files.
 
 ### Cryptography
 
