@@ -38,7 +38,7 @@ The first part of this exercise will have you set up a folder and create some fi
 +
 .Create the folder and change directories to the new folder
 image::mkdir-cd.png[mkdir pipe, cd pipe]
-. Run the following commands to create 3 files.
+. Run the following commands to create 4 files.
 +
 [source,powershell]
 ```

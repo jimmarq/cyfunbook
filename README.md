@@ -26,7 +26,7 @@ This book can be compiled using Asciidoctor Web PDF (https://github.com/Mogztter
 
 ## Future Improvements
 
-This eBook will be improved over time based on student feedback and industry trends. The following topics will be included in a future version.
+This eBook will be improved over time based on student feedback and industry trends. The following topics and changes will be included in a future version.
 
 ### Introduction
 
@@ -39,13 +39,23 @@ This eBook will be improved over time based on student feedback and industry tre
 * Expand the chapter on working with files to include the copy (cp) command
 * Include a chapter on tar and zip files. Include sample files.
 * Include the logger command. Search logs with grep and zgrep. Include an exercise to download a script and run it. The script should write logs.
-* Add a Linux review activity.
+* Add a Linux review activity so that students reinforce what they learned.
 
 ### Cryptography
 
 * Expand password cracking to include bcrypt hashes. Define the metrics reported by john regarding hashing speed.
 * Asymmetric cryptography: Add an exercise to import a public key and verify a file's signature (signed with somebody else's private key).
 * Symmetric cryptographic: Add an exercise to decrypt a file that somebody else encrypted.
+
+### Windows
+
+The Windows section is brief. Currently, it doesn't help students to be proficient using Windows, and it doesn't introduce Windows Server well. The book needs to pick a direction--help people use Windows well, or introduce server features.
+
+* Need to use a Windows Server virtual machine for standardization.
+* Some students could not access the Windows Store to intall Windows Terminal. Some students could not launch the Group Policy Editor.
+* For Windows Defender, have students download a malicious file (not too malicious), such as a zip bomb from SecLists.
+* It would be better to replace the user accounts and permission with an exercise that uses Active Directory.
+* The Firewall chapter should only be included if manipulating the firewall in a VM. Students should risk breaking their security on the host.
 
 ### Threats
 

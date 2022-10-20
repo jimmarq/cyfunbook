@@ -1,0 +1,13 @@
+
+
+
+. The following command was used to create the gzipped archive.
++
+----
+tar -zcvf data.tar.gz data
+----
+. The following command was used to create the bzipped archive.
+----
+tar -jcvf data.tar.bz2 data
+----
+
