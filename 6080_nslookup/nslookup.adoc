@@ -44,7 +44,7 @@ Address: 2607:f8b0:4009:805::200e
 +
 The *Server* is the DNS server that resolved the domain name. In this case, my home router was responsible for resolving Google's IP address. The *Address* includes the port number. DNS uses port 53. Two IP addresses are listed for Google. The IPv4 address and the IPv6 address. You may have received different IP addresses for Google. Google has many, many, servers, and it will give people different IP addresses to distribute the load.
 +
-The answer returned is *non-authoritative* in that it did not come directly from Google's nameserver. Instead, the answer came from a DNS resolver that contacted Google's nameserver. We can still trust the results, but the information may be out of date (remote, but likely) or incorrect (even less likely).
+The answer returned is *non-authoritative* in that it did not come directly from Google's nameserver. Instead, the answer came from a DNS resolver that contacted Google's nameserver. We can still trust the results, but the information may be out of date (uncommon) or incorrect (even less likely).
 . It is possible to query a specific DNS server. This could be useful when setting up a new server inside an organization. In `nslookup`, the name or IP address of the DNS server can be added at the end. Google maintains a public DNS server at 8.8.8.8. We can ask it about Google's DNS information.
 +
 [source,sh]
