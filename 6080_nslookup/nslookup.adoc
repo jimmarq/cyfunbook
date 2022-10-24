@@ -13,11 +13,11 @@ Nslookup is a tool that exists on Windows and Linux to evaluate DNS settings. Yo
 You should be able to:
 
 * Run nslookup
-* Evaluate `nslookup`` output
+* Evaluate `nslookup` output
 
 == Nslookup
 
-The *ns* in `nslookup`` stands for name server. Nslookup is a cross-platform tool for investigating DNS. This section will walk through several `nslookup` commands. These commands can be run from a Windows command prompt, a Windows PowerShell prompt, or a Linux terminal.
+The *ns* in `nslookup` stands for name server. Nslookup is a cross-platform tool for investigating DNS. This section will walk through several `nslookup` commands. These commands can be run from a Windows command prompt, a Windows PowerShell prompt, or a Linux terminal.
 
 Note: `nslookup` has two modes--interactive and non-interactive. We will only use the non-interactive mode. If you accidentally enter interactive mode, the prompt will change to ">". If that happens, just type "exit" and press enter to leave `nslookup`.
 

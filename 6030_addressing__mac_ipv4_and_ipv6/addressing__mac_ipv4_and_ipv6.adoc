@@ -123,7 +123,7 @@ IPv4 worked fine. But let's test the network with IPv6.
 . Open the *Config* tab.
 . Click on the *FastEthernet0* tab.
 . Delete the IPv4 Address and Subnet Mask.
-. For the IPv6 address, enter *2001:db8:acad:1::25.
+. For the IPv6 address, enter *2001:db8:acad:1::25*.
 . For the */* prefix, enter 64.
 +
 .Alice's IPv6 Settings
