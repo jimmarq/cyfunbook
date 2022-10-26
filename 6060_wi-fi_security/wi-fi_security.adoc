@@ -88,6 +88,7 @@ At this point, you can connect a client computer to the wireless network.
 +
 .Smart Phone Settings
 image::smartphone-settings.png[Smart Phone Settings]
+.. Enter the *SSID* you configured previously. (My SSID is *MarqFI*, but yours is probably different.)
 .. Select *WPA2-PSK*. PSK stands for pre-shared key. This is the passphrase you selected when securing the wireless router.
 .. Enter the password for the *PSK Pass Phrase*.
 
