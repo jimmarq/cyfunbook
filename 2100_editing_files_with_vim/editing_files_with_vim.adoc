@@ -13,8 +13,8 @@ Vim is a terminal text editor installed on every Linux system. It has existed fo
 You should be able to:
 
 * Launch vim
-* Change between command mode and insert mode
-** escape for command mode
+* Change between "normal" mode and insert mode
+** escape for normal mode
 ** i for insert mode
 * Add text
 * Save files
@@ -28,10 +28,10 @@ You should be able to:
 
 Vim is different than many other text editors in that it has two distinct modes:
 
-1. Command mode. In this mode, the keys you type on the keyboard run commands rather than adding text.
+1. Normal mode. In this mode, the keys you type on the keyboard navigate the document or run commands rather than adding text.
 2. Insert mode. In this mode, the keys you type add text to the document.
 
-If you are in the command mode when you want to write text, vim will look like it's going nuts.
+If you are in normal mode when you want to write text, vim will look like it's going nuts.
 
 == Create a File in vim
 
@@ -42,16 +42,18 @@ This will walk you through the absolute basics of using vim.
 ----
 $ cd ~/Documents
 ----
-. Launch vim just by running the `vim` command.
+. Launch the vim application just by running `vim`.
 +
 ----
 $ vim
 ----
++
+(Note: `vim` is `vi` improved. In some systems, you will need to run `vi` instead of `vim`.)
 . The vim editor will take over the terminal window.
 +
 .Vim interface
 image::vim-just-launched.png[vim interface]
-. Type the text `fleck`. Notice that no text appears in the window. This is because vim defaults to opening in *command* mode.
+. Type the text `fleck`. Notice that no text appears in the window. This is because vim defaults to opening in *normal* mode.
 . Type `i` to enter *insert* mode. Note that the insert mode will be indicated in the bottom left.
 +
 .Insert mode entered
@@ -62,17 +64,17 @@ image::insert-mode-label.png[insert mode enabled]
 +
 .Sample text in vim
 image::vim-sample-text-entered.png[sample text in vim]
-. To save files in vim, you have to change the mode to command mode.
-. Press the escape key to exit insert mode and enter command mode.
+. To save files in vim, you have to change the mode to normal mode.
+. Press the escape key to exit insert mode and enter normal mode.
 . To save the file:
 .. Press `shift+:` to enter the colon character.
 .. Enter `w file.txt`. The `w` command tells vim to *write* the contents to a file.
 .. Press enter. The file should now be saved.
 . Press `i` to enter insert mode again.
 . Add some more text.
-. Press escape to leave insert mode and enter command mode.
+. Press escape to leave insert mode and enter normal mode.
 . Enter `:w` and press enter. Because you already gave the file a name, you do not need to enter it again. All changes should be saved.
-. While still in command mode, enter `:q` and press enter to quit vim.
+. While still in normal mode, enter `:q` and press enter to quit vim.
 
 == Edit a File in vim
 
@@ -87,7 +89,7 @@ $ vim file.txt
 You should see all of the file's content.
 . Type `i` to enter insert mode.
 . Add some text to the file.
-. Press escape to enter command mode.
+. Press escape to enter normal mode.
 . Type `:wq` to save the changes and quit. The `w` and `q` commands can be run together or separately.
 . Display the file contents with `cat`.
 +
@@ -109,12 +111,12 @@ $ vim file.txt
 ----
 . Type `i` to enter insert mode.
 . Change some text.
-. Press escape to enter command mode.
+. Press escape to enter normal mode.
 . Type `:q!` to quit vim. Notice that the `w` command was omitted because we do not want to write the changes to disk. The `q` command quits vim. The exclamation point (`!`) tells vim to ignore any unsaved changes.
 
 == Power of vim
 
-At this point, you might think that the people who made vim are either crazy or masochists. But these exercises only touch on the most basic vim functionality. By separating command mode and insert mode, vim can do very powerful things to make editing text efficient.
+At this point, you might think that the people who made vim are either crazy or masochists. But these exercises only touch on the most basic vim functionality. By separating normal mode and insert mode, vim can do very powerful things to make editing text efficient.
 
 There are many ways to learn more advanced vim features. One fun resource is https://vim-adventures.com/.
 
