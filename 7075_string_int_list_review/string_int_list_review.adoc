@@ -1,0 +1,61 @@
+= String, Int, and List Review
+
+Author: Dr. Jim Marquardson
+
+Changelog
+
+* 2022-11-07 Initial Version
+
+This exercise helps assess your mastery of python variables using string, integer, and list data types.
+
+== Instructions
+
+Perform the following tasks in a Kali virtual machine.
+
+. Create a new file called `review1.py` in your ~/Documents/mypython directory.
+.. If you need to create this directory, run:
++
+----
+$ mkdir ~/Documents/mypython
+----
+. Create the code in `review1.py` that implements the following requirements.
+. Print the multiplication of 7 and 4.
+. Print the result of dividing 8 by 4.
+. Print the result of dividing 7/3 as an integer (rounded down using python's default).
+.. For example, if the result of dividing 7/3 is 2.6667. Your program should print *2*.
+. Print raising 5 to the power of 4.
+. Create a string variable named `first_name` with the value of your first name (properly capitalized).
+. Create a string variable named `last_name` with the value of your last name (properly capitalized).
+. Print your first name and last name with a space between them using the `first_name` and `last_name` variables. (Do not modify the `first_name` or `last_name` variables to add a space.)
+. Print the `first_name` variable in lower case.
+. Print the `last_name` variable in upper case.
+. Create a variable named `lower_name` that contains your full name, but lower case. Use the `first_name` and `last_name` variables to obtain your name.
+.. For example, if `first_name` is "Jim" and `last_name` is "Marquardson", you should print "Jim Marquardson" using the variables and adding a space in between. Concatenate the three elements together.
+. Print `lower_name`.
+. Print the number of characters in `lower_name`.
+. Create a `year` variable with an integer of the current year.
+. Create a `next_year` variable by adding one to the `year` variable.
+. Print the value of `year`.
+. Print the value of `next_year`.
+. Create a list variable named `countries` containing the names of 3 countries.
+. Print the value of the second country in the list.
+. Add a fourth country to the `countries` list.
+. Print the `countries` list.
+. Remove a country from the `countries` list.
+. Print the `countries` list.
+. Print the length of the countries list.
+. Save the file.
+. Run the file. Fix any syntax errors or logic errors.
+
+== Challenge
+
+. Edit review1.py to add the following requirements.
+. Create a nested list named `nessy` with three sublists. Populate the sublists with any data you want.
+. Print the value of each item in all sublists using the list indexes.
+. Save and run the file.
+
+== Reflection
+
+* Which elements of the assignment were most challenging?
+* How does this coding exercise compare to previous coding experience you might have had?
+
