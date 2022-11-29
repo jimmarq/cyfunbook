@@ -15,6 +15,7 @@ You should be able to:
 * Describe the usefulness of loops
 * Use *for* loops
 * Use *while* loops
+* Use *break* to exit loops
 
 == For Loops
 
@@ -132,7 +133,7 @@ Line 5 will print "Done" after the *while* loop has exited.
 Done
 ----
 
-== While Challenge
+== While Loop Challenge
 
 . Create a file called *while_launch.py* to create a launch countdown counting from 10 down to 1, then printing "Blastoff!".
 . Your launch countdown should look like this:
@@ -152,9 +153,63 @@ Blastoff!
 ----
 . The numbers 10 through 1 should be printed in a *while* loop.
 
+== Breaking Out of Loops
+
+There are many cases when it is necessary to exit a loop. The *break* keyword is used to make your code jump out of a loop. The following code will demonstrate how to exit from a loop using *break*.
+
+. Create a file called break.py.
++
+[source,sh]
+----
+$ touch break.py
+----
+. Write the following code.
++
+[source,python]
+----
+names = ["Alice", "Bob", "Eve"]
+for name in names:
+    print(name)
+----
+. Save and run the code. It should print the three names.
+. Modify the code so that the loop exits if it finds the name "Bob."
++
+[source,python]
+----
+names = ["Alice", "Bob", "Eve"]
+for name in names:
+    if name == "Bob":
+        break
+    print(name)
+----
+. Save and run the code.
+. Notice that only "Alice" is printed. When the loop got to "Bob," the code exited and therefore the remaining names were not printed.
+. The *break* keyword can be used in *while* loops, also.
+. Create a new file called *repeat.py*.
++
+[source,sh]
+----
+$ touch repeat.py
+----
+. Edit repeat.py to add the following contents.
++
+[source,python]
+----
+answer = input("Guess my favorite color: ")
+while True:
+    if answer.lower()=="blue":
+        print("Correct!")
+        break
+    else:
+        answer = input("Nope! Guess again: ")
+----
+. Run the code. Enter a few different colors, and finally "blue."
+. Notice that the *while* loop could theoretically run forever. The only way the loop will ever exit is when the *break* is triggered.
+
 == Challenge
 
-Create a *while* loop that never exits. Run it. What happens to your program?
+. Create a *while* loop that never exits. Run it. What happens to your program? (Hint: press control+c to exit.)
+. Modify the code to exit on a specific condition using the *break* keyword.
 
 == Reflection
 
