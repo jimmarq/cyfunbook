@@ -117,6 +117,16 @@ The result should be:
 ----
 '31a2d5282683edb3a22c565f199aa96fb9ffb3107af35aad92ee1cd567cfc25d'
 ----
+. Notice the "b" in front of "watermelon". The "b" tells python to treat the string "watermelon" as bytes (0s and 1s) using ASCII encoding.
+. To calculate the hash of a string variable, the *bytes()* function must be used.
++
+[source,python]
+----
+>>> password = "watermelon"
+>>> hashlib.sha256(bytes(password, 'ascii')).hexdigest()
+----
++
+The hashlib.sha256() function requires bytes (not a string), so the *bytes()* function converts the string to bytes according to the character encoding specified.
 . To see what else is in the *hashlib* library, run the following code:
 +
 ----
@@ -130,6 +140,27 @@ The result should be:
 ----
 +
 Run the above code several times. Notice that a different hash is created each time. That is because you are pulling in random entropy from the *os* library each time.
+
+== Challenge: Hash Items in a List
+
+The following code will hash a single password stored in the *password* variable:
+
+[source,python]
+----
+import hashlib
+password = "watermelon"
+sha = hashlib.sha256(bytes(password, 'ascii'))
+output = sha.hexdigest()
+print(f"{password}:{output}")
+----
+
+. Create a file called *hashem.py*.
+. Inside *hashem.py*, copy and then modify the above code:
+.. Change the name of the *password* variables to *passwords*.
+.. Set the value of the *passwords* variable to list of passwords (pick any random words).
+.. Loop through each *password* in *passwords*.
+.. In each loop, calculate the sha256 hash of the password.
+.. Print the password and the hash, separated by a colon.
 
 == Reflection
 
