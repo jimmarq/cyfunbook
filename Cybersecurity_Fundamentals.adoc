@@ -372,6 +372,10 @@ include::7060_variables\variables.adoc[]
 include::7070_lists\lists.adoc[]
 
 <<<
+:imagesdir: 7075_string_int_list_review
+include::7075_string_int_list_review\string_int_list_review.adoc[]
+
+<<<
 :imagesdir: 7080_dictionaries
 include::7080_dictionaries\dictionaries.adoc[]
 
@@ -408,6 +412,15 @@ include::7150_importing\importing.adoc[]
 <<<
 :imagesdir: 7160_review_reading_code
 include::7160_review_reading_code\review_reading_code.adoc[]
+
+<<<
+:imagesdir: 7170_py_dictionary_password_cracker
+include::7170_py_dictionary_password_cracker\py_dictionary_password_cracker.adoc[]
+
+<<<
+:imagesdir: 7180_py_hybrid_password_cracker
+include::7180_py_hybrid_password_cracker\py_hybrid_password_cracker.adoc[]
+
 
 :leveloffset: 0
 <<<

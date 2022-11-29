@@ -105,7 +105,8 @@ The above code produces a much more readable output:
 == Mad Lib Challenge
 
 . Create a file called madlib.py.
-. Use the *input()* function to prompt the user to input 2 adjectives, 2 nouns, 2 verbs, and an adjective.
+. Use the *input()* function to prompt the user to input 2 adjectives, 2 nouns, 2 verbs, and an adverb.
+.. (Use a separate line for each *input()* function call.)
 . Use f-strings to combine the variables into a brief string.
 . Print the string to the terminal.
 

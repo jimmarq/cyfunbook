@@ -169,8 +169,17 @@ xxx xxxx xx xxxxx:
 . In the function, determine which name is longer using the *len()* function.
 . If *name1* is longer, output the value of *name1* and " is longer."
 . If *name2* is longer, output the value of *name2* and " is longer."
+. If the names are the same length, print, "The names are the same length."
+. Call the function several times.
 
-For example, if I pass "Alice" and "Bob" to the *compare* function, the function should print, "Alice is longer."
+The following table shows sample inputs and expected outputs.
+
+|==========
+|Name 1 | Name 2 | Output
+|Alice  | Bob    | Alice is longer
+|Joe    | Jenny  | Jenny is longer
+|Abe    | Sue    | The names are the same length
+|==========
 
 == Reflection
 
