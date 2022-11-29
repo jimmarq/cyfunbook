@@ -17,7 +17,7 @@ You should be able to:
 
 == Cybersecurity Frameworks
 
-The National Institute of Standards and Technology (NIST) provides cybersecurity guidance. NITS's Cybersecurity Framework describes five major cybersecurity categories of actions that organizations should employ. The framework can be downloaded for free at https://www.nist.gov/cyberframework. Below, the five categories are described.
+The National Institute of Standards and Technology (NIST) provides cybersecurity guidance. NIST's Cybersecurity Framework describes five major cybersecurity categories of actions that organizations should employ. The framework can be downloaded for free at https://www.nist.gov/cyberframework. Below, the five categories are described.
 
 . Identify: Organizations must identify their assets and the threats that those assets face. You cannot protect something if you do not know that you have it. You also cannot protect against threats that you have not considered.
 . Protect: Implement practices and tools to protect against threats. Stopping an attack is more desirable than cleaning up a successful attack.
@@ -53,7 +53,7 @@ Several other cybersecurity frameworks exist. All frameworks can add value to or
 == Compare
 
 . Briefly review the NIST Cybersecurity Framework (e.g., focusing on the table of contents).
-. Briefly review the CIS Top 20 Controls.
+. Briefly review the CIS controls.
 . What elements are similar?
 . What differences do you note?
 

@@ -10,6 +10,12 @@ There are many ways to respond to risk. Risks can be accepted, mitigated, avoide
 
 == Learning Objectives
 
+You should  be able to describe the following terms precisely:
+
+* Vulnerability
+* Threat
+* Exploit
+
 You should be able to describe different risk responses:
 
 * Accept
@@ -17,15 +23,19 @@ You should be able to describe different risk responses:
 * Avoid
 * Transfer
 
-== Risk Responses
+== Risk
 
-Risk is the *likelihood* that a *severity* will be exploited leading to a loss. *Likelihood* is the probability that an adverse event will occur. *Severity* is the magnitude of harm if the event occurs. A risk score can be calculated by multiplying likelihood by severity. The higher the risk score, the more concerned an organization should be about the risk.
+*Vulnerabilities* are weaknesses. An information system that has no backups is vulnerable to data loss. Computers that do not run anti-virus are vulnerable to malware infections. People who use the same password for all of their accounts are vulnerable to having their accounts stolen. Every single point of failure (such as having only one internet service provider or one router to the internet) is a vulnerability. A vulnerability might exist for years without anything bad ever happening. Organizations need to be aware of their vulnerabilities.
 
-Scenario 1: Lost smart cart. Employees at ACME use a combination of a smart cart and a personal identification number (PIN) to log in to computers. ACME expects several employees to lose their smart cards every month. But because the smart card is useless without the PIN or physical access to computer systems, it is unlikely that a smart card could be badly abused. The likelihood is high (e.g., a 10/10), but the severity is low (e.g., 1/10), so the overall risk score is low (10/100 in this example). This means that ACME should probably not invest significant resources to address lost smart cards.
+*Threats* are people or events that *exploit* vulnerabilities. Threats might be people such as malicious insiders, nation-state hackers, or typo-prone system administrators. Threats can be natural in origin, too. A hurricane is a threat because it can destroy a data center. Power surges during thunderstorms can cause equipment to fail which could lead to a loss in availability.
+
+*Risk* is the *likelihood* that a *vulnerability* will be exploited leading to a loss. *Likelihood* is the probability that an adverse event will occur. *Severity* is the magnitude of harm if the event occurs. A risk score can be calculated by multiplying likelihood by severity. The higher the risk score, the more concerned an organization should be about the risk.
+
+Scenario 1: Lost smart card. Employees at ACME use a combination of a smart card and a personal identification number (PIN) to log in to computers. ACME expects several employees to lose their smart cards every month. But because the smart card is useless without the PIN or physical access to computer systems, it is unlikely that a smart card could be badly abused. The likelihood is high (e.g., a 10/10), but the severity is low (e.g., 1/10), so the overall risk score is low (10/100 in this example). This means that ACME should probably not invest significant resources to address lost smart cards.
 
 Organizations have several strategies they can employ to respond to risks.
 
-* Risk acceptance. The identified risks are within the organization's tolerance. They choose to engage in practices. In the smart card example explained previously, the risks associated with lost smart cards can likely be accepted without modifying any organizational practices.
+* Risk acceptance. The identified risks are within the organization's tolerance. They choose to engage in practices. In the smartcard example explained previously, the risks associated with lost smart cards can likely be accepted without modifying any organizational practices.
 * Risk mitigation. If risks are above an organization's tolerance, actions can be taken to reduce the chance of an adverse event occurring or reduce the severity of an event. In the smart card example, risk could be reduced by requiring employees to use a third factor when logging in, such as biometrics. Requiring a third factor would reduce risk, but comes at a cost. Systems might become harder to use, biometric identification could be costly, and systems would become more complex overall.
 * Risk avoidance. When risks are above an organization's risk tolerance and they cannot be mitigated sufficiently, the organization can simply choose not to engage in the activity. 
 * Trisk transfer. Risks can be shifted to third parties. Risk transfer is typically handled by a company purchasing cybersecurity insurance. An organization might do its best to secure its systems but still purchase cybersecurity insurance. A single data breach can cost organizations millions of dollars. Cybersecurity insurance is becoming a standard cost that organizations must bear.

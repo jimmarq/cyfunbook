@@ -54,7 +54,7 @@ if __name__ == "__main__":
         elif answer == "x":
             break
         else:
-            print("Uknown option")
+            print("Unknown option")
 ----
 
 == Reflection

@@ -19,7 +19,7 @@ You should be able to:
 
 The following are examples of crime. Some of the crimes target technology, while others merely use technology to facilitate crime.
 
-* Ransomeware. Criminals install malware on a victim's device. The malware encrypts the data and holds the decryption key hostage. If the ransom is paid, the decryption key is (hopefully) sent to the victim.
+* Ransomware. Criminals install malware on a victim's device. The malware encrypts the data and holds the decryption key hostage. If the ransom is paid, the decryption key is (hopefully) sent to the victim.
 * Phishing. Email is used to obtain information from a victim.
 * Internet of Things (IOT) hacking. Devices like security cameras
 * Child sexual abuse material (CSAM). Illicit photos and videos are traded online.
