@@ -32,17 +32,17 @@ $ mkdir ~/Documents/mypython
 ----
 $ cd ~/Documents/mypython
 ----
-. Create a file called *main.py* with the `touch` command.
+. Create a file called *program.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch convert.py
+$ touch program.py
 ----
-. Edit *main.py* with nano.
+. Edit *program.py* with nano.
 +
 [source,sh]
 ----
-$ nano main.py
+$ nano program.py
 ----
 . Enter the following code.
 +
@@ -59,8 +59,13 @@ if __name__=="__main__":
     new_name = input("Give me another name: ")
     greet(new_name)
 ----
+. Run the program using the following command.
 +
-The output will be:
+[source,sh]
+----
+$ python program.py
+----
+. Enter a name when prompted. The output should be:
 +
 ----
 Hello Eve
@@ -72,28 +77,28 @@ Hello Doug
 +
 (Of course, if you used a name other than "Doug," that name would appear in your output.)
 . In the Kali terminal, run *python* to start an interactive shell.
-. Import the "main.py" file with the following code. Importing loads the file and makes the functions and variables defined in the file available for use.
+. Import the "program.py" file with the following code. Importing loads the file and makes the functions and variables defined in the file available for use.
 +
 [source,python]
 ----
->>> import main
+>>> import program
 ----
 +
 Notice the output.
 +
 image::import_from_shell.png[]
 +
-None of the code in the \\__main__ section was executed. This is because the main.py file was not executed directly from the terminal.
+None of the code in the \\__main__ section was executed. This is because the program.py file was not executed directly from the terminal. But, we will not have access to the "greet" function defined in program.py.
 . Run the following code in the interactive python shell:
 +
 [source,python]
 ----
->>> main.greet("Jen")
+>>> program.greet("Jen")
 ----
 +
-You will see "Hello Jen" as a result. In this case, python knew that when you ran "import main" you wanted to run the code inside main.py.
+You will see "Hello Jen" as a result. In this case, python knew that when you ran "import program" you wanted to run the code inside program.py.
 
-As programs become more complex, you will start to include code from several .py files. Code in the \\__main__ method will only be run if it is called from the terminal, e.g., *python main.py*.
+As programs become more complex, you will start to include code from several .py files. Code in the \\__main__ method will only be run if it is called from the terminal, e.g., *python program.py*.
 
 == Challenge
 
