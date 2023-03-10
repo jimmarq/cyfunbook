@@ -2,10 +2,6 @@
 
 Author: Jim Marquardson
 
-Changelog
-
-* 2022-08-15 Initial Version
-
 Dictionaries organize data using named values. Like lists, dictionaries hold multiple values. Each value is associated with a key.
 
 == Learning Objectives

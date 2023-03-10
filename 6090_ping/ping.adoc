@@ -1,11 +1,5 @@
 = Ping
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The `ping` tool can do more than basic connectivity testing. This chapter goes through several `ping` command examples and analyzes the output. Running tools is easy. Understanding what the tools are telling you requires more skill.
 
 == Learning Objectives

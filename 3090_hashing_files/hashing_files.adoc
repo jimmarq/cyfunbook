@@ -1,11 +1,5 @@
 = Hashing Files
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 File hashes are like digital fingerprints. If two file hashes match, it means the contents of the file are the same. Hashing is used to verify the integrity of data.
 
 == Learning Objectives

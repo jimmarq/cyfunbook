@@ -1,11 +1,5 @@
 = First Coding Languages
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Computer programming is the practice of writing specific instructions that tell a computer what to do. In the past, it was very difficult to program computers. Today, programming languages like *python* make it easier. Successful computer programmers can define problems clearly, think logically, and can break processes down into smaller component parts.
 
 == Learning Objectives

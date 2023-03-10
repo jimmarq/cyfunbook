@@ -1,11 +1,5 @@
 = Virtualization For Education
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 `Virtualization` is a computing technology that powers many systems. With virtualization, you can run several computer operating systems on one physical computer. In this chapter, you will learn more about virtualization and install VirtualBox--a popular, free virtualization platform.
 
 == Learning Objectives

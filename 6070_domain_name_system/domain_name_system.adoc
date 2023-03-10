@@ -1,11 +1,5 @@
 = Domain Name System
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The domain name system (DNS) is a critical networking technology. DNS is like a massive directory of services and the IP address information for those services.
 
 == Learning Objectives

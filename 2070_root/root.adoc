@@ -1,11 +1,5 @@
 = Root
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Linux root account is the privileged administrator account. The root account has access to create, read, update, an delete anything on the Linux system. It is a powerful account and if used carelessly could result in crashing the system. So let's try it out!
 
 == Learning Objectives

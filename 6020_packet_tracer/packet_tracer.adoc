@@ -1,11 +1,5 @@
 = Packet Tracer
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Cisco Packet Tracer is a network simulation tool. It is primarily used for learning how computer networking works (with a clear emphasis on Cisco's hardware and software), but network engineers might also use it to design and test networks.
 
 == Learning Objectives

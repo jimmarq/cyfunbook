@@ -1,11 +1,5 @@
 = Routers
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Whereas switches are the backbone of local area networks, routers are the backbone of the internet. Routers move packets between networks. On the internet, your packets likely pass through ~6 routers before getting to their destination, and this happens in a fraction of a second. Most organizations have at least one router that gets packets to the internet. Organizations can also use routers to move packets between different parts of the organization's private network.
 
 == Learning Objectives

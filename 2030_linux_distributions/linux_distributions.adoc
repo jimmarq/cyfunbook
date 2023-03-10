@@ -1,11 +1,5 @@
 = Linux Distributions
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 There are many ways to run Linux. Most individuals and companies choose a Linux distribution--a flavor of Linux that suits their needs. This chapter provides an overview of a few popular Linux distributions.
 
 == Learning Objectives

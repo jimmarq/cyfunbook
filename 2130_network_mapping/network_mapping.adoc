@@ -1,11 +1,5 @@
 = Network Mapping
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Network administrators, ethical hackers, malicious hackers, security auditors and others may need to run network scans to produce network maps. `Nmap` is a popular network mapping tool. Every day, millions of network scans are run on the internet, but that does not always mean that they are legal. Generally speaking, you should have permission before scanning somebody's network. In this chapter, you will scan a site that explicitly grants permission to scan--scanme.nmap.org.
 
 == Learning Objectives

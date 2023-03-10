@@ -1,11 +1,5 @@
 = Risk Response Strategies
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 There are many ways to respond to risk. Risks can be accepted, mitigated, avoided, and transferred.
 
 == Learning Objectives

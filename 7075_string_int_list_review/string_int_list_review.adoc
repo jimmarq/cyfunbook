@@ -1,11 +1,5 @@
 = String, Int, and List Review
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-11-07 Initial Version
-
 This exercise helps assess your mastery of python variables using string, integer, and list data types.
 
 == Instructions

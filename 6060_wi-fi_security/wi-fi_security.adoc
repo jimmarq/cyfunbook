@@ -1,11 +1,5 @@
 = Wi-Fi
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Many client devices (like laptops and smartphones) connect to networks wirelessly. Wireless communication can be fast and secure. Most large organizations implement a combination of wired and wireless networks.
 
 == Learning Objectives

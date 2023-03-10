@@ -1,11 +1,5 @@
 = Secure Shell: SSH
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 SSH is a program that lets you establish a secure connection to a remote computer. Typically, SSH connections are used to administer remote devices. For example, you might SSH into a router or a web server to make configuration changes. SSH connections are encrypted.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Cracking Passwords
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Hashes are one-way functions so it is impossible to reconstruct the hash input from the hash output. But, for passwords, there are ways that password hashes can be "cracked." Several attacks will be demonstrated in this chapter.
 
 == Learning Objectives

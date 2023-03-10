@@ -1,11 +1,5 @@
 = Phishing
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Phishing attacks are one of the most common ways that organizations are breached. Many phishing emails are caught by spam filters, but a well-crafted phishing attack can bypass filters and cause a lot of damage.
 
 

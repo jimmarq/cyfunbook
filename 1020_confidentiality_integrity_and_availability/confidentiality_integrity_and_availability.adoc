@@ -1,17 +1,10 @@
 = Information Security Triad: Confidentiality, Integrity, and Availability
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-04-12 Initial Version
-* 2022-04-15 Additional cases added
-
 The information security triad is composed of *confidentiality*, *integrity*, and *availability*. Virtually any topic in cybersecurity will apply to one or more of the elements in the information security triad. It can be useful to think about a given topic and decide whether it refers to confidentiality, integrity, and/or availability.
 
 image::cia_diagram.png[]
 
-== Learning Objectivies
+== Learning Objectives
 
 You should be able to:
 
@@ -25,7 +18,7 @@ You should be able to:
 
 Confidentiality is all about protecting sensitive data. Access to some data should be restricted. For example, medical records should be kept private. Financial and education information is also protected. There can be serious legal consequences for failing to protect sensitive information.
 
-Confidentiality is enforced through two primary measures: 1) *access controls*, and 2) *encryption*. Differentiated access to systems can be granted to users. For example, you can log in to your bank, but you can only view your account information. A call center employee might have authority to view the accounts of all bank customers. Audits may be performed periodically to ensure that call center employees only access customer data in response to a customer concern, not merely curiosity.
+Confidentiality is enforced through two primary measures: 1) *access controls*, and 2) *encryption*. Differentiated access to systems can be granted to users. For example, you can log in to your bank, but you can only view your account information. A call center employee might have the authority to view the accounts of all bank customers. Audits may be performed periodically to ensure that call center employees only access customer data in response to a customer concern, not merely curiosity.
 
 With encryption, data is protected using secret keys. Only people with the right keys can read the data. Data can be protected on your device (e.g.; a hard drive or smart card), in transit (i.e.; going over the internet), or while the data is in use (i.e.; in your computer's memory). Encryption is not the ultimate solution to data confidentiality. At some point, the data must be decrypted, so encryption must be employed along with access controls to protect confidentiality.
 

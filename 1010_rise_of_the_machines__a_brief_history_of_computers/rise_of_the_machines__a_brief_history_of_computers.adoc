@@ -1,11 +1,5 @@
 = Rise Of The Machines: A Brief History Of Computers
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Information technology has touched almost all parts of life in the 21st century. We use technology to read the news, play music, share photos, get weather updates, book travel, and more. This chapter explores the rapid growth of information technology.
 
 == Learning Objectives

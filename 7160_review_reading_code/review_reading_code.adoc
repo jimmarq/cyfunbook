@@ -1,11 +1,5 @@
 = Review: Reading Code
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 It is important to be able to read other people's source code. You may need to tweak examples you find online, read tutorials, or look for bugs that can be exploited. This chapter reviews core python concepts.
 
 == Learning Objectives

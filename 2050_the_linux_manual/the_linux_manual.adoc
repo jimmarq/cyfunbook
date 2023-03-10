@@ -1,11 +1,5 @@
 = The Linux Manual
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Linux command-line interface (CLI) has a steep learning curve. One of the most important skills with Linx (and life in general) is to learn how to learn. Linux comes with a built-in manual, but learning how to read the manual is key.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Packet Inspection
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 From a user's perspective, computer networks just work. We don't usually have to care about the individual packets that get sent on the wire. Occasionally, we do care about the individual packets. A cybersecurity professional may want to make sure that data is being sent securely. A network administrator may need to look at network packets to troubleshoot problems. In this chapter, you will peel back the covers and take a look at individual network packets.
 
 == Learning Objectives

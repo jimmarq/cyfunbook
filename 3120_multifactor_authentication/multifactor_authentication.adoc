@@ -1,11 +1,5 @@
 = Multifactor Authentication
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Strong passwords help secure accounts, but passwords can be lost, guessed, or stolen. Many modern systems let you log in with alternatives to passwords, such as SMS text messages, email verification, or biometrics. Using multiple factors to authenticate can improve your account security.
 
 == Learning Objectives

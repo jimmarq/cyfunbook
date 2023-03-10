@@ -1,11 +1,5 @@
 = Importing
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Python has a lot of features. So far, chapters have focused on core functionality. It is possible to "import" python libraries that do more advanced work.
 
 == Learning Objectives

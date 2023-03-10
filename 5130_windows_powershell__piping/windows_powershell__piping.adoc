@@ -1,11 +1,5 @@
 = Windows Powershell: Piping
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 *Piping* is a way to send the output of one command into another command. Piping is a technique possible in Linux and Windows scripting. In this section, you will learn to pipe commands into each other to perform complex operations with fairly simple scripts.
 
 == Learning Objectives

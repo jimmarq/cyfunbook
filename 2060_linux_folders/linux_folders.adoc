@@ -1,11 +1,5 @@
 = Linux Folders
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 There are many important directories in Linux. The current chapter focuses on several key directories so that you will be comfortable moving around. The focus is on folders where you might need to explore data and edit files.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Windows Group Policy
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Group Policy is a feature used in Windows Pro. Organizations use Group Policy to enable or disable features on Windows computers. Policy is typically stored centrally in Active Directory.
 
 == Learning Objectives

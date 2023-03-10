@@ -1,11 +1,5 @@
 = Social Media Reconaissance
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Social engineering attacks are more effective when targeted toward specific individuals. Social media contains a treasure trove of information that social engineers can use to craft attacks.
 
 == Learning Objectives

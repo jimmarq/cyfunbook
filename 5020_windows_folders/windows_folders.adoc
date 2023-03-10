@@ -1,11 +1,5 @@
 = Windows Folders
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Recent versions of Windows have converged on a consistent set of folders. The organization is especially important to study if switching from tablets or Chromebooks that have very different folder structures. This chapter will use Windows 11. The principles apply to other versions of Windows, but some of the shortcuts, menus, and other graphical user elements might differ.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Asymmetric Encryption: Elliptic Curve Cryptography
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Elliptic Curve (EC) cryptography has become increasingly popular. RSA was invented first and was easier to vet mathematically, but EC cryptography has survived decades of inspection and it is increasingly being used. One benefit of EC is that it provides better security with smaller key sizes.
 
 

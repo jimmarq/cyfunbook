@@ -1,11 +1,5 @@
 = F-strings
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Programs frequently need to include the values of variables inside strings. Instead of concatenating strings with the plus symbol, python's f-strings let you use curly braces inside strings to include variables.
 
 == Learning Objectives

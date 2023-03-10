@@ -1,11 +1,5 @@
 = Main Method
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Python has special "*dunder*" methods. They are referred to as "dunder" because they use double-underscore characters. In this chapter, you will learn to use "\\__main__" dunder method to control how your programs flow.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Acceptable Use Policies
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Employees should know how an organization's assets can be used. These policies should be documented in an acceptable use policy.
 
 == Learning Objectives

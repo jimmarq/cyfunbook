@@ -1,11 +1,5 @@
 = The Rise of Windows
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Microsoft Windows dominates the enterprise desktop operating system market. This chapter provides a little history about Microsoft and its famed Windows operating system.
 
 == Learning Objectives

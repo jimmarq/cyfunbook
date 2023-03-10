@@ -1,11 +1,5 @@
 = Hello World
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 It is time to run some python code. You will learn to run python code in the interactive interpreter and in .py code files.
 
 == Learning Objectives

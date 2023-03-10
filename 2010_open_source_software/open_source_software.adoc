@@ -1,11 +1,5 @@
 = Open Source Software
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 You have probably used open source software at some point today. Your Wi-Fi router, smart TV, computer, and other devices probably run a mix of proprietary and open source software. This chapter will introduce some popular open source software, licensing, and current debates.
 
 == Learning Objectives

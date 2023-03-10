@@ -1,11 +1,5 @@
 = Windows Powershell: Variables
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Variables hold data. Variables are common in every programming language, including PowerShell.
 
 == Learning Objectives

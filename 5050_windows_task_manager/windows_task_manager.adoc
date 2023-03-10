@@ -1,11 +1,5 @@
 = Windows Task Manager
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Windows Task Manager is critical software for understanding what is running on your computer.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Searching For Files
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 If you have ever forgotten where you saved a file, you know the value of search. Tools exist on Linux to search for files by file name, or you can search the contents of files.
 
 == Learning Objectives

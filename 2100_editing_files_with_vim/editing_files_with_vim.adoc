@@ -1,11 +1,5 @@
 = Editing Files With Vim
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Vim is a terminal text editor installed on every Linux system. It has existed for decades and will likely exist until the heat death of the universe. So, if you plan to use Linux at all in your life, it is worth getting to know vim. Becoming a vim ninja takes many, many hours of dedicated work. Here, you will learn the basics so that you can survive. Many Linux applications use the same keyboard shortcuts as vim, so learning a bit about vim can help you in other administrative tasks.
 
 == Learning Objectives

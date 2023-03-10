@@ -1,11 +1,5 @@
 = Functions
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Functions are blocks of code that perform some useful action. Functions can be defined once and run many times in code. Functions are useful for organizing code and making code easier to test.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Wireshark
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Wireshark is an application that lets you capture and analyze network traffic. Wireshark is useful for learning about networking and troubleshooting network problems.
 
 == Learning Objectives

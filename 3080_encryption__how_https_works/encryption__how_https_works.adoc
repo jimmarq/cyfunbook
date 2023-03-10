@@ -1,11 +1,5 @@
 = Encryption: How Https Works
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 == Learning Objectives
 
 You should be able to:

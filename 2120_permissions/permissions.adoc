@@ -1,11 +1,5 @@
 = Permissions
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Restricting access to files and folders is important for maintaining confidentiality. Linux has features that allow different users or groups to read files, write to files, or execute programs.
 
 == Learning Objectives

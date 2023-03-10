@@ -1,11 +1,5 @@
 = Symmetric Encryption: AES
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Advanced Encryption Standard (AES) is one of the most widely used symmetric encryption algorithms. Like all symmetric encryption algorithms, it uses the same key to encrypt and decrypt data.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Strings And Numbers
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Python support several data types. In this lesson, you will learn more about number and string data types.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = The Rise Of Linux
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Linux is one of the most successful projects in the history of software. This chapter will describe some of the historical events that led to Linux and its popularity.
 
 == Learning Objectives

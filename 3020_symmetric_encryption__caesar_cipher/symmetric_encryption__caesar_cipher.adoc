@@ -1,11 +1,5 @@
 = Symmetric Encryption: Caesar Cipher
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 First version
-
 One of the simplest methods of encryption is the Caesar Cipher. It is also known as a rotation cipher. The Caesar Cipher demonstrates the principles of symmetric encryption, but should not be used for serious cryptography.
 
 == Learning Objectives

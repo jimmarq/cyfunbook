@@ -1,11 +1,5 @@
 = Tailgating
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Tailgating is a simple social engineering attack that gives the attacker access to a physical space.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Asymmetric Encryption
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Asymmetric encryption uses two keys: a public key and a private key. For this reason, asymmetric encryption is sometimes referred to as public key/private key encryption. With asymmetric encryption, one key is used to encrypt, and the other key is used to decrypt. Without asymmetric encryption, modern online business transactions could not take place.
 
 == Learning Objectives

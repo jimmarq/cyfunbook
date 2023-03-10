@@ -2,10 +2,6 @@
 
 Author: Jim Marquardson
 
-Changelog
-
-* 2022-08-15 Initial Version
-
 Network switches allow multiple devices to communicate. Switches are the backbone of local area networks.
 
 == Learning Objectives

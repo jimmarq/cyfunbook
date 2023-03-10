@@ -1,11 +1,5 @@
 = Windows Firewall
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Firewalls block packets based on rules. Firewalls can protect networks or single devices. The Windows Defender Firewall protects the computer on which it runs.
 
 == Learning Objectives

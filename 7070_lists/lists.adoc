@@ -1,11 +1,5 @@
 = Lists
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Lists store multiple values. The values could be the same data type or different data types.
 
 == Learning Objectives

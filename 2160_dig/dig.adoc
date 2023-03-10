@@ -1,11 +1,5 @@
 = Dig
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Computers like numbers, but people like words. The domain name system (DNS) makes the internet easier for people to use because it lets people remember the names of sites, and the computers will remember the IP addresses associated with those sites. `Dig` is a tool in Linux that lets us investigate DNS settings.
 
 == Learning Objectives

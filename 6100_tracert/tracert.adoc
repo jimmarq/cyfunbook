@@ -1,11 +1,5 @@
 = Tracing Routes
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Utilities exist to determine the route a packet takes over the internet. On Windows, the utility is named `tracert`. On Linux, the utility is `traceroute`.
 
 == Learning Objectives

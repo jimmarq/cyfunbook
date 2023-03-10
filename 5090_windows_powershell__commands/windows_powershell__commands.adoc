@@ -1,11 +1,5 @@
 = Windows Powershell: Cmdlets
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 PowerShell is the scripting language developed by Microsoft for administering computers. PowerShell was originally available only on Windows, but Microsoft now supports PowerShell on Linux. This chapter will walk you through some basic uses of PowerShell.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = User Input
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Programs often need to request input from the people using them. Python has an *input()* function that lets users input data from a terminal.
 
 == Learning Objectives

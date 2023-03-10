@@ -1,11 +1,5 @@
 = Conditionals
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Conditionals let you compare values and take action depending on the values. The important control statements are the *if*, *else*, and *elif*. Inside those statements, variables can be compared with *>*, *<*, *\<=*, *>=*, *==*, and *!=*.
 
 Include images like so:

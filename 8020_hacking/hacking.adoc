@@ -1,11 +1,5 @@
 = Hacking
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The term hacking can mean several things. Hacking can mean tinkering. Early computer enthusiasts were hackers because they tinkered with computers. Today, the term hacker often means an unauthorized person who breaks into computer systems.
 
 == Learning Objectives

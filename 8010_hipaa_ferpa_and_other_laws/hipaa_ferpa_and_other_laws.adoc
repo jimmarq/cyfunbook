@@ -1,11 +1,5 @@
 = HIPAA, FERPA, And CFAA Legislation
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Defensive cybersecurity practices are sometimes driven by legislation like HIPAA (that protects health information) and FERPA (that protects academic information). Laws also exist to punish misuse of computer systems, like the Computer Fraud and Abuse Act.
 
 == Learning Objectives

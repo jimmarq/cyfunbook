@@ -1,11 +1,5 @@
 = Loops
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Loops let us do operations on multiple items. There are two popular kinds of loops in python: *for* loops and *while* loops. In this chapter you will use *for* loops and *while* loops to work with lists and to control program flow.
 
 == Learning Objectives

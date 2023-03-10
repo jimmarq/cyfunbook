@@ -1,11 +1,5 @@
 = Nslookup
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Nslookup is a tool that exists on Windows and Linux to evaluate DNS settings. You can use nslookup to investigate and troubleshoot DNS.
 
 == Learning Objectives

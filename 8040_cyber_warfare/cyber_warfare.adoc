@@ -1,11 +1,5 @@
 = Cyber Warfare
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Modern militaries rely on information technology to conduct warfare. Militaries use offensive and defensive cybersecurity tools. Civilians sometimes throw themselves into the fray.
 
 == Learning Objectives

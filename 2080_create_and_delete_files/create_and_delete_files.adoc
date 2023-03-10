@@ -1,11 +1,5 @@
 = Create, Move And Delete Files and Directories
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 It is important to be able to work with files and directories on Linux. There are several ways to create files in Linux. This section will focus on using the `touch` command to create empty files. You will use the `mkdir` (make directory) command to create directories. Files will be renamed with the `mv` (move) command. You will then delete those files with `rm` (remove).
 
 == Learning Objectives

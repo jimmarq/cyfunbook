@@ -1,11 +1,5 @@
 = Curl
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Curl is a tool for downloading files off of the internet. Sometimes it is used as parts of software installation instructions. Curl can also be used to done some basic reconnaissance such as banner grabbing.
 
 == Learning Objectives

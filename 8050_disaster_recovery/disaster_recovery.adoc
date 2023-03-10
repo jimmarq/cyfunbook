@@ -1,11 +1,5 @@
 = Disaster Recovery
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Everybody who has used a computer knows that occasionally things go wrong. Cybersecurity professionals must plan for the worst-case computing scenarios. Together, these practices are known as *disaster recovery*.
 
 == Learning Objectives

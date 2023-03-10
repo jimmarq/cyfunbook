@@ -1,11 +1,5 @@
 = Symmetric Encryption
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 First version
-
 Symmetric encryption is used to protect information on our hard drives and sent over networks. Symmetric algorithms encrypt data with a key, and decrypt data with the same key.
 
 == Learning Objectives

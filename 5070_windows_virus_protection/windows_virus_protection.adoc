@@ -1,11 +1,5 @@
 = Windows Virus & Threat Protection
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Microsoft Windows offers built-in Virus & Threat Protection to discover and remove malware. This chapter will explore these protections.
 
 == Learning Objectives

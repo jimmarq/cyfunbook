@@ -1,11 +1,5 @@
 = Asymmetric Encryption: RSA
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Rivest-Shamir-Adlemen (RSA) algorithm has been used for decades. It is commonly used to sign files and to exchange temporary symmetric keys.
 
 == Learning Objectives

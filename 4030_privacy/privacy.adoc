@@ -1,11 +1,5 @@
 = Privacy
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 People say they care about privacy, but actions are not always consistent with stated values. If you care about privacy, there are steps you can take to increase privacy, but there may be a limit to what you can do without legislation that increases your options.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Spear Phishing
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Spear phishing attacks are phishing attacks that are customized to exploit an individual target. Typically, spear-phishing attacks are used for high-value targets. Even the savviest professional can fall victim to spear-phishing attacks.
 
 == Learning Objectives

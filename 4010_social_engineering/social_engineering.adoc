@@ -1,11 +1,5 @@
 = Social Engineering
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Social engineering is "people hacking." Social engineering attacks have some technical aspects, but they rely heavily on convincing people to do something for you. Social engineering attacks are some of the hardest attacks to prevent because there is no technical solution that can stop them entirely.
 
 == Learning Objectives

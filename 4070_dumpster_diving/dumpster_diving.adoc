@@ -1,11 +1,5 @@
 = Dumpster Diving
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Dumpster diving is exactly what it sounds like. Look in the trash for treasure.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Cybercrime
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Criminals use tools like smartphones, laptops, and social media at some point when committing crimes. Ditial evidence from these tools must be extracted so that it is admissible in court.
 
 == Learning Objectives

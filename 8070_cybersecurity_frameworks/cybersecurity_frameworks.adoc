@@ -1,11 +1,5 @@
 = Cybersecurity Frameworks
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Every organization that uses information technology should have a plan for maintaining security. Many organizations have created frameworks for organizations to ensure that their cybersecurity plans are complete.
 
 == Learning Objectives

@@ -1,12 +1,6 @@
 = Why Python
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
-Python is one of the most popular programming languages. It is expressive, meaning that a lot of work can be done in a few lines of code. Python is versatile. It can be used to create websites, artificial intelligence models, games, and more. Python is one of the top languages used by cybersecurity progessionals.
+Python is one of the most popular programming languages. It is expressive, meaning that a lot of work can be done in a few lines of code. Python is versatile. It can be used to create websites, artificial intelligence models, games, and more. Python is one of the top languages used by cybersecurity professionals.
 
 == Learning Objectives
 
@@ -25,7 +19,7 @@ Python first appeared in 1991. It was created by Guido van Rossum who continued 
 * Readability counts.
 * There should be one-- and preferably only one --obvious way to do it.
 
-Python is free for anybody to download and use. Many developers build *libraries* that extend python's base functionality to add features. Your python code can leverage these libraries to reduce the amount of code you need to write to solve problems. These libraries are often given away for free. For example, PyTorch is a premier machine learning library that anybody can use for free (https://pytorch.org/).
+Python is free for anybody to download and use. Many developers build *libraries* that extend python's base functionality to add features. Your python code can leverage these libraries to reduce the amount of code you need to write to solve problems. These libraries are often given away for free. For example, PyTorch is a premier machine-learning library that anybody can use for free (https://pytorch.org/).
 
 The python community encourages sharing code and best practices. There are thousands of resources to help you learn python.
 

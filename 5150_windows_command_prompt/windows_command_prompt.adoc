@@ -1,11 +1,5 @@
 = Windows Command Prompt
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Windows *command prompt* has existed since the early days to run command-line programs. It still exists today, and many programs still require it.
 
 == Learning Objectives

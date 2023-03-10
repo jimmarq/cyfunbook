@@ -1,11 +1,5 @@
 = Windows Accounts
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 User account information can be stored centrally (such as in Microsoft Active Directory) or locally on individual computers. Unless your computer is connected to a corporate network, your user and group information is probably stored locally. This chapter will help you explore local account information.
 
 == Learning Objectives

@@ -1,11 +1,5 @@
 = Symmetric Encryption: One-Time Pad
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 One-time Pads are the strongest way to encrypt data. But their strength comes with several limitations. Encryption and decryption with one-time pads can be done by hand, which made it useful for spies.
 
 == Learning Objectives

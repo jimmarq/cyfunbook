@@ -1,11 +1,5 @@
 = Addressing: MAC, IPv4 And IPv6
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Media Access Control (MAC) addresses are baked into the hardware. Every unique network card has a unique MAC address. But internet protocol (IP) addresses are assigned as part of joining a network. The internet protocol (IP) with IP addresses has been around since 1982. The internet protocol was designed very well by very small people. More than forty years after its implementation, it remains the dominant protocol to move packets around the internet. This original protocol would be named IPv4 to distinguish it from IPv6. The IPv6 specification was finalized in 1998, but IPv6 adoption has been slow.
 
 == Learning Objectives

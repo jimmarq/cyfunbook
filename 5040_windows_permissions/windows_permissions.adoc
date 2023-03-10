@@ -1,11 +1,5 @@
 = Windows Permissions
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Permissions can be set on files and folders to control access. Windows lets you change read, write, execute, and other permissions.
 
 == Learning Objectives

@@ -1,14 +1,18 @@
 = Cybersecurity Fundamentals
 Dr. Jim Marquardson, Northern Michigan University
-v0.1, 2022-08-15
+v0.11, 2023-03-10
 :doctype: book
 :toc:
 :toclevels: 1
 :docinfo: shared-running
 :leveloffset: 1
+
 :numbered!:
 :imagesdir: 0005_About
 include::0005-About\about.adoc[]
+
+:imagesdir: 0007_changelog
+include::0007_changelog\changelog.adoc[]
 :numbered:
 
 :leveloffset: 0
@@ -186,6 +190,10 @@ There are many threats to our security and privacy. Some of the threats are tech
 <<<
 :imagesdir: 4010_social_engineering
 include::4010_social_engineering\social_engineering.adoc[]
+
+<<<
+:imagesdir: 4015_dis_mis_mal_information
+include::4015_dis_mis_mal_information\dis_mis_mal_information.adoc[]
 
 <<<
 :imagesdir: 4020_social_media_reconaissance

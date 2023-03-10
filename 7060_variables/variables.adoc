@@ -1,11 +1,5 @@
 = Variables
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Variables hold data. Data could be a string, multiple strings, numbers, and more. 
 
 == Learning Objectives

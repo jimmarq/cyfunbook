@@ -1,11 +1,5 @@
 = Windows Terminal
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Microsoft recognizes that there are different command-line interfaces that users may want to run. Windows Terminal is a single application meant to unify the different command-line interfaces that you can use on Windows.
 
 == Learning Objectives

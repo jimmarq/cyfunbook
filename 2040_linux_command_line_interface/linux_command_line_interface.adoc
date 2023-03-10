@@ -1,11 +1,5 @@
 = Linux Command Line Interface
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 The Linux command-line interface (CLI) is one of the primary ways that Linux administrators and ethical hackers use Kali Linux. This chapter will walk you through a few commands that you can run in the command-line interface.
 
 == Learning Objectives

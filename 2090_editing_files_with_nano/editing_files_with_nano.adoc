@@ -1,11 +1,5 @@
 = Editing Files With Nano
 
-Author: Dr. Jim Marquardson
-
-Changelog
-
-* 2022-08-15 Initial Version
-
 Nano is a simple text editing application that runs in the terminal. It is commonly installed in most Linux distributions. Nano is one of the easiest ways to quickly make changes to text files.
 
 == Learning Objectives
