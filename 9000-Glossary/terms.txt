@@ -1,0 +1,178 @@
+These will can be fed into ChatGPT with the prompt:
+
+Create a glossary for the following terms with the format: term:: definition
+
+*nix design philosophy
+*nix systems
+access controls
+active directory
+administrators
+authentication
+authenticator app
+authority
+authorized hackers
+availability
+banner grabbing
+black hat hacker
+ciphertext
+cleartext
+cloud backup
+cold site
+command prompt
+compiled language
+confidentiality
+confusion
+consensus
+data center
+default gateway
+defense-in-depth
+diffusion
+disaster recovery
+disinformation
+display filters
+dns
+dns a record
+dns aaaa record
+dns mx record
+echo reply
+echo request
+elliptic curve cryptography
+encryption
+exploit
+familiarity
+firewall
+follow
+forward lookup (dns)
+git source control management
+gpedit.msc
+GPLv2
+GPLv3
+gray hat hacker
+groups
+guest
+hard drive backup
+hash digest
+hashing
+hosts file
+hot site
+http
+http get request
+http post request
+http protocol
+https
+icmp
+inbound rules
+information security triad
+integrity
+internet-of-things (iot)
+interpreted language
+intimidation
+ipv4 address
+ipv6 address
+Kali
+key (encryption)
+latency
+least privilege
+likelihood
+linux
+linux: cd command
+linux: ls command
+linux: man command
+linux: pwd command
+linux: whoami command
+lusrmgr.msc
+mainframe
+malinformation
+malware
+memory
+memory leak
+misinformation
+MIT license
+multifactor authentication
+network effect
+onedrive
+open source software
+packet (networking)
+perfect forward secrecy (pfs)
+permissions
+pid
+ping of death
+piping
+powershell
+processes
+proprietary software
+python
+python: and keyword
+python: append()
+python: break keyword
+python: bytes()
+python: datetime library
+python: dunder methods
+python: exit()
+python: for loop
+python: hashlib library
+python: if/elif/else
+python: input()
+python: int()
+python: len()
+python: libraries
+python: lower()
+python: or keyword
+python: os library
+python: pop()
+python: print function
+python: print()
+python: remove()
+python: return
+python: scrypt library
+python: str()
+python: string
+python: title()
+python: upper()
+python: while loop
+recovery point objective (rpo)
+recovery time objective (rto)
+RedHat linux
+redundancy
+reverse lookup (dns)
+risk
+root
+rot13
+rsa
+scarcity
+security operations center (soc)
+semi-authorized hacker
+services
+severity
+signatures (malware)
+spear phishing
+ssid
+stateful firewalls
+tape backup
+task manager
+tcp
+tcp handshake
+telnet
+terminal
+threat
+threat hunting
+ttl
+Ubuntu linux
+unathurotized hacker
+user
+virtual machine (vm)
+VirtualBox
+virtualization
+virtualization guest
+virtualization host
+VMWare Workstation Player
+vulnerability
+warm site
+web 1.0
+web 2.0
+web 3.0
+white hat hacker
+wifi
+windows defender firewall
+wireshark
+wpa2-psk

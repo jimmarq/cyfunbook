@@ -85,3 +85,6 @@ Notice that this time, the terminal application exited.
 * What is the benefit of computers making you elevate permissions to perform certain tasks?
 * What would go wrong if all users were given root privileges?
 
+== See Also
+
+* https://i.redd.it/if5ikirzf0ua1.jpg
