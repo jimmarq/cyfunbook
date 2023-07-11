@@ -33,12 +33,40 @@ include::1010_rise_of_the_machines__a_brief_history_of_computers\rise_of_the_mac
 include::1020_confidentiality_integrity_and_availability\confidentiality_integrity_and_availability.adoc[]
 
 <<<
-:imagesdir: 1030_virtualization_for_education
-include::1030_virtualization_for_education\virtualization_for_education.adoc[]
+:imagesdir: 1030_install_ublock
+include::1030_install_ublock\install_ublock.adoc[]
 
 <<<
-:imagesdir: 1040_lab_setup
-include::1040_lab_setup\lab_setup.adoc[]
+:imagesdir: 1040_install_greenshot
+include::1040_install_greenshot\install_greenshot.adoc[]
+
+<<<
+:imagesdir: 1050_install_7_zip
+include::1050_install_7_zip\install_7zip.adoc[]
+
+<<<
+:imagesdir: 1060_virtualization_for_education
+include::1060_virtualization_for_education\virtualization_for_education.adoc[]
+
+<<<
+:imagesdir: 1070_install_vmware
+include::1070_install_vmware\install_vmware.adoc[]
+
+<<<
+:imagesdir: 1080_install_kali_on_vmware
+include::1080_install_kali_on_vmware\install_kali_on_vmware.adoc[]
+
+<<<
+:imagesdir: 1090_install_virtualbox
+include::1090_install_virtualbox\install_virtualbox.adoc[]
+
+<<<
+:imagesdir: 1100_install_kali_on_virtualbox
+include::1100_install_kali_on_virtualbox\lab_setup.adoc[]
+
+<<<
+:imagesdir: 1110_kali_first_use
+include::1110_kali_first_use\kali_first_use.adoc[]
 
 :leveloffset: 0
 <<<

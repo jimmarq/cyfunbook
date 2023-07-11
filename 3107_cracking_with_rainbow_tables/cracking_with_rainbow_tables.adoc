@@ -12,7 +12,7 @@ You should be able to:
 
 == Rainbow Tables
 
-Rainbow tables are files with pre-computed hashes. A brute force attack generates a hash on the fly for every possible password. A dictionary attack compute the hash of every value in the dictionary line by line. If there are a million files in a dictionary, a million hashes will be generated. If there are a trillion possible passwords in a brute-force attack, a trillion hashes will be computed. This can be computationally expensive.
+Rainbow tables are files with pre-computed hashes. A brute force attack generates a hash on the fly for every possible password. A dictionary attack computes the hash of every value in the dictionary line by line as the attack progresses. If there are a million files in a dictionary, a million hashes will be generated. If there are a trillion possible passwords in a brute-force attack, a trillion hashes will be computed. This can be computationally expensive.
 
 Rainbow tables are essentially a pre-computed brute force attack. Every possible combination of specified characters and password length will be hashed. These hashes will be sorted and stored in a file. When it is time to crack a hash, the hash is simply looked up in the rainbow table.
 
@@ -20,34 +20,97 @@ Rainbow tables are fast. But, they have limitations. If passwords were hashed us
 
 == Creating a Rainbow Table
 
-[source,sh]
-----
-sudo su
-rtgen sha256 loweralpha 1 5 
-----
-
-[source,sh]
-----
-cd /usr/share/rainbowcrack
-----
-
-== Creating Hashes for Cracking
-
-. Create a file with SHA256 hashes.
+. Run the following commands to elevate privileges and navigate to the folder where the rainbow table should be stored.
 +
 [source,sh]
 ----
-cd ~
-echo -n "apple" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
-echo -n "green" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
-echo -n "elephant" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
-echo -n "whistle" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
-echo -n "cup" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+sudo su
+cd /usr/share/rainbowcrack
 ----
+. Run the following command to compute the rainbow table.
++
+[source,sh]
+----
+rtgen sha256 loweralpha 1 5 0 2400 240000 0
+----
++
+Several of the parameters are only useful if working with multiple files to create one big rainbow table. The algorithm, minimum plaintext size, and maximum plaintext size are most important.
++
+sha256 defines the hashing algorithm.
++
+1 defines the minimum plaintext length
++
+5 defines the maximum plaintext length
++
+0 defines the index
++
+16000 defines the chain length and chain number
++
+0 defines the chain part
++
+It will take ~2 minutes to pre-compute all the hashes.
+. Look at the rainbow table you just created.
++
+[source,sh]
+----
+ls -l
+----
++
+There should be a file named `sha256_loweralpha#1-5_0_2400x240000_0.rt`. Note the size of the file.
+. The rainbow tables must be sorted before use. 
++
+[source,sh]
+----
+rtsort .
+----
+
+At this point, the rainbow table has been created and is ready for use. Note that it will only work for passwords between 1 and 5 characters.
+
+== Creating Hashes for Cracking
+
+. Create a SHA256 hash.
++
+[source,sh]
+----
+echo -n "cup" | sha256sum 
+----
++
+The hash value should be:
++
+----
+c6171781d65f3ccce1135e3c89850cfbaa7f332fd72a1f8f6a841fbcf7fd362a
+----
+. Crack the hash using the following command.
++
+[source,sh]
+----
+rcrack /usr/share/rainbowcrack -h c6171781d65f3ccce1135e3c89850cfbaa7f332fd72a1f8f6a841fbcf7fd362a
+----
++
+The value should be cracked in about a minute.
+. Generate the hash for "xhmlz" (a random password).
+. Try cracking the hash using rcrack.
+. Generate the hash for "banana".
+. Try cracking the hash using rcrack.
+
+Because "xhmlz" is only 5 characters, the rainbow table should work fine. But because "banana" is 6 characters, the rainbow table cannot be used to crack it.
+
+== Thwarting Rainbow Table Attacks
+
+For rainbow tables to be effective, they must be generated for each unique combination of algorithm (e.g., SHA256) and salt. Most rainbow tables published on the internet assume that no salt is used. If a system administrator used the same salt for all users in a database, then a single rainbow table would be useful to crack all hashes inside that same system. If the system administrator used unique salt for each user, then rainbow tables would effectively be useless. It would be computationally simpler to do a brute force attack if per-user salt is used, though brute force attacks are still tremendously computationally expensive.
+
+Users can protect themselves with long passwords. If users have long passwords, such as 20+ characters, rainbow tables become so large that you start to need huge data centers just to store the rainbow tables themselves.
+
+Rainbow tables are effective for what they do--analyze hashes for given character sets with limitations on the plaintext input size. But like slugs, they can be killed with a bit of salt.
 
 == Challenge
 
 * Create a new rainbow table with a different length and character set. Compare the size of the new rainbow table.
+* Crack the following SHA256 hash using your rainbow table.
++
+----
+99e85b4adee30cd5dd383215d0320f82851c4147ed871e3dea758e62cf9ab3f9
+----
 
 == Reflection
 
