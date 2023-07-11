@@ -44,6 +44,7 @@ image::find-vmx.png[VMX File]
 .Kali Virtual Machine
 image::kali-registered.png[Kali Virtual Machine]
 . You can start the Kali VM by double-clicking it, or by selecting it and clicking the play button.
+. Use the username `kali` and the password `kali` to log in.
 
 When not using your VM, it is best to suspend it so that it does not eat up your system resources like CPU and RAM.
 

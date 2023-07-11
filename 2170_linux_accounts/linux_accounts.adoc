@@ -23,20 +23,71 @@ Older versions of Linux stored usernames and passwords in the same file--the `pa
 ----
 $ cat /etc/passwd
 ----
++
+The contents will be similar to the following.
++
+----
+rwhod:x:122:65534::/var/spool/rwho:/usr/sbin/nologin
+iodine:x:123:65534::/run/iodine:/usr/sbin/nologin
+miredo:x:124:65534::/var/run/miredo:/usr/sbin/nologin
+statd:x:125:65534::/var/lib/nfs:/usr/sbin/nologin
+redis:x:126:132::/var/lib/redis:/usr/sbin/nologin
+postgres:x:127:133:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+mosquitto:x:128:135::/var/lib/mosquitto:/usr/sbin/nologin
+inetsim:x:129:136::/var/lib/inetsim:/usr/sbin/nologin
+_gvm:x:130:138::/var/lib/openvas:/usr/sbin/nologin
+king-phisher:x:131:139::/var/lib/king-phisher:/usr/sbin/nologin
+kali:x:1000:1000:,,,:/home/kali:/usr/bin/zsh
+----
 . Note that the list of accounts may be fairly long. Services that run on your computer that keep your network working, run websites, or do other tasks in the background might run under a specific user account. Those accounts are granted permissions to resources on your computer so that they can carry out tasks, but those accounts will not be used for logging into the computer.
 
+
+== The `shadow` File
+
+In modern Linux distributions, password hashes are stored in the /etc/shadow file. Administrator rights are required to view the contents of the file.
+
+. Try to view the contents of /etc/shadow without administrator permissions.
++
+[source,sh]
+----
+cat /etc/shadow
+----
++
+You should get a permission denied error.
++
+----
+┌──(kali㉿kali)-[~]
+└─$ cat /etc/shadow
+cat: /etc/shadow: Permission denied
+----
+. View the contents of /etc/shadow using sudo. If prompted for a password, use `kali`.
++
+[source,sh]
+----
+sudo cat /etc/shadow
+----
++
+You should see content similar to the following.
++
+----
+inetsim:!:19500::::::
+_gvm:!:19500::::::
+king-phisher:!:19500::::::
+kali:$y$j9T$dl4ti9p1KPx6HrZ59TPMJ/$drMOLlRW8BZmsDQ0riDlPnUDsfyIvRL4qfgODnuZVz4:19500:0:99999:7:::
+----
+. The fields in the shadow file are separated by colons. Many of the fields are empty. The first field is the username. The second field has a hash of the password. Instead of storing the passwords in cleartext, a hash is stored that can be used to verify passwords.
 
 == Add User Accounts
 
 There are several ways to add Linux accounts. It's important to note that these are `local accounts`--they exist only on this computer. These accounts are in contrast to accounts stored in a central directory that can be used across devices.
 
-. Run the following command to create an account.
+. Run the following command to create an account. This action requires additional privileges, so `sudo` is used.
 +
 [source,sh]
 ----
-useradd chris
+sudo useradd chris
 ----
-. Set the password for the `chris` account.
+. Set the password for the `chris` account. The `passwd` command is used to change passwords. It requires administrative privileges. Make the password `logger`.
 +
 [source,sh]
 ----
@@ -47,6 +98,32 @@ $ sudo passwd chris
 [source,sh]
 ----
 $ sudo /etc/shadow
+----
+. Create another user named `pat` with the password `logger` (to match Chris' password).
+. View the passwords in the /etc/shadow file. Notice that even though their passwords are the same, the hashes are different. The hashes are different because random data called `salt` was added to the hashes.
++
+----
+chris:$y$j9T$GdBCSJyMXTTOBMArjqV8A0$gjvYRioFFWWMZ5FYZAQBUAEQzK82MWMTTV7cz.KlFbA:19549:0:99999:7:::
+pat:$y$j9T$WGqJT41hyKfvNaOchF7sE/$3/oH7lwoMyUgaLzqwh.01cOAKRcRGhrPB.2GWl220I1:19549:0:99999:7:::
+----
+
+There are two levels of protection for passwords in the `shadow` file: 1) restricted access, and 2) hashing.
+
+== Remove Users
+
+.To clean up your virtual machine, you can delete the two newly created users.
++
+[source,sh]
+----
+sudo userdel pat
+sudo userdel chris
+----
+. Verify that they no longer exist in the `passwd` and `shadow` files.
++
+[source,sh]
+----
+cat /etc/passwd
+sudo cat /etc/shadow
 ----
 
 == Challenge
