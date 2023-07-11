@@ -1,0 +1,56 @@
+= Rainbow Tables
+
+When cracking passwords using dictionary attacks or brute force attacks, the password cracking tool calculates hashes for each word in the dictionary or each possible password in the brute force attack on the fly. Computing the hashes is computationally expensive and time-consuming.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe the advantages and disadvantages of rainbow table attacks compared to brute force and dictionary attacks
+* Generate a rainbow table
+* Use a rainbow table
+
+== Rainbow Tables
+
+Rainbow tables are files with pre-computed hashes. A brute force attack generates a hash on the fly for every possible password. A dictionary attack compute the hash of every value in the dictionary line by line. If there are a million files in a dictionary, a million hashes will be generated. If there are a trillion possible passwords in a brute-force attack, a trillion hashes will be computed. This can be computationally expensive.
+
+Rainbow tables are essentially a pre-computed brute force attack. Every possible combination of specified characters and password length will be hashed. These hashes will be sorted and stored in a file. When it is time to crack a hash, the hash is simply looked up in the rainbow table.
+
+Rainbow tables are fast. But, they have limitations. If passwords were hashed using unique salt per password, rainbow tables are ineffective. Rainbow tables are also limited by the length of inputs that they hashed. So if a rainbow table only contains hashes for passwords up to 6 characters long, for example, a 7-character password cannot be cracked using the rainbow table.
+
+== Creating a Rainbow Table
+
+[source,sh]
+----
+sudo su
+rtgen sha256 loweralpha 1 5 
+----
+
+[source,sh]
+----
+cd /usr/share/rainbowcrack
+----
+
+== Creating Hashes for Cracking
+
+. Create a file with SHA256 hashes.
++
+[source,sh]
+----
+cd ~
+echo -n "apple" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+echo -n "green" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+echo -n "elephant" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+echo -n "whistle" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+echo -n "cup" | sha256sum | cut -c 1-64 >> sha256_hashes.txt
+----
+
+== Challenge
+
+* Create a new rainbow table with a different length and character set. Compare the size of the new rainbow table.
+
+== Reflection
+
+* Are rainbow table attacks effective today?
+* How can users protect themselves from rainbow table attacks?
+* How can system administrators protect their users from rainbow table attacks?

@@ -7,22 +7,21 @@ The Linux command-line interface (CLI) is one of the primary ways that Linux adm
 You should be able to:
 
 * Launch a terminal
-* Run basic commands: pwd, cd, whoami, ls
+* Use the `pwd``, `cd``, `whoami`` and `ls`` commands
 * Run basic commands with options
 
 == Basic Linux Commands
 
-Next, you will learn several Linux commands by running them.
+Most people learn best by doing. This section will walk you through the basic use of several commands. Pay attention to the commands that you type. It is more important to understand *why* the commands are important and *when* they would be useful. In a sense, different Linux commands are like different ingredients when cooking: the more commands you know, the more "recipes" you'll be able to create and the more problems you'll be able to solve.
 
 === Launch a Terminal
 
-. Start the VirtualBox Manager.
-. Star the Kali virtual machine.
+. Start the Kali virtual machine (using VirtualBox or VMWare).
 . Log in with the username `kali` and the password `kali` if prompted.
 . Click the icon on the toolbar to launch the terminal. The terminal is where you can enter commands with a command-line interface.
 +
 .Launch a terminal
-image::start-terminal.png[launch a termian]
+image::start-terminal.png[launch a terminal]
 . Notice that a terminal icon will appear to the right showing that a terminal application is running. This is similar to how running programs appear at the bottom of the screen in Windows and Mac OSX operating systems.
 +
 .Terminal running
@@ -114,8 +113,8 @@ The two periods tell the `cd` command to change directories to the parent folder
 $ cd kali
 ----
 +
-Because the kali directory exists in the /home directory, and your working directory is current in /home, you can just type the directory name `kali` after the `cd` command to change directories to /home/kali.
-. Double check that your working directory is now /home/kali.
+Because the Kali directory exists in the /home directory, and your working directory is current in /home, you can just type the directory name `kali` after the `cd` command to change directories to /home/kali.
+. Confirm that your working directory is now /home/kali.
 
 === User Command: whoami
 
@@ -133,7 +132,7 @@ You should see:
 kali
 ----
 
-Along with `pwd`, the `whoami` command can help you make sense of you are and what you are doing (at least as far as using Linux is concerned).
+Along with `pwd`, the `whoami` command can help you make sense of who you are and what you are doing (at least as far as using Linux is concerned).
 
 === List Command: ls
 

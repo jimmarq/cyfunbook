@@ -1,0 +1,22 @@
+= TODO
+
+TODO
+
+== Learning Objectives
+
+You should be able to:
+
+* 
+* 
+* 
+
+== TODO
+
+
+== Challenge
+
+* Ad blockers sometimes break sites. Practice turning uBlock on and off for different sites and compare the results.
+
+== Reflection
+
+* Is blocking advertisements ethical?

@@ -1,0 +1,60 @@
+= Linux Accounts
+
+Like most operating systems, Linux supports multiple user accounts on a computer. These accounts are stored in the `passwd` file. Passwords are stored in the `shadow` file.
+
+== Learning Objectives
+
+You should be able to:
+
+* List user accounts
+* Add user accounts
+* List the contents of the password file
+* Describe how password are hashed
+
+
+== The `passwd` File
+
+Older versions of Linux stored usernames and passwords in the same file--the `passwd` file. But it turned out that storing both in the same file opened systems up to attack. Modern versions of Linux store some account information in the `passwd` file, such as usernames and home directories, but passwords are stored in a separate `shadow` file. The shadow file has additional protections.
+
+. Open a Kali terminal.
+. Run
++
+[source,sh]
+----
+$ cat /etc/passwd
+----
+. Note that the list of accounts may be fairly long. Services that run on your computer that keep your network working, run websites, or do other tasks in the background might run under a specific user account. Those accounts are granted permissions to resources on your computer so that they can carry out tasks, but those accounts will not be used for logging into the computer.
+
+
+== Add User Accounts
+
+There are several ways to add Linux accounts. It's important to note that these are `local accounts`--they exist only on this computer. These accounts are in contrast to accounts stored in a central directory that can be used across devices.
+
+. Run the following command to create an account.
++
+[source,sh]
+----
+useradd chris
+----
+. Set the password for the `chris` account.
++
+[source,sh]
+----
+$ sudo passwd chris
+----
+. Verify that the new user account is in the `shadow` file.
++
+[source,sh]
+----
+$ sudo /etc/shadow
+----
+
+== Challenge
+
+* Add two users using the same password. Compare their password hashes in the `shadow` file. Are their password hashes the same or different? Why?
+
+== Reflection
+
+* Why do computers store passwords as hashes?
+* Who should be responsible for managing user accounts in large organizations?
+* What are the drawbacks of using local accounts compared to directory accounts?

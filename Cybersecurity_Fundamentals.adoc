@@ -2,6 +2,7 @@
 Dr. Jim Marquardson, Northern Michigan University
 v0.11, 2023-03-10
 :doctype: book
+:media: prepress
 :toc:
 :toclevels: 1
 :docinfo: shared-running
@@ -111,6 +112,11 @@ include::2150_curl\curl.adoc[]
 :imagesdir: 2160_dig
 include::2160_dig\dig.adoc[]
 
+<<<
+:imagesdir: 2170_linux_accounts
+include::2170_linux_accounts\linux_accounts.adoc[]
+
+
 :leveloffset: 0
 <<<
 = Cryptography
@@ -169,6 +175,12 @@ include::3100_hashing_passwords\hashing_passwords.adoc[]
 <<<
 :imagesdir: 3105_cracking_hashes
 include::3105_cracking_hashes\cracking_hashes.adoc[]
+
+
+<<<
+:imagesdir: 3107_cracking_with_rainbow_tables
+include::3107_cracking_with_rainbow_tables\cracking_with_rainbow_tables.adoc[]
+//TODO: in draft state--need to add rt sorting
 
 <<<
 :imagesdir: 3110_password_managers

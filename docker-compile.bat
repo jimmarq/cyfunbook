@@ -1,0 +1,1 @@
+docker run -i --rm --volume="%cd":"/usr/app" -u $(id -u ${USER}):$(id -g ${USER}) ggrossetie/asciidoctor-web-pdf:latest Cybersecurity_Fundamentals.adoc

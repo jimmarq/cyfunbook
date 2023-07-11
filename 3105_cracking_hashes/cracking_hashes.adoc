@@ -79,14 +79,14 @@ In the next section, you'll try a brute force attack.
 
 In a brute force attack, all possible passwords for given character sets will be tried. The larger the character set, the longer the attack can take to finish. Some of John's different preconfigured modes are:
 
-* Lower: lower case
-* Upper: upper case
-* LowerNum: lower case and numbers
+* Lower: lowercase
+* Upper: uppercase
+* LowerNum: lowercase and numbers
 * UpperNum: upper case and numbers
 * ASCII: lower case, upper case, numbers, and symbols
 * Alnum: lower case, upper case, and numbers
 
-. Try cracking passwords with all lower case letters.
+. Try cracking passwords with all lowercase letters.
 +
 [source,sh]
 ----
@@ -100,6 +100,23 @@ If you want to delete the hashes to try different attacks you will have to delet
 [source,sh]
 ----
 $ rm ~/.john/john.pot
+----
+
+== Challenge
+
+* Use `john` to crack passwords in the Linux `shadow` file with:
++
+----
+$ cd ~
+$ sudo cp /etc/shadow shadow
+$ john shadow
+----
+* Create several user accounts, set their passwords, and try to crack those passwords.
+* Use the following command to show any cracked passwords.
++
+[source,sh]
+----
+$ john shadow --show
 ----
 
 == Reflection

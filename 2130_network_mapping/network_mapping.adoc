@@ -18,9 +18,22 @@ Network scanning is kind of like walking around a neighborhood and seeing what h
 
 So is network scanning legal? There is some gray area. It is very rare for somebody to be prosecuted simply for network scanning, but it happens. Generally, networking professionals do not freak out about their networks being scanned--it happens thousands of times per hour. But network professionals do not create the laws, and some prosecutors have applied hacking laws to people who perform network scans. The following is not legal advice, but likely sound advice. Do not do intrusive scans on government sites, especially the CIA, FBI, or Department of Defense. Stay away from banks. Generally, public tech companies like Microsoft, Google, and Amazon will not give you a headache if you scan their publicly accessible networks. The site scanme.nmap.org gives explicit permission to perform periodic scans.
 
+== IP Addressing
+
+It is important to know your IP address on a network. When you run `nmap` on a network, the scans will originate from your computer.
+
+. The following three commands can be used to show your IP address. Compare the output.
+----
+$ ifconfig
+$ ip a
+$ hostname -I
+----
+
+You may log into a Linux computer that has either `ifconfig` or `ip` but not both. It is important to know a few ways to accomplish the same task.
+
 == Basic nmap scan
 
-. Launch the Kali virtual machine from VirtualBox.
+. Launch the Kali virtual machine.
 . Open a terminal.
 . Run the following command to do a basic network scan with `namp`. The scan should take less than 30 seconds to complete.
 +
