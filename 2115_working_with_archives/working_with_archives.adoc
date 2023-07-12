@@ -1,13 +1,234 @@
+= Working with Archives
+
+Most Windows users are familiar with the graphical user interface for working with .zip files. The 7-zip application can work with other formats on Windows. Linux administrators typically work with archives from the command line.
+
+== Learning Objectives
+
+You should be able to:
+
+. Create archives in the Linux terminal
+. Extract archives in the Linux terminal
+
+== Tar
+
+The `tar` program gets its name from "*t*ape *ar*chive." Tar files are often used to distribute applications and data.
+
+The `tar` file format combines multiple files but does not compress them. The `tar` format is combined with compression algorithms to take the single `tar` file and compress it. Files might be compressed using the gzip, bzip, or other algorithms. The compression algorithm is typically appended to the file extension, e.g., archive.tar.gz or archive.tar.bz.
 
 
+== Create Files for an Archive
 
-. The following command was used to crate the gzipped archive.
+The purpose of this section is just to create some data that will be archived.
+
+. Create a new folder in your Documents directory named `compressme`.
++
+[source,sh]
+----
+cd ~/Documents
+mkdir compressme
+cd compressme
+----
+. Create 3 files with .txt extensions. You can create these files in several ways. Use whichever method you want.
+. Here's one way:
++
+[source,sh]
+----
+touch one.txt
+nano one.txt
+----
++
+(Edit the text in nano, save it with control+o, and exit with control+x.)
+. Here's another way:
++
+[source,sh]
+----
+echo "This goes in #2" >> two.txt
+----
+. Here's another way:
++
+[source,sh]
+----
+vim three.txt
+----
++
+(Press `i` to enter insert mode. Add text. Press `escape` to enter normal mode, then `:wq` to save and exit.)
+
+== File Verification
+
+Before going on, it is important to be able to check whether everything has worked the way you wanted it to work. Being able to verify your work is critical.
+
+. Ensure that you are in the `/home/kali/Documents/compressme` directory using `pwd`.
+. Use `ls` to verify the three files you expect are present.
+. Use `cat` to verify the contents of the three files.
+
+If anything is not as you expected, fix the issues before moving to the next steps where you will create an archive.
+
+== Create an Archive
+
+The `tar` command can be used to work with archives. It has a lot of options
+
+. The following command was used to create the gzipped archive.
++
+[source,sh]
+----
+tar -zcvf myfiles.tar.gz *.txt
+----
++
+`z` tells `tar` to use the gzip compression algorithm.
++
+`c` tells `tar` to create a new archive.
++
+`v` tells `tar` to be "verbose." It will provide more status updates in the terminal while processing files.
++
+`f` tells `tar` which archive filename to use. Because `myfiles.tar.gz` comes directly after the `f`, `tar` will use that filename for the archive.
++
+`*.txt` tells `tar` to include ever file in the current directory with a .txt extension.
+. The following command was used to create the archive using the bzip2 compression algorithm.
++
+[source,sh]
+----
+tar -jcvf myfiles.tar.bz2 *.txt
+----
++
+There are only 2 differences between this tar command and the previous one. First, the `j` option is used instead of `z`. Second, the archive's file extension is different. The extensions help us humans understand what the file contains--Linux does not care.
+. List the files. There should be five now.
++
+[source,sh]
+----
+ls
+----
++
+Your output should be similar to the following.
 +
 ----
-tar -zcvf data.tar.gz data
-----
-. The following command was used to creat the bzipped archive.
-----
-tar -jcvf data.tar.bz2 data
+myfiles.tar.bz2 myfiles.tar.gz one.txt two.txt three.txt
 ----
 
+== Extract an Archive
+
+. To make sure the extraction works, delete the text files.
++
+[source,sh]
+----
+rm *.txt
+----
+. Verify that the text files are gone.
++
+[source,sh]
+----
+ls
+----
++
+The text files should be gone. Only the two archives should remain.
+. Extract the .gz file with the following command.
++
+[source,sh]
+----
+tar -xvf myfiles.tar.gz
+----
++
+`x` tells the `tar` command to extract file files. `v` is still for verbose. And `f` tells `tar` which archive file to work with.
+. Use `ls` to verify that the files exist.
++
+[source,sh]
+----
+ls
+----
++
+The text files should be present.
+. Display the contents of the files to ensure that they were fully restored.
++
+[source,sh]
+----
+cat one.txt
+cat two.txt
+cat three.txt
+----
+. Delete the files.
++
+[source,sh]
+----
+rm *.txt
+----
+. Extract the files from the .bz2 archive.
++
+[source,sh]
+----
+tar -xvf myfiles.tar.bz2
+----
++
+Note that you did not have to specify the compression protocol. The `tar` command figured it out.
+. Verify that all files were extracted correctly using `ls` and `cat`.
+
+== Downloading and Extracting Archives
+
+In this section, you will download and extract the source code for PuTTY.
+
+. Search the internet for `putty download`. You should be taken to a URL like https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html.
+. Find the download link to the .tar.gz source archive.
+. Run the following command to download the file. It's about 3 megabytes, so the download should be quick.
++
+[source,sh]
+----
+wget https://the.earth.li/~sgtatham/putty/latest/putty-0.78.tar.gz
+----
++
+If the download did not work, check that you're using the URL from the website. There may be a newer version of PuTTY, and so the version in the URL would be different.
+. Extract the files.
++
+[source,sh]
+----
+tar -xvf putty-0.78.tar.gz
+----
++
+If `tar` could not find the file, double-check that the archive file name matches what you downloaded. You may need to modify the filename.
+. Run `ls`. You should see a new folder, named something like `putty-0.78`. This indicates that the operation worked. If it worked, you can delete the archive.
++
+[source,sh]
+----
+rm pu*.gz
+----
++
+Instead of writing the entire file name, a wildcard was used to match the archive file name.
+. Navigate to the new folder.
++
+[source,sh]
+----
+cd putty-0.78
+----
++
+(Hint, type `cd pu` and then hit tab. This should autocomplete the correct directory name.)
+. View some of the files. For example, output the README file.
++
+[source,sh]
+----
+less README
+----
++
+Press `q` to quit the `less` program. 
+. Browse other files using `vim`, `nano`, `cat`, `less`, and/or `more`.
+
+== Cleanup
+
+Save any screenshots of your work. If you want to delete the entire `compressme` folder, run the following command.
+
+[source,sh]
+----
+cd ~/Documents
+rm -rf compressme
+----
+
+== Challenge
+
+* Create an archive of archives.
+* Explore the different compression algorithms available.
++
+[source,sh]
+----
+man tar
+----
+* Find out what XKCD thinks about `tar`.
+
+== Reflection
+
+* Why would it be helpful to work with archives from the terminal instead of a graphical user interface?
