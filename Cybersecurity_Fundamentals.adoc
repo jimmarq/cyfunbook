@@ -241,8 +241,8 @@ include::4010_social_engineering\social_engineering.adoc[]
 include::4015_dis_mis_mal_information\dis_mis_mal_information.adoc[]
 
 <<<
-:imagesdir: 4020_social_media_reconaissance
-include::4020_social_media_reconaissance\social_media_reconaissance.adoc[]
+:imagesdir: 4020_osint_phishing
+include::4020_osint_phishing\osint_phishing.adoc[]
 
 <<<
 :imagesdir: 4030_privacy

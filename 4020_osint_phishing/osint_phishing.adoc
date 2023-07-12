@@ -1,0 +1,54 @@
+= Open Source Intelligence (OSINT)
+
+Open-source intelligence (OSINT) is information accessible to the public. Social media and other online data contain a treasure trove of information that social engineers can use to craft attacks. In this exercise, you will be asked to find out information about a fictional person--Chuck Steinwater.
+
+== Learning Objectives
+
+You should be able to:
+
+* Define reconnaissance
+* Search the internet for open-source intelligence (OSINT)
+* Craft phishing attacks based on OSINT
+
+== Reconnaissance
+
+Reconnaissance is the process of discovering information about a target that can be used to craft attacks in the future. Many ethical hackers say that the reconnaissance phase is the most important phase of a penetration test. Social engineers use reconnaissance to learn about their victims, including hobbies, projects they work on, colleagues, and more. Information that is publicly accessible on the internet is referred to as OSINT--open-source intelligence.
+
+== Phase 1: Chuck Steinwater Reconnaissance
+
+Use your internet-sleuthing skills to find the following information about Chuck Steinwater.
+
+. Chuck has several public accounts online. Can you find four of them?
+. Chuck has a dog. What is its name?
+. In what city is Chuck's deer camp?
+. Where was Chuck on Friday, October 21, 2022?
+. What kind of database does Iron Pasties use?
+. Chuck created a data analytics project for tracking deer. What license does the project use? 
+. What high school did Chuck go to?
+. What is Chuck's secret?
+. What language does Chuck claim native proficiency in?
+. What programming language is Chuck's deer analytics project written in?
+. Chuck has a hidden interest. What is it?
+. What do the symbols mean on the page with Chuck's interests?
+. Where might Chuck stop for a snack while on a run?
+
+Hints
+
+. Some image metadata can be found in the file properties. The website https://jimpl.com can also extract metadata from images.
+. If a person has an account at github.com with the username jimmarq, that person may also have a public website available at jimmarq.github.io.
+. Check web page source code.
+
+== Phase 2: Phish Chuck
+
+Draft a phishing email to Chuck. The goal of the email is to have Chuck open a malicious file. Use the information you previously gathered to make Chuck think that he can trust you.
+
+* To: Chuck Steinwater chucksteinwater@mail.com
+* From: (make up a name and email)
+* Subject: (make up a subject line)
+* Email body: (write as little or as much as you need)
+
+== Reflection
+
+* Why is social media such a rich source of reconnaissance information?
+* Why might it be helpful to your career to list a lot of information on LinkedIn?
+* What other website may contain OSINT?
