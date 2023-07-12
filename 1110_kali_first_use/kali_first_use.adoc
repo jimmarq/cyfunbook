@@ -68,4 +68,4 @@ image::troubleshoot-cpu-limitation.png[change execution cap to 100%]
 
 == Reflection
 
-* Is blocking advertisements ethical?
+* What is the difference between "learning Kali" and "learning cybersecurity using Kali?"
