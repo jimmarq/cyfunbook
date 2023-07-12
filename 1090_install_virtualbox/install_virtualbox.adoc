@@ -1,18 +1,13 @@
-= TODO
+= Install Oracle VirtualBox
 
-TODO
+Sun Microsystems created the open-source program VirtualBox so that people could run virtual machines on their desktop computers. Eventually, Oracle bought Sun Microsystems and took over stewardship of VirtualBox. Fortunately, Oracle has continued to develop VirtualBox and release it for free. VirtualBox is an alternative to VMware Workstation Player.
 
 == Learning Objectives
 
 You should be able to:
 
-* 
-* 
-* 
-
-
-
-
+* Install VirtualBox
+* Investigate the operating systems supported by VirtualBox
 
 == Exercise 1: VirtualBox Installation
 

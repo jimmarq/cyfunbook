@@ -120,6 +120,11 @@ include::2100_editing_files_with_vim\editing_files_with_vim.adoc[]
 :imagesdir: 2110_searching_for_files
 include::2110_searching_for_files\searching_for_files.adoc[]
 
+
+<<<
+:imagesdir: 2115_working_with_archives
+include::2115_working_with_archives\working_with_archives.adoc[]
+
 <<<
 :imagesdir: 2120_permissions
 include::2120_permissions\permissions.adoc[]

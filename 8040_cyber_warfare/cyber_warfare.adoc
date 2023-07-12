@@ -30,7 +30,7 @@ One example will help describe how information technology is used in warfare. In
 The 2022 war between Russia and Ukraine brought to light a new phenomenon in war--civilian cybersecurity participation. On February 28, 2022, the Ukraine government issued a call for Russian vulnerabilities.
 
 .Source: https://twitter.com/dsszzi/status/1498245709031776258?s=20&t=eoiPUeg39zD1APV8tOAAMw
-image::ukraine-call.png[CYBER FRONT IS NOW OPEN! If you possess any information regarding vulnerabilities in Russian cyber defenses (bugs, backdoors, credentials), please report it via the chatbot @stop_russian_war_bot Ukrainian cyber experts will use your information to fight against the occupant]
+image::ukraine-call.png[Source: https://twitter.com/dsszzi/status/1498245709031776258?s=20&t=eoiPUeg39zD1APV8tOAAMw]
 
 Weeks after the Ukrainian government's call for vulnerabilities, the hacker group Anonymous claims that they hacked Russia's spy satellites and recovered sensitive documents. Anonymous posted screenshots of web pages and hacked systems on Twitter, but the validity of the screenshots and claims could not be verified. Russia denied the claims.
 
