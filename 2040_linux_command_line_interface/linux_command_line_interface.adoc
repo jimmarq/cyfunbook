@@ -50,7 +50,7 @@ image::PWD-caps.png[PWD capitalized output]
 
 The `cd` command is used to change your working directory. This command lets you move around the directories on your Linux computer.
 
-. Run (not including the `$`):
+. Run:
 +
 ----
 pwd

@@ -28,7 +28,8 @@ The `touch` command can do several things. First, it can be used to create new, 
 .. Your new terminal will start in your home directory by default.
 .. Run `pwd` to ensure that your working directory is /home/kali.
 . Create a new file with the following command:
-+
+\+\r
+[source,sh]\r
 ----
 touch you.txt
 ----

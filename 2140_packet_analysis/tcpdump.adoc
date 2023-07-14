@@ -24,21 +24,25 @@ Tcpdump is a command-line tool that can be used to capture network traffic. Late
 . Launch a Kali terminal.
 . Run the following command to ensure you are in your home directory.
 +
+[source,sh]
 ----
 cd ~
 ----
 . Make a new directory called *packets*.
 +
+[source,sh]
 ----
 mkdir packets
 ----
 . Change directories to the new *packets* directory.
 +
+[source,sh]
 ----
 cd packets
 ----
 . Run the following command to start capturing packets with `tcpdump`.
 +
+[source,sh]
 ----
 sudo tcpdump -i eth0 -w telnet.pcap
 ----
@@ -49,6 +53,7 @@ sudo tcpdump -i eth0 -w telnet.pcap
 image::new-terminal-tab.png[new terminal tab]
 . Run the following command to connect to a service called Telehack.
 +
+[source,sh]
 ----
 telnet telehack.com
 ----
@@ -77,6 +82,7 @@ Wireshark is a graphical program that can be used to capture and analyze pcap fi
 
 . In the terminal, run the following command to open the capture file in Wireshark.
 +
+[source,sh]
 ----
 wireshark telnet.pcap
 ----
@@ -92,7 +98,7 @@ image::right-click-follow.png[follow TCP stream]
 .Telnet stream
 image::stream-cowsay.png[telnet stream]
 +
-Also note that there are blue and red letters. The blue letters are what was sent to you from the server. The red letters are what you sent to the server.
+Note that there are blue and red letters. The blue letters are what was sent to you from the server. The red letters are what you sent to the server.
 
 From this analysis, it is clear that telnet is not encrypting any data. This communication was not secure. If you had sent important information like your bank account password, a hacker might have been able to intercept that communication and read it.
 
@@ -107,6 +113,7 @@ From this analysis, it is clear that telnet is not encrypting any data. This com
 . Close Wireshark.
 . Run the following command to delete the files.
 +
+[source,sh]
 ----
 cd ~
 rm -rf packets

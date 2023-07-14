@@ -55,6 +55,7 @@ image::nmap-scanme.png[nmap output]
 image::scanme-website.png[scanme.nmap.org website]
 ** The server is running nping, a tool used for network testing. We could test this in Kali.
 +
+[source,sh]
 ----
 nping scanme.nmap.org -p 9929
 ----
@@ -68,6 +69,7 @@ Nmap is powerful. Options can be configured to do things like operating system d
 
 . In the Kali terminal, run:
 +
+[source,sh]
 ----
 nmap -A scanme.nmap.org
 ----
@@ -84,18 +86,20 @@ image::version-info.png[nmap output with version information]
 . Run `man nmap` in the terminal to see what other options are available.
 .. Find additional options that could be helpful. For example, you might simply try operating system detection with `-O`.
 +
+[source,sh]
 ----
 nmap -O scanme.nmap.org
 ----
 +
 But running this command requires administrative privileges. Run it again with `sudo`.
 +
+[source,sh]
 ----
 sudo nmap -O scanme.nmap.org
 ----
 +
 Enter the password `kali` if needed. If the scan fails, press control+c to cancel the scan.
-.. Press `q` to quite the manual.
+.. Press `q` to quit the manual.
 
 == Challenge
 

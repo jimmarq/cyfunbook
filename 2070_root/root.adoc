@@ -21,7 +21,8 @@ The `sudo` command can be used to run a single command with elevated privileges.
 .Regular kali account in the home directory
 image::new-terminal.png[reguar kali account login]
 . Run the following command to try to list the root user's home directory:
-+
+\+\r
+[source,sh]\r
 ----
 ls -a /root
 ----
