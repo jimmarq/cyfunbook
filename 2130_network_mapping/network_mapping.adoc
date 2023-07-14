@@ -24,9 +24,9 @@ It is important to know your IP address on a network. When you run `nmap` on a n
 
 . The following three commands can be used to show your IP address. Compare the output.
 ----
-$ ifconfig
-$ ip a
-$ hostname -I
+ifconfig
+ip a
+hostname -I
 ----
 
 You may log into a Linux computer that has either `ifconfig` or `ip` but not both. It is important to know a few ways to accomplish the same task.
@@ -39,7 +39,7 @@ You may log into a Linux computer that has either `ifconfig` or `ip` but not bot
 +
 [source,sh]
 ----
-$ nmap scanme.nmap.org
+nmap scanme.nmap.org
 ----
 . The output should look similar to the following.
 +
@@ -56,7 +56,7 @@ image::scanme-website.png[scanme.nmap.org website]
 ** The server is running nping, a tool used for network testing. We could test this in Kali.
 +
 ----
-$ nping scanme.nmap.org -p 9929
+nping scanme.nmap.org -p 9929
 ----
 +
 (Press control+c to stop the ping.)
@@ -69,7 +69,7 @@ Nmap is powerful. Options can be configured to do things like operating system d
 . In the Kali terminal, run:
 +
 ----
-$ nmap -A scanme.nmap.org
+nmap -A scanme.nmap.org
 ----
 +
 The `-A` parameter tells `nmap` to try to figure out the name and version of everything it finds on the server.
@@ -85,13 +85,13 @@ image::version-info.png[nmap output with version information]
 .. Find additional options that could be helpful. For example, you might simply try operating system detection with `-O`.
 +
 ----
-$ nmap -O scanme.nmap.org
+nmap -O scanme.nmap.org
 ----
 +
 But running this command requires administrative privileges. Run it again with `sudo`.
 +
 ----
-$ sudo nmap -O scanme.nmap.org
+sudo nmap -O scanme.nmap.org
 ----
 +
 Enter the password `kali` if needed. If the scan fails, press control+c to cancel the scan.

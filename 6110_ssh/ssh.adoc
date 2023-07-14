@@ -33,7 +33,7 @@ Do not proceed to the next section until you have an account and password succes
 +
 [source,sh]
 ----
-$ ssh jimarqua@tty.sdf.org
+ssh jimarqua@tty.sdf.org
 ----
 . The first time you connect, you will be asked to accept the server's key. Type *yes* and press enter to confirm that you want to accept the connection.
 +

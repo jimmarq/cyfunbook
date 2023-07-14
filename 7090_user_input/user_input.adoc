@@ -19,25 +19,25 @@ Getting user input from the terminal is fairly easy. Creating graphical user int
 +
 [source,sh]
 ----
-$ mkdir ~/Documents/mypython
+mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
 [source,sh]
 ----
-$ cd ~/Documents/mypython
+cd ~/Documents/mypython
 ----
 . Create a file called *input.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch input.py
+touch input.py
 ----
 . Edit *input.py* with nano.
 +
 [source,sh]
 ----
-$ nano input.py
+nano input.py
 ----
 . Enter the following code.
 +
@@ -60,7 +60,7 @@ Line 4 prints a final message. The text, "Okay, let's go meet " is concatenated 
 +
 [source,sh]
 ----
-$ python input.py
+python input.py
 ----
 . Enter an answer when prompted. The program pauses when it prompts for input, then continues once you've entered something and pressed the enter key. Your program output should look something like the following.
 +
@@ -71,7 +71,7 @@ image::first-run-narnia.png[First Run of input.py]
 +
 [source,sh]
 ----
-$ nano input.py
+nano input.py
 ----
 . Append the following source code to the end of the file. Note--there is a *bug* in this code that we will fix later.
 +

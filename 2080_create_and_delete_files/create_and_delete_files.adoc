@@ -30,7 +30,7 @@ The `touch` command can do several things. First, it can be used to create new, 
 . Create a new file with the following command:
 +
 ----
-$ touch you.txt
+touch you.txt
 ----
 . Notice that Linux does not give you any indication that the command succeeded. This is the Linux way. No news is (hopefully) good news.
 +
@@ -39,12 +39,12 @@ image::touch.png[touch command output - nothing]
 . Create a new file called me.txt with the touch command.
 +
 ----
-$ touch me.txt
+touch me.txt
 ----
 . Verify that the files exist using the list command.
 +
 ----
-$ ls
+ls
 ----
 +
 .me.txt and you.txt are present
@@ -57,7 +57,7 @@ It is generally not a great idea to litter your home directory with random files
 . Run the following `mv` (move) command to move me.txt to the Documents directory.
 +
 ----
-$ mv me.txt Documents
+mv me.txt Documents
 ----
 +
 Again, new news is (hopefully) good news.
@@ -67,8 +67,8 @@ image::move-me.png[me.txt moved]
 . Run the following list commands to check the contents of /home/kali and /home/kali/Documents. Remember that case matters.
 +
 ----
-$ ls
-$ ls Documents
+ls
+ls Documents
 ----
 +
 The `ls` command knows that "Documents" is a directory in the current working directory, so adding it to the `ls` command tells the `ls` command to list the files in that directory.
@@ -97,7 +97,7 @@ Again, no news is good news.
 . List the files and folder in the Documents directory.
 +
 ----
-$ ls
+ls
 ----
 +
 .sweetcaroline created
@@ -108,7 +108,7 @@ Notice that in the Kali terminal, files have a white font and directories are bl
 . Move both text files into sweetcaroline using the following command.
 +
 ----
-$ mv *.txt sweetcaroline
+mv *.txt sweetcaroline
 ----
 +
 //Must escape the first instance of the asterisk so that the contents are not bolded.
@@ -126,14 +126,14 @@ Files are deleted with the `rm` remove command. Pay attention when using the `rm
 . Run the following command to delete me.txt.
 +
 ----
-$ rm me.txt
+rm me.txt
 ----
 +
 Notice that there is no prompt about making sure you really want to do it. The file just gets deleted.
 . Verify that me.txt was deleted by listing the directory's contents.
 +
 ----
-$ ls
+ls
 ----
 +
 .sweetcaroline after a file deletion
@@ -148,7 +148,7 @@ Deleting directories with the `rm` command requires additional options.
 . List the contents of sweetcaroline.
 +
 ----
-$ ls sweetcaroline
+ls sweetcaroline
 ----
 +
 .imempty directory created
@@ -156,14 +156,14 @@ image::imempty-created.png[imempty directory created]
 . Try to delete the imempty directory with the `rm` command. (The command below will fail.)
 +
 ----
-$ rm imempty
+rm imempty
 ----
 +
 It won't work. By default, `rm` does not delete directories. This is a basic safeguard to make sure that you don't delete things accidentally.
 . Use the following command to recursively delete imempty and any (nonexistant in this case) subdirectories.
 +
 ----
-$ rm -r imempty
+rm -r imempty
 ----
 +
 .Recursively remove impempty
@@ -172,12 +172,12 @@ image::rm-r-imepty.png[recursively remove imempty]
 . Run the following command to change working directories to the Documents directory.
 +
 ----
-$ cd ..
+cd ..
 ----
 . Delete the sweetcaroline directory.
 +
 ----
-$ rm -r sweetcaroline
+rm -r sweetcaroline
 ----
 . Verify that the Documents directory is empty using the `ls` command.
 
@@ -189,7 +189,7 @@ In the Linux world, the use of spaces in files and directory names is discourage
 . Create a directory called `it works` with the following command.
 +
 ----
-$ mkdir "it works"
+mkdir "it works"
 ----
 . List the files with `ls`.
 +
@@ -199,14 +199,14 @@ image::it-works.png[directory with a space in the name]
 . Create a file named "imma file.txt" with the following command.
 +
 ----
-$ touch "imma file.txt"
+touch "imma file.txt"
 ----
 . List the contents of Documents with `ls`.
 . Delete the file and directory with the following commands.
 +
 ----
-$ rm "imma file.txt"
-$ rm "it works" -r
+rm "imma file.txt"
+rm "it works" -r
 ----
 
 == Practice with Files and Directories

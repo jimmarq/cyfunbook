@@ -21,7 +21,7 @@ A python interpreter lets you run code line by line. The code executes as you wr
 +
 [source,sh]
 ----
-$ python
+python
 ----
 * The terminal will change. You should see something similar to the following.
 +
@@ -71,26 +71,26 @@ By convention, python programs are stored in files that have .py extensions.
 +
 [source,sh]
 ----
-$ cd ~/Documents
+cd ~/Documents
 ----
 * Create a folder for your python files called *mypython* and navigate to the new directory.
 +
 [source,sh]
 ----
-$ mkdir mypython
-$ cd mypython
+mkdir mypython
+cd mypython
 ----
 * Create a file called *hello.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch hello.py
+touch hello.py
 ----
 * Edit the file with `nano`.
 +
 [source,sh]
 ----
-$ nano hello.py
+nano hello.py
 ----
 * Add the following single line of code to hello.py using `nano`.
 +
@@ -107,7 +107,7 @@ image::nano-hello.png[hello world in nano]
 +
 [source,sh]
 ----
-$ python hello.py
+python hello.py
 ----
 * You should see the output of the program.
 +

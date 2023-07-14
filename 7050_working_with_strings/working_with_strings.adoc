@@ -17,7 +17,7 @@ You should be able to use python functions to:
 +
 [source,sh]
 ----
-$ python
+python
 ----
 . All strings have functions available to them. One of them is the *upper()* function that makes a string upper case. Run the following code to use the *upper()* function.
 +

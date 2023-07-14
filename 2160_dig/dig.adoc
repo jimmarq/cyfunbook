@@ -20,7 +20,7 @@ Suppose you want to visit yahoo.com. You want to be able to type yahoo.com in yo
 +
 [source,sh]
 ----
-$ dig yahoo.com
+dig yahoo.com
 ----
 +
 .Dig output
@@ -31,9 +31,9 @@ Dig tells us that to access yahoo.com, we should go to the IP addresses listed i
 +
 [source,sh]
 ----
-$ dig yahoo.com
-$ dig yahoo.com
-$ dig yahoo.com
+dig yahoo.com
+dig yahoo.com
+dig yahoo.com
 ----
 +
 Notice that the order of IP addresses changes. Yahoo wants this to happen to help spread out the load.
@@ -41,7 +41,7 @@ Notice that the order of IP addresses changes. Yahoo wants this to happen to hel
 +
 [source,sh]
 ----
-$ dig yahoo.com MX
+dig yahoo.com MX
 ----
 +
 .Yahoo's MX Records
@@ -52,7 +52,7 @@ Notice that instead of an IP address, we have several domains. Yahoo uses this s
 +
 [source,sh]
 ----
-$ dig mta7.am0.yahoodns.net
+dig mta7.am0.yahoodns.net
 ----
 +
 .IP address of yahoo email server
@@ -67,7 +67,7 @@ With a reverse DNS lookup, you know the IP and want the name associated with it.
 +
 [source,sh]
 ----
-$ dig -x 74.6.231.20
+dig -x 74.6.231.20
 ----
 +
 The instructions here use that specific IP address because it was one of the IP addresses output in the previous command. But, IP addresses that company's use change all the time. If this command does not give you any results, try an IP address that you recently saw in the forward lookups.
@@ -93,7 +93,7 @@ If I saw the 74.6.231.20 IP address in my logs, and I did a reverse lookup and f
 +
 [source,sh]
 ----
-$ ping google.com
+ping google.com
 ----
 +
 .Example ping of google.com

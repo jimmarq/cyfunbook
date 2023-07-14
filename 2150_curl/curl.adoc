@@ -16,25 +16,25 @@ You should be able to:
 +
 [source,sh]
 ----
-$ cd ~
+cd ~
 ----
 . Run the following command to make a new temporary directory called *dl* (download).
 +
 [source,sh]
 ----
-$ mkdir dl
+mkdir dl
 ----
 . Run the following command to change directories to the new *dl* directory.
 +
 [source,sh]
 ----
-$ cd dl
+cd dl
 ----
 . Run the following `curl` command to download google.com's web page.
 +
 [source,sh]
 ----
-$ curl google.com
+curl google.com
 ----
 +
 Note the contents. Some of the text is human readable. You will see the hypertext markup language (HTML) that describes how the page should be displayed.
@@ -47,7 +47,7 @@ Notice that the web page says "The document has moved." Google wants to send us 
 +
 [source,sh]
 ----
-$ curl www.google.com
+curl www.google.com
 ----
 +
 Notice that the web page is much more complete.
@@ -56,7 +56,7 @@ Notice that the web page is much more complete.
 +
 [source,sh]
 ----
-$ curl -o google.html www.google.com
+curl -o google.html www.google.com
 ----
 +
 The `-o` option tells curl to output the download to the file google.html.
@@ -79,7 +79,7 @@ Notice that images and styling look different than visiting http://www.google.co
 +
 [source,sh]
 ----
-$ curl –I google.com
+curl –I google.com
 ----
 +
 .Curl banner grabbing

@@ -29,7 +29,7 @@ The `ping` utility implements the ICMP *echo request* and *echo reply* messages.
 +
 [source,sh]
 ----
-$ ping 8.8.8.8
+ping 8.8.8.8
 ----
 +
 Evaluate the output.
@@ -59,7 +59,7 @@ The *time* field shows *latency*--the time it took to send and receive a reply. 
 +
 [source,sh]
 ----
-$ ping google.com
+ping google.com
 ----
 +
 Evaluate the output.
@@ -83,7 +83,7 @@ Lines 2-4 show a different domain. A DNS reverse lookup was used to determine th
 +
 [source,sh]
 ----
-$ ping -c 4 8.8.8.8
+ping -c 4 8.8.8.8
 ----
 +
 The output will be similar to before. The only difference is that it stops automatically.
@@ -91,7 +91,7 @@ The output will be similar to before. The only difference is that it stops autom
 +
 [source,sh]
 ----
-$ ping -c 4 netflix.com
+ping -c 4 netflix.com
 ----
 +
 Evaluate the output.

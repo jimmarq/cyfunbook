@@ -54,25 +54,25 @@ In the next section, you will write several functions and test them.
 +
 [source,sh]
 ----
-$ mkdir ~/Documents/mypython
+mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
 [source,sh]
 ----
-$ cd ~/Documents/mypython
+cd ~/Documents/mypython
 ----
 . Create a file called *convert.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch convert.py
+touch convert.py
 ----
 . Edit *convert.py* with nano.
 +
 [source,sh]
 ----
-$ nano convert.py
+nano convert.py
 ----
 . Enter the following code.
 +
@@ -98,7 +98,7 @@ There is a design problem with the code. If we wanted to convert 50 temperatures
 +
 [source,sh]
 ----
-$ python convert.py
+python convert.py
 ----
 +
 You should see the following output.

@@ -97,7 +97,7 @@ Sometimes you need to take action based on the result of comparing two values. "
 +
 [source,sh]
 ----
-$ touch if.py
+touch if.py
 ----
 . Edit *if.py* in `nano` (*nano if.py*).
 . Add the following code.

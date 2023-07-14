@@ -21,7 +21,7 @@ Older versions of Linux stored usernames and passwords in the same file--the `pa
 +
 [source,sh]
 ----
-$ cat /etc/passwd
+cat /etc/passwd
 ----
 +
 The contents will be similar to the following.
@@ -91,13 +91,13 @@ sudo useradd chris
 +
 [source,sh]
 ----
-$ sudo passwd chris
+sudo passwd chris
 ----
 . Verify that the new user account is in the `shadow` file.
 +
 [source,sh]
 ----
-$ sudo /etc/shadow
+sudo /etc/shadow
 ----
 . Create another user named `pat` with the password `logger` (to match Chris' password).
 . View the passwords in the /etc/shadow file. Notice that even though their passwords are the same, the hashes are different. The hashes are different because random data called `salt` was added to the hashes.

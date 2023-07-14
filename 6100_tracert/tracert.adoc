@@ -25,7 +25,7 @@ The Linux `traceroute` utility can work poorly in a virtual machine. The followi
 +
 [source,sh]
 ----
-$ sudo traceroute -I google.com
+sudo traceroute -I google.com
 ----
 +
 `sudo` tells Linux to run the command that follows with administrative rights. `traceroute` is the main command. The `-I` option tells `traceroute` to use ICMP. And finally, `whitehouse.gov` is the site we want to trace.
@@ -77,7 +77,7 @@ The last 3 columns are the round trip times to that router. The `traceroute` uti
 . Trace the path to a different site. The site whitehouse.gov is an official United States government website.
 +
 ----
-$ sudo traceroute -I whitehouse.gov
+sudo traceroute -I whitehouse.gov
 ----
 +
 Several of the first hops will likely be the same.
@@ -100,7 +100,7 @@ Several of the first hops will likely be the same.
 . Trace the route to your local city's website. I live in Marquette, Michigan and https://www.marquettemi.gov/ is my city's official website.
 +
 ----
-$ sudo traceroute -I marquettemi.gov
+sudo traceroute -I marquettemi.gov
 ----
 +
 The packets do not stay in my hometown.

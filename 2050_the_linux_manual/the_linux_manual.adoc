@@ -22,7 +22,7 @@ This section will guide you through basic use of the manual.
 . Run the following command to learn about the `ls` command.
 +
 ----
-$ man ls
+man ls
 ----
 . The manual application will launch, overtaking the terminal window.
 +
@@ -39,12 +39,12 @@ In this section, you will use the Linux manual to learn new ways to use the `ls`
 . Run the following command to change directories to /etc.
 +
 ----
-$ cd /etc
+cd /etc
 ----
 . Run the following command to list the files and directories in long format.
 +
 ----
-$ ls -l
+ls -l
 ----
 . File sizes are listed next to the date in the output. Notice that the file sizes are in no particular order (i.e., unsorted). It might be useful to sort the output to find the biggest or smallest files.
 +
@@ -53,7 +53,7 @@ image::file-sizes.png[listing of ls -l]
 . Run the following to launch the manual for the `ls` command:
 +
 ----
-$ man ls
+man ls
 ----
 . There should be a few helpful entries that describe how to sort.
 +
@@ -65,20 +65,20 @@ image::sort-options.png[sort options for ls]
 . Run the following command to list the files from largest to smallest in a long format:
 +
 ----
-$ ls -lS
+ls -lS
 ----
 +
 You could also run the following:
 +
 ----
-$ ls -Sl
+ls -Sl
 ----
 +
 With the `ls` command (and most commands), the order of the options after the dash does not matter.
 . Run the following command to list the riles from smallest to largest in a long format:
 +
 ----
-$ ls -lSr
+ls -lSr
 ----
 +
 This command basically says, "list the files in long format, sorted by size, in reverse."

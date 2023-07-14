@@ -42,7 +42,7 @@ Make variable names unambiguous if possible. "ASDF" is a perfectly valid variabl
 +
 [source,sh]
 ----
-$ python
+python
 ----
 . Run the following code to create a variable named *first_name* with a value of "Alice."
 +

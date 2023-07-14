@@ -25,22 +25,22 @@ Tcpdump is a command-line tool that can be used to capture network traffic. Late
 . Run the following command to ensure you are in your home directory.
 +
 ----
-$ cd ~
+cd ~
 ----
 . Make a new directory called *packets*.
 +
 ----
-$ mkdir packets
+mkdir packets
 ----
 . Change directories to the new *packets* directory.
 +
 ----
-$ cd packets
+cd packets
 ----
 . Run the following command to start capturing packets with `tcpdump`.
 +
 ----
-$ sudo tcpdump -i eth0 -w telnet.pcap
+sudo tcpdump -i eth0 -w telnet.pcap
 ----
 . Tcpdump will run until canceled.
 . Open a new terminal tab by clicking File > New Tab.
@@ -50,7 +50,7 @@ image::new-terminal-tab.png[new terminal tab]
 . Run the following command to connect to a service called Telehack.
 +
 ----
-$ telnet telehack.com
+telnet telehack.com
 ----
 . You will be connected to a remote computer through your terminal.
 . Run `cowsay hi` to run the `cowsay` program.
@@ -78,7 +78,7 @@ Wireshark is a graphical program that can be used to capture and analyze pcap fi
 . In the terminal, run the following command to open the capture file in Wireshark.
 +
 ----
-$ wireshark telnet.pcap
+wireshark telnet.pcap
 ----
 . Wireshark displays a ton of information. It might be helpful to make your Kali virtual machine window larger to display more data.
 . Each row of data in Wireshark represents a different network packet. Your connection to Telehack spanned many packets.
@@ -108,8 +108,8 @@ From this analysis, it is clear that telnet is not encrypting any data. This com
 . Run the following command to delete the files.
 +
 ----
-$ cd ~
-$ rm -rf packets
+cd ~
+rm -rf packets
 ----
 
 == Reflection

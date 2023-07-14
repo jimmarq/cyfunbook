@@ -20,25 +20,25 @@ Python's *for* loops are good for iterating through list items.
 +
 [source,sh]
 ----
-$ mkdir ~/Documents/mypython
+mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
 [source,sh]
 ----
-$ cd ~/Documents/mypython
+cd ~/Documents/mypython
 ----
 . Create a file called *for.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch for.py
+touch for.py
 ----
 . Edit *for.py* with nano.
 +
 [source,sh]
 ----
-$ nano for.py
+nano for.py
 ----
 . Enter the following code.
 +
@@ -60,7 +60,7 @@ Line 3 starts with 4 spaces. Python uses spaces (or tabs) for defining the struc
 +
 [source,sh]
 ----
-$ python for.py
+python for.py
 ----
 +
 You should see the output:
@@ -88,7 +88,7 @@ In python, *while* will continue until some condition is met, then the loop is e
 +
 [souce,sh]
 ----
-$ touch while.py
+touch while.py
 ----
 . Edit *while.py* with `nano` (*nano while.py*).
 . Add the following code to write a small program.
@@ -155,7 +155,7 @@ There are many cases when it is necessary to exit a loop. The *break* keyword is
 +
 [source,sh]
 ----
-$ touch break.py
+touch break.py
 ----
 . Write the following code.
 +
@@ -183,7 +183,7 @@ for name in names:
 +
 [source,sh]
 ----
-$ touch repeat.py
+touch repeat.py
 ----
 . Edit repeat.py to add the following contents.
 +

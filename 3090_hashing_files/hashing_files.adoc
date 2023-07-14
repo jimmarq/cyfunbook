@@ -28,41 +28,41 @@ Next, you will hash several files in Linux and analyze the output.
 +
 [source,sh]
 ----
-$ rm -rf cyfunfiles
+rm -rf cyfunfiles
 ----
 . Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
 +
 [source,sh]
 ----
-$ git clone https://github.com/jimmarq/cyfunfiles.git
+git clone https://github.com/jimmarq/cyfunfiles.git
 ----
 . Change directories to the *cyfunfiles* directory.
 +
 [source,sh]
 ----
-$ cd cyfunfiles
+cd cyfunfiles
 ----
 . Change directories to the *crypto_hashing* subdirectory.
 +
 [source,sh]
 ----
-$ cd crypto_hashing
+cd crypto_hashing
 ----
 . Look at the files in the folder with `ls`.
 +
 [source,sh]
 ----
-$ ls
+ls
 ----
 . Inspect each of the text files with `cat`.
 +
 [source,sh]
 ----
-$ cat a.txt
-$ cat b.txt
-$ cat long.txt
-$ cat essay.txt
-$ cat essay_twin.txt
+cat a.txt
+cat b.txt
+cat long.txt
+cat essay.txt
+cat essay_twin.txt
 ----
 +
 Note that the contents of essay.txt and essay_twin.txt look very similar--but are they exactly the same? You'll use hashing to find out.
@@ -75,7 +75,7 @@ image::open-cyfunfiles-in-gui.png[Open the crypto_hashing folder in the graphica
 +
 [source,sh]
 ----
-$ sha256sum a.txt
+sha256sum a.txt
 ----
 +
 You should see the following result.
@@ -90,7 +90,7 @@ The SHA2 hash will compute the same output every time it receives the same input
 +
 [sourch,sh]
 ----
-$ sha256sum b.txt
+sha256sum b.txt
 ----
 +
 The result should be:
@@ -103,7 +103,7 @@ The result should be:
 +
 [source,sh]
 ----
-$ sha256sum long.txt
+sha256sum long.txt
 ----
 +
 The result should be:
@@ -117,8 +117,8 @@ Even though long.txt has a lot more content than a.txt and b.txt, the hash diges
 +
 [source,sh]
 ----
-$ sha256sum essay.txt
-$ sha256sum essay_twin.txt
+sha256sum essay.txt
+sha256sum essay_twin.txt
 ----
 +
 Are the file contents the same? The hashes should look very different which indicates that the file contents are not the same.
@@ -126,7 +126,7 @@ Are the file contents the same? The hashes should look very different which indi
 +
 [source,sh]
 ----
-$ diff essay.txt essay_twin.txt
+diff essay.txt essay_twin.txt
 ----
 +
 The output should look similar to the following screenshot.
@@ -139,8 +139,8 @@ The diff result shows that a change occured on line 7, and the resulting change 
 +
 [source,sh]
 ----
-$ sha256sum smile.png
-$ sha256sum smile_twin.png
+sha256sum smile.png
+sha256sum smile_twin.png
 ----
 +
 The hashes should match, indicating that every single bit in each of the files matches.

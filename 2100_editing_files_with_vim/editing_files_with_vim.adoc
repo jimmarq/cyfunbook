@@ -34,12 +34,12 @@ This will walk you through the absolute basics of using vim.
 . In Kali, navigate to your Documents folder in your home directory.
 +
 ----
-$ cd ~/Documents
+cd ~/Documents
 ----
 . Launch the vim application just by running `vim`.
 +
 ----
-$ vim
+vim
 ----
 +
 (Note: `vim` is `vi` improved. In some systems, you will need to run `vi` instead of `vim`.)
@@ -77,7 +77,7 @@ You created `file.txt` in the last section. Here, you will edit this file.
 . Run the following command to open file.txt in vim.
 +
 ----
-$ vim file.txt
+vim file.txt
 ----
 +
 You should see all of the file's content.
@@ -88,7 +88,7 @@ You should see all of the file's content.
 . Display the file contents with `cat`.
 +
 ----
-$ cat file.txt
+cat file.txt
 ----
 +
 .Contents of file.txt with cat
@@ -101,7 +101,7 @@ There are times when you make changes to a file but do not want to save the chan
 . Edit file.txt with vim again.
 +
 ----
-$ vim file.txt
+vim file.txt
 ----
 . Type `i` to enter insert mode.
 . Change some text.

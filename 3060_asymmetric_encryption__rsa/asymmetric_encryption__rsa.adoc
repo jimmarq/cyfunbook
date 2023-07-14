@@ -44,13 +44,13 @@ The GnuPG application can be used to create RSA key pairs.
 +
 [source,sh]
 ----
-$ cd ~
+cd ~
 ----
 . Run the following command to start the key creation wizard.
 +
 [source,sh]
 ----
-$ gpg --full-generate-key
+gpg --full-generate-key
 ----
 . Choose RSA and RSA (the default.)
 +
@@ -82,14 +82,14 @@ Right now, the private key/public key pair only lives on your computer. But you 
 +
 [source,sh]
 ----
-$ gpg --output public.key --armor --export bugs@bunny.com
+gpg --output public.key --armor --export bugs@bunny.com
 ----
 . Run `ls` and verify that the file public.key exists in the directory.
 . View the contents of the key file with the `cat` command.
 +
 [source,sh]
 ----
-$ cat public.key
+cat public.key
 ----
 +
 You should see something similar to the following.
@@ -101,13 +101,13 @@ image::public-key-cat.png[public key block]
 +
 [source,sh]
 ----
-$ gpg --output private.key --armor --export-secret-key bugs@bunny.com
+gpg --output private.key --armor --export-secret-key bugs@bunny.com
 ----
 . Run the following command to display the contents of the key file.
 +
 [source,sh]
 ----
-$ cat private.key
+cat private.key
 ----
 +
 You should see output similar to the following.
@@ -123,8 +123,8 @@ Signing a file verifies that you are the person who had control of the file when
 +
 [source,sh]
 ----
-$ touch message.txt
-$ nano message.txt
+touch message.txt
+nano message.txt
 ----
 . Add a controversial opinion to the text file.
 +
@@ -135,7 +135,7 @@ image::nano-message.png[in-n-out is better than five guys]
 +
 [source,sh]
 ----
-$ gpg --clearsign message.txt
+gpg --clearsign message.txt
 ----
 . Confirm your passphrase.
 +
@@ -145,7 +145,7 @@ image::confirm-passphrase.png[confirm passphrase]
 +
 [source,sh]
 ----
-$ cat message.txt.asc
+cat message.txt.asc
 ----
 +
 You should see output similar to the following.
@@ -164,7 +164,7 @@ Clearsigning the file left it in a human-readable format. But what if you were c
 +
 [source,sh]
 ----
-$ gpg --encrypt -r bugs@bunny.com message.txt 
+gpg --encrypt -r bugs@bunny.com message.txt 
 ----
 +
 The above command encrypts the file for the recipient bugs@bunny.com using Bugs' public key.
@@ -173,7 +173,7 @@ The above command encrypts the file for the recipient bugs@bunny.com using Bugs'
 +
 [source,sh]
 ----
-$ cat message.txt.gpg
+cat message.txt.gpg
 ----
 +
 You will see output similar to the following.
@@ -189,8 +189,8 @@ When you are finished with the exercise, you can delete the 5 files created in y
 
 [source,sh]
 ----
-$ rm message.*
-$ rm *.key
+rm message.*
+rm *.key
 ----
 
 The "*" character is the wildcard character that matches any character. The above commands delete all files that start with "message." or end with ".key."
@@ -199,8 +199,8 @@ The keys you created still exist on your computer, but it is fine to leave them 
 
 [source,sh]
 ----
-$ gpg --delete-secret-keys bugs@bunny.com
-$ gpg --delete-keys bugs@bunny.com
+gpg --delete-secret-keys bugs@bunny.com
+gpg --delete-keys bugs@bunny.com
 ----
 
 == Reflection

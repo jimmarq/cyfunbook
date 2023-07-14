@@ -18,25 +18,25 @@ You should be able to:
 +
 [source,sh]
 ----
-$ mkdir ~/Documents/mypython
+mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
 [source,sh]
 ----
-$ cd ~/Documents/mypython
+cd ~/Documents/mypython
 ----
 . Create a file called *program.py* with the `touch` command.
 +
 [source,sh]
 ----
-$ touch program.py
+touch program.py
 ----
 . Edit *program.py* with nano.
 +
 [source,sh]
 ----
-$ nano program.py
+nano program.py
 ----
 . Enter the following code.
 +
@@ -57,7 +57,7 @@ if __name__=="__main__":
 +
 [source,sh]
 ----
-$ python program.py
+python program.py
 ----
 . Enter a name when prompted. The output should be:
 +

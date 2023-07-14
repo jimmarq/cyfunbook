@@ -23,7 +23,7 @@ Dates are hard. Really hard. Your average elementary school student knows how ca
 . From the Kali terminal, launch a python interactive shell.
 +
 ----
-$ python
+python
 ----
 . Run the following code to try to get the current date. (It will fail.)
 +

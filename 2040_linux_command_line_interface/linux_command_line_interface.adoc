@@ -53,19 +53,19 @@ The `cd` command is used to change your working directory. This command lets you
 . Run (not including the `$`):
 +
 ----
-$ pwd
+pwd
 ----
 +
 This will just check your current working directory.
 . Run:
 +
 ----
-$ cd /etc
+cd /etc
 ----
 . Run:
 +
 ----
-$ pwd
+pwd
 ----
 +
 The location should be:
@@ -78,12 +78,12 @@ Using `cd` followed by a forward slash ('/') changes directory to directory rela
 . Run:
 +
 ----
-$ cd /
+cd /
 ----
 . Run:
 +
 ----
-$ pwd
+pwd
 ----
 +
 You should see:
@@ -94,7 +94,7 @@ You should see:
 . To quickly return to your home folder, run:
 +
 ----
-$ cd ~
+cd ~
 ----
 +
 The tilde is a special character used with the `cd` command to return to your home folder.
@@ -102,7 +102,7 @@ The tilde is a special character used with the `cd` command to return to your ho
 . Run:
 +
 ----
-$ cd ..
+cd ..
 ----
 +
 The two periods tell the `cd` command to change directories to the parent folder.
@@ -110,7 +110,7 @@ The two periods tell the `cd` command to change directories to the parent folder
 . Run:
 +
 ----
-$ cd kali
+cd kali
 ----
 +
 Because the Kali directory exists in the /home directory, and your working directory is current in /home, you can just type the directory name `kali` after the `cd` command to change directories to /home/kali.
@@ -123,7 +123,7 @@ The `whoami` command tells you the account that you are currently logged in as. 
 . Run:
 +
 ----
-$ whoami
+whoami
 ----
 +
 You should see:
@@ -141,12 +141,12 @@ The `ls` command is used to list files. This is such a common command that even 
 . Run the following command to navigate to your home folder.
 +
 ----
-$ cd ~
+cd ~
 ----
 . Run:
 +
 ----
-$ ls
+ls
 ----
 +
 You will see the list of files and directories in your home folder.
@@ -156,7 +156,7 @@ image::ls-output.png[ls output in the home directory]
 . Currently, there are just a bunch of folders--no files. Notice that they are laid out left to right. To view them in a list from top to bottom, run:
 +
 ----
-$ ls -l
+ls -l
 ----
 +
 .ls -l output

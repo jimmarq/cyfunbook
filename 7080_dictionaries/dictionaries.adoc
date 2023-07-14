@@ -20,7 +20,7 @@ Think about a regular dictionary that defines words. If you want to know the def
 +
 [source,sh]
 ----
-$ python
+python
 ----
 . Create a small dictionary with the following code. Notice that the code spans multiple lines. Python won't run the code until you hit enter after the last curly brace. (You do not need to type the ellipses--those are there to indicate what the user interface will look like.)
 +

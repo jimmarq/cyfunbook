@@ -18,7 +18,7 @@ A string object just holds one piece of text. An integer holds a single whole nu
 +
 [source,sh]
 ----
-$ python
+python
 ----
 . Run the following code to create a list variable named *names* with 4 values: Alice, Bob, Eve, and the number 42. Yes, 42 would be a strange name.
 +

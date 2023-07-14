@@ -23,14 +23,14 @@ image::new-terminal.png[reguar kali account login]
 . Run the following command to try to list the root user's home directory:
 +
 ----
-$ ls -a /root
+ls -a /root
 ----
 +
 You should get a permission denied error. Note that all other user home directories will be in `/home`.
 . Run the following command to run `ls` with elevated privileges:
 +
 ----
-$ sudo ls -a /root
+sudo ls -a /root
 ----
 +
 You will be prompted for the sudo password, which is `kali`.
@@ -45,7 +45,7 @@ Generally, it is a good idea to switch to the root user only when needed. Regula
 . Run the following "substitute user" command to switch users to the root account.
 +
 ----
-$ sudo su - root
+sudo su - root
 ----
 +
 If you just entered the sudo password, you will not be prompted to re-enter the `kali` password.
@@ -75,7 +75,7 @@ image::exit-root.png[exit from the root account]
 . Run:
 +
 ----
-$ exit
+exit
 ----
 +
 Notice that this time, the terminal application exited.

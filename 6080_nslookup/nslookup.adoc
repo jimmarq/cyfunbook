@@ -20,7 +20,7 @@ Note: `nslookup` has two modes--interactive and non-interactive. We will only us
 +
 [source,sh]
 ----
-$ nslookup google.com
+nslookup google.com
 ----
 +
 The output will look something like the following.
@@ -43,7 +43,7 @@ The answer returned is *non-authoritative* in that it did not come directly from
 +
 [source,sh]
 ----
-$ nslookup google.com 8.8.8.8
+nslookup google.com 8.8.8.8
 ----
 +
 The result is similar to the response from my DNS server, but note that different IP addresses are returned.
@@ -62,7 +62,7 @@ Address: 2607:f8b0:4009:81b::200e
 +
 [source,sh]
 ----
-$ nslookup -type=mx google.com
+nslookup -type=mx google.com
 ----
 +
 The result was:
@@ -78,7 +78,7 @@ google.com      mail exchanger = 10 smtp.google.com.
 +
 [source,sh]
 ----
-$ nslookup -type=ANY google.com 8.8.8.8
+nslookup -type=ANY google.com 8.8.8.8
 ----
 +
 The result is long.
@@ -138,7 +138,7 @@ google.com      text = "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0n
 +
 [source,sh]
 ----
-$ nslookup 74.125.129.101              
+nslookup 74.125.129.101              
 ----
 +
 The result is:

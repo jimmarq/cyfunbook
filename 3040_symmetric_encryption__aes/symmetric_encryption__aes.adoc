@@ -27,31 +27,31 @@ Your computer uses AES frequently. In this exercise, you will use the Gnu Privac
 +
 [source,sh]
 ----
-$ cd ~/Documents
+cd ~/Documents
 ----
 . Make a new folder called *crypto*.
 +
 [source,sh]
 ----
-$ mkdir crypto
+mkdir crypto
 ----
 . Change directories to the new *crypto* directory.
 +
 [source,sh]
 ----
-$ cd crypto
+cd crypto
 ----
 . Create a file called secrets.txt.
 +
 [source,sh]
 ----
-$ touch secrets.txt
+touch secrets.txt
 ----
 . Edit the secrets.txt file with nano.
 +
 [source,sh]
 ----
-$ nano secrets.txt
+nano secrets.txt
 ----
 . Type a secret message in the text file.
 . Save the file with *control+o*, then exit using *control+x*.
@@ -59,7 +59,7 @@ $ nano secrets.txt
 +
 [source,sh]
 ----
-$ ls -al
+ls -al
 ----
 +
 ----
@@ -71,7 +71,7 @@ My file is 33 bytes.
 +
 [source,sh]
 ----
-$ gpg --output encrypted-secret.gpg --symmetric secrets.txt
+gpg --output encrypted-secret.gpg --symmetric secrets.txt
 ----
 +
 If you get an error that says, "No such file or directory," then double-check that you 1) did not make a typo when creating *secrets.txt*, and 2) did not make a typo when typing *secrets.txt* into the `gpg` command.
@@ -87,7 +87,7 @@ The file should be encrypted quickly.
 +
 [source,sh]
 ----
-$ ls -al
+ls -al
 ----
 +
 Some overhead was added to the plaintext file.
@@ -100,7 +100,7 @@ Some overhead was added to the plaintext file.
 +
 [source,sh]
 ----
-$ cat secrets.txt
+cat secrets.txt
 ----
 +
 ----
@@ -109,7 +109,7 @@ Pineapple on pizza is excellent.
 +
 [source,sh]
 ----
-$ cat encrypted-secret.gpg
+cat encrypted-secret.gpg
 ----
 +
 ----
@@ -122,20 +122,20 @@ The output will not be human-readable. The terminal did its best to try to write
 +
 [source,sh]
 ----
-$ rm secrets.txt
+rm secrets.txt
 ----
 . Now, you are left with the encrypted file.
 . This next step would typically only be done for testing. The Gnu Privacy Guard remembers that you just entered the passphrase, so it will not prompt you for it again when trying to decrypt. You can clear out this cache to simulate having just downloaded the file from the internet.
 +
 [source,sh]
 ----
-$ gpg-connect-agent reloadagent /bye
+gpg-connect-agent reloadagent /bye
 ----
 . Decrypt the file with the `gpg` program. If you sent this file to a friend, your friend could use the same process for decrypting the file.
 +
 [source,sh]
 ----
-$ gpg --decrypt encrypted-secret.gpg
+gpg --decrypt encrypted-secret.gpg
 ----
 +
 You will be prompted for the passphrase. After confirming the passphrase, you should see the output in cleartext. But, the cleartext content will not be written to a file.
@@ -143,13 +143,13 @@ You will be prompted for the passphrase. After confirming the passphrase, you sh
 +
 [source,sh]
 ----
-$ gpg --output clear.txt --decrypt encrypted-secret.gpg
+gpg --output clear.txt --decrypt encrypted-secret.gpg
 ----
 . Run `cat` to view the contents of clear.txt.
 +
 [source,sh]
 ----
-$ cat clear.txt
+cat clear.txt
 ----
 +
 The original file will be restored.

@@ -118,13 +118,13 @@ echo "Hello world"
 +
 [source,sh]
 ----
-$ chmod +x program
+chmod +x program
 ----
 . List the folder contents with the permissions.
 +
 [source,sh]
 ----
-$ ls -l
+ls -l
 ----
 +
 .ls -l output after adding execute permissions

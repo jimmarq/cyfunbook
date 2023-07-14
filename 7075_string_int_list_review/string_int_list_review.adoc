@@ -10,7 +10,7 @@ Perform the following tasks in a Kali virtual machine.
 .. If you need to create this directory, run:
 +
 ----
-$ mkdir ~/Documents/mypython
+mkdir ~/Documents/mypython
 ----
 . Create the code in `review1.py` that implements the following requirements.
 . Print the multiplication of 7 and 4.
