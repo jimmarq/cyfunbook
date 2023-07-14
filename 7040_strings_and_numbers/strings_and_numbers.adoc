@@ -21,7 +21,7 @@ In python, you do not need to declare the data type. This is in contrast to many
 +
 [source,python]
 ----
->>> print(4)
+print(4)
 ----
 +
 Notice that an integer is output to the terminal. There are no decimal places. Python is treating the number 4 like an integer without any decimal places.
@@ -29,7 +29,7 @@ Notice that an integer is output to the terminal. There are no decimal places. P
 +
 [source,python]
 ----
->>> print(5.9)
+print(5.9)
 ----
 +
 Python treats this number as a float--a number with decimal places.
@@ -37,7 +37,7 @@ Python treats this number as a float--a number with decimal places.
 +
 [source,python]
 ----
->>> 5 / 3
+5 / 3
 ----
 +
 The number 5 does not divide evenly by 3, so a float is produced (1.6666666666666667).
@@ -45,14 +45,14 @@ The number 5 does not divide evenly by 3, so a float is produced (1.666666666666
 +
 [source,python]
 ----
->>> int(5 / 3)
+int(5 / 3)
 ----
 The output will be the number 1. Python rounds down by default. So even though 1.67 is closer to 2, python will output 1 in this case.
 . Sometimes, you might want to work with decimal numbers. The float() function can help.
 +
 [source,python]
 ----
->>> float(4 / 2)
+float(4 / 2)
 ----
 +
 The results will be 2.0, even though 4 is evenly divisible by 2.
@@ -67,7 +67,7 @@ Text data uses the *string* data type. The name "string" is common across most p
 +
 [source,python]
 ----
->>> "Hello everyone."
+"Hello everyone."
 ----
 +
 The text will be repeated in the output, though with single quotes instead of double quotes.
@@ -75,7 +75,7 @@ The text will be repeated in the output, though with single quotes instead of do
 +
 [source,python]
 ----
->>> 'Hi there'
+'Hi there'
 ----
 +
 Again, the text will be repeated, with single quotes.
@@ -83,7 +83,7 @@ Again, the text will be repeated, with single quotes.
 +
 [source,python]
 ----
->>> "It's hammer time."
+"It's hammer time."
 ----
 . If you try the above with single quotes, you'll get an error.
 +
@@ -93,13 +93,13 @@ image::invalid-single-quote.png[Error including a single quote]
 +
 [source,python]
 ----
->>> 'It\'s hammer time.'
+'It\'s hammer time.'
 ----
 . It is possible to escape double quotes as well.
 +
 [source,python]
 ----
->>> "I said, \"No.\""
+"I said, \"No.\""
 ----
 +
 It can become difficult to read the code the more escape characters are required, but sometimes there is not much that can be done to improve readability.
@@ -107,7 +107,7 @@ It can become difficult to read the code the more escape characters are required
 +
 [source,python]
 ----
->>> """ Hello
+""" Hello
 ... there."""
 ----
 +
@@ -116,7 +116,7 @@ The output will be: 'Hello\nthere.' Notice the "\n." You know that the \ charact
 +
 [source,python]
 ----
->>> exit()
+exit()
 ----
 
 Generally speaking, using double quotes is preferred to using single quotes for strings. But both work.

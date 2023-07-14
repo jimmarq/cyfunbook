@@ -75,7 +75,7 @@ Hello Doug
 +
 [source,python]
 ----
->>> import program
+import program
 ----
 +
 Notice the output.
@@ -87,7 +87,7 @@ None of the code in the \\__main__ section was executed. This is because the pro
 +
 [source,python]
 ----
->>> program.greet("Jen")
+program.greet("Jen")
 ----
 +
 You will see "Hello Jen" as a result. In this case, python knew that when you ran "import program" you wanted to run the code inside program.py.

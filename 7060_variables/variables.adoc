@@ -48,19 +48,19 @@ python
 +
 [source,python]
 ----
->>> first_name = "Alice"
+first_name = "Alice"
 ----
 . Use the *print()* function to output the variable's value. (In the shell, it's possible to just write the variable name and press enter, but this does not work in .py files.)
 +
 [source,python]
 ----
->>> print(first_name)
+print(first_name)
 ----
 . Run the following code to make "Alice" lower-case.
 +
 [source,python]
 ----
->>> first_name.lower()
+first_name.lower()
 ----
 +
 The code will automatically print 'alice' in the shell.
@@ -68,7 +68,7 @@ The code will automatically print 'alice' in the shell.
 +
 [source,python]
 ----
->>> print(first_name)
+print(first_name)
 ----
 +
 The value of first_name is still "Alice" with a capital A. The *lower()* function did not change the value of the first_name variable.
@@ -76,7 +76,7 @@ The value of first_name is still "Alice" with a capital A. The *lower()* functio
 +
 [source,python]
 ----
->>> first_name = first_name.lower()
+first_name = first_name.lower()
 ----
 +
 No code will be output in the shell. 
@@ -84,7 +84,7 @@ No code will be output in the shell.
 +
 [source,python]
 ----
->>> print(first_name)
+print(first_name)
 ----
 +
 Now, the value should be lower-case. In this instance, python overwrote the old variable with the new value.
@@ -92,7 +92,7 @@ Now, the value should be lower-case. In this instance, python overwrote the old 
 +
 [source,python]
 ----
->>> age = 25
+age = 25
 ----
 +
 Notice that you did not have to declare a data type for first_name or age.
@@ -100,31 +100,31 @@ Notice that you did not have to declare a data type for first_name or age.
 +
 [source,python]
 ----
->>> print(age)
+print(age)
 ----
 . Add 5 to age.
 +
 [source,python]
 ----
->>> age + 5
+age + 5
 ----
 The value 30 will be output in the shell.
 . Predict what the value of age will be before printing it.
 +
 [source,python]
 ----
->>> print(age)
+print(age)
 ----
 . Update the age variable by adding 2.
 +
 [source,python]
 ----
->>> age = age + 2
+age = age + 2
 ----
 . Check that the value has been updated.
 +
 ----
->>> print(age)
+print(age)
 ----
 +
 The value should be 27.

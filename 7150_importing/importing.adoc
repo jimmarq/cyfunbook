@@ -22,14 +22,22 @@ Dates are hard. Really hard. Your average elementary school student knows how ca
 
 . From the Kali terminal, launch a python interactive shell.
 +
+[source,sh]
 ----
 python
 ----
+. You will now see prompts like:
++
+----
+>>>
+----
++
+The code you write at these prompts must be python code.
 . Run the following code to try to get the current date. (It will fail.)
 +
 [source,python]
 ----
->>> datetime.date.today()
+datetime.date.today()
 ----
 +
 You should see an error: "NameError: name 'datetime' is not defined." The *datetime* library definitely exists, but we have not imported it, yet.
@@ -37,7 +45,7 @@ You should see an error: "NameError: name 'datetime' is not defined." The *datet
 +
 [source,python]
 ----
->>> import datetime
+import datetime
 ----
 +
 It looks like nothing happens when you run the above code. But what python does is load all of the *datetime* python files into your current program (the shell).
@@ -45,7 +53,7 @@ It looks like nothing happens when you run the above code. But what python does 
 +
 [source,python]
 ----
->>> datetime.date.today()
+datetime.date.today()
 ----
 +
 The code will now produce:
@@ -73,8 +81,8 @@ The *os* library has information about operating system features.
 +
 [source,python]
 ----
->>> import os
->>> os.getlogin()
+import os
+os.getlogin()
 ----
 +
 This will print the name of the logged-in user--'kali.'
@@ -82,14 +90,14 @@ This will print the name of the logged-in user--'kali.'
 +
 [source,python]
 ----
->>> os.path.exists("/home/kali/Docs")
->>> os.path.exists("/home/kali/Documents")
+os.path.exists("/home/kali/Docs")
+os.path.exists("/home/kali/Documents")
 ----
 . Check your current working directory.
 +
 [source,python]
 ----
->>> os.getcwd()
+os.getcwd()
 ----
 
 Find other features here: https://docs.python.org/3/library/os.html.
@@ -102,8 +110,8 @@ Python can be used to calculate hashes.
 +
 [source,python]
 ----
->>> import hashlib
->>> hashlib.sha256(b"watermelon").hexdigest()
+import hashlib
+hashlib.sha256(b"watermelon").hexdigest()
 ----
 +
 The result should be:
@@ -116,21 +124,21 @@ The result should be:
 +
 [source,python]
 ----
->>> password = "watermelon"
->>> hashlib.sha256(bytes(password, 'ascii')).hexdigest()
+password = "watermelon"
+hashlib.sha256(bytes(password, 'ascii')).hexdigest()
 ----
 +
 The hashlib.sha256() function requires bytes (not a string), so the *bytes()* function converts the string to bytes according to the character encoding specified.
 . To see what else is in the *hashlib* library, run the following code:
 +
 ----
->>> dir(hashlib)
+dir(hashlib)
 ----
 . If you see something interesting, you can dig deeper into the official documentation at https://docs.python.org/3/library/hashlib.html.
 . For example, for password storage, *scrypt* would be better than *sha256*. Honestly, the python documentation does not give a great explanation for using *scrypt*. But, the following code would work.
 +
 ----
->>> hashlib.scrypt(b"watermelon", salt=os.urandom(16), n=4, r=8, p=1)
+hashlib.scrypt(b"watermelon", salt=os.urandom(16), n=4, r=8, p=1)
 ----
 +
 Run the above code several times. Notice that a different hash is created each time. That is because you are pulling in random entropy from the *os* library each time.

@@ -26,7 +26,7 @@ python
 +
 [source,python]
 ----
->>> target = {
+target = {
 ... "name": "ACME Tech University",
 ... "IP": "251.22.25.932",
 ... "reason": "spite"
@@ -36,7 +36,7 @@ python
 +
 [source,python]
 ----
->>> print(target)
+print(target)
 ----
 The output should be:
 +
@@ -48,15 +48,15 @@ The output should be:
 +
 [source,python]
 ----
->>> target['IP']
->>> target['name']
->>> target['reason']
+target['IP']
+target['name']
+target['reason']
 ----
 . If you try to access a key that does not exist, or you use the wrong case for a key, you'll get an error.
 +
 [source,python]
 ----
->>> target['NAME']
+target['NAME']
 ----
 +
 You will get:
@@ -71,8 +71,8 @@ KeyError: 'NAME'
 +
 [source,python]
 ----
->>> target['contact_name'] = "Alice"
->>> print(target)
+target['contact_name'] = "Alice"
+print(target)
 ----
 +
 A fourth key and value should appear in the output.
@@ -80,8 +80,8 @@ A fourth key and value should appear in the output.
 +
 [source,python]
 ----
->>> target.pop("IP")
->>> print(target)
+target.pop("IP")
+print(target)
 ----
 +
 The pop function prints the IP value, then removes the key and value. The IP key and value will no longer exist.
@@ -89,8 +89,8 @@ The pop function prints the IP value, then removes the key and value. The IP key
 +
 [source,python]
 ----
->>> target['contact_name'] = "Bob"
->>> print(target)
+target['contact_name'] = "Bob"
+print(target)
 ----
 
 Dictionaries are commonly used in python. Like lists, they are very flexible. Dictionary values can even be lists or dictionaries. Lists can have dictionary elements. 

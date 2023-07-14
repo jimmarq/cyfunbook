@@ -23,7 +23,7 @@ python
 +
 [source,python]
 ----
->>> "hello".upper()
+"hello".upper()
 ----
 +
 The code produces, 'HELLO'. It is important to put the period after the last quotation mark.
@@ -31,7 +31,7 @@ The code produces, 'HELLO'. It is important to put the period after the last quo
 +
 [source,python]
 ----
->>> "Hi tHeRe".lower()
+"Hi tHeRe".lower()
 ----
 +
 The code produces 'hi there'.
@@ -39,7 +39,7 @@ The code produces 'hi there'.
 +
 [source,python]
 ----
->>> len("Jackson")
+len("Jackson")
 ----
 +
 The code outputs 7, meaning that there are 7 characters in the name "Jackson."
@@ -47,7 +47,7 @@ The code outputs 7, meaning that there are 7 characters in the name "Jackson."
 +
 [source,python]
 ----
->>> "apple"[0]
+"apple"[0]
 ----
 +
 The code will output 'a'.
@@ -55,7 +55,7 @@ The code will output 'a'.
 +
 [source,python]
 ----
->>> "apple"[4]
+"apple"[4]
 ----
 +
 Yep. It's "e."
@@ -63,7 +63,7 @@ Yep. It's "e."
 +
 [source,python]
 ----
->>> "apple"[5]
+"apple"[5]
 ----
 +
 An error. That's all. You have failed to peer beyond the edge of the universe, unfortunately.
@@ -74,7 +74,7 @@ image::index-out-of-range.png[index error]
 +
 [source,python]
 ----
->>> "i was never very good at punctuation".title()
+"i was never very good at punctuation".title()
 ----
 +
 The code produces, 'I Was Never Very Good At Punctuation'.
@@ -82,7 +82,7 @@ The code produces, 'I Was Never Very Good At Punctuation'.
 +
 [source,python]
 ----
->>> "I messed teh things up".replace("teh", "the")
+"I messed teh things up".replace("teh", "the")
 ----
 +
 The code will produce, 'I messed the things up'.
@@ -90,7 +90,7 @@ The code will produce, 'I messed the things up'.
 +
 [source,python]
 ----
->>> "one" + " plus " + "two"
+"one" + " plus " + "two"
 ----
 +
 The code produces 'one plus two'. Be sure to include the spaces around the word "plus" for the resulting string to be readable.

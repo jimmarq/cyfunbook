@@ -152,14 +152,14 @@ It is possible to compare multiple things at the same time to evaluate if all st
 +
 [source,python]
 ----
->>> grade = "B"
->>> status = "Junior"
+grade = "B"
+status = "Junior"
 ----
 . Run the following code that will make sure that *grade* is "B" and *status* is "Senior" (which it is not).
 +
 [source,python]
 ----
->>> grade == "B" and status == "Senior"
+grade == "B" and status == "Senior"
 ----
 +
 This will return a single "False" value indicating that the entire statement is not true.
@@ -167,7 +167,7 @@ This will return a single "False" value indicating that the entire statement is 
 +
 [source,python]
 ----
->>> grade == "B" or status == "Senior"
+grade == "B" or status == "Senior"
 ----
 +
 The code returns a single "True" value because one of the values was true.
@@ -175,19 +175,19 @@ The code returns a single "True" value because one of the values was true.
 +
 [source,python]
 ----
->>> 1 == 2 or 2 == 3 or 3 == 4 or 4 == 5 or 5 == 6 or 7 == 7
+1 == 2 or 2 == 3 or 3 == 4 or 4 == 5 or 5 == 6 or 7 == 7
 ----
 . What would be the value of the following code: True or False?
 +
 [source,python]
 ----
->>> 1 == 1 and 2 == 2 and 3 == 3 and 4 == 4
+1 == 1 and 2 == 2 and 3 == 3 and 4 == 4
 ----
 . What would be the value of the following code: True or False?
 +
 [source,python]
 ----
->>> 1 == 1 and 2 == 2 and 3 == 3 and 4 == 4 and 5 == 6 or 6 == 7 or 7 == 7
+1 == 1 and 2 == 2 and 3 == 3 and 4 == 4 and 5 == 6 or 6 == 7 or 7 == 7
 ----
 
 == Challenge

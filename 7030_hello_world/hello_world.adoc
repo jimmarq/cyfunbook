@@ -45,20 +45,20 @@ Remember that computers are dumb. Python will not try to figure out what you mea
 +
 [source,sh]
 ----
->>> 1 + 1
->>> 1+1
->>> 2**3
->>> 4 / 2
->>> 7 / 3
->>> "a" * 5
+1 + 1
+1+1
+2**3
+4 / 2
+7 / 3
+"a" * 5
 ----
 +
 Note that in these examples, the space between the numbers and operators is optional. But, putting spaces makes the code easier to read.
-* Exit the interpreter using the `exit()` function.
+* Exit the interpreter using the `exit()` function. The `quit()` function also works.
 +
-[source,sh]
+[source,python]
 ----
->>> exit()
+exit()
 ----
 
 You will now be back in the terminal. Often, the python interactive interpreter is used for testing small bits of code or for running very small programs. It is important to note that the code that you write in the interactive interpreter is not saved. Most programmers write code in python files, then execute those files from the terminal.

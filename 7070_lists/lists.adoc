@@ -24,7 +24,7 @@ python
 +
 [source,python]
 ----
->>> names = ["Alice", "Bob", "Eve", 42]
+names = ["Alice", "Bob", "Eve", 42]
 ----
 +
 Be sure to put the commas outside of the quotation marks. It is important to note that python lists can contain different data types. This is different than the default behavior in many programming languages that require all elements to be the same data type.
@@ -32,7 +32,7 @@ Be sure to put the commas outside of the quotation marks. It is important to not
 +
 [source,python]
 ----
->>> len(names)
+len(names)
 ----
 +
 The result should be 4.
@@ -40,14 +40,14 @@ The result should be 4.
 +
 [source,python]
 ----
->>> print(names)
+print(names)
 ----
 The result will be: ['Alice', 'Bob', 'Eve', 42].
 . Bob has been annoying lately, so remove him from the list with the *remove()* function.
 +
 [source,python]
 ----
->>> names.remove("Bob")
+names.remove("Bob")
 ----
 +
 But did that really remove Bob? Running *upper()* and *lower()* on a string variable does not change the variable's value.
@@ -55,7 +55,7 @@ But did that really remove Bob? Running *upper()* and *lower()* on a string vari
 +
 [source,python]
 ----
->>> print(names)
+print(names)
 ----
 +
 There should only be 3 values left. Bob, indeed, has been removed.
@@ -63,8 +63,8 @@ There should only be 3 values left. Bob, indeed, has been removed.
 +
 [source,python]
 ----
->>> names.append("Bob")
->>> print(names)
+names.append("Bob")
+print(names)
 ----
 +
 Bob's back. But he's at the end of the list, now.
@@ -72,21 +72,21 @@ Bob's back. But he's at the end of the list, now.
 +
 [source,python]
 ----
->>> names = ["Alice", "Eve", 42, "Bob"]
+names = ["Alice", "Eve", 42, "Bob"]
 ----
 . Individual values can be accessed by their index. Like strings, indexes start at 0.
 +
 [source,python]
 ----
->>> print(names[0])
+print(names[0])
 Alice
->>> print(names[1])
+print(names[1])
 Eve
->>> print(names[2])
+print(names[2])
 42
->>> print(names[3])
+print(names[3])
 Bob
->>> print(names[4])
+print(names[4])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list index out of range
@@ -95,8 +95,8 @@ IndexError: list index out of range
 +
 [source,powershell]
 ----
->>> schools = [ ["South High", "Somecity"], ["North High", "OtherCity"]]
->>> print(schools)
+schools = [ ["South High", "Somecity"], ["North High", "OtherCity"]]
+print(schools)
 ----
 +
 This code contains a *schools* variable that is a single list. The *schools* list has 2 items, and each of the items is a list with the school name and the city name.

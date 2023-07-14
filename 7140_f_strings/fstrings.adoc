@@ -48,8 +48,8 @@ Line 5 includes the f-string. The letter "f" must be placed before the quotation
 +
 [source,python]
 ----
->>> ip = "10.1.2.15"
->>> f"The IP address is {ip}"
+ip = "10.1.2.15"
+f"The IP address is {ip}"
 ----
 +
 You should see the output:
@@ -61,8 +61,8 @@ You should see the output:
 +
 [souce,python]
 ----
->>> age = 5
->>> f"My sister is {age} years old."
+age = 5
+f"My sister is {age} years old."
 ----
 . You should see the output:
 +
@@ -72,8 +72,8 @@ You should see the output:
 . Decimal numbers can be trickier. Run the following code:
 +
 ----
->>> fraction = 2/3
->>> f"{fraction} of the pie has been eaten."
+fraction = 2/3
+f"{fraction} of the pie has been eaten."
 ----
 +
 The output should be:
