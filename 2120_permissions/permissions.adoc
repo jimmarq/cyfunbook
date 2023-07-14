@@ -19,6 +19,29 @@ Limiting access to resources is key to maintaining confidentiality. In Linux, fi
 * Write permissions. People can update or delete files. Technically, it is possible to grant somebody write permissions without read permissions, but that is often reserved for special systems processes. In most cases, if you grant write permissions, you likely want to grant read permissions as well.
 * Execute permissions. The Linux execute permission is very different from permissions on Windows. In Linux, just because a program exists on a computer does not necessarily mean that you can run it. Execute permissions have to be granted in some cases.
 
+
+The `chmod` command can use numbers that represent the permissions.
+
+|========
+| Read    | 4
+| Write   | 2
+| Execute | 1
+|========
+
+You can compute permissions by adding the numbers for the desired permissions. For example, if a user needs `read` and `execute` permissions, you would add 4 + 1 to get 5. Every combination of permissions can be represented uniquely with the numbers 1-7.
+
+|========
+| Read (4) | Write (2) | Execute (1) | Sum
+| No       | No        | No          | 0
+| No       | No        | Yes         | 1
+| No       | Yes       | No          | 2
+| No       | Yes       | Yes         | 3
+| Yes      | No        | No          | 4
+| Yes      | No        | Yes         | 5
+| Yes      | Yes       | No          | 6
+| Yes      | Yes       | Yes         | 7
+|========
+
 == Create Files
 
 This section will have you create several files. Later, you will set the permissions on the files.
@@ -27,25 +50,29 @@ This section will have you create several files. Later, you will set the permiss
 . Open a new terminal window.
 . Run the following command to ensure that you are in your home directory.
 +
+[source,sh]
 ----
-$ cd ~
+cd ~
 ----
 . Run the following command to create a new folder called `permissions`.
 +
+[source,sh]
 ----
-$ mkdir permissions
+mkdir permissions
 ----
 . Change directories to the new *permissions* folder.
 +
+[source,sh]
 ----
-$ cd permissions
+cd permissions
 ----
 . Use the `touch` command to create files called *program*, *watch*, and *write*.
 +
+[source,sh]
 ----
-$ touch program
-$ touch watch
-$ touch write
+touch program
+touch watch
+touch write
 ----
 
 At this point, there are now three files in the *permissions* folder.
@@ -54,8 +81,9 @@ At this point, there are now three files in the *permissions* folder.
 
 . Run `ls -l` to list the files in the long format which shows the permissions.
 +
+[source,sh]
 ----
-$ ls -l
+ls -l
 ----
 +
 .ls -l output
@@ -73,12 +101,13 @@ Looking at the permissions, you can read and write all three files, but not exec
 
 == Executing Files
 
-There are times when you need to download a file from the internet and execute it (i.e., run it). In this section you will write a very small program, add the execute permissions, and then run the program.
+There are times when you need to download a file from the internet and execute it (i.e., run it). In this section, you will write a very small program, add the execute permissions, and then run the program.
 
 . Open the *program* file in `nano`.
 +
+[source,sh]
 ----
-$ nano program
+nano program
 ----
 . Add the following text
 +
@@ -87,11 +116,13 @@ echo "Hello world"
 ----
 . Run the following command to add the execute permission.
 +
+[source,sh]
 ----
 $ chmod +x program
 ----
 . List the folder contents with the permissions.
 +
+[source,sh]
 ----
 $ ls -l
 ----
@@ -102,21 +133,24 @@ image::ls-l-after-plus-x.png[ls -l output after adding execute permissions]
 Note that the "x" permission now exists. Also, the word *program* is now in a different font to show that is can be executed.
 . Run the program with a period, forward slash, and the name of the program.
 +
+[source,sh]
 ----
-$ ./program
+./program
 ----
 +
 .Running "program"
 image::program-output.png[running program]
 . Remove the execute permission.
 +
+[source,sh]
 ----
-$ chmod -x program
+chmod -x program
 ----
 . Try running the program again.
 +
+[source,sh]
 ----
-$ ./program
+./program
 ----
 +
 .Execution fails
@@ -132,19 +166,22 @@ In the previous section, the `chmod` command was used to grant execute permissio
 
 . Verify the permissions using `ls -l`.
 +
+[source,sh]
 ----
-$ ls -l
+ls -l
 ----
 . Note that the *kali* group does not have write access to any of the files.
 . Run the following command to grant the *kali* group access to the *write* file.
 +
+[source,sh]
 ----
-$ chmod g+w write
+chmod g+w write
 ----
 . Check the permissions. Note that the group now has write access.
 +
+[source,sh]
 ----
-$ ls -l
+ls -l
 ----
 +
 .Write permissions granted
@@ -156,25 +193,63 @@ Perhaps we want to protect a file so that changes are not made to it. Write acce
 
 . Verify the permissions using `ls -l`.
 +
+[source,sh]
 ----
-$ ls -l
+ls -l
 ----
 . Note that the *kali* user has write access to the *watch* file.
 . Run the following command to revoke write access.
 +
+[source,sh]
 ----
-$ chmod u-w watch
+chmod u-w watch
 ----
 . Try to edit the file in `nano`.
 +
+[source,sh]
 ----
-$ nano watch
+nano watch
 ----
 . Notice that `nano` says that the file cannot be changed.
 +
 .Nano warning
 image::unwritable.png[nano warning]
 . Quit nano.
+
+== Using chmod with Numbers
+
+. Create a new file called `permtest.txt`.
++
+[source,sh]
+----
+touch permtest.txt
+----
+. Change its permissions to that the owner, groups, and others get full read, write and execute access (7, 7, and 7).
++
+[source,sh]
+----
+chmod 777 permtest.txt
+----
+. Verify the permissions with `ls -l`
++
+[source,sh]
+----
+ls -l
+----
+. Change the permissions so that the owner have read and execute permissions, the group have read and write permissions, and others do not have any permissions.
++
+[source,sh]
+----
+chmod 560 permtest.txt
+----
+. Verify the permissions using the `ls`.
++
+[source,sh]
+----
+ls -l
+----
+
+Because full owner, group, and other permissions can be set with a single command using numbers, installation instructions will often include instructions that set the permissions via numbers. Using numbers is a little less intuitive than manually setting individual permissions, such as `u+x`, but it is much more compact.
 
 == Challenge
 
@@ -187,9 +262,10 @@ image::unwritable.png[nano warning]
 
 When finished, the permissions folder can be deleted with the following commands.
 
+[source,sh]
 ----
-$ cd ~
-$ rm -rf permissions
+cd ~
+rm -rf permissions
 ----
 
 == Reflection
@@ -197,5 +273,4 @@ $ rm -rf permissions
 * At a hospital, who should have access to read patient data, update patient data, and execute applications?
 * At a hospital, what groups would you create to help manage access?
 * Linux requires that the execute permission be added to programs. Why might this default help prevent people from malware infections?
-
 
