@@ -75,11 +75,11 @@ Notice that images and styling look different than visiting http://www.google.co
 
 *Banner grabbing* is the act of requesting information from a server to discover information about the server's configuration. Ethical hackers (and malicious hackers) use banner grabbing in the reconnaissance phase of an attack. `Curl` can be used to gather some basic information about the server.
 
-. In the Kali terminal, run the following command. The `-I` switch loads the HTTP headers (the stuff that your web browser hides from you because it is not necessary for rendering a web page.j)
+. In the Kali terminal, run the following command. The `-I` switch loads the HTTP headers (the stuff that your web browser hides from you because it is not necessary for rendering a web page.)
 +
 [source,sh]
 ----
-curl –I google.com
+curl -I google.com
 ----
 +
 .Curl banner grabbing
