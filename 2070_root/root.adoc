@@ -21,8 +21,8 @@ The `sudo` command can be used to run a single command with elevated privileges.
 .Regular kali account in the home directory
 image::new-terminal.png[reguar kali account login]
 . Run the following command to try to list the root user's home directory:
-\+\r
-[source,sh]\r
++
+[source,sh]
 ----
 ls -a /root
 ----
@@ -30,6 +30,7 @@ ls -a /root
 You should get a permission denied error. Note that all other user home directories will be in `/home`.
 . Run the following command to run `ls` with elevated privileges:
 +
+[source,sh]
 ----
 sudo ls -a /root
 ----
@@ -45,6 +46,7 @@ Generally, it is a good idea to switch to the root user only when needed. Regula
 
 . Run the following "substitute user" command to switch users to the root account.
 +
+[source,sh]
 ----
 sudo su - root
 ----
@@ -58,15 +60,17 @@ image::sudo-su.png[pwd and whoami after sudo su - root]
 Notice that the current user is now `root`, and the working directory is /root. You did not `cd` to change directories, but by switching users with `su -` you basically logged into the system with that user account. Notice that the prompt also changed to show `root@kali` instead of `kali@kali`.
 . Run:
 +
+[source,sh]
 ----
-# ls -a
+ls -a
 ----
 +
 You should see a listing of the files (including hidden files starting with a period) in the root user's folder. You should not get a permission denied error.
 . Run:
 +
+[source,sh]
 ----
-# exit
+exit
 ----
 +
 Notice that the terminal program did not exit. You only exited from the root user account.
@@ -75,6 +79,7 @@ Notice that the terminal program did not exit. You only exited from the root use
 image::exit-root.png[exit from the root account]
 . Run:
 +
+[source,sh]
 ----
 exit
 ----

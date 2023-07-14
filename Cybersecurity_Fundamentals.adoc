@@ -7,6 +7,7 @@ v0.11, 2023-03-10
 :toclevels: 1
 :docinfo: shared-running
 :leveloffset: 1
+:source-highlighter: rouge
 
 :numbered!:
 :imagesdir: 0005_About
@@ -213,7 +214,6 @@ include::3105_cracking_hashes\cracking_hashes.adoc[]
 <<<
 :imagesdir: 3107_cracking_with_rainbow_tables
 include::3107_cracking_with_rainbow_tables\cracking_with_rainbow_tables.adoc[]
-//TODO: in draft state--need to add rt sorting
 
 <<<
 :imagesdir: 3110_password_managers
