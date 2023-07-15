@@ -22,7 +22,7 @@ The purpose of this section is just to create some data that will be archived.
 
 . Create a new folder in your Documents directory named `compressme`.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents
 mkdir compressme
@@ -31,7 +31,7 @@ cd compressme
 . Create 3 files with .txt extensions. You can create these files in several ways. Use whichever method you want.
 . Here's one way:
 +
-[source,sh]
+[source,shell]
 ----
 touch one.txt
 nano one.txt
@@ -40,13 +40,13 @@ nano one.txt
 (Edit the text in nano, save it with control+o, and exit with control+x.)
 . Here's another way:
 +
-[source,sh]
+[source,shell]
 ----
 echo "This goes in #2" >> two.txt
 ----
 . Here's another way:
 +
-[source,sh]
+[source,shell]
 ----
 vim three.txt
 ----
@@ -69,7 +69,7 @@ The `tar` command can be used to work with archives. It has a lot of options
 
 . The following command was used to create the gzipped archive.
 +
-[source,sh]
+[source,shell]
 ----
 tar -zcvf myfiles.tar.gz *.txt
 ----
@@ -85,7 +85,7 @@ tar -zcvf myfiles.tar.gz *.txt
 `*.txt` tells `tar` to include ever file in the current directory with a .txt extension.
 . The following command was used to create the archive using the bzip2 compression algorithm.
 +
-[source,sh]
+[source,shell]
 ----
 tar -jcvf myfiles.tar.bz2 *.txt
 ----
@@ -93,14 +93,14 @@ tar -jcvf myfiles.tar.bz2 *.txt
 There are only 2 differences between this tar command and the previous one. First, the `j` option is used instead of `z`. Second, the archive's file extension is different. The extensions help us humans understand what the file contains--Linux does not care.
 . List the files. There should be five now.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
 +
 Your output should be similar to the following.
 +
-[source,sh]
+[source,shell]
 ----
 myfiles.tar.bz2 myfiles.tar.gz one.txt two.txt three.txt
 ----
@@ -109,13 +109,13 @@ myfiles.tar.bz2 myfiles.tar.gz one.txt two.txt three.txt
 
 . To make sure the extraction works, delete the text files.
 +
-[source,sh]
+[source,shell]
 ----
 rm *.txt
 ----
 . Verify that the text files are gone.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -123,7 +123,7 @@ ls
 The text files should be gone. Only the two archives should remain.
 . Extract the .gz file with the following command.
 +
-[source,sh]
+[source,shell]
 ----
 tar -xvf myfiles.tar.gz
 ----
@@ -131,7 +131,7 @@ tar -xvf myfiles.tar.gz
 `x` tells the `tar` command to extract file files. `v` is still for verbose. And `f` tells `tar` which archive file to work with.
 . Use `ls` to verify that the files exist.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -139,7 +139,7 @@ ls
 The text files should be present.
 . Display the contents of the files to ensure that they were fully restored.
 +
-[source,sh]
+[source,shell]
 ----
 cat one.txt
 cat two.txt
@@ -147,13 +147,13 @@ cat three.txt
 ----
 . Delete the files.
 +
-[source,sh]
+[source,shell]
 ----
 rm *.txt
 ----
 . Extract the files from the .bz2 archive.
 +
-[source,sh]
+[source,shell]
 ----
 tar -xvf myfiles.tar.bz2
 ----
@@ -169,7 +169,7 @@ In this section, you will download and extract the source code for PuTTY.
 . Find the download link to the .tar.gz source archive.
 . Run the following command to download the file. It's about 3 megabytes, so the download should be quick.
 +
-[source,sh]
+[source,shell]
 ----
 wget https://the.earth.li/~sgtatham/putty/latest/putty-0.78.tar.gz
 ----
@@ -177,7 +177,7 @@ wget https://the.earth.li/~sgtatham/putty/latest/putty-0.78.tar.gz
 If the download did not work, check that you're using the URL from the website. There may be a newer version of PuTTY, and so the version in the URL would be different.
 . Extract the files.
 +
-[source,sh]
+[source,shell]
 ----
 tar -xvf putty-0.78.tar.gz
 ----
@@ -185,7 +185,7 @@ tar -xvf putty-0.78.tar.gz
 If `tar` could not find the file, double-check that the archive file name matches what you downloaded. You may need to modify the filename.
 . Run `ls`. You should see a new folder, named something like `putty-0.78`. This indicates that the operation worked. If it worked, you can delete the archive.
 +
-[source,sh]
+[source,shell]
 ----
 rm pu*.gz
 ----
@@ -193,7 +193,7 @@ rm pu*.gz
 Instead of writing the entire file name, a wildcard was used to match the archive file name.
 . Navigate to the new folder.
 +
-[source,sh]
+[source,shell]
 ----
 cd putty-0.78
 ----
@@ -201,7 +201,7 @@ cd putty-0.78
 (Hint, type `cd pu` and then hit tab. This should autocomplete the correct directory name.)
 . View some of the files. For example, output the README file.
 +
-[source,sh]
+[source,shell]
 ----
 less README
 ----
@@ -213,7 +213,7 @@ Press `q` to quit the `less` program.
 
 Save any screenshots of your work. If you want to delete the entire `compressme` folder, run the following command.
 
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents
 rm -rf compressme
@@ -224,7 +224,7 @@ rm -rf compressme
 * Create an archive of archives.
 * Explore the different compression algorithms available.
 +
-[source,sh]
+[source,shell]
 ----
 man tar
 ----

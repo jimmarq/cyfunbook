@@ -16,25 +16,25 @@ You should be able to:
 . Open a Kali terminal.
 . If you did not create the *mypython* directory, create it with the following command. (Even if the directory exists, the following command will not hurt anything--it will just tell you that the directory already exists.)
 +
-[source,sh]
+[source,shell]
 ----
 mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents/mypython
 ----
 . Create a file called *program.py* with the `touch` command.
 +
-[source,sh]
+[source,shell]
 ----
 touch program.py
 ----
 . Edit *program.py* with nano.
 +
-[source,sh]
+[source,shell]
 ----
 nano program.py
 ----
@@ -55,19 +55,19 @@ if __name__=="__main__":
 ----
 . Run the program using the following command.
 +
-[source,sh]
+[source,shell]
 ----
 python program.py
 ----
 . Enter a name when prompted. The output should be:
 +
-----
+....
 Hello Eve
 Hello Alice
 Hello Bob
 Give me another name: Doug
 Hello Doug
-----
+....
 +
 (Of course, if you used a name other than "Doug," that name would appear in your output.)
 . In the Kali terminal, run *python* to start an interactive shell.

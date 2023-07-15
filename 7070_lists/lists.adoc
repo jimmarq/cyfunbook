@@ -16,7 +16,7 @@ A string object just holds one piece of text. An integer holds a single whole nu
 
 . In a Kali terminal, run `python` to start an interactive python shell.
 +
-[source,sh]
+[source,shell]
 ----
 python
 ----

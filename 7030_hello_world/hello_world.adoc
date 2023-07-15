@@ -19,7 +19,7 @@ A python interpreter lets you run code line by line. The code executes as you wr
 * Open a new terminal.
 * Run `python`.
 +
-[source,sh]
+[source,shell]
 ----
 python
 ----
@@ -43,7 +43,7 @@ image::hello-fail.png[Small typo--missing quotation mark]
 Remember that computers are dumb. Python will not try to figure out what you meant.
 * Run the following lines of code and look at the output.
 +
-[source,sh]
+[source,shell]
 ----
 1 + 1
 1+1
@@ -69,26 +69,26 @@ By convention, python programs are stored in files that have .py extensions.
 
 * In the terminal, navigate to your Documents directory. 
 +
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents
 ----
 * Create a folder for your python files called *mypython* and navigate to the new directory.
 +
-[source,sh]
+[source,shell]
 ----
 mkdir mypython
 cd mypython
 ----
 * Create a file called *hello.py* with the `touch` command.
 +
-[source,sh]
+[source,shell]
 ----
 touch hello.py
 ----
 * Edit the file with `nano`.
 +
-[source,sh]
+[source,shell]
 ----
 nano hello.py
 ----
@@ -105,7 +105,7 @@ image::nano-hello.png[hello world in nano]
 * Press control+x to exit `nano`.
 * In the terminal, run the hello.py program with the following command.
 +
-[source,sh]
+[source,shell]
 ----
 python hello.py
 ----

@@ -25,6 +25,7 @@ This lab requires a Kali Linux virtual machine. You should already know:
 
 . Open a terminal window. Navigate to your home directory's Documents folder with the following command.
 +
+[source,shell]
 ----
 cd ~/Documents
 ----
@@ -32,11 +33,13 @@ cd ~/Documents
 No matter what your working directory was previously, you will now be in /home/kali/Documents. ~/Documents in an absolute path, not a relative path.
 . Create a text file called haiku.txt with the touch command.
 +
+[source,shell]
 ----
 touch haiku.txt
 ----
 . Launch the `nano` editor with haiku.txt ready for editing using the following command.
 +
+[source,shell]
 ----
 nano haiku.txt
 ----
@@ -67,14 +70,15 @@ image::file-name-to-write.png[file name to write]
 
 == Editing New Named Files with Nano
 
-Once you know how to edit existing files with nano, creating and editing new files is not rocket surgery. Next, you will create a file that has no file extension. In the Linux world, file extensions are not required. Many Linux system files have file names without extensions.
+Once you know how to edit existing files with `nano`, creating and editing new files is not rocket surgery. Next, you will create a file that has no file extension. In the Linux world, file extensions are not required. Many Linux system files have file names without extensions.
 
 . Run the following command to start editing a new file called `limerick` (with no file extension).
 +
+[source,shell]
 ----
 nano limerick
 ----
-. Write a limerick. As a reminder, limericks have five lines. The first, second, and fifth lines must have seven to ten syllables and rhyme. The third and fourth lines should be shorter--5 to seven syllabus--and rhyme with each other. Below is an example.
+. Write a limerick. As a reminder, limericks have five lines. The first, second, and fifth lines must have seven to ten syllables and rhyme. The third and fourth lines should be shorter--5 to seven syllables--and rhyme with each other. Below is an example.
 +
 .Career in limerick form
 image::limerick.png[carreer in limerick form]
@@ -91,6 +95,7 @@ You can launch nano and start editing files before you know the file name.
 
 . Run the following command from the terminal.
 +
+[source,shell]
 ----
 nano
 ----
@@ -111,6 +116,7 @@ The `cat` command can be used to display file contents in the terminal.
 
 . Run the following commands to display the poems.
 +
+[source,shell]
 ----
 cat haiku.txt
 ----
@@ -119,6 +125,7 @@ cat haiku.txt
 image::cat-haiku.png[haiku printed with cat]
 . Run the following command to print the limerick.
 +
+[source,shell]
 ----
 cat limerick
 ----

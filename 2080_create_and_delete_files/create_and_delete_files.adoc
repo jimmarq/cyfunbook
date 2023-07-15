@@ -29,7 +29,7 @@ The `touch` command can do several things. First, it can be used to create new, 
 .. Run `pwd` to ensure that your working directory is /home/kali.
 . Create a new file with the following command:
 +
-[source,sh]
+[source,shell]
 ----
 touch you.txt
 ----
@@ -39,13 +39,13 @@ touch you.txt
 image::touch.png[touch command output - nothing]
 . Create a new file called me.txt with the touch command.
 +
-[source,sh]
+[source,shell]
 ----
 touch me.txt
 ----
 . Verify that the files exist using the list command.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -59,7 +59,7 @@ It is generally not a great idea to litter your home directory with random files
 
 . Run the following `mv` (move) command to move me.txt to the Documents directory.
 +
-[source,sh]
+[source,shell]
 ----
 mv me.txt Documents
 ----
@@ -70,7 +70,7 @@ Again, new news is (hopefully) good news.
 image::move-me.png[me.txt moved]
 . Run the following list commands to check the contents of /home/kali and /home/kali/Documents. Remember that case matters.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ls Documents
@@ -94,7 +94,7 @@ The files are organized better already, but typically we want to organize files 
 . Your working directory should be /home/kali/Documents. Use `pwd` to verify that this is your working directory.
 . Run the following command to create the "sweetcaroline" directory.
 +
-[source,sh]
+[source,shell]
 ----
 mkdir sweetcaroline
 ----
@@ -102,7 +102,7 @@ mkdir sweetcaroline
 Again, no news is good news.
 . List the files and folder in the Documents directory.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -114,7 +114,7 @@ Notice that in the Kali terminal, files have a white font and directories are bl
 . That's about how complicated it is to create a directory using the command-line interface in Linux.
 . Move both text files into sweetcaroline using the following command.
 +
-[source,sh]
+[source,shell]
 ----
 mv *.txt sweetcaroline
 ----
@@ -133,7 +133,7 @@ Files are deleted with the `rm` remove command. Pay attention when using the `rm
 . Use `pwd` to ensure that your working directory is `/home/kali/Documents/sweetcaroline`.
 . Run the following command to delete me.txt.
 +
-[source,sh]
+[source,shell]
 ----
 rm me.txt
 ----
@@ -141,7 +141,7 @@ rm me.txt
 Notice that there is no prompt about making sure you really want to do it. The file just gets deleted.
 . Verify that me.txt was deleted by listing the directory's contents.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -157,7 +157,7 @@ Deleting directories with the `rm` command requires additional options.
 . Create a new folder called `imempty`. (Refer to the syntax) for creating folders if you need help with this command.
 . List the contents of sweetcaroline.
 +
-[source,sh]
+[source,shell]
 ----
 ls sweetcaroline
 ----
@@ -166,7 +166,7 @@ ls sweetcaroline
 image::imempty-created.png[imempty directory created]
 . Try to delete the imempty directory with the `rm` command. (The command below will fail.)
 +
-[source,sh]
+[source,shell]
 ----
 rm imempty
 ----
@@ -174,7 +174,7 @@ rm imempty
 It won't work. By default, `rm` does not delete directories. This is a basic safeguard to make sure that you don't delete things accidentally.
 . Use the following command to recursively delete imempty and any (nonexistant in this case) subdirectories.
 +
-[source,sh]
+[source,shell]
 ----
 rm -r imempty
 ----
@@ -184,13 +184,13 @@ image::rm-r-imepty.png[recursively remove imempty]
 . Run `ls` to ensure that the imempty directory has been removed. Note that you.txt still exists in the sweetcaroline directory.
 . Run the following command to change working directories to the Documents directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ..
 ----
 . Delete the sweetcaroline directory.
 +
-[source,sh]
+[source,shell]
 ----
 rm -r sweetcaroline
 ----
@@ -203,7 +203,7 @@ In the Linux world, the use of spaces in files and directory names is discourage
 . Ensure that your working directory is /home/kali/Documents using the `pwd` command.
 . Create a directory called `it works` with the following command.
 +
-[source,sh]
+[source,shell]
 ----
 mkdir "it works"
 ----
@@ -214,14 +214,14 @@ image::it-works.png[directory with a space in the name]
 . The same thing can be done with files.
 . Create a file named "imma file.txt" with the following command.
 +
-[source,sh]
+[source,shell]
 ----
 touch "imma file.txt"
 ----
 . List the contents of Documents with `ls`.
 . Delete the file and directory with the following commands.
 +
-[source,sh]
+[source,shell]
 ----
 rm "imma file.txt"
 rm "it works" -r

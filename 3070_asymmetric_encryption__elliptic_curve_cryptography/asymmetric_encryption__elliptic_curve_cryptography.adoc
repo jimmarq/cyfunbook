@@ -36,13 +36,13 @@ Next, you will create an EC key pair using OpenSSH. OpenSSH is commonly used on 
 . Open a terminal.
 . Navigate to your home directory with the following command:
 +
-[source,sh]
+[source,shell]
 ----
 cd ~
 ----
 . Run the following command to launch the key creation process with OpenSSH.
 +
-[source,sh]
+[source,shell]
 ----
 ssh-keygen -t ed25519
 ----
@@ -55,7 +55,7 @@ The *ed25519* refers to a specific curve specification.
 image::openssh-key-creation.png[Elliptic curve key pair created with OpenSSH]
 . You will notice a "randomart" image. This image is supposed to make it easier for you to recognize that the correct key is being shared. For example, if you logged onto a server, and the server presented the same randomart image, that could give you more confidence that you are connecting to the right service. The randomart image is a representation of the public key and can be shared. Below is a different randomart image than the one shown in the previous key generation process.
 +
-----
+....
 The key's randomart image is:
 +--[ED25519 256]--+
 |       .++++==+**|
@@ -68,11 +68,11 @@ The key's randomart image is:
 |          E +   .|
 |           +     |
 +----[SHA256]-----+
-----
+....
 . Note that the key pair was created very quickly. Though benchmarks for creating keys is tricky, a ballpark number is that it's about 1,000 times faster to create an EC key than an RSA key for equivalent security.
 . Navigate to the hidden .ssh directory and use `cat` to display the contents of the private key and the public key. The public key has a .pub extension. The private key has no extension.
 +
-[source,sh]
+[source,shell]
 ----
 cd .ssh
 cat id_ed25519

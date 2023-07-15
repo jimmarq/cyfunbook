@@ -18,31 +18,31 @@ LinkedIn suffered a data breach in 2012. Millions of usernames and password hash
 . Open a terminal.
 . Run the following command. Note that it will delete any files you added or changed in the cyfunfiles folder.
 +
-[source,sh]
+[source,shell]
 ----
 rm -rf cyfunfiles
 ----
 . Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
 +
-[source,sh]
+[source,shell]
 ----
 git clone https://github.com/jimmarq/cyfunfiles.git
 ----
 . Change directories to the *cyfunfiles* directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd cyfunfiles
 ----
 . Change directories to the *crypto_crack_hashes* subdirectory.
 +
-[source,sh]
+[source,shell]
 ----
 cd crypto_crack_hashes
 ----
 . Look at the files in the folder with `ls`.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -55,7 +55,7 @@ Dictionary attacks hash all of the words in a list and compare those hashes to t
 
 . Run the following command to run a dictionary attack.
 +
-[source,sh]
+[source,shell]
 ----
 john --wordlist=/usr/share/wordlists/metasploit/password.lst --format=Raw-SHA1 linkedin_hashes.txt
 ----
@@ -64,7 +64,7 @@ The file /usr/share/wordlists/metasploit/password.lst has about 90,000 passwords
 . The attack should run very fast. All 90,000 passwords were checked against the LinkedIn hashes very quickly.
 . If you missed the hashes in the terminal, you can check to see what has been cracked with:
 +
-[source,sh]
+[source,shell]
 ----
 john -show linkedin_hashes.txt
 ----
@@ -88,7 +88,7 @@ In a brute force attack, all possible passwords for given character sets will be
 
 . Try cracking passwords with all lowercase letters.
 +
-[source,sh]
+[source,shell]
 ----
 john -incremental=Lower linkedin_hashes.txt
 ----
@@ -97,7 +97,7 @@ john -incremental=Lower linkedin_hashes.txt
 
 If you want to delete the hashes to try different attacks you will have to delete the "potfile" (where hashes are stored).
 
-[source,sh]
+[source,shell]
 ----
 rm ~/.john/john.pot
 ----
@@ -106,6 +106,7 @@ rm ~/.john/john.pot
 
 * Use `john` to crack passwords in the Linux `shadow` file with:
 +
+[source,shell]
 ----
 cd ~
 sudo cp /etc/shadow shadow
@@ -114,7 +115,7 @@ john shadow
 * Create several user accounts, set their passwords, and try to crack those passwords.
 * Use the following command to show any cracked passwords.
 +
-[source,sh]
+[source,shell]
 ----
 john shadow --show
 ----

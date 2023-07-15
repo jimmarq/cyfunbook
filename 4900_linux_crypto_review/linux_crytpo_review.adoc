@@ -24,6 +24,7 @@ Test your skills by completing as many of these challenges as possible. For each
 . Create a file in your home directory called `program.sh`.
 . Edit the file in `nano` to add the following text:
 +
+[source,shell]
 ----
 echo 'This takes practice.'
 ----
@@ -36,9 +37,9 @@ Save the file in `nano`.
 . Copy `program.sh` to `program_backup.sh`.
 . Edit `/etc/hosts` to add the following content:
 +
-----
+....
 # I'm not actually changing anything
-----
+....
 +
 Be sure to include the `#` at the beginning of the line.
 +
@@ -54,9 +55,9 @@ Use the Cyber Chef as appropriate: https://gchq.github.io/CyberChef/
 
 . The following ciphertext was encrypted using the Caesar cipher. Decrypt it.
 +
-----
+....
 Csy'vi hsmrk kviex
-----
+....
 . Encrypt a message using the Caesar Cipher. Include the decryption key in your submission.
 . Clear any Cyber Chef recipes. Add the RSA Encrypt operation. A public key must be provided. Whose public key would go in this space?
 . Go to https://www.nmu.edu.
@@ -66,9 +67,9 @@ Csy'vi hsmrk kviex
 .. What kind of cryptography is being used to establish a secure connection?
 . Decrypt the following ciphertext.
 +
-----
+....
 b79acb634559bdab9f66afb96b6e5db7c4b403144110d46beb7b9125b2163748ce23da5777d9508536d767372d8d7a03
-----
+....
 +
 Use the cyber chef. It was encrypted with `AES`. The encryption mode was `CBC`. The key is `wildcatswildcats` (UTF8). The IV was `abcdefghijklmnop` (UTF8).
 
@@ -101,24 +102,24 @@ Use the cyber chef. It was encrypted with `AES`. The encryption mode was `CBC`. 
 
 . Crack this 3-character password. It was hashed using bcrypt. It only uses lower-case characters (a-z).
 +
-----
+....
 $2a$10$qvsCr2TVnxiGUN.LP.4nj.XqPTxLrdU5tCXVvskXrGhPivXNv93Hi
-----
+....
 //cat
 . Crack this 5-digit password. It was hashed using bcrypt. It only uses digits (0-9).
 +
-----
+....
 $2a$10$.Uhzxlc5/elaQi7AJZswDOonIe.Q5rJ4gZQTgtqoey3ifvC19uHQG
-----
+....
 //49855
 . Crack these SHA2-256 password hashes.
 +
-----
+....
 f02c96357481972443a2eb6d2861c803fa7790fb7d0225b2f54b6beba964f4ad
 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
 583f292b1159c0b38eeff9a35ee92ad1656b705045e8231bdf72e1072f360f2f
-----
+....
 //basketball
 //password
 //admin

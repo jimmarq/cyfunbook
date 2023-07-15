@@ -18,14 +18,14 @@ Note: `nslookup` has two modes--interactive and non-interactive. We will only us
 . Run these commands in a command-line interface. The instructions will show the Kali terminal, but the commands will work in PowerShell or the command prompt.
 . Determine google.com's IP address.
 +
-[source,sh]
+[source,shell]
 ----
 nslookup google.com
 ----
 +
 The output will look something like the following.
 +
-----
+....
 Server:         192.168.1.1
 Address:        192.168.1.1#53
 
@@ -34,21 +34,21 @@ Name:   google.com
 Address: 142.250.191.206
 Name:   google.com
 Address: 2607:f8b0:4009:805::200e
-----
+....
 +
 The *Server* is the DNS server that resolved the domain name. In this case, my home router was responsible for resolving Google's IP address. The *Address* includes the port number. DNS uses port 53. Two IP addresses are listed for Google. The IPv4 address and the IPv6 address. You may have received different IP addresses for Google. Google has many, many, servers, and it will give people different IP addresses to distribute the load.
 +
 The answer returned is *non-authoritative* in that it did not come directly from Google's nameserver. Instead, the answer came from a DNS resolver that contacted Google's nameserver. We can still trust the results, but the information may be out of date (uncommon) or incorrect (even less likely).
 . It is possible to query a specific DNS server. This could be useful when setting up a new server inside an organization. In `nslookup`, the name or IP address of the DNS server can be added at the end. Google maintains a public DNS server at 8.8.8.8. We can ask it about Google's DNS information.
 +
-[source,sh]
+[source,shell]
 ----
 nslookup google.com 8.8.8.8
 ----
 +
 The result is similar to the response from my DNS server, but note that different IP addresses are returned.
 +
-----
+....
 Server:         8.8.8.8
 Address:        8.8.8.8#53
 
@@ -57,33 +57,33 @@ Name:   google.com
 Address: 142.250.190.46
 Name:   google.com
 Address: 2607:f8b0:4009:81b::200e
-----
+....
 . Specific record types can be queried. *A* records are IPv4. *AAAA* are IPv6. *MX* are used for email. The *any* keyword can be used for all record types. The following command would find mail records, which would be useful if my email server needed to send an email to an employee with a @google.com email address.
 +
-[source,sh]
+[source,shell]
 ----
 nslookup -type=mx google.com
 ----
 +
 The result was:
 +
-----
+....
 Server:         192.168.1.1
 Address:        192.168.1.1#53
 
 Non-authoritative answer:
 google.com      mail exchanger = 10 smtp.google.com.
-----
+....
 . The following command asks the nameserver for all record types from google's 8.8.8.8 resolving nameserver.
 +
-[source,sh]
+[source,shell]
 ----
 nslookup -type=ANY google.com 8.8.8.8
 ----
 +
 The result is long.
 +
-----
+....
 Server:         8.8.8.8
 Address:        8.8.8.8#53
 
@@ -133,19 +133,19 @@ google.com      nameserver = ns4.google.com.
 google.com      nameserver = ns3.google.com.
 google.com      text = "MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"
 google.com      text = "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"
-----
+....
 . Usually, we want to look up a domain name and find the IP address information. That is a *forward lookup.* A *reverse lookup* is useful when we know an IP address, and we want to find the domain name information associated with it. The following shows a reverse lookup using one of the IP addresses recently found in a forward lookup.
 +
-[source,sh]
+[source,shell]
 ----
 nslookup 74.125.129.101              
 ----
 +
 The result is:
 +
-----
+....
 101.129.125.74.in-addr.arpa     name = jm-in-f101.1e100.net.
-----
+....
 +
 It might not be immediately obvious who owns the domain 1e100.net. A "googol" is a 1 followed by 100 zeros, 1e100 in scientific notation. That's where "Google" got its name. So I can be fairly confident that the IP address is associated with Google.
 

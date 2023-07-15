@@ -95,7 +95,7 @@ Sometimes you need to take action based on the result of comparing two values. "
 
 . In the Kali terminal, create *if.py* with the `touch` command.
 +
-[source,sh]
+[source,shell]
 ----
 touch if.py
 ----
@@ -124,22 +124,22 @@ Line 6 will only be evaluated if lines 2 and 4 are both false. We know the score
 . Run the code (*python if.py*).
 . Enter a student score when prompted. If you enter *550*, you should see:
 +
-----
+....
 Please enter the student score to evaluate: 550
 The student made it!
-----
+....
 . Run the program again (*python if.py*) and enter *419* for the score. You should see:
 +
-----
+....
 Please enter the student score to evaluate: 419
 Almost! The student earned a free retake.
-----
+....
 . Run the program again and enter *330* for the score. You should see:
 +
-----
+....
 Please enter the student score to evaluate: 330
 The student needs to study more.
-----
+....
 
 One of the biggest problems people have when programming *if/elif/else* statements is not being precise with comparison operators. Double-check that you did not accidentally use *>* when you should have used *>=*, for example.
 

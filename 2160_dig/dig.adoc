@@ -18,7 +18,7 @@ Suppose you want to visit yahoo.com. You want to be able to type yahoo.com in yo
 . Open a terminal in Kali.
 . Run the following command to query DNS information for yahoo.com
 +
-[source,sh]
+[source,shell]
 ----
 dig yahoo.com
 ----
@@ -29,7 +29,7 @@ image::dig-output.png[dig output]
 Dig tells us that to access yahoo.com, we should go to the IP addresses listed in the response. The record type is "A" for IPv4 addresses. There are multiple IP addresses because yahoo.com is a popular site, and yahoo.com wants to distribute the load to different web servers. The response came from my DNS server, which in this case, was my home router.
 . Push the up arrow key to find the most recent command and run it again. Run it a few times. (If you want to make life hard on yourself, type it out again.)
 +
-[source,sh]
+[source,shell]
 ----
 dig yahoo.com
 dig yahoo.com
@@ -39,7 +39,7 @@ dig yahoo.com
 Notice that the order of IP addresses changes. Yahoo wants this to happen to help spread out the load.
 . You can query different types of records using `dig`. If you wanted to send somebody who worked at Yahoo an email, your email provider needs to look up where to send @yahoo.com email addresses to. Query email information using the `MX` record type.
 +
-[source,sh]
+[source,shell]
 ----
 dig yahoo.com MX
 ----
@@ -50,7 +50,7 @@ image::yahoo-mx.png[yahoo's MX records]
 Notice that instead of an IP address, we have several domains. Yahoo uses this strategy to help distribute the load between its email servers.
 . You can pick one of the email servers and look up its IP address. (You may have to modify the command based on the output of the previous `dig` command. Use one of the server names listed.)
 +
-[source,sh]
+[source,shell]
 ----
 dig mta7.am0.yahoodns.net
 ----
@@ -65,7 +65,7 @@ With a reverse DNS lookup, you know the IP and want the name associated with it.
 
 . In the Kali terminal, run the following command to do a rever DNS lookup.
 +
-[source,sh]
+[source,shell]
 ----
 dig -x 74.6.231.20
 ----
@@ -91,7 +91,7 @@ If I saw the 74.6.231.20 IP address in my logs, and I did a reverse lookup and f
 * What does the output of those `dig` commands tell you about your school's infrastructure?
 * Ping google.com and see what IP address returned. (Press control+c to stop the ping.) Do a reverse DNS lookup for that IP address. To what domain name does the IP address point? The IP address that you will get when you ping google.com will very likely be different than the IP address in the screenshot below.
 +
-[source,sh]
+[source,shell]
 ----
 ping google.com
 ----

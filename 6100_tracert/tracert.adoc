@@ -23,7 +23,7 @@ The Linux `traceroute` utility can work poorly in a virtual machine. The followi
 . Open a Kali Linux terminal.
 . Run the following command.
 +
-[source,sh]
+[source,shell]
 ----
 sudo traceroute -I google.com
 ----
@@ -32,7 +32,7 @@ sudo traceroute -I google.com
 +
 The output will be something similar to the following.
 +
-----
+....
  1  10.0.2.2 (10.0.2.2)  0.600 ms  0.475 ms  0.427 ms
  2  unifi.localdomain (192.168.1.1)  0.725 ms  3.468 ms  3.414 ms
  3  22.19.163.1 (22.19.163.1)  8.857 ms  9.537 ms  9.493 ms
@@ -48,7 +48,7 @@ The output will be something similar to the following.
 13  74.125.251.183 (74.125.251.183)  55.212 ms  55.171 ms  55.064 ms
 14  216.239.51.145 (216.239.51.145)  47.076 ms  47.452 ms  54.177 ms
 15  lga15s47-in-f78.1e100.net (172.217.4.78)  46.412 ms  46.273 ms  46.988 ms
-----
+....
 +
 It is easier to read in a table:
 +
@@ -76,13 +76,14 @@ The number in the first column is the hop number. Each line represents a differe
 The last 3 columns are the round trip times to that router. The `traceroute` utility sends 3 requests and reports the total trip time for each. It only took ~0.5 milliseconds for that to happen.
 . Trace the path to a different site. The site whitehouse.gov is an official United States government website.
 +
+[source,shell]
 ----
 sudo traceroute -I whitehouse.gov
 ----
 +
 Several of the first hops will likely be the same.
 +
-----
+....
  1  10.0.2.2 (10.0.2.2)  0.428 ms  0.286 ms  0.337 ms
  2  unifi.localdomain (192.168.1.1)  0.739 ms  0.894 ms  0.619 ms
  3  22.19.163.1 (22.19.163.1)  8.300 ms  8.748 ms  8.458 ms
@@ -96,16 +97,17 @@ Several of the first hops will likely be the same.
 11  lag-801.prr01chcgil.netops.charter.com (96.34.3.9)  49.839 ms  50.285 ms  50.023 ms
 12  eqix-ch1.automattic.com (208.115.136.239)  48.905 ms  48.639 ms  48.746 ms
 13  192.0.66.168 (192.0.66.168)  46.936 ms  51.060 ms  51.764 ms
-----
+....
 . Trace the route to your local city's website. I live in Marquette, Michigan and https://www.marquettemi.gov/ is my city's official website.
 +
+[source,shell]
 ----
 sudo traceroute -I marquettemi.gov
 ----
 +
 The packets do not stay in my hometown.
 +
-----
+....
  1  10.0.2.2 (10.0.2.2)  1.316 ms  0.248 ms  0.238 ms
  2  unifi.localdomain (192.168.1.1)  0.917 ms  0.948 ms  0.986 ms
  3  22.19.163.1 (22.19.163.1)  7.758 ms  10.470 ms  9.519 ms
@@ -127,7 +129,7 @@ The packets do not stay in my hometown.
 19  * * *
 20  * * *
 21  ip-107-180-48-116.ip.secureserver.net (107.180.48.116)  72.730 ms  73.576 ms  73.872 ms
-----
+....
 +
 Notice that hops 17-20 did not respond to the ICMP requests, so their data is unavailable.
 

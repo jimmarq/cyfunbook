@@ -17,25 +17,25 @@ Getting user input from the terminal is fairly easy. Creating graphical user int
 . Open a Kali terminal.
 . If you did not create the *mypython* directory, create it with the following command. (Even if the directory exists, the following command will not hurt anything--it will just tell you that the directory already exists.)
 +
-[source,sh]
+[source,shell]
 ----
 mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents/mypython
 ----
 . Create a file called *input.py* with the `touch` command.
 +
-[source,sh]
+[source,shell]
 ----
 touch input.py
 ----
 . Edit *input.py* with nano.
 +
-[source,sh]
+[source,shell]
 ----
 nano input.py
 ----
@@ -58,7 +58,7 @@ Line 4 prints a final message. The text, "Okay, let's go meet " is concatenated 
 . Exit `nano` by pressing *control+x*.
 . Run the program.
 +
-[source,sh]
+[source,shell]
 ----
 python input.py
 ----
@@ -69,7 +69,7 @@ image::first-run-narnia.png[First Run of input.py]
 . Run the program multiple times. Try leaving the input blank, enter a number, or enter random stuff. You will notice that the program does not validate the input at all. We do not have the tools to validate the data, yet, but we should recognize that this is a weakness of the program.
 . Edit *input.py* with `nano`.
 +
-[source,sh]
+[source,shell]
 ----
 nano input.py
 ----

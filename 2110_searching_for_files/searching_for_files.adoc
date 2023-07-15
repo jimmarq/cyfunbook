@@ -16,13 +16,13 @@ The `locate` command can be used to find files by filename. The locate command s
 . Launch a Kali terminal.
 . If your Kali virtual machine is new, the database of files might not be updated. Run the following command to update the database.
 +
-[source,sh]
+[source,shell]
 ----
 sudo updatedb
 ----
 . Imagine that you have heard that Linux has a system log called "syslog." Run the following command to find files that have "syslog" in the file name.
 +
-[source,sh]
+[source,shell]
 ----
 locate syslog
 ----
@@ -35,7 +35,7 @@ image::locate-syslog-output.png[locate syslog output]
 . By default, `locate` finds matches in the directory or file name. So a search for "bunny" would find /home/kali/bunny/easter.txt and /home/kali/bunny.txt.
 . To search only for file names (not directories), use the `-b` option.
 +
-[source,sh]
+[source,shell]
 ----
 locate -b syslog
 ----
@@ -48,37 +48,37 @@ Remember that `locate` only looks at file names--it does not look at any of the 
 
 . Run the following command in the Kali terminal to ensure you are in your home directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~
 ----
 . Run the following command to delete the cyfunfiles directory (if it exists).
 +
-[source,sh]
+[source,shell]
 ----
 rm -rf cyfunfiles
 ----
 . Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
 +
-[source,sh]
+[source,shell]
 ----
 git clone https://github.com/jimmarq/cyfunfiles.git
 ----
 . Change directories to the *cyfunfiles* directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd cyfunfiles
 ----
 . Change directories to the *linux_finding* subdirectory.
 +
-[source,sh]
+[source,shell]
 ----
 cd linux_finding
 ----
 . Look at the files in the folder with `ls`.
 +
-[source,sh]
+[source,shell]
 ----
 ls
 ----
@@ -87,7 +87,7 @@ ls
 image::linux_finding_files.png[contents of cyfunfiles]
 . Use the `locate` command to look for fruits.txt.
 +
-[source,sh]
+[source,shell]
 ----
 locate fruits.txt
 ----
@@ -95,7 +95,7 @@ locate fruits.txt
 If you just checked out the files from GitHub for the first time, the `locate` command could not find fruits.txt, even though you obviously see it.
 . Run the following command to update the database of files on your system.
 +
-[source,sh]
+[source,shell]
 ----
 sudo updatedb
 ----
@@ -103,7 +103,7 @@ sudo updatedb
 You may need to enter the password `kali` if prompted. This command will take about 15 seconds to run. It is indexing all of the file names on your system.
 . Run the following command to look for fruits.txt again.
 +
-[source,sh]
+[source,shell]
 ----
 locate fruits.txt
 ----
@@ -116,7 +116,7 @@ The `grep` command looks inside files for specific contents. The syntax is `grep
 
 . Run the following command to look for the word *celery* in the file veggies.txt.
 +
-[source,sh]
+[source,shell]
 ----
 grep "celery" veggies.txt
 ----
@@ -124,7 +124,7 @@ grep "celery" veggies.txt
 If the output is not blank, it means the text was found.
 . Search for the word "strawberry" in veggies.txt.
 +
-[source,sh]
+[source,shell]
 ----
 grep "strawberry" veggies.txt
 ----
@@ -135,7 +135,7 @@ In this case, there is no output, meaning that the search did not return any res
 image::grep-results-fruits-and-veggies.png[search results for grep--one for celery and none for strawberry]
 . Run the following command to look for the word *banana* in all files in the current folder.
 +
-[source,sh]
+[source,shell]
 ----
 grep "banana" ./*
 ----

@@ -31,33 +31,33 @@ Do not proceed to the next section until you have an account and password succes
 . Open a Kali terminal.
 . Run the following command to connect to sdf.org using the `ssh` program. When you run the command, enter your username instead of *jimarqua*.
 +
-[source,sh]
+[source,shell]
 ----
 ssh jimarqua@tty.sdf.org
 ----
 . The first time you connect, you will be asked to accept the server's key. Type *yes* and press enter to confirm that you want to accept the connection.
 +
-----
+....
 The authenticity of host 'tty.sdf.org (205.166.94.16)' can't be established.
 ED25519 key fingerprint is SHA256:ZjwbO7AU8rHJExYrmZS2LqGZ7WfdoELfMrF54W92PYA.
 This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
-----
+....
 . You will be prompted for your password. NOTE: when you type or paste your password, the cursor will not move. This confuses many people, but this is a basic security feature. The login is hiding how long your password is from potential hackers. Just type confidently or right-click and paste your password and you will be fine.
 . You'll see several pages of information. Read it if you want.
 . Press enter to page through the information.
 . Notice the final prompt.
 +
-----
+....
 rie:/sdf/udd/j/jimarqua>
-----
+....
 +
 This is your home directory on the remote server. The commands that you type right now will be run on the remote server. The server will send the result back to your Kali Linux terminal.
 . Remember that you logged into Kali Linux with the *kali* user account. Run `whoami` to determine your current account in your SSH connection.
 +
-----
+....
 rie:/sdf/udd/j/jimarqua> whoami
-----
+....
 +
 You should see the username that you just created, not *kali*. In the background, you are still logged into Kali Linux with your *kali* username, but for the purposes of this connection, you are using your new username on the remote system.
 . Run the `tetris` command to launch the game. Quit whenever you want.
@@ -67,7 +67,7 @@ You should see the username that you just created, not *kali*. In the background
 Sidebar: Successful cybersecurity professionals are curious. There is no way to teach you to want to push the boundaries of your knowledge and experience. If you connected to sdf.org and did not want to poke around, that's fine, but shows a lack of interest. If you don't care, you won't put in the time or effort needed to succeed long term. This goes for any career, but it is especially true in cybersecurity because systems evolve so quickly that you must continually learn new things. Most of the chapters in this book hold your hand and walk you through problems step-by-step, but in "the real world" you will eventually need to be in a position to determine what those steps are without an expert looking over your shoulder telling you what to do. /end of rant
 . When you are done on sdf.org, run `exit`. It will take a few seconds to fully disconnect. You should see a prompt like the following before returning to the Kali prompt.
 +
-----
+....
 Good Bye from the S D F - 1 ..
 
 Please 'validate' or join 'arpa' soon.
@@ -75,7 +75,7 @@ Your support is appreciated!
 
 Thank you!
 Connection to tty.sdf.org closed.
-----
+....
 . At this point, the remote connection has closed. Now, the command that you run will be run on your local Kali Linux computer.
 
 SSH is an important tool for working with distributed computers. You can use SSH to connect to network equipment like routers and switches. Inside an organization, you could use SSH to connect to a web server or database server. With cloud computing, you might use SSH to connect to a virtual machine running in a data center hosted by Amazon, Google, or Microsoft.

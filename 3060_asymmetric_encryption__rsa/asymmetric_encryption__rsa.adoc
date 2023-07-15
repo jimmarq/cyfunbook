@@ -42,13 +42,13 @@ The GnuPG application can be used to create RSA key pairs.
 . Launch your Kali virtual machine.
 . Open a terminal and run the following command to ensure that you are in your home directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~
 ----
 . Run the following command to start the key creation wizard.
 +
-[source,sh]
+[source,shell]
 ----
 gpg --full-generate-key
 ----
@@ -80,14 +80,14 @@ Right now, the private key/public key pair only lives on your computer. But you 
 
 . Export your public key with the following command. (Replace the email address with the email that you used when creating your key.)
 +
-[source,sh]
+[source,shell]
 ----
 gpg --output public.key --armor --export bugs@bunny.com
 ----
 . Run `ls` and verify that the file public.key exists in the directory.
 . View the contents of the key file with the `cat` command.
 +
-[source,sh]
+[source,shell]
 ----
 cat public.key
 ----
@@ -99,13 +99,13 @@ image::public-key-cat.png[public key block]
 . Notice that the text says "PGP" public key block. Think of PGP as a wrapper for RSA.
 . Export your private key with the following command.
 +
-[source,sh]
+[source,shell]
 ----
 gpg --output private.key --armor --export-secret-key bugs@bunny.com
 ----
 . Run the following command to display the contents of the key file.
 +
-[source,sh]
+[source,shell]
 ----
 cat private.key
 ----
@@ -121,7 +121,7 @@ Signing a file verifies that you are the person who had control of the file when
 
 . Run the following commands to create a text file and edit it in `nano`.
 +
-[source,sh]
+[source,shell]
 ----
 touch message.txt
 nano message.txt
@@ -133,7 +133,7 @@ image::nano-message.png[in-n-out is better than five guys]
 . Save the file with control+o. Exit with control+x.
 . Now you will clear-sign the file. Clear signing leaves the file in a readable format.
 +
-[source,sh]
+[source,shell]
 ----
 gpg --clearsign message.txt
 ----
@@ -143,7 +143,7 @@ gpg --clearsign message.txt
 image::confirm-passphrase.png[confirm passphrase]
 . There will not be a file called message.txt.asc in the directory. View it with the `cat` command.
 +
-[source,sh]
+[source,shell]
 ----
 cat message.txt.asc
 ----
@@ -162,7 +162,7 @@ Clearsigning the file left it in a human-readable format. But what if you were c
 
 . Run the following command to encrypt data *for* yourself. (Replace the email address with the one you used previously.)
 +
-[source,sh]
+[source,shell]
 ----
 gpg --encrypt -r bugs@bunny.com message.txt 
 ----
@@ -171,7 +171,7 @@ The above command encrypts the file for the recipient bugs@bunny.com using Bugs'
 . If the command works, a file message.txt.gpg will now exist in the directory.
 . Use `cat` to view its content.
 +
-[source,sh]
+[source,shell]
 ----
 cat message.txt.gpg
 ----
@@ -187,7 +187,7 @@ Now, the only person in the world who can decrypt this is the person with the pr
 
 When you are finished with the exercise, you can delete the 5 files created in your home directory.
 
-[source,sh]
+[source,shell]
 ----
 rm message.*
 rm *.key
@@ -197,7 +197,7 @@ The "*" character is the wildcard character that matches any character. The abov
 
 The keys you created still exist on your computer, but it is fine to leave them there. If you really want to delete the keys from your system, run these commands (replacing the email as needed). The first command deletes the private key, and the second command deletes the public key.
 
-[source,sh]
+[source,shell]
 ----
 gpg --delete-secret-keys bugs@bunny.com
 gpg --delete-keys bugs@bunny.com

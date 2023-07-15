@@ -50,25 +50,25 @@ This section will have you create several files. Later, you will set the permiss
 . Open a new terminal window.
 . Run the following command to ensure that you are in your home directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~
 ----
 . Run the following command to create a new folder called `permissions`.
 +
-[source,sh]
+[source,shell]
 ----
 mkdir permissions
 ----
 . Change directories to the new *permissions* folder.
 +
-[source,sh]
+[source,shell]
 ----
 cd permissions
 ----
 . Use the `touch` command to create files called *program*, *watch*, and *write*.
 +
-[source,sh]
+[source,shell]
 ----
 touch program
 touch watch
@@ -81,7 +81,7 @@ At this point, there are now three files in the *permissions* folder.
 
 . Run `ls -l` to list the files in the long format which shows the permissions.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
@@ -105,24 +105,24 @@ There are times when you need to download a file from the internet and execute i
 
 . Open the *program* file in `nano`.
 +
-[source,sh]
+[source,shell]
 ----
 nano program
 ----
 . Add the following text
 +
-----
+....
 echo "Hello world"
-----
+....
 . Run the following command to add the execute permission.
 +
-[source,sh]
+[source,shell]
 ----
 chmod +x program
 ----
 . List the folder contents with the permissions.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
@@ -133,7 +133,7 @@ image::ls-l-after-plus-x.png[ls -l output after adding execute permissions]
 Note that the "x" permission now exists. Also, the word *program* is now in a different font to show that is can be executed.
 . Run the program with a period, forward slash, and the name of the program.
 +
-[source,sh]
+[source,shell]
 ----
 ./program
 ----
@@ -142,13 +142,13 @@ Note that the "x" permission now exists. Also, the word *program* is now in a di
 image::program-output.png[running program]
 . Remove the execute permission.
 +
-[source,sh]
+[source,shell]
 ----
 chmod -x program
 ----
 . Try running the program again.
 +
-[source,sh]
+[source,shell]
 ----
 ./program
 ----
@@ -166,20 +166,20 @@ In the previous section, the `chmod` command was used to grant execute permissio
 
 . Verify the permissions using `ls -l`.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
 . Note that the *kali* group does not have write access to any of the files.
 . Run the following command to grant the *kali* group access to the *write* file.
 +
-[source,sh]
+[source,shell]
 ----
 chmod g+w write
 ----
 . Check the permissions. Note that the group now has write access.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
@@ -193,20 +193,20 @@ Perhaps we want to protect a file so that changes are not made to it. Write acce
 
 . Verify the permissions using `ls -l`.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
 . Note that the *kali* user has write access to the *watch* file.
 . Run the following command to revoke write access.
 +
-[source,sh]
+[source,shell]
 ----
 chmod u-w watch
 ----
 . Try to edit the file in `nano`.
 +
-[source,sh]
+[source,shell]
 ----
 nano watch
 ----
@@ -220,31 +220,31 @@ image::unwritable.png[nano warning]
 
 . Create a new file called `permtest.txt`.
 +
-[source,sh]
+[source,shell]
 ----
 touch permtest.txt
 ----
 . Change its permissions to that the owner, groups, and others get full read, write and execute access (7, 7, and 7).
 +
-[source,sh]
+[source,shell]
 ----
 chmod 777 permtest.txt
 ----
 . Verify the permissions with `ls -l`
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
 . Change the permissions so that the owner have read and execute permissions, the group have read and write permissions, and others do not have any permissions.
 +
-[source,sh]
+[source,shell]
 ----
 chmod 560 permtest.txt
 ----
 . Verify the permissions using the `ls`.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
@@ -262,7 +262,7 @@ Because full owner, group, and other permissions can be set with a single comman
 
 When finished, the permissions folder can be deleted with the following commands.
 
-[source,sh]
+[source,shell]
 ----
 cd ~
 rm -rf permissions

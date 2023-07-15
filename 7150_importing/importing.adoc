@@ -22,15 +22,15 @@ Dates are hard. Really hard. Your average elementary school student knows how ca
 
 . From the Kali terminal, launch a python interactive shell.
 +
-[source,sh]
+[source,shell]
 ----
 python
 ----
 . You will now see prompts like:
 +
-----
+....
 >>>
-----
+....
 +
 The code you write at these prompts must be python code.
 . Run the following code to try to get the current date. (It will fail.)
@@ -58,9 +58,9 @@ datetime.date.today()
 +
 The code will now produce:
 +
-----
+....
 datetime.date(2022, 6, 20)
-----
+....
 +
 (Of course, the date produced will depend on the date when you run the code.)
 . Technically, you imported way more functionality than you needed to. If the only *datetime* feature we need is the *date* functionality, it can be imported specifically.
@@ -116,9 +116,9 @@ hashlib.sha256(b"watermelon").hexdigest()
 +
 The result should be:
 +
-----
+....
 '31a2d5282683edb3a22c565f199aa96fb9ffb3107af35aad92ee1cd567cfc25d'
-----
+....
 . Notice the "b" in front of "watermelon". The "b" tells python to treat the string "watermelon" as bytes (0s and 1s) using ASCII encoding.
 . To calculate the hash of a string variable, the *bytes()* function must be used.
 +
@@ -131,12 +131,14 @@ hashlib.sha256(bytes(password, 'ascii')).hexdigest()
 The hashlib.sha256() function requires bytes (not a string), so the *bytes()* function converts the string to bytes according to the character encoding specified.
 . To see what else is in the *hashlib* library, run the following code:
 +
+[source,python]
 ----
 dir(hashlib)
 ----
 . If you see something interesting, you can dig deeper into the official documentation at https://docs.python.org/3/library/hashlib.html.
 . For example, for password storage, *scrypt* would be better than *sha256*. Honestly, the python documentation does not give a great explanation for using *scrypt*. But, the following code would work.
 +
+[source,python]
 ----
 hashlib.scrypt(b"watermelon", salt=os.urandom(16), n=4, r=8, p=1)
 ----

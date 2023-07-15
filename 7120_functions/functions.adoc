@@ -52,25 +52,25 @@ In the next section, you will write several functions and test them.
 . Open a Kali terminal.
 . If you did not create the *mypython* directory, create it with the following command. (Even if the directory exists, the following command will not hurt anything--it will just tell you that the directory already exists.)
 +
-[source,sh]
+[source,shell]
 ----
 mkdir ~/Documents/mypython
 ----
 . Navigate to the *mypython* directory.
 +
-[source,sh]
+[source,shell]
 ----
 cd ~/Documents/mypython
 ----
 . Create a file called *convert.py* with the `touch` command.
 +
-[source,sh]
+[source,shell]
 ----
 touch convert.py
 ----
 . Edit *convert.py* with nano.
 +
-[source,sh]
+[source,shell]
 ----
 nano convert.py
 ----
@@ -96,17 +96,17 @@ There is a design problem with the code. If we wanted to convert 50 temperatures
 . Save the file (*control+o*) and exit `nano` (*control+x*).
 . Run the code to verify that it works.
 +
-[source,sh]
+[source,shell]
 ----
 python convert.py
 ----
 +
 You should see the following output.
 +
-----
+....
 30 degrees Celsius in Farenheight is: 86.0
 20 degrees Celsius in Farenheight is: 68.0
-----
+....
 . The code works, but it can be improved with functions.
 . Edit the code in `nano` (*nano convert.py*). You can hold down shift, then use the arrow keys to select all of the text. Press *control+k* to cut the text. Write the following code. Be sure to indent lines 2 and 3 four spaces.
 +

@@ -68,9 +68,9 @@ image::cafe-default-rotation.png[ROT13 Encryption of the Word "CAFE"]
 . There are 26 letters in the English alphabet, so there are only 26 possible unique rotations. (A rotation of 27 is the same thing as a rotation of 1.) In a brute force attack, every possible key is tried. 
 . Imagine that you find the following encrypted text.
 +
-----
+....
 Nby Wuymul Wcjbyl cm lyuffs hin mywoly. Sio mbiofx hin omy cn ni jlinywn xunu.
-----
+....
 . Paste that text into the *Input* in the CyberChef.
 . Increase or decrease the *Amount* of the ROT13 rotation until you find something that reads like English.
 . How hard was it to decrypt the message?

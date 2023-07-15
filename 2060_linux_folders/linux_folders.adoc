@@ -4,15 +4,14 @@ There are many important directories in Linux. The current chapter focuses on se
 
 == Learning Objectives
 
-You should be able to:
+You should be able to Describe the purpose of the following folders:
 
-* Describe the purpose of the following folders:
-** /home
-** /etc
-** /var
-** /root
-** /dev
-** /media
+* /home
+* /etc
+* /var
+* /root
+* /dev
+* /media
 
 == Linux Directories
 
@@ -29,7 +28,7 @@ Run the following commands and look at the output to answer the questions.
 
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /home
 ----
@@ -37,7 +36,7 @@ ls /home
 How many user accounts are there in the /home directory?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /home/kali
 ----
@@ -45,7 +44,7 @@ ls /home/kali
 What folders exist in your home directory?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /etc/apache2
 ----
@@ -53,7 +52,7 @@ ls /etc/apache2
 Apache is a web server. Apache 2 is simply version 2 of the web server. What configuration files exist for the Apache web server on this system?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /var
 ----
@@ -61,7 +60,7 @@ ls /var
 What folders exist in /var?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /var/www
 ----
@@ -69,7 +68,7 @@ ls /var/www
 Website files are often stored in /var/www. Does there seem to be a website there?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /root
 ----
@@ -77,7 +76,7 @@ ls /root
 What happened when you tried to list the root user's files and directories? Why might this be a good thing?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /dev
 ----
@@ -85,7 +84,7 @@ ls /dev
 There will be many devices that you do not recognize. What devices do you recognize? Can you guess what some of the others are?
 . Run:
 +
-[source,sh]
+[source,shell]
 ----
 ls /media
 ----

@@ -37,7 +37,7 @@ You may log into a Linux computer that has either `ifconfig` or `ip` but not bot
 . Open a terminal.
 . Run the following command to do a basic network scan with `namp`. The scan should take less than 30 seconds to complete.
 +
-[source,sh]
+[source,shell]
 ----
 nmap scanme.nmap.org
 ----
@@ -55,7 +55,7 @@ image::nmap-scanme.png[nmap output]
 image::scanme-website.png[scanme.nmap.org website]
 ** The server is running nping, a tool used for network testing. We could test this in Kali.
 +
-[source,sh]
+[source,shell]
 ----
 nping scanme.nmap.org -p 9929
 ----
@@ -69,7 +69,7 @@ Nmap is powerful. Options can be configured to do things like operating system d
 
 . In the Kali terminal, run:
 +
-[source,sh]
+[source,shell]
 ----
 nmap -A scanme.nmap.org
 ----
@@ -86,14 +86,14 @@ image::version-info.png[nmap output with version information]
 . Run `man nmap` in the terminal to see what other options are available.
 .. Find additional options that could be helpful. For example, you might simply try operating system detection with `-O`.
 +
-[source,sh]
+[source,shell]
 ----
 nmap -O scanme.nmap.org
 ----
 +
 But running this command requires administrative privileges. Run it again with `sudo`.
 +
-[source,sh]
+[source,shell]
 ----
 sudo nmap -O scanme.nmap.org
 ----

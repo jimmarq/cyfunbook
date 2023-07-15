@@ -22,14 +22,14 @@ Rainbow tables are fast. But, they have limitations. If passwords were hashed us
 
 . Run the following commands to elevate privileges and navigate to the folder where the rainbow table should be stored.
 +
-[source,sh]
+[source,shell]
 ----
 sudo su
 cd /usr/share/rainbowcrack
 ----
 . Run the following command to compute the rainbow table.
 +
-[source,sh]
+[source,shell]
 ----
 rtgen sha256 loweralpha 1 5 0 2400 240000 0
 ----
@@ -51,7 +51,7 @@ sha256 defines the hashing algorithm.
 It will take ~2 minutes to pre-compute all the hashes.
 . Look at the rainbow table you just created.
 +
-[source,sh]
+[source,shell]
 ----
 ls -l
 ----
@@ -59,7 +59,7 @@ ls -l
 There should be a file named `sha256_loweralpha#1-5_0_2400x240000_0.rt`. Note the size of the file.
 . The rainbow tables must be sorted before use. 
 +
-[source,sh]
+[source,shell]
 ----
 rtsort .
 ----
@@ -70,19 +70,19 @@ At this point, the rainbow table has been created and is ready for use. Note tha
 
 . Create a SHA256 hash.
 +
-[source,sh]
+[source,shell]
 ----
 echo -n "cup" | sha256sum 
 ----
 +
 The hash value should be:
 +
-----
+....
 c6171781d65f3ccce1135e3c89850cfbaa7f332fd72a1f8f6a841fbcf7fd362a
-----
+....
 . Crack the hash using the following command.
 +
-[source,sh]
+[source,shell]
 ----
 rcrack /usr/share/rainbowcrack -h c6171781d65f3ccce1135e3c89850cfbaa7f332fd72a1f8f6a841fbcf7fd362a
 ----
@@ -108,9 +108,9 @@ Rainbow tables are effective for what they do--analyze hashes for given characte
 * Create a new rainbow table with a different length and character set. Compare the size of the new rainbow table.
 * Crack the following SHA256 hash using your rainbow table.
 +
-----
+....
 99e85b4adee30cd5dd383215d0320f82851c4147ed871e3dea758e62cf9ab3f9
-----
+....
 
 == Reflection
 

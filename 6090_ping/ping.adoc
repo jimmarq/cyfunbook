@@ -27,14 +27,14 @@ The `ping` utility implements the ICMP *echo request* and *echo reply* messages.
 . Launch a terminal in Kali.
 . Run the following command to ping an IP address on the internet. In this case, the IP address is a public DNS server hosted by Google. Pinging a known IP address is a good way to test basic internet connectivity. *Press control+c to stop the ping after about 4 replies.*
 +
-[source,sh]
+[source,shell]
 ----
 ping 8.8.8.8
 ----
 +
 Evaluate the output.
 +
-----
+....
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=109 time=46.3 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=109 time=45.4 ms
@@ -44,7 +44,7 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 3021ms
 rtt min/avg/max/mdev = 45.447/45.845/46.317/0.312 ms
-----
+....
 +
 The first line shows the IP address being pinged. *56* is the amount of data being sent. The ICMP header adds 8 bytes, so that is why "*64* bytes" is seen in the subsequent lines. The IP header adds additional information for a total of *84* bytes. This example ping uses the default values for packet size. The size of the packet can be increased manually. In the past, some computers did not expect a very large `ping` packet and would crash if the packet was too large. This attack was known as the *ping of death*. 
 +
@@ -57,7 +57,7 @@ The *ttl* field is 109. When a packet first starts its journal on the internet, 
 The *time* field shows *latency*--the time it took to send and receive a reply. It is usually measured in milliseconds. The lower the number, the faster your connection. Generally, we want consistent numbers. You might be unsatisfied with your network if you had 10 packets with really low latency and 10 packets with really high latency. Especially for gaming, low latency is important. The *time* number does not evaluate bandwidth, but it is a decent heuristic for evaluating the network connection between two devices.
 . You can `ping` a domain name to test connectivity. (Again, press *control+c* to stop the ping after about 4 replies.)
 +
-[source,sh]
+[source,shell]
 ----
 ping google.com
 ----
@@ -81,7 +81,7 @@ The results show that DNS is successfully resolving Google's IP address. The fir
 Lines 2-4 show a different domain. A DNS reverse lookup was used to determine the domain associated with the IP address. Because a single server might host multiple domains, the domain you `ping` and the domain in the reverse lookup may not always match.
 . You can specify the number of pings with the *-c* (count) option.
 +
-[source,sh]
+[source,shell]
 ----
 ping -c 4 8.8.8.8
 ----
@@ -89,19 +89,19 @@ ping -c 4 8.8.8.8
 The output will be similar to before. The only difference is that it stops automatically.
 . See if netflix.com is up.
 +
-[source,sh]
+[source,shell]
 ----
 ping -c 4 netflix.com
 ----
 +
 Evaluate the output.
 +
-----
+....
 PING netflix.com (54.160.93.182) 56(84) bytes of data.
 
 --- netflix.com ping statistics ---
 4 packets transmitted, 0 received, 100% packet loss, time 3081ms
-----
+....
 +
 The output shows that the netflix.com domain name was successfully resolved--that's good. But there was 100% packet loss. 4 packets were transmitted, and 0 were received. Check your web browser and see if netflix.com can be loaded (it probably can). So what is happening? Likely, netflix.com simply does not respond to `ping` requests. The network engineers at Netflix decided to block ICMP requests.
 

@@ -15,7 +15,7 @@ You should be able to use python functions to:
 
 . Open a terminal and run `python` to start an interactive shell.
 +
-[source,sh]
+[source,shell]
 ----
 python
 ----

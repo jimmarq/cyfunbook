@@ -44,6 +44,7 @@ image::alice-output.png[Value of $name is retrieved]
 . Assign a text value to the variables.
 . In line 5, write a short MadLib, such as:
 +
+[source,powershell]
 ----
 Write-Host "While $adverb walking one day I caught my $adjective $noun $verb_ending_in_ing bread to ducks at the park."
 ----

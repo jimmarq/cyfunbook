@@ -58,11 +58,11 @@ The command should work.
 . In the PowerShell prompt, run `Update-Help`.
 .. The command will look like it is working, then fail with a big, ugly error message. In that error message will be a message like:
 +
-----
+....
 Access is denied. The command could not update Help topics for the Windows PowerShell core modules, or for any modules
 in the $pshome\Modules directory. To update these Help topics, start Windows PowerShell by using the "Run as
 Administrator" command, and try running Update-Help again.
-----
+....
 . Click the down arrow to open the new tab options, hover your mouse over the PowerShell option, and Terminal will show you the different ways the tab can be opened.
 +
 .New Tab Options

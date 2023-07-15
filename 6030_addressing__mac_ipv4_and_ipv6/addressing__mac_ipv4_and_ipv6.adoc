@@ -101,8 +101,9 @@ image::bob-ipconfig-all.png[ipconfig /all on Bob]
 . Notice that in this output, the MAC address is called the "Physical Address."
 . Verify connectivity with Alice using the `ping` command. Remember that Alice's IP address is 192.168.1.25.
 +
+[source,powershell]
 ----
-c:\> ping 192.168.1.25
+ping 192.168.1.25
 ----
 . The ping should be successful. You should see four replies from 192.168.1.25.
 +
@@ -135,8 +136,9 @@ image::bob-set-ipv6-address.png[Bob's IPv6 Settings]
 . Launch the *Command Prompt* again.
 . Modify the previous `ping` command to use Alice's IPv6 address.
 +
+[source,powershell]
 ----
-c:\> ping 2001:db8:acad:1::25
+ping 2001:db8:acad:1::25
 ----
 . You should see several successful replies from Alice's IPv6 address.
 +

@@ -18,7 +18,7 @@ Think about a regular dictionary that defines words. If you want to know the def
 
 . In a Kali terminal, run `python` to start an interactive python shell.
 +
-[source,sh]
+[source,shell]
 ----
 python
 ----

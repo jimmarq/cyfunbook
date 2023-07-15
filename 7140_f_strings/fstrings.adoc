@@ -54,23 +54,24 @@ f"The IP address is {ip}"
 +
 You should see the output:
 +
-----
+....
 'The IP address is 10.1.2.15'
-----
+....
 . Try using integers with f-strings.
 +
-[souce,python]
+[source,python]
 ----
 age = 5
 f"My sister is {age} years old."
 ----
 . You should see the output:
 +
-----
+....
 'My sister is 5 years old.'
-----
+....
 . Decimal numbers can be trickier. Run the following code:
 +
+[source,python]
 ----
 fraction = 2/3
 f"{fraction} of the pie has been eaten."
@@ -78,9 +79,9 @@ f"{fraction} of the pie has been eaten."
 +
 The output should be:
 +
-----
+....
 '0.6666666666666666 of the pie has been eaten.'
-----
+....
 +
 That's a few more decimal places than needed.
 . F-string allows you to format decimal numbers. In this case, we might only want 2 decimal places after the zero. In this case, we can format the variable with ":.2" by putting that in the curly brace after the variable name.
@@ -92,9 +93,9 @@ f"{fraction:.2} of the pie has been eaten."
 +
 The above code produces a much more readable output:
 +
-----
+....
 '0.67 of the pie has been eaten.'
-----
+....
 
 == Mad Lib Challenge
 

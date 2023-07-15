@@ -13,9 +13,9 @@ You should be able to:
 
 . The exact download page will change, so search the internet for:
 +
-----
+....
 vmware workstation player download
-----
+....
 . Follow the links until you find the download for a version of `VMware Workstation Player for Windows 64-bit Operating Systems`.
 . Download the file.
 . Launch the file when the download has finished.

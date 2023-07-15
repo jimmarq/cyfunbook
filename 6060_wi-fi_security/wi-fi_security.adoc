@@ -92,8 +92,9 @@ image::smartphone-settings.png[Smart Phone Settings]
 . On the *Desktop* tab, start the *Command Prompt*. (Apple and Android really do not want to give you access to run commands from a terminal. They could give you access to run these commands if they wanted to.)
 . Use the `ping` command to see if you can connect to the wireless router's IP address.
 +
+[source,powershell]
 ----
-c:\> ping 192.168.0.1
+ping 192.168.0.1
 ----
 +
 The ping should be successful.

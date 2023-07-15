@@ -9,6 +9,7 @@ Perform the following tasks in a Kali virtual machine.
 . Create a new file called `review1.py` in your ~/Documents/mypython directory.
 .. If you need to create this directory, run:
 +
+[source,shell]
 ----
 mkdir ~/Documents/mypython
 ----
@@ -21,9 +22,9 @@ mkdir ~/Documents/mypython
 . Create a string variable named `first_name` with the value of your first name (properly capitalized).
 . Create a string variable named `last_name` with the value of your last name (properly capitalized).
 . Print your first name and last name with a space between them using the `first_name` and `last_name` variables. (Do not modify the `first_name` or `last_name` variables to add a space.)
-. Print the `first_name` variable in lower case.
+. Print the `first_name` variable in lowercase.
 . Print the `last_name` variable in upper case.
-. Create a variable named `lower_name` that contains your full name, but lower case. Use the `first_name` and `last_name` variables to obtain your name.
+. Create a variable named `lower_name` that contains your full name, but lowercase. Use the `first_name` and `last_name` variables to obtain your name.
 .. For example, if `first_name` is "Jim" and `last_name` is "Marquardson", you should print "Jim Marquardson" using the variables and adding a space in between. Concatenate the three elements together.
 . Print `lower_name`.
 . Print the number of characters in `lower_name`.

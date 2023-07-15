@@ -59,9 +59,10 @@ image::three-pcs-cabled-to-switch.png[Three PCs Connected to the Switch]
 . Launch the *Command Prompt*.
 . Verify connectivity to *Alice* and *Bob* using the `ping` command.
 +
+[source,powershell]
 ----
-c:\> ping 192.168.1.25
-c:\> ping 192.168.1.50
+ping 192.168.1.25
+ping 192.168.1.50
 ----
 . The pings should be successful.
 +
