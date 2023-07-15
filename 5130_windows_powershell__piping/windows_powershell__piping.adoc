@@ -17,7 +17,7 @@ PowerShell, like Linux scripting, uses the vertical bar symbol for piping: `|`. 
 
 [source,powershell]
 ----
-PS C:\Users\Jim> command1 | command2
+command1 | command2
 ----
 
 In this example, command1 would run, and it would send its output to command2. This will be demonstrated in the following exercise.
@@ -35,12 +35,12 @@ image::mkdir-cd.png[mkdir pipe, cd pipe]
 . Run the following commands to create 4 files.
 +
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> Set-Content a1.txt -Value "aaaaaaaa"
-PS C:\Users\Jim\pipe> Set-Content a2.txt -Value "aaaaaaaa"
-PS C:\Users\Jim\pipe> Set-Content b1.txt -Value "bbbbbbbb"
-PS C:\Users\Jim\pipe> Set-Content b2.txt -Value "bbbb"
-```
+----
+Set-Content a1.txt -Value "aaaaaaaa"
+Set-Content a2.txt -Value "aaaaaaaa"
+Set-Content b1.txt -Value "bbbbbbbb"
+Set-Content b2.txt -Value "bbbb"
+----
 +
 Note that the file contents of a1.txt and a2.txt are identical.
 
@@ -50,21 +50,21 @@ The exercise is set up. Now it is time to run the Get-ChildItems (gci) and Get-F
 . Run the following code to list the files.
 +
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> gci
-```
+----
+gci
+----
 +
 .Output of the gci command
 image::gci.png[gci]
 . Run the following code to calculate the hash of each file individually. (The expected output will be shown in the screenshot below.)
 +
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> Get-FileHash a1.txt
-PS C:\Users\Jim\pipe> Get-FileHash a2.txt
-PS C:\Users\Jim\pipe> Get-FileHash b1.txt
-PS C:\Users\Jim\pipe> Get-FileHash b2.txt
-```
+----
+Get-FileHash a1.txt
+Get-FileHash a2.txt
+Get-FileHash b1.txt
+Get-FileHash b2.txt
+----
 +
 .Result of hashing files individually
 image::hash-individual.png[get-filehash commands]
@@ -74,9 +74,9 @@ So far so good. The hashes of all files were calculated, but this process does n
 . Run the following command to pipe the gci output into the Get-FileHash cmdlet.
 +
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> gci | Get-FileHash
-```
+----
+gci | Get-FileHash
+----
 +
 .Gci piped into Get-FileHash
 image::hash-piped.png[gci piped to get-filehash]
@@ -88,11 +88,11 @@ Notice that you did not have to specify the name of a file to hash in the Get-Fi
 Run the following code to see how different commands can be piped. Take time to read the code and think about what is happening.
 
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> gci | Sort-Object -Property Length
-PS C:\Users\Jim\pipe> gci | Sort-Object -Property Name
-PS C:\Users\Jim\pipe> gci | Get-Content | Sort-Object
-```
+----
+gci | Sort-Object -Property Length
+gci | Sort-Object -Property Name
+gci | Get-Content | Sort-Object
+----
 
 Notice that in the last example, there are two pipes. Many pipes can be used in a single line of code.
 
@@ -107,6 +107,7 @@ $friends = @("Alice", "Bob", "Eve", "Foo", "Bar")
 
 The $friends variable now contains a list of all of the friends. To randomly select one of the friends.
 
+[source,powershell]
 ----
 $friends | Get-Random
 ----
@@ -127,14 +128,15 @@ Run `$friends | Get-Random` multiple times. A different name will be displayed m
 
 == Cleanup
 
-Run the following code to delete the files and the pipe folder.
+Run the following code to delete the files and the pipe folder. When you run `pwd`, make sure you're in the correct folder before deleting files, otherwise you might delete files you care about.
 
 [source,powershell]
-```
-PS C:\Users\Jim\pipe> rm *.txt
-PS C:\Users\Jim\pipe> cd ..
-PS C:\Users\Jim> rm pipe
-```
+----
+pwd
+rm *.txt
+cd ..
+rm pipe
+----
 
 == Reflection
 

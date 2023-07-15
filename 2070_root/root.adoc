@@ -16,7 +16,7 @@ You should be able to:
 The `sudo` command can be used to run a single command with elevated privileges.
 
 . Open a new terminal.
-. Double-check that you are logged in with the `kali`` account and are in your home directory.
+. Double-check that you are logged in with the `kali` account and are in your home directory.
 +
 .Regular kali account in the home directory
 image::new-terminal.png[reguar kali account login]

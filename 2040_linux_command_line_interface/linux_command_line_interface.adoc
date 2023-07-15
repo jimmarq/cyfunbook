@@ -7,7 +7,7 @@ The Linux command-line interface (CLI) is one of the primary ways that Linux adm
 You should be able to:
 
 * Launch a terminal
-* Use the `pwd``, `cd``, `whoami`` and `ls`` commands
+* Use the `pwd`, `cd`, `whoami` and `ls` commands
 * Run basic commands with options
 
 == Basic Linux Commands
@@ -32,9 +32,14 @@ image::terminal-running.png[terminal running]
 
 === Print Working Directory Command: pwd
 
-The `pwd` command prints the name of the working directory.
+One of the hardest things for new Linux terminal users to understand is where they are in the filesystem. Files are organized in directories. Often, we run commands to load or create files. We must know where the commands will look for files. The `pwd` command helps confirm we are in the right place to create to load or create a file. The `pwd` command prints the name of the working directory.
 
 . Run `pwd` in a terminal by typing the command and pressing enter.
++
+[source,sh]
+----
+pwd
+----
 . You should see output similar to the following.
 +
 .pwd output
@@ -52,6 +57,7 @@ The `cd` command is used to change your working directory. This command lets you
 
 . Run:
 +
+[source,sh]
 ----
 pwd
 ----
@@ -59,11 +65,13 @@ pwd
 This will just check your current working directory.
 . Run:
 +
+[source,sh]
 ----
 cd /etc
 ----
 . Run:
 +
+[source,sh]
 ----
 pwd
 ----
@@ -77,11 +85,13 @@ The location should be:
 Using `cd` followed by a forward slash ('/') changes directory to directory relative to the *root*. The root of the file system is /.
 . Run:
 +
+[source,sh]
 ----
 cd /
 ----
 . Run:
 +
+[source,sh]
 ----
 pwd
 ----
@@ -93,14 +103,16 @@ You should see:
 ----
 . To quickly return to your home folder, run:
 +
+[source,sh]
 ----
 cd ~
 ----
 +
-The tilde is a special character used with the `cd` command to return to your home folder.
+The tilde is a special character that references the home folder.
 . Print your working directory. It should be `/home/kali`.
 . Run:
 +
+[source,sh]
 ----
 cd ..
 ----
@@ -109,6 +121,7 @@ The two periods tell the `cd` command to change directories to the parent folder
 . Print your working directory again. It should be `/home`.
 . Run:
 +
+[source,sh]
 ----
 cd kali
 ----
@@ -116,12 +129,121 @@ cd kali
 Because the Kali directory exists in the /home directory, and your working directory is current in /home, you can just type the directory name `kali` after the `cd` command to change directories to /home/kali.
 . Confirm that your working directory is now /home/kali.
 
+=== Absolute and Relative Paths
+
+Entering directory paths that start with `/` or `~` are `absolute` paths because they will take you to the same place no matter your present working directory.
+
+. In the terminal, run:
++
+[source,sh]
+----
+cd ~
+----
++
+Because `~` refers to the home directory, it will always take you to /home/kali (if logged in as the kali user).
+. Change to another directory with an absolute path.
++
+[source,sh]
+----
+cd /var/www/html
+----
++
+It would not matter if your previous working directory was `/`, `/home/kali`, `/etc`, or any other directory. Because the path started with `/`, you will be taken directory to `/var/www/html`.
+. Relative paths include `.`, `..`, files in the current directory, and subdirectories of the current directory.
+. The period (`.`) refers to the current directory. Run the following command to check your directory, change the current directory (`.`), and check your directory again.
++
+[source,sh]
+----
+pwd
+cd .
+pwd
+----
+. Two periods in a row (`..`) refer to the `parent` directory. Run the following commands to observe what happens when changing directories using `cd ..`.
++
+[source,sh]
+----
+pwd
+cd ..
+pwd
+----
++
+You should now be in the `/var/www` directory. 
+. Run `ls` to see what directories exist in /var/www.
++
+[source,sh]
+----
+ls
+----
+. Notice that the `html` directory is inside /var/www/html. (This should make sense since you were just there.) To navigate to the `html` folder, you can use a relative path with `cd`.
++
+[source,sh]
+----
+cd html
+----
++
+This is a `relative reference` to the `html` folder because it can be found relative to your present working directory.
+. Run `ls` to see the files inside of /var/www/html.
++
+[source,sh]
+----
+ls
+----
+. Print the contents of `index.html` using `cat`.
++
+[source,sh]
+----
+cat index.html
+----
++
+Again, the reference to index.html is relative because we did not give the `cat` command an absolute reference to the index.html file.
+. Run the following `cd` command with an absolute reference.
++
+[source,sh]
+----
+cd /var/www
+----
++
+Knowledge check: does the command use an absolute or relative reference?
+. Run the following command to print the `index.html` file in the `html` subdirectory.
++
+[source,sh]
+----
+cat html/index.html
+----
++
+This is a relative reference to `html/index/html`. This command would only succeed if my present working directory were /var/www.
+. Run the following command to print `index.html` again.
++
+[source,sh]
+----
+cat /var/www/html/index.html
+----
++
+This is an absolute reference. This command would work no matter the present working directory.
+. Navigate home using the `~` absolute path. Then verify your location with `pwd`.
++
+[souce,sh]
+----
+cd ~
+pwd
+----
+. Run the following two commands. One will work. One will not. Why?
++
+[source,sh]
+----
+cat html/index.html
+cat /var/www/html/index.html
+----
+
+The distinction between absolute and relative paths is important in many computing contexts, including Windows, website URLs, and importing modules when developing code, just to name a few.
+
 === User Command: whoami
 
-The `whoami` command tells you the account that you are currently logged in as. It might seem obvious right now since you have only logged in with the kali user account, but there are times when you may need to log into systems with multiple accounts.
+The `whoami` command tells you the account that you are currently logged in as. It might seem obvious right now since you have only logged in with the `kali` user account, but there are times when you may need to log into systems with multiple accounts.
 
 . Run:
 +
+[source,sh]
 ----
 whoami
 ----
@@ -140,11 +262,13 @@ The `ls` command is used to list files. This is such a common command that even 
 
 . Run the following command to navigate to your home folder.
 +
+[source,sh]
 ----
 cd ~
 ----
 . Run:
 +
+[source,sh]
 ----
 ls
 ----
@@ -155,6 +279,7 @@ You will see the list of files and directories in your home folder.
 image::ls-output.png[ls output in the home directory]
 . Currently, there are just a bunch of folders--no files. Notice that they are laid out left to right. To view them in a list from top to bottom, run:
 +
+[source,sh]
 ----
 ls -l
 ----

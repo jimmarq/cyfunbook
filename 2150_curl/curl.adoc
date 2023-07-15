@@ -1,6 +1,6 @@
 = Curl
 
-Curl is a tool for downloading files off of the internet. Sometimes it is used as parts of software installation instructions. Curl can also be used to done some basic reconnaissance such as banner grabbing.
+Curl is a tool for downloading files off of the internet. Sometimes it is used as part of software installation instructions. Curl can also be used to perform basic reconnaissance such as banner grabbing to determine server software versions.
 
 == Learning Objectives
 
@@ -43,14 +43,32 @@ Note the contents. Some of the text is human readable. You will see the hypertex
 image::curl-google-com.png[curl download of google.com]
 +
 Notice that the web page says "The document has moved." Google wants to send us to www.google.com instead of letting us access google.com (without the www at the beginning).
-. Run the following command to download www.google.com.
+. Run the following command to display www.google.com in the terminal.
 +
 [source,sh]
 ----
 curl www.google.com
 ----
 +
-Notice that the web page is much more complete.
+Notice that the web page is much more complete. But there is an issue. The contents are too large to display on one terminal screen.
+. Run the following command to display the contents page by page by piping the output into the `more` command.
++
+[source,sh]
+----
+curl www.google.com | more
+----
++
+Press enter to move down line by line, or the space bar to move down page by page.
+. The `less` command is a more advanced version of `more`. Try it out.
++
+[source,sh]
+----
+curl www.google.com | less
+----
++
+You can use the arrow keys to move up and down. Or use enter or enter to go down line by line. Space bar will page through the content.
++
+You can search the same way you would in vim. For example, type `/goo` and press enter to find instances of `goo` in the content.
 . Run `ls` to show that no files were created. Curl just displayed the web page in the browser.
 . Run the following command to download google.com to a file.
 +
@@ -95,6 +113,7 @@ One of the most useful pieces of information is that google.com is running the "
 ** cnn.com
 ** foxnews.com
 * Download your school's web page to a local file on your computer. Open the file in a web browser.
+* `wget` is another tool used to download files from the internet. Search online for differences between the two commands. Test then in the Linux terminal.
 
 == Reflection
 

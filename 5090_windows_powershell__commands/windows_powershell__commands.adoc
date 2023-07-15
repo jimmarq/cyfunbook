@@ -59,7 +59,7 @@ You are now ready to start running PowerShell code.
 +
 [source,powershell]
 ----
-PS C:\users\Jim> Get-ChildItem
+Get-ChildItem
 ----
 +
 Congratulations! You just ran some PowerShell code. Note that you essentially ran a 1-line program.
@@ -69,9 +69,9 @@ Notice that the Get-ChildItem output is similar to the Linux `ls` command.
 +
 [source,powershell]
 ----
-PS C:\users\Jim> get-childitem
-PS C:\users\Jim> GET-CHILDITEM
-PS C:\users\Jim> get-CHILDitem
+get-childitem
+GET-CHILDITEM
+get-CHILDitem
 ----
 +
 All of the commands should work. Unlike Linux, Windows does not care about the case of your commands, files, or folder names.
@@ -79,7 +79,7 @@ All of the commands should work. Unlike Linux, Windows does not care about the c
 +
 [source,powershell]
 ----
-PS C:\users\Jim> Write-Host "Hello world"
+Write-Host "Hello world"
 ----
 +
 The text "Hello world" should appear in the console. Writing to the host is often useful when writing long scripts to give status updates and debug scripts.
@@ -87,7 +87,7 @@ The text "Hello world" should appear in the console. Writing to the host is ofte
 +
 [source,powershell]
 ----
-PS C:\users\Jim> dir
+dir
 ----
 +
 You should see the same output as `Get-ChildItem` because the `Get-ChildItem` command was the command that Windows ran.
@@ -96,7 +96,7 @@ You should see the same output as `Get-ChildItem` because the `Get-ChildItem` co
 +
 [source,powershell]
 ----
-PS C:\users\Jim> gci *.txt
+gci *.txt
 ----
 +
 If you do not have any text files in the directory, the list will be empty.
@@ -104,7 +104,7 @@ If you do not have any text files in the directory, the list will be empty.
 +
 [source,powershell]
 ----
-PS C:\users\Jim> gci D*
+gci D*
 ----
 +
 You should have a few, including *Desktop*, *Documents*, and *Downloads*.
@@ -116,10 +116,11 @@ PowerShell has built-in help. But sometimes your system will not come with all o
 
 . Right-click the start menu and launch *Windows PowerShell (Admin)*. It is important to launch the option that has "(Admin)" in the name.
 . Windows will launch a User Account Control prompt asking you to verify that you really want to launch PowerShell in administrative mode. Confirm that you do.
-. Run `update-help` to start the update process.
+. Run `update-help` to start the update process. (Notice that the prompt will show `PS C:\WINDOWS\system32` instead of the regular user's home directory.)
 +
+[source,powershell]
 ----
-PS C:\WINDOWS\system32> Update-Help
+Update-Help
 ----
 . You will see progress bars like the following.
 +
@@ -135,7 +136,7 @@ image::update-error-ignore.png[Ignore these kinds of errors]
 +
 [source,powershell]
 ----
-PS C:\users\Jim> get-help get-childitem
+get-help get-childitem
 ----
 +
 The help will display the syntax for using the command, a description, and places to get more information.
@@ -143,7 +144,7 @@ The help will display the syntax for using the command, a description, and place
 +
 [source,powershell]
 ----
-PS C:\users\Jim> get-help gci -examples
+get-help gci -examples
 ----
 +
 Many examples will be listed and described.
@@ -165,7 +166,7 @@ image::ise-interface.png[ISE Features]
 .. Lines of code are automatically numbered. Line number
 .. The working directory is shown in the console.
 .. There are icons to run the current line of code or selected lines of code.
-.. The script file name appears on that file's tab. Multiple files can be open at the same time--each in their own tab.
+.. The script file name appears on that file's tab. Multiple files can be opened at the same time--each in its own tab.
 . Add the following code to the file.
 +
 [source,powershell]

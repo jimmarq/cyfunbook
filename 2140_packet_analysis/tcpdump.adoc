@@ -15,7 +15,7 @@ A packet is a single chunk of data sent over the network. Your computer may need
 
 Generally speaking, the software on our computers takes care of all of the network packets and we never have to investigate what is happening. But imagine that a company was planning to adopt network software to transmit data from its headquarters building to an off-site backup. That company might want to inspect the network packets to ensure that the data was transmitted in an encrypted format. Also, network administrators might need to troubleshoot problems. For example, a user might not be able to obtain an IP address automatically, and the network administrator could look at the network packets to determine what is going wrong.
 
-Intrusion detection systems (IDS) automatically scan packets coming into a network to look for malicious traffic patterns. These systems work much like antivirus. But where antivirus programs typically look for malware signatures in files, IDSs look for malicious signatures in network traffic.
+Intrusion detection systems (IDS) automatically scan packets coming into a network to look for malicious traffic patterns. These systems work much like antivirus. But where antivirus programs typically look for malware signatures in files, IDSs look for malicious signatures in network traffic. An IDS might be installed in a large network where it can inspect all incoming and outgoing internet traffic. In some ways, an IDS acts like `tcpdump` in that it captures network packets, but an ID runs continuously and has sophisticated analytics and reporting on top of it.
 
 == Use tcpdump to Capture Traffic
 
@@ -40,14 +40,24 @@ mkdir packets
 ----
 cd packets
 ----
+. Verify that you are in the correct directory using `pwd`.
++
+[source,sh]
+----
+pwd
+----
++
+You should be in /home/kali/packets.
 . Run the following command to start capturing packets with `tcpdump`.
 +
 [source,sh]
 ----
 sudo tcpdump -i eth0 -w telnet.pcap
 ----
++
+The `tcpdump` will capture packets on the eth0 interface and write the file to telnet.pcap.
 . Tcpdump will run until canceled.
-. Open a new terminal tab by clicking File > New Tab.
+. Open a new terminal tab by clicking File > New Tab (or open a new terminal window by pressing control+alt+t).
 +
 .Open a new terminal tab
 image::new-terminal-tab.png[new terminal tab]
@@ -78,7 +88,7 @@ image::telnet-pcap.png[pcap file]
 
 == Analyze Capture in Wireshark
 
-Wireshark is a graphical program that can be used to capture and analyze pcap files. You already made the capture file, so we will only use Wireshark to analyze the file.
+Wireshark is a graphical program that can be used to capture and analyze `pcap` files. You already made the capture file, so we will only use Wireshark to analyze the file.
 
 . In the terminal, run the following command to open the capture file in Wireshark.
 +
