@@ -1,0 +1,152 @@
+= Linux Processes and Daemons
+
+Modern operating systems run many applications simultaneously. Applications can be composed of one or more related processes. Processes that run in the background are `daemons`.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe processes
+* List running processes using several methods
+* Start and stop daemons using `systemctl`
+
+== List Running Processes
+
+In Linux, a process is a running program. When you run a command in the terminal, you launch a new process. When the command finishes running, the process closes.
+
+. Open a terminal. Run `whoami` to ensure that you are the `kali` user. If you are root, use `exit` to return to using the kali account.
+. Run the following `ps` command to show running processes.
++
+[source,shell]
+----
+ps
+----
++
+You should see output similar to the following:
++
+```
+  PID TTY          TIME CMD
+65147 pts/0    00:00:00 zsh
+65180 pts/0    00:00:00 ps
+```
++
+In this example, two processes are running: zsh (the terminal), and ps (showing the running processes). These are the only 2 processes that the current user (kali) is running.
+. Other processes are running. Run `ps -A` to show processes for all users.
++
+[source,shell]
+----
+ps -A
+----
++
+There will be many more processes. The first process will be `systemd`--a special process that organizes all daemons.
++
+```
+PID TTY          TIME CMD
+  1 ?        00:00:05 systemd
+  2 ?        00:00:00 kthreadd
+  3 ?        00:00:00 rcu_gp
+  4 ?        00:00:00 rcu_par_gp
+  5 ?        00:00:00 slub_flushwq
+  6 ?        00:00:00 netns
+```
++
+`PID` is the process identifier. `TTY` lists the terminal associated with the process, or a "?" if there is no terminal associated with it. The `TIME` column displays the cumulative CPU time. The `CMD` column shows the executable name.
+. Run `pstree` to show a hierarchal view of processes running on the system.
++
+[source,shell]
+----
+pstree
+----
++
+You will see output similar to the following.
++
+```
+systemd─┬─ModemManager───3*[{ModemManager}]
+        ├─NetworkManager───3*[{NetworkManager}]
+        ├─agetty
+        ├─colord───3*[{colord}]
+        ├─containerd───8*[{containerd}]
+        ├─cron
+        ├─2*[dbus-daemon]
+```
++
+An advantage of `pstree` over `ps` is that the processes are organized by the processes that spawned other processes. For example, `systemd` might launch the `cron` scheduler, so `cron` is listed as a child process of `systemd`.
+. It is sometimes useful to use `top` to show processes that are consuming lots of resources, such as memory or CPU. Information about processes is updated in real-time. It may be necessary to increate your terminal width to see all of the information.
++
+[source,shell]
+----
+top
+----
+. Sort the information in `top` using `M` (capital) for memory, or `P` (again, capital) for CPU, and `T` for time. This might be useful for determining if a program is using more memory than expected, for example.
+
+== Daemons
+
+Daemons (pronounced day-muns) are background processes. Daemons control things like the graphical user interface, networking, web services, SSH servers, and more. While there are different choices that Linux distribution maintainers can make about the appropriate way to manage daemons, many distributions are using a tool called `systemd` to make sure daemons run properly. For example, `systemd` might make sure that the network interfaces are working before starting the web services. The `systemctl` application is a key tool for managing and monitoring services with `systemd`.
+
+. Run the following command to check the status of the Apache web server.
++
+[source,shell]
+----
+systemctl status apache2
+----
++
+The service could be running, or in the example below, disabled.
++
+```
+○ apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: https://httpd.apache.org/docs/2.4/
+```
+. Verify that Apache is not running using the `curl` command that will try to load the web page.
++
+[source,shell]
+----
+curl localhost
+----
++
+You should receive a connection error.
+. Start the Apache service using `systemctl`. This command requires elevated permissions.
++
+[source,shell]
+----
+sudo systemctl start apache2
+----
+. Load the web page using `curl` again. This time, the HTML for the local website should be displayed in the terminal.
++
+[source,shell]
+----
+curl localhost
+----
+. Check the status of the Apache web server again.
++
+[source,shell]
+----
+systemctl status apache2
+----
++
+This stime, the service should show as running.
+. Stop the Apache web server.
++
+[source,shell]
+----
+sudo systemctl stop apache2
+----
+. Verify that it stopped.
+. Daemons are organizes as `units` in systemd. List all units for systemd with the following command.
++
+[source,shell]
+----
+systemctl list-unit-files
+----
++
+The Apache web server and many other services will be present. You can use the arrow keys to scroll through the list. Press `q` to quit.
+
+== Challenge
+
+* Investigate why some people in the Linux world do not like systemd. What are the alternatives?
+* Search online for a few services that you do not recognize to find out what they do.
+
+== Reflection
+
+* Should administrators be able to explain what *all* of the daemons are doing on a computer? How would they know what is appropriate?

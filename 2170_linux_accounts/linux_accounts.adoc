@@ -9,7 +9,7 @@ You should be able to:
 * List user accounts
 * Add user accounts
 * List the contents of the password file
-* Describe how password are hashed
+* Describe how passwords are hashed
 
 
 == The `passwd` File
@@ -39,7 +39,7 @@ _gvm:x:130:138::/var/lib/openvas:/usr/sbin/nologin
 king-phisher:x:131:139::/var/lib/king-phisher:/usr/sbin/nologin
 kali:x:1000:1000:,,,:/home/kali:/usr/bin/zsh
 ....
-. Note that the list of accounts may be fairly long. Services that run on your computer that keep your network working, run websites, or do other tasks in the background might run under a specific user account. Those accounts are granted permissions to resources on your computer so that they can carry out tasks, but those accounts will not be used for logging into the computer.
+. Note that the list of accounts may be fairly long. Services that run on your computer that keep your network working, run websites, or do other tasks in the background might run under a specific user account. Those `service accounts` are granted permissions to resources on your computer so that they can carry out tasks, but those accounts will not be used for logging into the computer. One way to verify that they cannot login is the last field in the `passwd` file that points their login script to /usr/sbin/nologin.
 
 
 == The `shadow` File
