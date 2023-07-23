@@ -97,7 +97,7 @@ sudo passwd chris
 +
 [source,shell]
 ----
-sudo /etc/shadow
+sudo cat /etc/shadow
 ----
 . Create another user named `pat` with the password `logger` (to match Chris' password).
 . View the passwords in the /etc/shadow file. Notice that even though their passwords are the same, the hashes are different. The hashes are different because random data called `salt` was added to the hashes.

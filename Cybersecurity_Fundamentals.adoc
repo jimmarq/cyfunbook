@@ -154,6 +154,10 @@ include::2170_linux_accounts\linux_accounts.adoc[]
 :imagesdir: 2180_processes_and_daemons
 include::2180_processes_and_daemons\processes_and_daemons.adoc[]
 
+<<<
+:imagesdir: 2990_linux_command_cheat_sheet
+include::2990_linux_command_cheat_sheet\2990_linux_command_cheat_sheet.adoc[]
+
 :leveloffset: 0
 <<<
 = Cryptography

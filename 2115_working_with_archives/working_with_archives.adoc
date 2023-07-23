@@ -100,10 +100,9 @@ ls
 +
 Your output should be similar to the following.
 +
-[source,shell]
-----
+```
 myfiles.tar.bz2 myfiles.tar.gz one.txt two.txt three.txt
-----
+```
 
 == Extract an Archive
 
