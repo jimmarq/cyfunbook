@@ -133,7 +133,7 @@ The packets do not stay in my hometown.
 +
 Notice that hops 17-20 did not respond to the ICMP requests, so their data is unavailable.
 
-The examples above might be interesting (if you're in how the internet works), but they generally tell us that the networks between me and the destination are working fine. The response times to all of the routes are fairly good. There are no problems with the network. If we were to run this test on a private network, we might find a router that is much slower than the others, indicating that there could be an opportunity to tweak the network to improve performance. Ethical hackers might run trace routes in order to map out the organization of a private network.
+The examples above might be interesting (if you're in how the internet works), but they generally tell us that the networks between me and the destination are working fine. The response times to all of the routes are fairly good. There are no problems with the network. If we were to run this test on a private network, we might find a router that is much slower than the others, indicating that there could be an opportunity to tweak the network to improve performance. Ethical hackers might run trace routes to map out the organization of a private network.
 
 == Challenge
 

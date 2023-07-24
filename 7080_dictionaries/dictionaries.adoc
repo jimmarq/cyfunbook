@@ -1,6 +1,4 @@
-= Dictionaries
-
-Author: Jim Marquardson
+= Python Dictionaries
 
 Dictionaries organize data using named values. Like lists, dictionaries hold multiple values. Each value is associated with a key.
 

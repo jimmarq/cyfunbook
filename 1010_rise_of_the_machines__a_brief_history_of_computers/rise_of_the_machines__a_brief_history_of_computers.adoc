@@ -61,19 +61,16 @@ Over the next 200 years, thousands of technological improvements made our modern
 ** Smartphones were not so smart before the iPhone. The iPhone form factor has been copied endlessly since its release.
 * 2009: Bitcoin launched
 * 2016: Oculus Rift virtual reality headset launches
-** The dream of virtual environment (the metaverse?) and augmented reality felt closer than ever.
+** The dream of virtual environments (the metaverse?) and augmented reality felt closer than ever.
 * 2019: Quantum computing "supremacy" achieved
 ** Quantum computers solve certain problems very well, but they will never replace traditional computers. Quantum computing may become an important complement to traditional computers.
+* 2022: ChatGPT brought generative artificial intelligence into mainstream use.
 
 == Exercise
 
-. List all of the things you have done today.
-. For each event, describe any information technology and how you used it.
-
-Examples could include listening to the radio, checking email, or texting somebody--all of which use information technology in some way.
+List all of the things you have done today. For each event, describe any information technology and how you used it. Examples could include listening to the radio, checking email, or texting somebody--all of which use information technology in some way.
 
 == Reflection
 
 * Has improved information technology come with any negatives? If so, what?
 * What will be the major information technologies that will shape our society in the next 50 years?
-

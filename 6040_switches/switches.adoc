@@ -1,7 +1,5 @@
 = Switches
 
-Author: Jim Marquardson
-
 Network switches allow multiple devices to communicate. Switches are the backbone of local area networks.
 
 == Learning Objectives
@@ -83,4 +81,3 @@ The switch learns who is connected to the network. When Eve pings Alice, Bob doe
 
 * The switch used in this exercise has 26 ethernet interfaces. How would you grow the network if you had more than 26 devices?
 * How do switches allow networks to grow?
-

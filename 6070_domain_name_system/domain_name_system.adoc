@@ -28,7 +28,7 @@ In this section, you will configure a DNS server to resolve a domain name to an 
 .. PC0 => PC - 192.168.1.5
 .. Server0 => Web - 192.168.1.10
 .. Server1 => DNS - 192.168.1.15
-. Connect the PC and both servers to the switch (any interface) using straight-through ethernet cable. The network should look similar to the following.
+. Connect the PC and both servers to the switch (any interface) using a straight-through ethernet cable. The network should look similar to the following.
 +
 .Network Topology
 image::dns-topology.png[.Network Topology]

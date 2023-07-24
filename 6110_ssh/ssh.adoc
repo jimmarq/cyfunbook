@@ -64,7 +64,7 @@ You should see the username that you just created, not *kali*. In the background
 .. In a very, very basic sense, this is cloud gaming that Google and Microsoft are currently testing, except that the graphics are extremely basic. The game is running on the remote computer, and you are getting the graphics sent back to you via SSH.
 . Explore what else you can do on the remote machine. Run the `help` command.
 +
-Sidebar: Successful cybersecurity professionals are curious. There is no way to teach you to want to push the boundaries of your knowledge and experience. If you connected to sdf.org and did not want to poke around, that's fine, but shows a lack of interest. If you don't care, you won't put in the time or effort needed to succeed long term. This goes for any career, but it is especially true in cybersecurity because systems evolve so quickly that you must continually learn new things. Most of the chapters in this book hold your hand and walk you through problems step-by-step, but in "the real world" you will eventually need to be in a position to determine what those steps are without an expert looking over your shoulder telling you what to do. /end of rant
+Sidebar: Successful cybersecurity professionals are curious. There is no way to teach you to want to push the boundaries of your knowledge and experience. If you connected to sdf.org and did not want to poke around, that's fine, but shows a lack of interest. If you don't care, you won't put in the time or effort needed for long-term success. This goes for any career, but it is especially true in cybersecurity because systems evolve so quickly that you must continually learn new things. Most of the chapters in this book hold your hand and walk you through problems step-by-step, but in "the real world" you will eventually need to be in a position to determine what those steps are without an expert looking over your shoulder telling you what to do. /end of rant
 . When you are done on sdf.org, run `exit`. It will take a few seconds to fully disconnect. You should see a prompt like the following before returning to the Kali prompt.
 +
 ....
@@ -84,4 +84,3 @@ SSH is an important tool for working with distributed computers. You can use SSH
 
 * What are the potential benefits of using a command-line interface (CLI) instead of a graphical user interface (GUI) when establishing remote connections?
 * How is SSH different from HTTPS? How are they similar?
-

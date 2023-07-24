@@ -44,7 +44,7 @@ Note that there are two subnetworks: the 192.168.1.0 and the 192.168.50.0 networ
 
 == Cable the Router
 
-Two distinct networks exist in the Packet Tracer network. The Test User will not be able to access the web server until we put a router in the network that can move packets from the Workstations network to the Data Center network. 
+Two distinct networks exist in the Packet Tracer network. The Test User will not be able to access the web server until we put a router in the network that can move packets from the Workstation network to the Data Center network. 
 
 . In the *[Network Devices]* category and *[Routers]* subcategory, add a *1941* router to the network.
 .. Change the label to *Routy McRouteFace*.
@@ -75,7 +75,7 @@ The Test User cannot communicate with the Web Server, yet. The router has to be 
 .. Set the IP address to 192.168.50.1.
 .. Set the Subnet Mask to 255.255.255.0.
 .. Check the *On* box to turn the interface on.
-. Click on the GigabitEthernet0/1 interface. (This is the interface connected to the Workstations switch.)
+. Click on the GigabitEthernet0/1 interface. (This is the interface connected to the Workstation switch.)
 .. Set the IP address to 192.168.1.1.
 .. Set the Subnet Mask to 255.255.255.0.
 .. Check the *On* box to turn the interface on.
@@ -93,7 +93,7 @@ All of the IP addresses are set correctly. The interfaces are all enabled. *BUT*
 
 == Default Gateway Setup
 
-When a computer needs to send a packet to a device on another network, the computer will send the packet to its *default gateway*. The default gateway should be a device that knows how to route packets--i.e. a router. In this section you will setup the default gateway on the devices.
+When a computer needs to send a packet to a device on another network, the computer will send the packet to its *default gateway*. The default gateway should be a device that knows how to route packets--i.e. a router. In this section, you will configure the default gateway on the devices.
 
 . Open the Test User PC.
 .. Click on the *Desktop* tab.
@@ -136,12 +136,12 @@ If the website did not load, double-check that the following settings are correc
 * Routy McRoutFace GigabitEthernet0/1
 ** IP address: 192.168.1.1
 ** Subnet Mask: 255.255.255.0
-* Double check that the Workstations switch is connected to the router's GigabitEthernet0/1 interface.
-* Double check that the Data Center switch is connected to the router's GigabitEthernet0/0 interface.
+* Double-check that the Workstation switch is connected to the router's GigabitEthernet0/1 interface.
+* Double-check that the Data Center switch is connected to the router's GigabitEthernet0/0 interface.
 
 == Challenge
 
-. Add a new PC to the Workstations switch.
+. Add a new PC to the Workstation switch.
 . Give it an appropriate IP address, subnet mask, and default gateway.
 . Access the Web Server's website from the new PC.
 
@@ -149,4 +149,3 @@ If the website did not load, double-check that the following settings are correc
 
 * Why is it important to segment networks?
 * Should access to the data center be restricted in some way?
-

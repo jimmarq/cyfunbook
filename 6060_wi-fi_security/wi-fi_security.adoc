@@ -13,7 +13,7 @@ You should be able to:
 
 It is difficult for a casual hacker to steal the signal from network cables. But wireless signals are different. By their very nature, wireless signals travel broadly and have the potential to be intercepted. Therefore, it is critical to protect wireless networks using good encryption protocols.
 
-One of the first attempts at wireless security was the Wired Equivalency Protocol (WEP). WEP had design flaws. With modern tools, a WEP encryption key can be stolen in about a minute. By the time the weaknesses in WEP were discovered, many wireless access points that supported WEP had been deployed. Experts developed the Wi-Fi Protected Access (WPA) protocol that could be installed on all of the WEP access points. WPA provided better, but not perfect security. WPA version 2 (WPA2) would solve more problems, but required that people purchase new hardware. WPA2 is widely supported. WPA3 will improve upon WPA2, but it requires new hardware. Security with WPA2 is good, but will be better with WPA3.
+One of the first attempts at wireless security was the Wired Equivalency Protocol (WEP). WEP had design flaws. With modern tools, a WEP encryption key can be stolen in about a minute. By the time the weaknesses in WEP were discovered, many wireless access points that supported WEP had been deployed. Experts developed the Wi-Fi Protected Access (WPA) protocol that could be installed on all of the WEP access points. WPA provided better, but not perfect security. WPA version 2 (WPA2) would solve more problems, but required that people purchase new hardware. WPA2 is widely supported. WPA3 will improve upon WPA2, but it requires new hardware. Security with WPA2 is good but will be better with WPA3.
 
 == Configure a Wireless Router
 
