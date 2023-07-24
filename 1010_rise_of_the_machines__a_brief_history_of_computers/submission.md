@@ -4,4 +4,4 @@
 
 Describe the first computing device you remember using.
 
-How have you seen computing changed over your lifetime?
+How have you seen computing change over your lifetime?

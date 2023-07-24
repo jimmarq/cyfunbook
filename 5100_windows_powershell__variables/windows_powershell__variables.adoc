@@ -25,7 +25,7 @@ $name = "Alice"
 .Run the line of code
 image::set-name-variable.png[Run the line of code]
 +
-Note that the cursor in this example is between the "m" and "e" in name. Multiple characters are *not* selected. The *Run Selection* option can be used to run parts of 1 line of code, so if you want to run the entire line, either select the entire line, or put the cursor in the line with nothing selected.
+Note that the cursor in this example is between the "m" and "e" in name. Multiple characters are *not* selected. The *Run Selection* option can be used to run parts of 1 line of code, so if you want to run the entire line, either select the entire line or put the cursor in the line with nothing selected.
 . Put the code `$name` on line 2.
 . Run line 2.
 . Notice that the name *Alice* will be output in the console.
@@ -59,14 +59,14 @@ image::madlib-complete.png[Complete MadLib code and output]
 
 == Other Variable Types
 
-Variables do not just have to be text. Look at the following code.
+Variables do not just have to be text. Look at the following code. The comments describe the data type of the different variables.
 
 [source,powershell]
 ----
-$favorite_number = 3
-$files = gci
-$pi = 3.14
-$fruits = @("apple", "banana")
+$favorite_number = 3           # Integer
+$files = gci                   # Collection of objects
+$pi = 3.14                     # Decimal number
+$fruits = @("apple", "banana") # Array
 ----
 
 == Reflection
