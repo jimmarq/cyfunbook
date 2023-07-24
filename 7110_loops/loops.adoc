@@ -93,7 +93,7 @@ touch while.py
 . Edit *while.py* with `nano` (*nano while.py*).
 . Add the following code to write a small program.
 +
-[souce,python]
+[source,python]
 ----
 counter = 1
 while counter < 10:

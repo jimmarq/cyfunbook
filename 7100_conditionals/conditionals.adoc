@@ -22,7 +22,7 @@ Comparison operators let you compare values. Some of the comparison operators ar
 . Run `python` in the Kali terminal to start an interactive python shell. Run the following sample comparisons. The expected output is included in a comment to the right.
 * *>*: Greater than
 +
-[souce,python]
+[source,python]
 ----
 5 > 6 # False
 5 > 3 # True
@@ -31,7 +31,7 @@ Comparison operators let you compare values. Some of the comparison operators ar
 (You do not need to write "# False" or "# True"--those values should appear as a result of running the code before.)
 * *>=*: Greater than or equal to
 +
-[souce,python]
+[source,python]
 ----
 100 >= 100 # True
 100 >= 99  # True
@@ -39,14 +39,14 @@ Comparison operators let you compare values. Some of the comparison operators ar
 ----
 * *<*: Less than
 +
-[souce,python]
+[source,python]
 ----
 8 < 10 # True
 10 < 8 # False
 ----
 * *\<=*: Less than or equal to
 +
-[souce,python]
+[source,python]
 ----
 1 <= 100 # True
 1 <= 1   # True
@@ -54,14 +54,14 @@ Comparison operators let you compare values. Some of the comparison operators ar
 ----
 * *==*: Equal to
 +
-[souce,python]
+[source,python]
 ----
 42 == 42 # True
 41 == 42 # False
 ----
 * *!=*: Not equal to
 +
-[souce,python]
+[source,python]
 ----
 42 != 42 # False
 41 != 42 # True
