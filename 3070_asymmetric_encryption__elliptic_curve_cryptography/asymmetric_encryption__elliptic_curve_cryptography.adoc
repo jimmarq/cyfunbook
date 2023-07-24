@@ -24,7 +24,7 @@ The curve is defined by a formula (something like y^2 = x^3 + 7). There is a gen
 .Public key on a curvey where the private key is 6
 image::elliptic-curve.drawio.png[]
 
-So, given a curve with the starting point G, we pick a random number, and that random number will correspond to a public key point on the curve. A key concept in EC cryptography is that if we are given a random point on the curvey, it is tremendously difficult to determine how many hops it took to get there. There is no easy way to find the private key when given the public key.
+So, given a curve with the starting point G, we pick a random number, and that random number will correspond to a public key point on the curve. A key concept in EC cryptography is that if we are given a random point on the curve, it is tremendously difficult to determine how many hops it took to get there. There is no easy way to find the private key when given the public key.
 
 In reality, your computer does not "hop" trillions of times to determine the public key. EC cryptography is computationally efficient. Essentially, a single multiplication operation can be done to compute the public key.
 

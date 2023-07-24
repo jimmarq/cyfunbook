@@ -66,7 +66,7 @@ cat essay_twin.txt
 ----
 +
 Note that the contents of essay.txt and essay_twin.txt look very similar--but are they exactly the same? You'll use hashing to find out.
-. The terminal is not great for looking at the two images in the cyfunfiles directory. In the Kali tool bar, click on the folder icon and choose cyfunfiles > crypto_hashing.
+. The terminal is not great for looking at the two images in the cyfunfiles directory. In the Kali toolbar, click on the folder icon and choose cyfunfiles > crypto_hashing.
 +
 .Open the crypto_hashing folder in the graphical interface
 image::open-cyfunfiles-in-gui.png[Open the crypto_hashing folder in the graphical interface]

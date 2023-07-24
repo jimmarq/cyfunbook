@@ -1,4 +1,4 @@
-= Encryption: How Https Works
+= Encryption: How HTTPS Works
 
 == Learning Objectives
 
