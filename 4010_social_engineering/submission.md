@@ -2,6 +2,4 @@
 
 ## Reflect
 
-If you or somebody you know has been phished, describe broadly the factors that led to it happening.
-
-If you have not been phished, describe the steps you take to stay vigilant.
+Computers, encryption, and software have become more powerful, yet social engineering is still a fruitful avenue for attack. Will we get to a place where social engineering is no longer effective? Justify your decision.

@@ -244,12 +244,8 @@ There are many threats to our security and privacy. Some of the threats are tech
 include::4010_social_engineering\social_engineering.adoc[]
 
 <<<
-:imagesdir: 4015_dis_mis_mal_information
-include::4015_dis_mis_mal_information\dis_mis_mal_information.adoc[]
-
-<<<
-:imagesdir: 4020_osint_phishing
-include::4020_osint_phishing\osint_phishing.adoc[]
+:imagesdir: 4020_dis_mis_mal_information
+include::4020_dis_mis_mal_information\dis_mis_mal_information.adoc[]
 
 <<<
 :imagesdir: 4030_privacy
@@ -262,6 +258,10 @@ include::4040_phishing\phishing.adoc[]
 <<<
 :imagesdir: 4050_spear_phishing
 include::4050_spear_phishing\spear_phishing.adoc[]
+
+<<<
+:imagesdir: 4055_osint_phishing
+include::4055_osint_phishing\osint_phishing.adoc[]
 
 <<<
 :imagesdir: 4060_tailgating

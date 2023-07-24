@@ -1,4 +1,4 @@
-= Spear Phishing
+= Spear Phishing and Whaling
 
 Spear phishing attacks are phishing attacks that are customized to exploit an individual target. Typically, spear-phishing attacks are used for high-value targets. Even the savviest professional can fall victim to spear-phishing attacks.
 
@@ -8,6 +8,7 @@ You should be able to:
 
 * Differentiate a spear-phishing attack from a regular phishing attack
 * Craft a spear-phishing email
+* Describe whaling
 
 == Phishing and Spear Phishing
 
@@ -49,17 +50,13 @@ In the email above, the social engineer used social media to learn the following
 
 With that information, a social engineer can craft a convincing email. If Sally is a high-value target, social engineers will spend a lot of time learning about her so that they can craft attacks specifically for her.
 
-== Spear Phishing Exercise
+== Whaling
 
-You will be asked to craft a spear-phishing attack, but you are not authorized to *conduct* a spear-phishing attack.
+**Whaling** is an extension of spear phishing attacks. Whales are high-value targets. These could be company presidents, employees with access to sensitive information, wealthy individuals, or anybody else with access to something desirable that attackers want.
 
-. Pick a person to whom you would hypothetically send a spear-phishing email. 
-.. It would be best to pick somebody that you do not already know well.
-. Perform social media reconnaissance on that individual.
-. Draft a spear-phishing email using the data you got in the social media reconnaissance. (DO NOT SEND THE EMAIL.)
+Whales will be attacked with the most persistent and sophisticated attacks. While practices like using strong passwords, running anti-malware, and using multi-factor authentication is important for everybody, it is especially important for whales. 
 
 == Reflection
 
 * Why are spear-phishing emails so effective?
 * How would you protect yourself against spear-phishing attacks?
-
