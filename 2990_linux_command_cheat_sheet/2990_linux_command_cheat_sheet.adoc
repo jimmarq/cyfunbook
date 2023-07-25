@@ -3,45 +3,48 @@
 The following commands have been presented in the first section.
 
 |========
-|Command   | Description                                | Example
-|pwd       | Print working directory                    | pwd
-|cd        | Change directory                           | cd ~/Desktop
-|ls        | List directory contents                    | ls -al
-|cat       | Print file contents                        | cat file.txt
-|whoami    | Prints current user                        | whoami
-|man       | Show the manual for a command              | man ls
-|sudo      | Superuser do: run a command as root        | sudo ls /root
-|su        | Switch users (default is root)             | sudo su
-|exit      | Exit the terminal or switched user         | exit
-|touch     | Create a file                              | touch new.txt
-|mv        | Move or rename a file                      | mv old_name.txt new_name.txt
-|mkdir     | Make a directory                           | mkdir test_files
-|rm        | Remove files or directories                | rm -rf to_be_deleted
-|nano      | Edit text files                            | nano config.txt
-|vim       | Edit text files                            | vim config.txt
-|locate    | Find files by filename                     | locate syslog
-|updatedb  | Update the database of files               | sudo updatedb
-|git       | Manage git source repositories             | git clone https://github.com/jimmarq/cyfunfiles
-|grep      | Find text inside files                     | grep "fail" auth.log
-|echo      | Print text to the terminal                 | echo "hi"
-|tar       | Create and extract archives                | tar -xvf file.tar.bz2
-|wget      | Download files from the internet           | wget https://some_site/file.zip
-|less      | Display multiple pages of command output   | ifconfig | less
-|chmod     | Change file permissions                    | chmod u+x program.sh
-|ifconfig  | View and change network interface settings | ifconfig eth0
-|nmap      | Scan ports                                 | nmap scanme.nmap.org
-|nping     | Ping for enhanced network testing          | nping scanme.nmap.org -p 9929
-|tcpdump   | Capture network packets                    | tcpdump -i eth0 -w telnet.pcap
-|telnet    | Connect to remote computers (unencrypted)  | telnet telehack.com
-|curl      | Download content from the internet         | curl https://www.google.com
-|dig       | Query domain name information              | dig yahoo.com
-|ping      | Verify connectivity                        | ping 192.168.1.1
-|useradd   | Add a user                                 | sudo useradd chris
-|passwd    | Change a user's password                   | sudo passwd chris
-|ps        | View running processes                     | ps -A
-|pstree    | View running processes as a tree           | pstree
-|top       | View running processes in real-time        | top
-|systemctl | Manage services                            | sudo systemctl start apache2
+|Command    | Description                                | Example
+|pwd        | Print working directory                    | pwd
+|cd         | Change directory                           | cd ~/Desktop
+|ls         | List directory contents                    | ls -al
+|cat        | Print file contents                        | cat file.txt
+|whoami     | Prints current user                        | whoami
+|man        | Show the manual for a command              | man ls
+|sudo       | Superuser do: run a command as root        | sudo ls /root
+|su         | Switch users (default is root)             | sudo su
+|exit       | Exit the terminal or switched user         | exit
+|touch      | Create a file                              | touch new.txt
+|mv         | Move or rename files and directories       | mv old_name.txt new_name.txt
+|cp         | Copy files and directories                 | cp /etc/passwd ~/Desktop/passwd
+|mkdir      | Make a directory                           | mkdir test_files
+|rm         | Remove files or directories                | rm -rf dir_to_be_deleted
+|nano       | Edit text files                            | nano config.txt
+|vim        | Edit text files                            | vim config.txt
+|locate     | Find files by filename                     | locate syslog
+|updatedb   | Update the database of files               | sudo updatedb
+|git        | Manage git source repositories             | git clone https://github.com/jimmarq/cyfunfiles
+|grep       | Find text inside files                     | grep "fail" auth.log
+|echo       | Print text to the terminal                 | echo "hi"
+|tar        | Create and extract archives                | tar -xvf file.tar.bz2
+|wget       | Download files from the internet           | wget https://some_site/file.zip
+|less       | Display multiple pages of command output   | ifconfig | less
+|chmod      | Change file permissions                    | chmod u+x program.sh
+|ifconfig   | View and change network interface settings | ifconfig eth0
+|nmap       | Scan ports                                 | nmap scanme.nmap.org
+|nping      | Ping for enhanced network testing          | nping scanme.nmap.org -p 9929
+|tcpdump    | Capture network packets                    | tcpdump -i eth0 -w telnet.pcap
+|telnet     | Connect to remote computers (unencrypted)  | telnet telehack.com
+|curl       | Download content from the internet         | curl https://www.google.com
+|dig        | Query domain name information              | dig yahoo.com
+|ping       | Verify connectivity                        | ping 192.168.1.1
+|useradd    | Add a user                                 | sudo useradd chris
+|passwd     | Change a user's password                   | sudo passwd chris
+|ps         | View running processes                     | ps -A
+|pstree     | View running processes as a tree           | pstree
+|top        | View running processes in real-time        | top
+|systemctl  | Manage services                            | sudo systemctl start apache2
+|logger     | Manually create a log entry                | logger Backup started
+|journalctl | Query system logs                          | journalctl -u apache2.service
 |========
 
 

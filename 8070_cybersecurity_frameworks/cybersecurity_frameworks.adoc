@@ -21,7 +21,7 @@ The National Institute of Standards and Technology (NIST) provides cybersecurity
 
 It should be noted that the NIST Cybersecurity Framework is not a checklist. It is guidance that helps organizations craft their own cybersecurity policies and practices.
 
-The Center for Internet Security (CIS) Controls serve more as a checklist. They produce a list of the practices that organizations should follow. Version 8's list of controls is included below. More details can be found at https://www.cisecurity.org/controls/cis-controls-list.
+The Center for Internet Security (CIS) Controls serves more as a checklist. They produce a list of the practices that organizations should follow. Version 8's list of controls is included below. More details can be found at https://www.cisecurity.org/controls/cis-controls-list.
 
 . Inventory and Control of Enterprise Assets
 . Inventory and Control of Software Assets

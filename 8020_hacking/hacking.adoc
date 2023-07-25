@@ -20,7 +20,7 @@ In 2019, security testers were arrested while performing an authorized penetrati
 
 == Semi-authorized Hackers
 
-Semi-authorized hackers are often experts who like pushing the boundaries of what might be acceptable. They are commonly referred to as *gray hats*. They do not have malicious intent. They also lack authorization. A gray hat hacker might spend hours seeing if they can break into a system. If they are successful, they will tell the company the weakness they found. Sometimes they will ask for a bug bounty, but often they report their findings without any expectation of reward.
+Semi-authorized hackers are often experts who like pushing the boundaries of what might be acceptable. They are commonly referred to as *gray hats*. They do not have malicious intent. They also lack authorization. A gray hat hacker might spend hours seeing if they can break into a system. If they are successful, they will tell the company the weaknesses they found. Sometimes they will ask for a bug bounty, but often they report their findings without any expectation of reward.
 
 Gray hat hackers face a huge risk--they never know how the target organization will react. One company might thank the gray hat hacker for disclosing the weakness in their system, and some companies even offer to hire them as security consultants. Other organizations react as if their systems have been corrupted and try to get the gray hat hacker prosecuted.
 
@@ -30,7 +30,7 @@ A journalist in Missouri discovered that a state government website was disclosi
 
 Unauthorized hackers (*black hats*) lack authorization and good intentions. Black hat hackers can have different motivations. They might want to hack for the thrill, to bring down a company, to cause embarrassment, or for hacker peer respect.
 
-The hacking group LulzSec picked major targets including the FBI and the CIA. They definitely did not have permission. They were able to take down some FBI sites, but some members of the team were found and arrested. Be careful which bears you poke.
+The hacking group LulzSec picked major targets including the FBI and the CIA. They clearly did not have permission. They were able to take down some FBI sites, but some members of the team were found and arrested. Be careful which bears you poke.
 
 == Reflection
 

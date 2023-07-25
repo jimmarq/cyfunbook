@@ -25,7 +25,7 @@ Acceptable use policies are written documents that describe the appropriate use 
 *** Putting data on external storage
 *** Intentionally causing service disruptions
 *** Attempting to access unauthorized information
-* Compliance. Employees are expected to comply. Consequences of non-compliance should be clear.
+* Compliance. Employees are expected to comply. The consequences of non-compliance should be clear.
 
 Employees should be required to review the acceptable use policy as part of onboarding. Employees should be informed about any changes to the acceptable use policy. Regularly scheduled training should ensure that employees clearly understand what is expected of them.
 
