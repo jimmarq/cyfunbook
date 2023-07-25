@@ -2,6 +2,16 @@
 
 The following are major changes to the book. Chapter numbers will frequently change as new chapters are added or removed, but those changes will not be listed here.
 
+* 2023-07-25: Major 2.0 revision
+** Several new Linux labs (e.g., logging, archives, daemons)
+** Instructions for creating a Windows desktop VM
+** Better source highlighting throughout
+** Suggested student submissions for each chapter
+** More detailed instructions for getting a lab setup
+** Included VMware Workstation Player as an alternative to Virtualbox
+** Bcrypt added to password cracking
+** Rainbow table password cracking chapter added
+** CTF-style OSINT chapter added
 * 2023-03-10: New chapter on disinformation, misinformation, and malinformation was added.
 * 2023-03-10: Authorship for each chapter was removed. Initially, this eBook was going to be a collaborative project, but it ended up largely being the work of one person. If a different author creates a chapter, that person's information will be added to that specific chapter.
 * 2023-03-10: This changelog was added. Instead of maintaining changes in each chapter, they are summarized here.
