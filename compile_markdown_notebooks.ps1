@@ -15,7 +15,7 @@
 
 
 # Delete contents
-remove-item .\submission_notebooks\* -Recurse
+remove-item .\submission_notebooks\* -Recurse -Exclude .gitignore
 # Create the new folder structure
 mkdir .\submission_notebooks\1
 mkdir .\submission_notebooks\2
