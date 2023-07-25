@@ -82,7 +82,7 @@ tar -zcvf myfiles.tar.gz *.txt
 +
 `f` tells `tar` which archive filename to use. Because `myfiles.tar.gz` comes directly after the `f`, `tar` will use that filename for the archive.
 +
-`*.txt` tells `tar` to include ever file in the current directory with a .txt extension.
+`*.txt` tells `tar` to include every file in the current directory with a .txt extension.
 . The following command was used to create the archive using the bzip2 compression algorithm.
 +
 [source,shell]

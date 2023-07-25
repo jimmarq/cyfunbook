@@ -16,17 +16,18 @@ LinkedIn suffered a data breach in 2012. Millions of usernames and password hash
 
 . Launch the Kali virtual machine.
 . Open a terminal.
-. Run the following command. Note that it will delete any files you added or changed in the cyfunfiles folder.
+. Run the following command. Note that it will delete any files you added or changed in the *cyfunfiles* folder.
 +
 [source,shell]
 ----
+cd ~
 rm -rf cyfunfiles
 ----
 . Run the following command to download files from the internet. This will create a new folder called *cyfunfiles* in your home directory.
 +
 [source,shell]
 ----
-git clone https://github.com/jimmarq/cyfunfiles.git
+git clone https://github.com/jimmarq/cyfunfiles
 ----
 . Change directories to the *cyfunfiles* directory.
 +
@@ -70,6 +71,7 @@ john -show linkedin_hashes.txt
 ----
 
 When dictionary attacks fail, you can:
+
 . find a bigger dictionary, or
 . try a different type of attack.
 
@@ -92,6 +94,13 @@ In a brute force attack, all possible passwords for given character sets will be
 ----
 john -incremental=Lower linkedin_hashes.txt
 ----
+. Press space bar while the attack is running to see cracking metrics. John reports several metrics:
+.. g/s: Successful guesses per second
+.. p/s, c/s, and C/s describe subtle variations of how many passwords can be tried per second. The following shows that John can crack 12,000K (12 million) SHA1 hashes per second.
++
+```
+6g 0:00:00:05  3/3 1.197g/s 12003Kp/s 12003Kc/s 12003KC/s hoogb..hoo2s
+```
 
 === Clean up / Restart
 
@@ -101,6 +110,29 @@ If you want to delete the hashes to try different attacks you will have to delet
 ----
 rm ~/.john/john.pot
 ----
+
+== Evaluating Bcrypt
+
+The bcrypt algorithm has 2 defenses against password cracking: 1) it intentionally wastes CPU to make it slow, and 2) it salts by default.
+
+. Run the following command to try cracking the bcrypt hashes for `cat` (because "wildcat" would take entirely too long to crack) and `1999` (in honor of his purpleness). These passwords would be trivial to crack if they were hashed using MD5 without salt.
++
+[source,shell]
+----
+john bcrypt_hashes.txt
+----
+. While the attack is in progress, press the space bar to evaluate the cracking speed.
++
+```
+1g 0:00:02:53 14.10% 2/3 (ETA: 05:05:41) 0.005774g/s 121.8p/s 138.6c/s 138.6C/s stacerom..1donald
+```
+
+On the same hardware, John can crack:
+
+* 12 million SHA1 hashes per second
+* 125 bcrypt hashes per second
+
+In this case, cracking bcrypt hashes is approximately 100,000 times slower. So if it took a week to crack a SHA1 hash, it would take 1,923 years to crack that same password if it were hashed using bcrypt. There are some caveats about hardware and software efficiency, but the fact remains that bcrypt hashes are much harder to crack.
 
 == Challenge
 
