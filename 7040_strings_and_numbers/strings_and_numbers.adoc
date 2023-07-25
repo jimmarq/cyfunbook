@@ -1,6 +1,6 @@
 = Strings And Numbers
 
-Python support several data types. In this lesson, you will learn more about number and string data types.
+Python supports several data types. In this lesson, you will learn more about number and string data types.
 
 == Learning Objectives
 

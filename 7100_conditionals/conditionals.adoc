@@ -2,11 +2,6 @@
 
 Conditionals let you compare values and take action depending on the values. The important control statements are the *if*, *else*, and *elif*. Inside those statements, variables can be compared with *>*, *<*, *\<=*, *>=*, *==*, and *!=*.
 
-Include images like so:
-
-//.Text here will go under the image
-//image::some_image.png[Alt text here]
-
 == Learning Objectives
 
 You should be able to:

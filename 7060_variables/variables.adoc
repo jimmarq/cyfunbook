@@ -56,7 +56,7 @@ first_name = "Alice"
 ----
 print(first_name)
 ----
-. Run the following code to make "Alice" lower-case.
+. Run the following code to make "Alice" lowercase.
 +
 [source,python]
 ----
@@ -87,7 +87,7 @@ No code will be output in the shell.
 print(first_name)
 ----
 +
-Now, the value should be lower-case. In this instance, python overwrote the old variable with the new value.
+Now, the value should be lowercase. In this instance, python overwrote the old variable with the new value.
 . Create a string variable.
 +
 [source,python]
