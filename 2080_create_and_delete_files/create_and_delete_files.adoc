@@ -1,6 +1,6 @@
-= Create, Move And Delete Files and Directories
+= Create, Move, Copy and Delete Files and Directories
 
-It is important to be able to work with files and directories on Linux. There are several ways to create files in Linux. This section will focus on using the `touch` command to create empty files. You will use the `mkdir` (make directory) command to create directories. Files will be renamed with the `mv` (move) command. You will then delete those files with `rm` (remove).
+It is important to be able to work with files and directories on Linux. There are several ways to create files in Linux. This section will focus on using the `touch` command to create empty files. You will use the `mkdir` (make directory) command to create directories. Files will be renamed with the `mv` (move) command. The `cp` command is used to copy files. You will then delete those files with `rm` (remove).
 
 == Learning Objectives
 
@@ -9,21 +9,15 @@ You should be able to:
 * Create files using the `touch` command
 * Create folders using the `mkdir` command
 * Rename files using the `mv` command
+* Copy files using the `cp` command
 * Use the `*` wildcard character
 * Remove files and folders using the `rm` command.
-
-== Prerequisites
-
-You should already:
-
-* Have a Kali virtual machine running in VirtualBox
-* Know how to use the `pwd`, `ls`, and `cd` commands.
 
 == Exercise Touching Files
 
 The `touch` command can do several things. First, it can be used to create new, empty files. The touch command can also be used to update the last modified dates and other date properties of files, but we won't get into that.
 
-. Boot Kali Linux in VirtualBox if it is not already running. (Login with kali/kali if needed).
+. Start Kali Linux. (Login with kali/kali if needed).
 . Launch a new terminal.
 .. Your new terminal will start in your home directory by default.
 .. Run `pwd` to ensure that your working directory is /home/kali.
@@ -64,7 +58,7 @@ It is generally not a great idea to litter your home directory with random files
 mv me.txt Documents
 ----
 +
-Again, new news is (hopefully) good news.
+Again, no news is (hopefully) good news.
 +
 .me.txt moved
 image::move-me.png[me.txt moved]
@@ -86,6 +80,51 @@ image::list-me-you-after-move-me.png[list after moving me.txt]
 +
 .me.txt and you.txt in Documents
 image::me-you-in-documents.png[me.txt and you.txt in Documents]
+
+== Copying Files
+
+The `cp` command copies files. The basic syntax is: `cp existingfilename copiedfilename`.
+
+. In the Linux terminal, ensure you are in the kali user home directory.
++
+[source,shell]
+----
+cd
+----
++
+The `cd` command without any parameters is a shortcut to go to the home directory. This is the same as `cd ~`.
+. Change directories into *Documents* again.
++
+[source,shell]
+----
+cd Documents
+----
+. Create a file called config.txt using the following command.
++
+[source,shell]
+----
+echo "very important config" > config.txt
+----
++
+The text "very important config" will be created in the file named config.txt. This is another way to create files.
+. Show the contents of the file using `cat`.
++
+[source,shell]
+----
+cat config.txt
+----
+. Before making changes to important system files, it is often a good practice to create a backup copy. Use the `cp` command to make a copy.
++
+[source,shell]
+----
+cp config.txt config_backup.txt
+----
+. List the files to verify that both files are present and are the same size.
++
+[source,shell]
+----
+ls -l
+----
 
 == Create Directories
 

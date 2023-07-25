@@ -1,0 +1,117 @@
+# Linux Logging
+
+Log files record important system events. In Linux, these log files are often stored locally in the `/var/log` directory. Organizations often copy logs to a central server for analysis.
+
+== Learning Objectives
+
+You should be able to:
+
+* Describe the purpose of logging
+* Use `logger` to add entries to the logs
+* View entries in the syslog using `journalctl`
+
+== Linux Logs
+
+The `syslog` is a general system log that records many computer events. Traditionally, it can be found in Linux systems in `/var/log/syslog`. However, because Kali is a Debian-based system, and because Debian uses `systemd`, logs are accessed through the program `journalctl`.
+
+Basically, `systemd` replaces the following logs found on older Linux systems with a unified logging system:
+
+* /var/log/syslog: General system log
+* /var/log/auth.log: Authentication-related log data
+* /var/log/daemon.log: Logs from background service daemons
+* /var/log/kern.log: Kernel-related data
+* /var/log/mail.log: Mail server-related data
+
+The log data is still present--it's just organized and queried differently.
+
+== Manual Logging
+
+The `logger` command can be used to 
+
+. In the terminal, run the logger command followed by some text. (no need for quotes).
++
+[source,shell]
+----
+logger About to make a destructive change
+----
++
+The entry will be logged.
+
+Manually creating log entries help identify the point in time at which breaking changes were made. This can aid in restore processes if a change needs to be reversed.
+
+== Searching Logs
+
+. Search commands can be entered in `journalctl` using the `-g` (grep) parameter.
++
+[source,shell]
+----
+journalctl -g destructive
+----
++
+You should see output similar to the following.
++
+```
+-- Boot e503f4af24ab405fbabb050904610f3a --
+Jul 25 04:00:50 kali kali[97494]: About to make a destructive change
+```
++
+If there are multiple pages of output, use `q` to quit.
+. You can query logs for a specific service. For example, the `-u` parameter accepts a `systemd unit`--such as the Apache web server.
++
+[source,shell]
+----
+journalctl -u apache2.service
+----
++
+You should see messages about the Apache web server starting and stopping (if you had previously started and stopped it).
++
+```
+Jul 22 17:24:52 kali systemd[1]: Starting apache2.service - The Apache HTTP...
+Jul 22 17:24:53 kali apachectl[84201]: AH00558: apache2: Could not reliably...
+Jul 22 17:24:53 kali systemd[1]: Started apache2.service - The Apache HTTP...
+Jul 22 17:27:24 kali systemd[1]: Stopping apache2.service - The Apache HTTP...
+Jul 22 17:27:25 kali apachectl[85486]: AH00558: apache2: Could not reliably...
+Jul 22 17:27:25 kali systemd[1]: apache2.service: Deactivated successfully.
+Jul 22 17:27:25 kali systemd[1]: Stopped apache2.service - The Apache HTTP...
+```
+. Logs can be "followed" so that new entries are displayed immediately.
++
+[source,shell]
+----
+journalctl -f
+----
+. Open a new terminal. Try logging in with the root account, but provide the incorrect password.
++
+[source,shell]
+----
+sudo su
+----
+. The logs should identify an authentication failure.
++
+```
+Jul 25 04:16:06 kali sudo[105128]: pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=kali rhost=  user=kali 
+```
++
+In the log, `sudo` is the source.
+. Click on the terminal running journalctl and use `control+c` to stop following the logs.
+. Use `-n` to specify the number of most recent logs to display.
++
+[source,shell]
+----
+journalctl -n 10
+----
+. Query the `sudo` source using `_COMM` to specify the command. 
++
+[source,shell]
+----
+journalctl _COMM=sudo -n 5
+----
+
+== Challenge
+
+* Start Apache. Use `curl` to load web pages from the terminal. Check the Apache logs. Stop Apache.
+
+== Reflection
+
+* Why would it be important to log failed `sudo su` attempts?
+* Why do administrators send copies of logs to central servers for processing?

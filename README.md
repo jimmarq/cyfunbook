@@ -18,28 +18,28 @@ You are free to download, distribute, and use this eBook.
 
 ## Compilation
 
-This book can be compiled using Asciidoctor Web PDF (https://github.com/Mogztter/asciidoctor-web-pdf). Asciidoctor PDF (https://docs.asciidoctor.org/pdf-converter/latest/install/) can also be used. However, only the Asciidoctor Web PDF produces accessibility markup that satisfies my institution's accessibility guidelines.
+This book can be compiled using [Asciidoctor Web PDF](https://github.com/Mogztter/asciidoctor-web-pdf) or [Asciidoctor PDF](https://docs.asciidoctor.org/pdf-converter/latest/install/). Asciidoctor Web PDF produces accessibility markup that satisfies my institution's accessibility guidelines. But, Asciidoctor PDF produces better-looking PDFs.
+
+### Compilation with asciidoctor-web-pdf
 
 * Download the latest release from https://github.com/Mogztter/asciidoctor-web-pdf/releases.
-* Run asciidoctor-web-pdf Cybersecurity_Fundamentals.adoc -a stylesheet="+Cybersecurity_Fundamentals.css"
+* Run ```asciidoctor-web-pdf Cybersecurity_Fundamentals.adoc -a stylesheet="+Cybersecurity_Fundamentals.css"```
 * The Cybersecurity_Fundamentals.css style sheet contains styles that will be applied after the default style sheet.
+
+### Compliation with Asciidoctor PDF
+
+* Install Ruby
+* Install the asciidoctor-pdf gem: ```gem install asciidoctor-pdf```
+* Install the rouge gem for syntax highlighting: ```gem install rouge```
+* Compile: ```asciidoctor-pdf Cybersecurity_Fundamentals.adoc```
 
 ## Future Improvements
 
 This eBook will be improved over time based on student feedback and industry trends. The following topics and changes will be included in a future version.
 
-### Introduction
-
-* Make VMWare an option. (Two students out of 25 could not make VirtualBox work.)
-* Working with .gz files on Windows using 7-zip. (The Kali VMware image is a .gz download.)
-* Taking screenshots using Greenshot. (Computer policy blocked some built-in Windows tools.)
-
 ### Linux
 
-* Expand the chapter on working with files to include the copy (cp) command
-* Include a chapter on tar and zip files. Include sample files.
 * Include the logger command. Search logs with grep and zgrep. Include an exercise to download a script and run it. The script should write logs.
-* Add a Linux review activity so that students reinforce what they learned.
 
 ### Cryptography
 
@@ -51,11 +51,7 @@ This eBook will be improved over time based on student feedback and industry tre
 
 The Windows section is brief. Currently, it doesn't help students to be proficient using Windows, and it doesn't introduce Windows Server well. The book needs to pick a direction--help people use Windows well, or introduce server features.
 
-* Need to use a Windows Server virtual machine for standardization.
-* Some students could not access the Windows Store to intall Windows Terminal. Some students could not launch the Group Policy Editor.
 * For Windows Defender, have students download a malicious file (not too malicious), such as a zip bomb from SecLists.
-* It would be better to replace the user accounts and permission with an exercise that uses Active Directory.
-* The Firewall chapter should only be included if manipulating the firewall in a VM. Students should risk breaking their security on the host.
 
 ### Threats
 
