@@ -49,7 +49,11 @@ $submissionmds = gci submission.md -Recurse
 foreach ($submissionmd in $submissionmds) {
     $dirname = $submissionmd.Directory.Name
     $folder = $dirname[0]
-    Copy-Item -Path $submissionmd.FullName -Destination "submission_notebooks\$folder\$dirname.md"
+    # Change dirname to title case
+    $textInfo = (Get-Culture).TextInfo
+    $friendly = $textInfo.ToTitleCase($dirname)
+    $friendly = $friendly.Replace("_", " ")
+    Copy-Item -Path $submissionmd.FullName -Destination "submission_notebooks\$folder\$friendly.md"
 }
 
 $submission_support = Get-ChildItem -Recurse -File | Where-Object { $_.Name -like 'submission*' -and $_.Extension -ne '.md' }
