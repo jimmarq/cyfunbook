@@ -26,7 +26,7 @@ This book can be compiled using [Asciidoctor Web PDF](https://github.com/Mogztte
 * Run ```asciidoctor-web-pdf Cybersecurity_Fundamentals.adoc -a stylesheet="+Cybersecurity_Fundamentals.css"```
 * The Cybersecurity_Fundamentals.css style sheet contains styles that will be applied after the default style sheet.
 
-### Compliation with Asciidoctor PDF
+### Compilation with Asciidoctor PDF
 
 * Install Ruby
 * Install the asciidoctor-pdf gem: ```gem install asciidoctor-pdf```
@@ -37,19 +37,14 @@ This book can be compiled using [Asciidoctor Web PDF](https://github.com/Mogztte
 
 This eBook will be improved over time based on student feedback and industry trends. The following topics and changes will be included in a future version.
 
-### Linux
-
-* Include the logger command. Search logs with grep and zgrep. Include an exercise to download a script and run it. The script should write logs.
-
 ### Cryptography
 
-* Expand password cracking to include bcrypt hashes. Define the metrics reported by john regarding hashing speed.
 * Asymmetric cryptography: Add an exercise to import a public key and verify a file's signature (signed with somebody else's private key).
 * Symmetric cryptographic: Add an exercise to decrypt a file that somebody else encrypted.
 
 ### Windows
 
-The Windows section is brief. Currently, it doesn't help students to be proficient using Windows, and it doesn't introduce Windows Server well. The book needs to pick a direction--help people use Windows well, or introduce server features.
+The Windows section is brief. To be consistent with Linux, it should focus on the desktop experience.
 
 * For Windows Defender, have students download a malicious file (not too malicious), such as a zip bomb from SecLists.
 
