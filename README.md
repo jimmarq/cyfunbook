@@ -6,7 +6,7 @@ This project is an eBook written in AsciiDoc. It was created to use in a 100-lev
 
 You are free to download, distribute, and use this eBook.
 
-* [Download version 1.0 of the eBook - 9.85Mb](https://github.com/jimmarq/cyfunbook/releases/download/v1.0/Cybersecurity_Fundamentals-1.0.pdf)
+* [Download version 2.0 of the eBook - 11Mb](https://github.com/jimmarq/cyfunbook/releases/download/v2.0/Cybersecurity_Fundamentals-2.0.pdf)
 
 ## Guiding Principles
 
@@ -37,27 +37,17 @@ This book can be compiled using [Asciidoctor Web PDF](https://github.com/Mogztte
 
 This eBook will be improved over time based on student feedback and industry trends. The following topics and changes will be included in a future version.
 
-### Cryptography
-
 * Asymmetric cryptography: Add an exercise to import a public key and verify a file's signature (signed with somebody else's private key).
 * Symmetric cryptographic: Add an exercise to decrypt a file that somebody else encrypted.
-
-### Windows
-
-The Windows section is brief. To be consistent with Linux, it should focus on the desktop experience.
-
+* The Windows section is brief. To be consistent with Linux, it should focus on the desktop experience.
 * For Windows Defender, have students download a malicious file (not too malicious), such as a zip bomb from SecLists.
-
-### Threats
-
-The current section on threats focuses primarily on social engineering attacks. The threats section needs to be expanded to include:
-
+* The current section on threats focuses primarily on social engineering attacks. The threats section needs to be expanded to include:
 * Threat actors (e.g,.script kiddies, nation-states, organized crime, terrorists, hacktivists, APTs)
 * Malware types (e.g., botnets, ransomware)
 
 ## Contributions
 
-Corrections, additions, and suggestions are welcome. Pull requests will be considered. 
+Corrections, additions, and suggestions are welcome.
 
 ## License
 
