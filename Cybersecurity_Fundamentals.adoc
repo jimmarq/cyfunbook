@@ -1,6 +1,6 @@
 = Cybersecurity Fundamentals
 Dr. Jim Marquardson, Northern Michigan University
-v0.11, 2023-03-10
+v2.0, 2023-07-25
 :doctype: book
 :media: prepress
 :toc:
