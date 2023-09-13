@@ -26,6 +26,7 @@ The following commands have been presented in the first section.
 |grep       | Find text inside files                     | grep "fail" auth.log
 |echo       | Print text to the terminal                 | echo "hi"
 |tar        | Create and extract archives                | tar -xvf file.tar.bz2
+|file       | View information about a file              | file file.tar.bz2
 |wget       | Download files from the internet           | wget https://some_site/file.zip
 |less       | Display multiple pages of command output   | ifconfig \| less
 |chmod      | Change file permissions                    | chmod u+x program.sh

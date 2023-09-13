@@ -2,6 +2,10 @@
 
 The following are major changes to the book. Chapter numbers will frequently change as new chapters are added or removed, but those changes will not be listed here.
 
+* 2023-09-13
+** The Linux searching instructions were updated to remove references to files in /var/log.
+** Fixed a character that prevented the Linux cheat sheet from rendering properly.
+** Updated the archive instructions to find the most recent version of PuTTY, including the associated Moodle submission instructions.
 * 2023-07-25: Major 2.0 revision
 ** Several new Linux labs (e.g., logging, archives, daemons)
 ** Instructions for creating a Windows desktop VM

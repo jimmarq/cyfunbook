@@ -11,7 +11,7 @@ You should be able to:
 
 == Searching for File Names
 
-The `locate` command can be used to find files by filename. The locate command searches all file names on the computer using an index that is rebuilt periodically (often daily). It is possible that very new files may not be in the index. A benefit of the locate command is that it runs extremely quickly--the database is typically searched in less than a second.
+The `locate` command can be used to find files by filename. The locate command searches all file names on the computer using an index that is rebuilt periodically (often daily). The index may not contain very new files. A benefit of the locate command is that it runs extremely quickly--the database is typically searched in a few seconds (depending on how many files are on the hard drive).
 
 . Launch a Kali terminal.
 . If your Kali virtual machine is new, the database of files might not be updated. Run the following command to update the database.
@@ -20,27 +20,27 @@ The `locate` command can be used to find files by filename. The locate command s
 ----
 sudo updatedb
 ----
-. Imagine that you have heard that Linux has a system log called "syslog." Run the following command to find files that have "syslog" in the file name.
+. Imagine that you have heard that a Linux system serves web pages, and those web pages include a file called "index.html." But, you do not know what folder index.html is located in. Run the following command to find files and directories that have "index.html" in the name.
 +
 [source,shell]
 ----
-locate syslog
+locate index.html
 ----
 +
 You will see output similar to the following.
 +
-.'locate syslog' output
-image::locate-syslog-output.png[locate syslog output]
+.'locate index.html' output
+image::locate-index-html-output.png[locate index.html output]
 . There are a lot of results. It may take some time to look through the results to find the file you really want.
 . By default, `locate` finds matches in the directory or file name. So a search for "bunny" would find /home/kali/bunny/easter.txt and /home/kali/bunny.txt.
 . To search only for file names (not directories), use the `-b` option.
 +
 [source,shell]
 ----
-locate -b syslog
+locate -b index.html
 ----
 
-In this example, the file /var/log/syslog is the file you are looking for.
+In this example, the file /var/www/html/index.html is the file you are looking for.
 
 Remember that `locate` only looks at file names--it does not look at any of the file content.
 
@@ -140,20 +140,16 @@ image::grep-results-fruits-and-veggies.png[search results for grep--one for cele
 grep "banana" ./*
 ----
 +
-The "./" tells Linux to look in the current folder, and the asterisk tells kali to match any file name. The grep command should find the word *banana* in fruits.txt.
+The "./" tells Linux to look in the current folder, and the asterisk tells Kali to match any file name. The grep command should find the word *banana* in fruits.txt.
 
 == Challenge
 
-. Find entries in the /var/log/auth.log file that have the words "user root."
+. Find entries in the /var/www/html/index.html for lines that contain the word "please."
+.. Find words that contain "Please" with a capital **P** in the same file.
+.. Look at the **grep** manual to find a way to perform a case-insensitive search.
 . Find files with the name "firefox" in the file name only.
 . Find files and directories with "apache" in the name.
 . How many employees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
-
-// Solutions:
-// grep -a "user root" /var/log/auth.log
-// locate firefox
-// locate -b apache
-// grep "Tavu" ./*
 
 == Reflection
 

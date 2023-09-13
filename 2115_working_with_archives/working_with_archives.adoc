@@ -166,19 +166,34 @@ In this section, you will download and extract the source code for PuTTY.
 
 . Search the internet for `putty download`. You should be taken to a URL like https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html.
 . Find the download link to the .tar.gz source archive.
+. Copy the download link to the tar.tz file. It should be something like https://the.earth.li/~sgtatham/putty/latest/putty-0.78.tar.gz, but the version number will likely be different.
 . Run the following command to download the file. It's about 3 megabytes, so the download should be quick.
 +
 [source,shell]
 ----
-wget https://the.earth.li/~sgtatham/putty/latest/putty-0.78.tar.gz
+wget https://the.earth.li/~sgtatham/putty/latest/putty-0.79.tar.gz
 ----
 +
 If the download did not work, check that you're using the URL from the website. There may be a newer version of PuTTY, and so the version in the URL would be different.
+. Use the `file` command to inspect the properties.
++
+[source,shell]
+----
+file putty-0.79.tar.gz
+----
++
+You should see information like the following.
++
+----
+putty-0.79.tar.gz: gzip compressed data, from Unix, original size modulo 2^32 10516480
+----
++
+The `file` command does not care about the file name's extension. Instead, the `file` command performs various tests on a file's contents to determine what kind of file it is: archive, web page, image, video, etc. Sometimes, you might accidentally download a web page instead of an archive, and `tar` might give you an error indicating that the archive is invalid. You might use `file` to check that the file you downloaded is an archive.
 . Extract the files.
 +
 [source,shell]
 ----
-tar -xvf putty-0.78.tar.gz
+tar -xvf putty-0.79.tar.gz
 ----
 +
 If `tar` could not find the file, double-check that the archive file name matches what you downloaded. You may need to modify the filename.
@@ -190,11 +205,11 @@ rm pu*.gz
 ----
 +
 Instead of writing the entire file name, a wildcard was used to match the archive file name.
-. Navigate to the new folder.
+. Navigate to the new folder (using the name of the directory on your system, which may differ from the example command below).
 +
 [source,shell]
 ----
-cd putty-0.78
+cd putty-0.79
 ----
 +
 (Hint, type `cd pu` and then hit tab. This should autocomplete the correct directory name.)
