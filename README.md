@@ -6,7 +6,7 @@ This project is an eBook written in AsciiDoc. It was created to use in a 100-lev
 
 You are free to download, distribute, and use this eBook.
 
-* [Download version 2.0 of the eBook - 11Mb](https://github.com/jimmarq/cyfunbook/releases/download/v2.0/Cybersecurity_Fundamentals-2.0.pdf)
+* [Download version 2.1 of the eBook - 11Mb](https://github.com/jimmarq/cyfunbook/releases/download/v2.1/Cybersecurity_Fundamentals-2.1.pdf)
 
 ## Guiding Principles
 
