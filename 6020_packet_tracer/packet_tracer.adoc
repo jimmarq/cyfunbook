@@ -21,6 +21,7 @@ Cisco's Network Academy can be found at https://skillsforall.com/. There are sev
 . Open the Getting Started with Cisco Packet Tracer course.
 . Enroll in the course. You will not have to complete any activities in the course, but you will need to enroll to get access to download Packet Tracer.
 . The first module has instructions for installing Cisco Packet Tracer.
+.. Note that you may get an error about cookies. If that occurs, follow the instructions in the error message to click on the module title to load the content in a new window.
 .. They will likely link to https://skillsforall.com/resources/lab-downloads.
 . Once downloaded, run the installer file.
 . Accept all of the defaults with the following notes:
