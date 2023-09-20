@@ -57,6 +57,21 @@ image::decrypt-gfo.png[.Decrypt "F" using the Key "G"]
 .Decrypt "S" Using the Key "G"
 image::decrypt-bsg.png[Decrypt "S" Using the Key "G"]
 
+== Impossible Challenge
+
+Consider the ciphertext **RBBTLFDWVKDDIL** (14 characters). The source cleartext was encrypted using the NSA's lookup table.
+
+What is the plaintext? The table below shows how different keys can extract different candidate cleartext messages. The table shows 3 example keys among the 629,983,141,281,877,223,603,213,172,736 (14^26) possible keys along with the cleartext produced if decrypting the ciphertext with that key. How would somebody know when they got the correct key?
+
+|=====
+| Key            | Cleartext
+| ULUBGCPKIBROZH | ONEFISHTWOFISH
+| GYNVCQOLXDWSGW | CALLMEISHMAELS
+| AFCGWUHSAPECAK | ITWASAPLEASURE
+|=====
+
+If all possible keys were used to decrypt the ciphertext, the introduction to every book written in English would be found. The cryptographers would have no way of knowing which of the valid combinations of letters and words is correct.
+
 == Challenge
 
 Use the key and the NSA codebook to encrypt and decrypt the missing data below.
