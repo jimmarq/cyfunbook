@@ -1,0 +1,231 @@
+= Linux Review 1
+
+This exercise will test your Linux skills. You will use the `script` program to record your commands and the output. When finished, you can replay your commands using the `scriptreplay` program.
+
+== Start Recording
+
+. Open a terminal in Kali Linux.
+. Ensure you are in your home directory by running the following command.
++
+[source,sh]
+----
+cd ~
+----
++
+(Technically, this is not necessary if you just opened a new terminal.)
+. Clear your screen.
++
+[source,sh]
+----
+clear
+----
+. Start recording your terminal commands and output.
++
+[source,sh]
+----
+script review1.log -t=review1.time.log
+----
++
+You should see a message similar to the following.
++
+----
+Script started, output log file is review1.out.
+----
+
+Now, all commands you type in the terminal and the output will be saved to the file named **/home/kali/review1.out**. If you make a mistake in the review tasks, just correct the mistakes and keep going. There is no need to restart the recording.
+
+== Review Tasks
+
+. Run the following command, substituting **your name** for the example name.
++
+[source,sh]
+----
+echo "Name: Sally Jones"
+----
+. Run:
++
+[source,sh]
+----
+echo "Task 1"
+----
+. Change directories to the **Documents** folder in Kali's home directory.
+. Run:
++
+[source,sh]
+----
+echo "Task 2"
+----
+. Create an empty file named **review_nano.txt**.
+. Run:
++
+[source,sh]
+----
+echo "Task 3"
+----
+. Edit the file in `nano`. Write any sentence. Save the file and exit `nano`.
+. Run:
++
+[source,sh]
+----
+echo "Task 4"
+----
+. Create a file named **review_vim.txt**.
+. Run:
++
+[source,sh]
+----
+echo "Task 5"
+----
+. Edit the file in `vim`. Write any sentence. Save the file and exit `vim`.
+. Run:
++
+[source,sh]
+----
+echo "Task 6"
+----
+. Print your current working directory.
+. Run:
++
+[source,sh]
+----
+echo "Task 7"
+----
+. Without changing working directories, list the contents of the /var/www directory.
+. Run:
++
+[source,sh]
+----
+echo "Task 8"
+----
+. Show files and directories with **index.html** in the file or directory name.
+. Run:
++
+[source,sh]
+----
+echo "Task 9"
+----
+. Change directories to the root directory.
+. Run:
++
+[source,sh]
+----
+echo "Task 10"
+----
+. Print the contents of review_nano.txt to the terminal.
+. Run:
++
+[source,sh]
+----
+echo "Task 11"
+----
+. Search for the word "tough" inside review_vim.txt.
+. Run:
++
+[source,sh]
+----
+echo "Task 12"
+----
+. Change directories to your home directory.
+. Run:
++
+[source,sh]
+----
+echo "Task 13"
+----
+. Display your username.
+. Run:
++
+[source,sh]
+----
+echo "Task 14"
+----
+. Ping google.com.
+.. Stop the ping after a couple of successful pings.
+. Run:
++
+[source,sh]
+----
+echo "Task 15"
+----
+. Perform a reverse lookup on Google's IP address in the previous task.
+. Run:
++
+[source,sh]
+----
+echo "Task 16"
+----
+. Add a user named **review1_user**, then set **review1_user's** password.
+. Run:
++
+[source,sh]
+----
+echo "Task 17"
+----
+. Display the contents of the **shadow** file and the **passwd** file.
+. Run:
++
+[source,sh]
+----
+echo "Task 18"
+----
+. Start the Apache 2 web service.
+. Run:
++
+[source,sh]
+----
+echo "Task 19"
+----
+. Display the local website served from Apache 2 in your terminal.
+. Run:
++
+[source,sh]
+----
+echo "Task 20"
+----
+. Stop the Apache 2 web service.
+
+== Stop Recording
+
+. Run `exit` to stop the recording.
++
+[source,sh]
+----
+exit
+----
++
+You should see a message similar to the following.
++
+----
+Script done.
+----
+. You can preview the recording. Clearing the screen before displaying the output helps delineate where your commands end and the replay starts.
++
+[source,sh]
+----
+clear
+scriptreplay review1.log -t review1.time.log
+----
++
+The commands will not be run again, but the terminal will replay everything that showed up in the terminal.
+. To run the script faster, you can decrease the delay between screen updates. The following command will limit the dead space to 0.2 seconds.
++
+[source,sh]
+----
+scriptreplay review1.log -t review1.time.log -m .2
+----
+. To speed up the entire script but retain the original cadence, use the divisor. The following command runs the script at triple the original speed.
++
+[source,sh]
+----
+scriptreplay review1.log -t review1.time.log -d 3
+----
+
+== Package the Recording
+
+. Combine the recordings into a single file using `tar`, substituting your last name for **name**.
++
+[source,sh]
+----
+tar -cvzf name.review1.tar.gz review1.* 
+----
+. This file can be uploaded. It is probably easiest to use Kali's built-in web browser rather than copying this file. The file will be in the /home/kali directory.

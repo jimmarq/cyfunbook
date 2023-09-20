@@ -6,6 +6,6 @@
 
 ## Reflection
 
-How does the ciphertext from one-time pad encryption
+The one-time pad algorithm is fairly simple. Why is it secure?
 
 How could one-time pad keys be distributed securely?

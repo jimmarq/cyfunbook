@@ -163,6 +163,10 @@ include::2180_processes_and_daemons\processes_and_daemons.adoc[]
 include::2190_logging\linux_logging.adoc[]
 
 <<<
+:imagesdir: 2910_linux_review_1
+include::2910_linux_review_1\linux_review_1.adoc[]
+
+<<<
 :imagesdir: 2990_linux_command_cheat_sheet
 include::2990_linux_command_cheat_sheet\2990_linux_command_cheat_sheet.adoc[]
 
