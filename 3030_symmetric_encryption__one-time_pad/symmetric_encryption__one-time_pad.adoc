@@ -59,9 +59,9 @@ image::decrypt-bsg.png[Decrypt "S" Using the Key "G"]
 
 == Impossible Challenge
 
-Consider the ciphertext **RBBTLFDWVKDDIL** (14 characters). The source cleartext was encrypted using the NSA's lookup table.
+Consider the ciphertext **RBBTLFDWVKDDIL** (14 characters). The source cleartext was encrypted using the NSA's lookup table, but you do not know the key. What is the cleartext?
 
-What is the plaintext? The table below shows how different keys can extract different candidate cleartext messages. The table shows 3 example keys among the 629,983,141,281,877,223,603,213,172,736 (14^26) possible keys along with the cleartext produced if decrypting the ciphertext with that key. How would somebody know when they got the correct key?
+The table below shows how different keys can extract different candidate cleartext messages. The table shows 3 example keys among the 629,983,141,281,877,223,603,213,172,736 (14^26) possible keys along with the cleartext produced if decrypting the ciphertext with that key. How would somebody know when they got the correct key?
 
 |=====
 | Key            | Cleartext
@@ -71,6 +71,28 @@ What is the plaintext? The table below shows how different keys can extract diff
 |=====
 
 If all possible keys were used to decrypt the ciphertext, the introduction to every book written in English would be found. The cryptographers would have no way of knowing which of the valid combinations of letters and words is correct.
+
+== Thought Experiment
+
+Imagine that you operate a starport in the Andromeda galaxy. There are 17,576 (26*26*26) ports where spaceships can dock. All port identifiers are 3 letters, such as AXY, VLN, and ERQ. Each port identifier is unique.
+
+Your security team intercepts an encrypted message. Your intelligence source says that this message contains the port where a bomb has been and is set to explode in one hour. You can dispatch your security team to check 50 different ports in an hour, so you do not have enough time to check every port. Assume that the encrypted message contains the correct port.
+
+=== Scenario 1: Caesar Cipher 
+
+The encrypted message you receive is **HGX**. The message was encrypted using the **Caesar cipher**. You do not have the key.
+
+* How would you determine which ports must be checked?
+* How many ports must be checked to guarantee that you find the bomb?
+* Will you find the bomb in time?
+
+=== Scenario 2: One-time Pad
+
+The encrypted message you receive is **HGX**. The message was encrypted using a **one-time pad**. You do not have the key.
+
+* How would you determine which ports must be checked?
+* How many ports must be checked to guarantee that you find the bomb?
+* Will you find the bomb in time?
 
 == Challenge
 
