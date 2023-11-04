@@ -69,10 +69,6 @@ include::1100_install_kali_on_virtualbox\lab_setup.adoc[]
 :imagesdir: 1110_kali_first_use
 include::1110_kali_first_use\kali_first_use.adoc[]
 
-<<<
-:imagesdir: 1120_windows_11_vm
-include::1120_windows_11_vm\windows_11_vm_setup.adoc[]
-
 :leveloffset: 0
 <<<
 = Linux
