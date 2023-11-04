@@ -225,11 +225,6 @@ include::3100_hashing_passwords\hashing_passwords.adoc[]
 :imagesdir: 3105_cracking_hashes
 include::3105_cracking_hashes\cracking_hashes.adoc[]
 
-
-<<<
-:imagesdir: 3107_cracking_with_rainbow_tables
-include::3107_cracking_with_rainbow_tables\cracking_with_rainbow_tables.adoc[]
-
 <<<
 :imagesdir: 3110_password_managers
 include::3110_password_managers\password_managers.adoc[]
