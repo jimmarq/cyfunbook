@@ -1,0 +1,125 @@
+= Analyze Packet Captures
+
+== Learning Objectives
+
+You should be able to:
+
+* Open packet capture fires in Wireshark
+* Navigate the Wireshark interface
+* Describe network traffic from a packet capture
+
+== Packet Captures
+
+A variety of tools can capture packets. The command-line tool **tcpdump** captures packets for later analysis. **Wireshark** can capture and analyze packets using a graphical user interface, whereas its related **tshark** captures and analyzes packets using a command-line interface. **Tcpdump** will capture packets from a command line interface for later analysis in other programs. Tools like **Snort** continuously capture network packets looking for malicious network traffic.
+
+These tools capture packets in standard formats.
+
+* **PCAP** files are one of the oldest file formats. These files might have file extensions like **.cap** or **.pcap**.
+* **PCAPNG** files are "next-generation" packet capture files. File extensions will typically be **.pcapng**.
+
+There are other formats, but these are the most common. Most packet capture formats are open, so many tools can create and analyze files. I.e., you could capture packets using **tcpdump**, and later analyze those files with **Wireshark**.
+
+== Analyzing Packet Captures
+
+A networking professional can answer several questions by analyzing packets, such as:
+
+* Why are some network requests failing?
+* Is there any malicious network traffic?
+* What sites are people accessing?
+* What was happening on the network during a specific timeframe?
+* Is anything weird happening?
+
+To be effective, networking professionals need to have a strong understanding of:
+
+* network protocols, such as TCP, UDP, IP, DNS
+* network design principles, such as subnetworks, public/private IP addressing, routing
+* specific network design (i.e., how the specific network is designed)
+
+Nobody is born knowing how to analyze packets. Professionals develop these skills over time. Over time, it becomes easier to make sense of network traffic. **Threat hunting** is the process of using tools manually to look for threats. Threat hunting augments automated network traffic scanning. Given the tremendous amount of data transmitted on modern networks, it would be infeasible for a person to manually evaluate all network traffic.
+
+== Practice Analyzing Packets
+
+. Launch Kail.
+. Open a Kali terminal.
+. Run the following commands to clear and re-download the required files for this activity. This will delete any files that you had previously created in the *cyfunfiles* folder (if any).
++
+```sh
+cd ~
+rm -rf cyfunfiles
+git clone https://github.com/jimmarq/cyfunfiles
+cd cyfunfiles
+```
+. Navigate to the **pcaps** folder and list the files.
++
+```sh
+cd pcaps
+ls
+```
++
+You should see several files with **.pcapng** file extensions. These were files previously captured using Wireshark.
+. Close the terminal, but remember where these files are located.
+. Launch **Wireshark** from the program menu.
+
+=== ARP Network Traffic
+
+The **Address Resolution Protocol (ARP)** helps connect physical network addresses (OSI layer 2) and IP addresses (layer 3) in a local area network. The protocol uses fairly readable messages.
+
+. In Wireshark, open **arp.pcapng**.
+.. Find this file in /home/kali/cyfunfiles/pcaps.
+. Note the following items:
+.. Sending and receiving physical addresses
+.. Sending and receiving IP addresses
+.. The protocol column
+
+Ideally, you can explain what is happening to a 5th grader.
+
+=== Ping Network Traffic
+
+The **ping** command uses the **ICMP** protocol to troubleshoot networks. **ICMP** is part of the **Internet Protocol (IP)**, which operates at layer 3 of the OSI model. Therefore, **ICMP** does not connect to a specific port (ports are used at layer 4 of the OSI model).
+
+. In Wireshark, open **ping.pcapng**.
+. Evaluate the requests and responses.
+. Look at DNS lookups. Why would the **ping** command need to perform so many DNS lookups?
+.. What kind of DNS lookups are being performed? Forward? Reverse?
+. Note the protocols being used.
+. Were the pings successful?
+
+=== Cleartext Website Network Traffic
+
+Some websites still server cleartext content using the HTTP protocol. In these cases, it is easy for eavesdroppers to evaluate the content of the network traffic.
+
+. In Wireshark, open **cleartext_website.pcapng**.
+. Find a TCP packet, right-click a packet, and follow the TCP stream.
+.. Navigate streams until you see the contents of the web page.
+.. Close the stream.
+.. Clear the stream filter.
+
+=== Encrypted Website Network Traffic
+
+The majority of websites serve encrypted web traffic using HTTPS. Even when people can capture the network traffic, it can be challenging (or impossible) to evaluate the content.
+
+. In Wireshark, open **encrypted_website.pcapng**.
+. Find a TCP packet and follow the TCP stream.
+.. Navigate between the different streams.
+.. How much of the content is in cleartext?
+
+=== Port Scan Network Traffic
+
+Port scanning tools (such as **nmap**) scan remote systems to determine what services are running on the system. Network administrators use port scanning to verify that they properly secured their systems. Hackers use port scanning to probe for weaknesses. Unexpected port scans may be a sign of an impending attack.
+
+. In Wireshark, open **nmap.pcapng**.
+. What is the IP address of the computer performing the scan?
+. What is the IP address of the computer being scanned?
+. How would you tell that this was a port scan?
+. Did anything malicious happen?
+
+== Challenge
+
+. Capture packets for a minute in Wireshark.
+. Find a protocol or message that you are unfamiliar with.
+. Search the internet or use AI tools to figure out what that network traffic means.
+
+== Reflection
+
+* Intrusion prevention systems scan packets in real time to protect networks. Why would it still be important for network administrators to be able to scan packets manually?
+* Should network protocols be designed for human readability?

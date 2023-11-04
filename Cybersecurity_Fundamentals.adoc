@@ -406,6 +406,9 @@ include::6110_ssh\ssh.adoc[]
 :imagesdir: 6120_wireshark
 include::6120_wireshark\wireshark.adoc[]
 
+<<<
+:imagesdir: 6130_analyze_pcaps
+include::6130_analyze_pcaps\analyze_pcaps.adoc[]
 
 :leveloffset: 0
 <<<
@@ -492,6 +495,11 @@ include::7170_py_dictionary_password_cracker\py_dictionary_password_cracker.adoc
 <<<
 :imagesdir: 7180_py_hybrid_password_cracker
 include::7180_py_hybrid_password_cracker\py_hybrid_password_cracker.adoc[]
+
+
+<<<
+:imagesdir: 7190_ai_enhanced_coding
+include::7190_ai_enhanced_coding\ai_enhanced_coding.adoc[]
 
 
 :leveloffset: 0
