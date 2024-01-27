@@ -110,50 +110,36 @@ locate fruits.txt
 +
 You should see that fruits.txt can be found in /home/kali/cyfunfiles/linux_finding/.
 
-== Searching for File Content
+== Using Find
 
-The `grep` command looks inside files for specific contents. The syntax is `grep [options] [search pattern] [file(s) to search]`
+The `find` command can be used to find files by name, size, or other attributes. The `find` command searches the file system each time it is run. This means that it can take a long time to run, depending on how many files are on the system. The `find` command is very flexible, and can be used to find files by name, size, or other attributes.
 
-. Run the following command to look for the word *celery* in the file veggies.txt.
+. Run the following command to find files with "fruits" in the name.
 +
 [source,shell]
 ----
-grep "celery" veggies.txt
+find . -name "*fruits*"
 ----
 +
-If the output is not blank, it means the text was found.
-. Search for the word "strawberry" in veggies.txt.
+In this case, the period tells `find` to start searching in the current directory. The `-name` option tells `find` to search for files with "fruits" in the name. The asterisks are wildcards that match any characters. So, the command will find files with "fruits" anywhere in the name.
+. Run the following command to search the entire computer for files with the word "fruits" in the name.
 +
 [source,shell]
 ----
-grep "strawberry" veggies.txt
+sudo find / -name "*fruits*"
 ----
 +
-In this case, there is no output, meaning that the search did not return any results.
-+
-.Search results for celery and strawberry
-image::grep-results-fruits-and-veggies.png[search results for grep--one for celery and none for strawberry]
-. Run the following command to look for the word *banana* in all files in the current folder.
-+
-[source,shell]
-----
-grep "banana" ./*
-----
-+
-The "./" tells Linux to look in the current folder, and the asterisk tells Kali to match any file name. The grep command should find the word *banana* in fruits.txt.
+The `sudo` command is required because `find` will search the entire computer, including directories that are not accessible to your user account. You may still get some access denied errors, but those wouldn't be places you'd be looking for files anyway.
 
 == Challenge
 
-. Find entries in the /var/www/html/index.html for lines that contain the word "please."
-.. Find words that contain "Please" with a capital **P** in the same file.
-.. Look at the **grep** manual to find a way to perform a case-insensitive search.
 . Find files with the name "firefox" in the file name only.
 . Find files and directories with "apache" in the name.
-. How many employees work for the company "Tavu?" The file customer_data.txt in the linux_finding directory contains customer information.
+. Dictionary and fuzzing attacks often use files called `wordlists`. Find files or directories with "wordlist" in the name.
 
 == Reflection
 
-* When would it be most useful to search by file name?
-* When would it be most useful to search for content within files?
+* When would it be best to use **locate** to search for files?
+* When would it be best to use **find** to search for files?
 
 

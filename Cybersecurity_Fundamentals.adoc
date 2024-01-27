@@ -121,6 +121,9 @@ include::2100_editing_files_with_vim\editing_files_with_vim.adoc[]
 :imagesdir: 2110_searching_for_files
 include::2110_searching_for_files\searching_for_files.adoc[]
 
+<<<
+:imagesdir: 2112_searching_content
+include::2112_searching_content\searching_content.adoc[]
 
 <<<
 :imagesdir: 2115_working_with_archives
