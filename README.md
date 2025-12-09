@@ -2,6 +2,10 @@
 
 This project is an eBook written in AsciiDoc. It was created to use in a 100-level course in a university to teach foundational technical skills and cybersecurity concepts. 
 
+A more updated version of the content is available at [my personal website](https://jimmarquardson.com/116).
+
+No updates to the materials in this repository are planned.
+
 ## Current Version
 
 You are free to download, distribute, and use this eBook.
